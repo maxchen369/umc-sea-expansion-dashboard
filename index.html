@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UMC Southeast Asia Expansion Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">UMC</span>
+        <div>
+          <p class="eyebrow">Strategy dashboard</p>
+          <h1>Southeast Asia Expansion Dashboard</h1>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Dashboard sections">
+        <a href="#summary">Summary</a>
+        <a href="#matrix">Matrix</a>
+        <a href="#model">Model</a>
+        <a href="#deep-dive">Deep Dive</a>
+        <a href="#recommendation">Recommendation</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="summary" class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">June 2026 working view</p>
+          <h2>Evaluate where UMC should place commercial, manufacturing, packaging, and support capacity in Southeast Asia.</h2>
+          <p>
+            The model compares six ASEAN markets across four expansion modes, balancing semiconductor ecosystem depth,
+            customer access, incentive support, execution risk, talent, infrastructure, and geopolitical resilience.
+          </p>
+        </div>
+        <div class="hero-panel" aria-label="Top recommendation">
+          <p class="panel-label">Base case priority</p>
+          <div id="topRecommendation" class="hero-score">Loading</div>
+          <p id="topRecommendationText" class="muted">Loading model output...</p>
+        </div>
+      </section>
+
+      <section class="section kpi-grid" aria-label="Executive summary metrics">
+        <article class="kpi">
+          <span>Best commercial hub</span>
+          <strong id="bestSales">-</strong>
+          <p>Customer proximity, rule of law, travel connectivity, and regional headquarters fit.</p>
+        </article>
+        <article class="kpi">
+          <span>Best foundry option</span>
+          <strong id="bestFoundry">-</strong>
+          <p>Infrastructure, utilities, permitting confidence, ecosystem maturity, and capex risk.</p>
+        </article>
+        <article class="kpi">
+          <span>Best packaging option</span>
+          <strong id="bestPackaging">-</strong>
+          <p>OSAT density, advanced packaging momentum, talent, and supplier adjacency.</p>
+        </article>
+        <article class="kpi">
+          <span>Best support option</span>
+          <strong id="bestSupport">-</strong>
+          <p>Language coverage, operating cost, service talent, and timezone coverage.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Auto-generated strategy calls</p>
+          <h2>Executive Summary Cards</h2>
+          <p>These recommendations update when scenario presets or slider assumptions change.</p>
+        </div>
+        <div id="executiveCards" class="executive-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="matrix" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Country x expansion mode matrix</p>
+          <h2>Recommendation score heatmap</h2>
+          <p>Each cell recalculates a country x expansion mode strategy score from the current slider weights.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="matrix-table">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Sales Office</th>
+                <th>Foundry</th>
+                <th>Advanced Packaging</th>
+                <th>Customer Support Center</th>
+              </tr>
+            </thead>
+            <tbody id="matrixBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="model" class="section model-section">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive weighting model</p>
+          <h2>Change the strategy weights</h2>
+          <p>Each slider ranges from 0 to 20. Adjust them to test how country ranking and expansion-mode recommendations change.</p>
+        </div>
+        <div class="model-layout">
+          <div>
+            <div id="scenarioPresets" class="scenario-presets" aria-label="Scenario presets"></div>
+            <div id="weightControls" class="controls"></div>
+          </div>
+          <div class="rank-panel">
+            <div class="rank-header">
+              <h3>Weighted country ranking</h3>
+              <span id="weightTotal">100%</span>
+            </div>
+            <div id="rankingList" class="ranking-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="deep-dive" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Country deep dive</p>
+          <h2>Market detail</h2>
+          <p>Select a country to view rationale, risks, recommended entry posture, and source trail.</p>
+        </div>
+        <div id="countryTabs" class="tabs" role="tablist" aria-label="Countries"></div>
+        <article id="countryDetail" class="country-detail"></article>
+        <div id="countryCards" class="country-card-grid"></div>
+      </section>
+
+      <section id="case-studies" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Peer case studies</p>
+          <h2>Comparable expansion moves</h2>
+          <p>Selected examples show how semiconductor peers have used ASEAN as a resilience, packaging, and customer access platform.</p>
+        </div>
+        <div id="caseFilters" class="filter-row" aria-label="Case study filters"></div>
+        <div id="caseStudyGrid" class="case-grid"></div>
+      </section>
+
+      <section id="recommendation" class="section recommendation-section">
+        <div class="section-heading">
+          <p class="eyebrow">Recommendation engine</p>
+          <h2>Sequenced market entry plan</h2>
+          <p>The recommendation combines weighted score, implementation risk, and mode-specific suitability.</p>
+        </div>
+        <div id="recommendationCards" class="recommendation-grid"></div>
+      </section>
+
+      <section class="section sources-section">
+        <div class="section-heading">
+          <p class="eyebrow">Source trail</p>
+          <h2>Reference links</h2>
+          <p>Open-source references used to frame the directional assumptions in this dashboard.</p>
+        </div>
+        <div id="sourcesList" class="sources-list"></div>
+      </section>
+
+      <section id="methodology" class="section methodology-section">
+        <div class="section-heading">
+          <p class="eyebrow">Methodology & assumptions</p>
+          <h2>How to read the model</h2>
+        </div>
+        <div class="methodology-grid">
+          <article>
+            <h3>Scoring basis</h3>
+            <p>Scores are preliminary strategic estimates, not investment advice. Country inputs use a 1-5 scale before weighted conversion to a 1-100 score.</p>
+          </article>
+          <article>
+            <h3>User assumptions</h3>
+            <p>Users can change assumptions using sliders or scenario presets. Each change recalculates country ranking, heatmap cells, and strategy cards.</p>
+          </article>
+          <article>
+            <h3>Comparable evidence</h3>
+            <p>Case studies are used as comparable evidence, not direct proof that UMC should repeat the same investment.</p>
+          </article>
+          <article>
+            <h3>Capital intensity</h3>
+            <p>Foundry expansion has much higher capital intensity and execution risk than sales office or customer support operations.</p>
+          </article>
+          <article>
+            <h3>Support center definition</h3>
+            <p>Customer support center means B2B technical support, FAE support, customer engineering support, and account operations, not consumer call center.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Static prototype for strategic discussion. Update data files before using for investment committee materials.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
