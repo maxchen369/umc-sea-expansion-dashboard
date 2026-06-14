@@ -1,0 +1,304 @@
+﻿[
+    {
+        "id":  "singapore",
+        "name":  "Singapore",
+        "key_locations":  [
+                              "Pasir Ris Wafer Fab Park",
+                              "Woodlands",
+                              "Tampines",
+                              "one-north"
+                          ],
+        "policy_score":  4,
+        "ecosystem_score":  5,
+        "talent_score":  5,
+        "infrastructure_score":  5,
+        "customer_proximity_score":  5,
+        "cost_efficiency_score":  2,
+        "geopolitical_stability_score":  5,
+        "time_to_market_score":  5,
+        "esg_readiness_score":  5,
+        "fab12i_synergy_score":  5,
+        "umc_global_layout_fit_score":  5,
+        "ecosystem_adjacency_score":  5,
+        "customer_coverage_score":  5,
+        "partner_potential_score":  4,
+        "execution_risk_penalty":  1,
+        "summary":  "Singapore is UMC\u0027s Southeast Asia manufacturing anchor through Fab 12i and the strongest base for regional manufacturing assurance, senior customer engagement, and customer engineering coordination.",
+        "strengths":  [
+                          "Direct operational synergy with UMC Fab 12i",
+                          "Strong wafer fabrication, equipment, logistics, and engineering ecosystem",
+                          "Best regional platform for customer assurance, executive coverage, and low-risk expansion"
+                      ],
+        "risks":  [
+                      "High labor, land, utility, and operating costs",
+                      "Limited greenfield land availability",
+                      "Advanced packaging and support operations need careful cost discipline"
+                  ],
+        "recommended_modes":  [
+                                  "sales_office",
+                                  "foundry",
+                                  "advanced_packaging",
+                                  "customer_support_call_center"
+                              ],
+        "source_ids":  [
+                           "src_umc_singapore_expansion",
+                           "src_edb_semiconductors"
+                       ],
+        "published_date":  "2025-01-01",
+        "retrieved_date":  "2026-06-13",
+        "data_year":  2025,
+        "confidence":  "High",
+        "country_attractiveness_score":  4.6,
+        "expansion_mode_fit_score":  4.8
+    },
+    {
+        "id":  "malaysia",
+        "name":  "Malaysia",
+        "key_locations":  [
+                              "Penang",
+                              "Kulim",
+                              "Kuala Lumpur",
+                              "Johor"
+                          ],
+        "policy_score":  5,
+        "ecosystem_score":  5,
+        "talent_score":  4,
+        "infrastructure_score":  4,
+        "customer_proximity_score":  4,
+        "cost_efficiency_score":  4,
+        "geopolitical_stability_score":  4,
+        "time_to_market_score":  4,
+        "esg_readiness_score":  4,
+        "fab12i_synergy_score":  4,
+        "umc_global_layout_fit_score":  4,
+        "ecosystem_adjacency_score":  5,
+        "customer_coverage_score":  4,
+        "partner_potential_score":  5,
+        "execution_risk_penalty":  2,
+        "summary":  "Malaysia is the strongest non-Singapore option for UMC advanced packaging, OSAT adjacency, and staged manufacturing-adjacent partnerships linked to Fab 12i customer demand.",
+        "strengths":  [
+                          "Deep OSAT, test, packaging, equipment, and supplier ecosystem",
+                          "National semiconductor strategy supports higher-value chip activities",
+                          "Good cost-to-capability balance for packaging and customer engineering support"
+                      ],
+        "risks":  [
+                      "Rising competition for semiconductor engineering talent",
+                      "Foundry commitments require water, power, permitting, and anchor-customer diligence",
+                      "Execution quality varies by state and industrial park"
+                  ],
+        "recommended_modes":  [
+                                  "advanced_packaging",
+                                  "sales_office",
+                                  "customer_support_call_center",
+                                  "foundry"
+                              ],
+        "source_ids":  [
+                           "src_malaysia_nss",
+                           "src_malaysia_wsj_chip_hub"
+                       ],
+        "published_date":  "2024-05-28",
+        "retrieved_date":  "2026-06-13",
+        "data_year":  2024,
+        "confidence":  "High",
+        "country_attractiveness_score":  4.2,
+        "expansion_mode_fit_score":  4.3
+    },
+    {
+        "id":  "vietnam",
+        "name":  "Vietnam",
+        "key_locations":  [
+                              "Bac Ninh",
+                              "Ho Chi Minh City",
+                              "Hanoi",
+                              "Da Nang"
+                          ],
+        "policy_score":  4,
+        "ecosystem_score":  3,
+        "talent_score":  3,
+        "infrastructure_score":  3,
+        "customer_proximity_score":  4,
+        "cost_efficiency_score":  5,
+        "geopolitical_stability_score":  3,
+        "time_to_market_score":  3,
+        "esg_readiness_score":  3,
+        "fab12i_synergy_score":  3,
+        "umc_global_layout_fit_score":  3,
+        "ecosystem_adjacency_score":  3,
+        "customer_coverage_score":  4,
+        "partner_potential_score":  4,
+        "execution_risk_penalty":  3,
+        "summary":  "Vietnam is an option-value market for customer engineering support, EMS proximity, and future back-end partnerships, but it is not yet a primary front-end foundry platform for UMC.",
+        "strengths":  [
+                          "Competitive operating cost",
+                          "Growing EMS and electronics manufacturing base",
+                          "Improving relevance for regional customer support and supply-chain monitoring"
+                      ],
+        "risks":  [
+                      "Specialized semiconductor process and packaging talent is still developing",
+                      "Supplier depth is less mature than Malaysia or Singapore",
+                      "Province-level execution and infrastructure consistency require diligence"
+                  ],
+        "recommended_modes":  [
+                                  "customer_support_call_center",
+                                  "sales_office",
+                                  "advanced_packaging"
+                              ],
+        "source_ids":  [
+                           "src_vietnam_placeholder",
+                           "src_amkor_vietnam"
+                       ],
+        "published_date":  "2025-01-01",
+        "retrieved_date":  "2026-06-13",
+        "data_year":  2025,
+        "confidence":  "Medium",
+        "country_attractiveness_score":  3.4,
+        "expansion_mode_fit_score":  3.3
+    },
+    {
+        "id":  "thailand",
+        "name":  "Thailand",
+        "key_locations":  [
+                              "Bangkok",
+                              "Eastern Economic Corridor",
+                              "Chonburi",
+                              "Rayong"
+                          ],
+        "policy_score":  4,
+        "ecosystem_score":  3,
+        "talent_score":  3,
+        "infrastructure_score":  4,
+        "customer_proximity_score":  4,
+        "cost_efficiency_score":  4,
+        "geopolitical_stability_score":  3,
+        "time_to_market_score":  4,
+        "esg_readiness_score":  3,
+        "fab12i_synergy_score":  3,
+        "umc_global_layout_fit_score":  3,
+        "ecosystem_adjacency_score":  3,
+        "customer_coverage_score":  4,
+        "partner_potential_score":  3,
+        "execution_risk_penalty":  3,
+        "summary":  "Thailand is most relevant to UMC through automotive, industrial, power, and connectivity-related customer coverage rather than near-term wafer fabrication.",
+        "strengths":  [
+                          "Automotive and industrial manufacturing base",
+                          "Good logistics and industrial-zone infrastructure",
+                          "Useful for mature-node, power, display, and industrial customer proximity"
+                      ],
+        "risks":  [
+                      "Semiconductor ecosystem depth trails Singapore and Malaysia",
+                      "Political and regulatory continuity should be monitored",
+                      "Limited advanced packaging and foundry supplier density"
+                  ],
+        "recommended_modes":  [
+                                  "sales_office",
+                                  "customer_support_call_center"
+                              ],
+        "source_ids":  [
+                           "src_thailand_boi_placeholder"
+                       ],
+        "published_date":  "2025-01-01",
+        "retrieved_date":  "2026-06-13",
+        "data_year":  2025,
+        "confidence":  "Medium",
+        "country_attractiveness_score":  3.6,
+        "expansion_mode_fit_score":  3.2
+    },
+    {
+        "id":  "philippines",
+        "name":  "Philippines",
+        "key_locations":  [
+                              "Metro Manila",
+                              "CALABARZON",
+                              "Clark",
+                              "Cebu"
+                          ],
+        "policy_score":  3,
+        "ecosystem_score":  4,
+        "talent_score":  4,
+        "infrastructure_score":  3,
+        "customer_proximity_score":  3,
+        "cost_efficiency_score":  4,
+        "geopolitical_stability_score":  3,
+        "time_to_market_score":  4,
+        "esg_readiness_score":  3,
+        "fab12i_synergy_score":  2,
+        "umc_global_layout_fit_score":  3,
+        "ecosystem_adjacency_score":  4,
+        "customer_coverage_score":  3,
+        "partner_potential_score":  4,
+        "execution_risk_penalty":  3,
+        "summary":  "The Philippines is strongest for UMC customer engineering support, account operations, and selected assembly/test adjacency, not front-end foundry expansion.",
+        "strengths":  [
+                          "Established electronics assembly, test, and service operations",
+                          "Strong English-language technical support workforce",
+                          "Useful for FAE support, documentation, and customer operations"
+                      ],
+        "risks":  [
+                      "Infrastructure resilience varies by location",
+                      "Wafer fabrication fit is limited",
+                      "Policy competitiveness requires project-specific validation"
+                  ],
+        "recommended_modes":  [
+                                  "customer_support_call_center",
+                                  "advanced_packaging"
+                              ],
+        "source_ids":  [
+                           "src_oecd_philippines"
+                       ],
+        "published_date":  "2024-01-01",
+        "retrieved_date":  "2026-06-13",
+        "data_year":  2024,
+        "confidence":  "Medium",
+        "country_attractiveness_score":  3.4,
+        "expansion_mode_fit_score":  3.2
+    },
+    {
+        "id":  "indonesia",
+        "name":  "Indonesia",
+        "key_locations":  [
+                              "Jakarta",
+                              "Batam",
+                              "West Java",
+                              "Central Java"
+                          ],
+        "policy_score":  4,
+        "ecosystem_score":  2,
+        "talent_score":  3,
+        "infrastructure_score":  3,
+        "customer_proximity_score":  4,
+        "cost_efficiency_score":  4,
+        "geopolitical_stability_score":  3,
+        "time_to_market_score":  2,
+        "esg_readiness_score":  3,
+        "fab12i_synergy_score":  2,
+        "umc_global_layout_fit_score":  2,
+        "ecosystem_adjacency_score":  2,
+        "customer_coverage_score":  4,
+        "partner_potential_score":  3,
+        "execution_risk_penalty":  4,
+        "summary":  "Indonesia is a long-term customer and market-development option for UMC, especially automotive, consumer, and industrial demand, but semiconductor ecosystem maturity remains early.",
+        "strengths":  [
+                          "Largest domestic market in Southeast Asia",
+                          "Long-term relevance to automotive, EV, consumer, and industrial demand",
+                          "Competitive labor cost and large workforce"
+                      ],
+        "risks":  [
+                      "Early-stage semiconductor supplier ecosystem",
+                      "Higher execution complexity for major capital projects",
+                      "Slower time to market from permitting, infrastructure, and coordination requirements"
+                  ],
+        "recommended_modes":  [
+                                  "sales_office",
+                                  "customer_support_call_center"
+                              ],
+        "source_ids":  [
+                           "src_indonesia_placeholder"
+                       ],
+        "published_date":  "2025-01-01",
+        "retrieved_date":  "2026-06-13",
+        "data_year":  2025,
+        "confidence":  "Low",
+        "country_attractiveness_score":  3.1,
+        "expansion_mode_fit_score":  2.5
+    }
+]
