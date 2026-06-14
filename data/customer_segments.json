@@ -1,0 +1,26 @@
+[
+  {
+    "id": "communications_connectivity",
+    "name": "Communication and connectivity",
+    "umc_technology_fit": ["22/28nm", "RF", "mixed signal", "connectivity"],
+    "support_needs": "Regional technical sales, account operations, and Fab 12i supply assurance."
+  },
+  {
+    "id": "consumer_iot",
+    "name": "Consumer and IoT",
+    "umc_technology_fit": ["22/28nm", "specialty technology", "embedded memory", "low power"],
+    "support_needs": "Fast customer engineering response, packaging partner access, and volume ramp coordination."
+  },
+  {
+    "id": "automotive_industrial",
+    "name": "Automotive and industrial",
+    "umc_technology_fit": ["specialty technology", "power", "display", "mixed signal"],
+    "support_needs": "Quality systems, long product lifecycle support, application engineering, and regional customer coverage."
+  },
+  {
+    "id": "display_power",
+    "name": "Display, power, and specialty analog",
+    "umc_technology_fit": ["display driver", "power management", "specialty analog"],
+    "support_needs": "OSAT adjacency, test capability, and customer engineering coverage near EMS and module customers."
+  }
+]
