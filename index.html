@@ -18,8 +18,9 @@
       <nav class="nav" aria-label="Dashboard sections">
         <a href="#summary">Summary</a>
         <a href="#matrix">Matrix</a>
-        <a href="#model">Model</a>
+        <a href="#model">Lenses</a>
         <a href="#deep-dive">Deep Dive</a>
+        <a href="#ecosystem">Ecosystem</a>
         <a href="#recommendation">Recommendation</a>
       </nav>
     </header>
@@ -28,10 +29,10 @@
       <section id="summary" class="hero section">
         <div class="hero-copy">
           <p class="eyebrow">June 2026 working view</p>
-          <h2>Evaluate where UMC should place commercial, manufacturing, packaging, and support capacity in Southeast Asia.</h2>
+          <h2>UMC-specific expansion model for Southeast Asia.</h2>
           <p>
-            The model compares six ASEAN markets across four expansion modes, balancing semiconductor ecosystem depth,
-            customer access, incentive support, execution risk, talent, infrastructure, and geopolitical resilience.
+            The model anchors on UMC Singapore Fab 12i, UMC's global foundry footprint, 22/28nm and specialty technology
+            demand, customer engineering coverage, OSAT adjacency, and regional ecosystem depth.
           </p>
         </div>
         <div class="hero-panel" aria-label="Top recommendation">
@@ -97,13 +98,13 @@
 
       <section id="model" class="section model-section">
         <div class="section-heading">
-          <p class="eyebrow">Interactive weighting model</p>
-          <h2>Change the strategy weights</h2>
-          <p>Each slider ranges from 0 to 20. Adjust them to test how country ranking and expansion-mode recommendations change.</p>
+          <p class="eyebrow">UMC-specific scoring lenses</p>
+          <h2>Choose the strategic lens</h2>
+          <p>Each lens uses a different weighting logic. Foundry, advanced packaging, sales, and customer engineering support should not share one generic model.</p>
         </div>
         <div class="model-layout">
           <div>
-            <div id="scenarioPresets" class="scenario-presets" aria-label="Scenario presets"></div>
+            <div id="lensSelector" class="scenario-presets" aria-label="Scoring lenses"></div>
             <div id="weightControls" class="controls"></div>
           </div>
           <div class="rank-panel">
@@ -114,6 +115,30 @@
             <div id="rankingList" class="ranking-list"></div>
           </div>
         </div>
+      </section>
+
+      <section id="ecosystem" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Ecosystem map</p>
+          <h2>Upstream, downstream, and customer-support adjacency</h2>
+          <p>Filter ecosystem entities by country, semiconductor layer, and relevant expansion mode to understand where UMC can extend Fab 12i's regional role.</p>
+        </div>
+        <div class="ecosystem-filter-stack">
+          <div>
+            <p class="filter-label">Country</p>
+            <div id="ecosystemCountryFilters" class="filter-row" aria-label="Ecosystem country filters"></div>
+          </div>
+          <div>
+            <p class="filter-label">Layer</p>
+            <div id="ecosystemLayerFilters" class="filter-row" aria-label="Ecosystem layer filters"></div>
+          </div>
+          <div>
+            <p class="filter-label">Expansion mode</p>
+            <div id="ecosystemModeFilters" class="filter-row" aria-label="Ecosystem expansion mode filters"></div>
+          </div>
+        </div>
+        <div id="ecosystemSummary" class="ecosystem-summary"></div>
+        <div id="ecosystemGrid" class="case-grid"></div>
       </section>
 
       <section id="deep-dive" class="section">
@@ -166,12 +191,12 @@
             <p>Scores are preliminary strategic estimates, not investment advice. Country inputs use a 1-5 scale before weighted conversion to a 1-100 score.</p>
           </article>
           <article>
-            <h3>User assumptions</h3>
-            <p>Users can change assumptions using sliders or scenario presets. Each change recalculates country ranking, heatmap cells, and strategy cards.</p>
+            <h3>UMC-specific model</h3>
+            <p>The model is specific to UMC, Fab 12i, mature-node and specialty foundry demand, customer engineering support, and OSAT adjacency.</p>
           </article>
           <article>
-            <h3>Comparable evidence</h3>
-            <p>Case studies are used as comparable evidence, not direct proof that UMC should repeat the same investment.</p>
+            <h3>Separate lenses</h3>
+            <p>Foundry, advanced packaging, sales office, and customer engineering support should not use the same weights because their capex, risk, and ecosystem requirements differ.</p>
           </article>
           <article>
             <h3>Capital intensity</h3>
@@ -180,6 +205,10 @@
           <article>
             <h3>Support center definition</h3>
             <p>Customer support center means B2B technical support, FAE support, customer engineering support, and account operations, not consumer call center.</p>
+          </article>
+          <article>
+            <h3>Data freshness</h3>
+            <p>Cards show published date, retrieved date, data year, and source confidence. Placeholder sources should be replaced before formal use.</p>
           </article>
         </div>
       </section>

@@ -360,6 +360,20 @@ td small {
   padding-bottom: 3px;
 }
 
+.ecosystem-filter-stack {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.filter-label {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .scenario-presets button,
 .filter-row button {
   flex: 0 0 auto;
@@ -375,6 +389,7 @@ td small {
 
 .scenario-presets button:hover,
 .filter-row button:hover,
+.scenario-presets button.active,
 .filter-row button.active {
   border-color: var(--blue);
   color: var(--blue);
@@ -413,6 +428,15 @@ td small {
   margin-bottom: 10px;
   color: #344054;
   font-weight: 700;
+}
+
+.compact-control {
+  padding: 10px 14px;
+  box-shadow: none;
+}
+
+.compact-control label {
+  margin: 0;
 }
 
 input[type="range"] {
@@ -538,9 +562,31 @@ input[type="range"] {
 
 .detail-grid,
 .case-grid,
-.recommendation-grid {
+.recommendation-grid,
+.ecosystem-summary {
   display: grid;
   gap: 14px;
+}
+
+.ecosystem-summary {
+  margin: 14px 0 18px;
+}
+
+.ecosystem-summary article {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.ecosystem-summary h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.ecosystem-summary p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .stat-grid {
@@ -619,6 +665,50 @@ input[type="range"] {
   color: var(--muted);
 }
 
+.entity-mode-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entity-mode-list li {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: #254a87;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.entity-score-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.entity-score-grid div {
+  padding: 9px;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+.entity-score-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.entity-score-grid strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 1.1rem;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -649,6 +739,22 @@ input[type="range"] {
   color: #254a87;
   font-size: 0.72rem;
   font-weight: 800;
+}
+
+.freshness-badge {
+  display: grid;
+  gap: 5px;
+  margin: 12px 0;
+  padding: 10px;
+  border: 1px solid #d7dee9;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475467;
+  font-size: 0.76rem;
+}
+
+.freshness-badge span {
+  display: block;
 }
 
 .recommendation-card:first-child {
@@ -736,8 +842,13 @@ input[type="range"] {
 
   .detail-grid,
   .case-grid,
-  .recommendation-grid {
+  .recommendation-grid,
+  .ecosystem-summary {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ecosystem-summary {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .country-detail .detail-grid {
