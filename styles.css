@@ -211,6 +211,102 @@ main {
   grid-template-columns: 1fr;
 }
 
+.scope-section {
+  background: #eef4f8;
+}
+
+.scope-controls,
+.heatmap-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.scope-option,
+.heatmap-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  color: #344054;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.scope-option.active {
+  border-color: var(--blue);
+  background: #f8fbff;
+  color: var(--blue);
+}
+
+.scope-option input,
+.heatmap-options input {
+  accent-color: var(--blue);
+}
+
+.comparison-note {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.baseline-card {
+  margin-top: 16px;
+}
+
+.baseline-card[hidden] {
+  display: none;
+}
+
+.baseline-panel {
+  padding: 18px;
+  border: 1px solid rgba(36, 87, 166, 0.28);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.baseline-panel h3 {
+  margin: 10px 0 8px;
+}
+
+.baseline-panel p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.baseline-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.baseline-metrics div {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+.baseline-metrics span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.baseline-metrics strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 1.1rem;
+}
+
 .kpi {
   padding: 18px;
 }
@@ -375,7 +471,10 @@ td small {
 }
 
 .scenario-presets button,
-.filter-row button {
+.filter-row button,
+.weight-actions button,
+.explain-btn,
+.score-modal-close {
   flex: 0 0 auto;
   min-height: 38px;
   padding: 9px 12px;
@@ -390,7 +489,10 @@ td small {
 .scenario-presets button:hover,
 .filter-row button:hover,
 .scenario-presets button.active,
-.filter-row button.active {
+.filter-row button.active,
+.weight-actions button:hover,
+.explain-btn:hover,
+.score-modal-close:hover {
   border-color: var(--blue);
   color: var(--blue);
   background: #f8fbff;
@@ -437,6 +539,77 @@ td small {
 
 .compact-control label {
   margin: 0;
+}
+
+.weight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.custom-weight-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.custom-control label {
+  margin-bottom: 8px;
+}
+
+.custom-control p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.factor-definitions {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.factor-definitions h3 {
+  margin: 0 0 12px;
+}
+
+.factor-definitions dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.factor-definitions div {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.factor-definitions div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.factor-definitions dt {
+  color: #344054;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.factor-definitions dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.explain-btn {
+  width: 100%;
+  min-height: 34px;
+  margin-top: 10px;
+  padding: 7px 9px;
+  background: rgba(255, 255, 255, 0.76);
+  font-size: 0.76rem;
 }
 
 input[type="range"] {
@@ -530,6 +703,11 @@ input[type="range"] {
 .country-card-toggle:focus-visible,
 .scenario-presets button:focus-visible,
 .filter-row button:focus-visible,
+.scope-option:focus-within,
+.heatmap-options label:focus-within,
+.weight-actions button:focus-visible,
+.explain-btn:focus-visible,
+.score-modal-close:focus-visible,
 .tabs button:focus-visible,
 .nav a:focus-visible {
   outline: 3px solid rgba(36, 87, 166, 0.35);
@@ -792,6 +970,70 @@ input[type="range"] {
   font-size: 0.9rem;
 }
 
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: start center;
+  padding: 18px;
+  overflow-y: auto;
+  background: rgba(16, 24, 40, 0.58);
+}
+
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.score-modal {
+  width: min(1120px, 100%);
+  margin: 34px auto;
+  padding: 18px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 24px 60px rgba(16, 24, 40, 0.24);
+}
+
+.score-modal-header {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.score-modal-header h2 {
+  margin: 0;
+}
+
+.score-modal-close {
+  justify-self: start;
+  background: white;
+}
+
+.breakdown-wrap {
+  border-radius: 8px;
+}
+
+.breakdown-table {
+  width: 100%;
+  min-width: 940px;
+  border-collapse: collapse;
+}
+
+.breakdown-table td,
+.breakdown-table th {
+  vertical-align: top;
+}
+
+.breakdown-table small {
+  color: var(--muted);
+}
+
+.modal-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 @media (min-width: 720px) {
   .topbar {
     flex-direction: row;
@@ -825,6 +1067,10 @@ input[type="range"] {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .baseline-metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .executive-grid,
   .country-card-grid,
   .methodology-grid {
@@ -833,6 +1079,10 @@ input[type="range"] {
 
   .model-layout {
     grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1.1fr);
+  }
+
+  .custom-weight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .ranking-table th:nth-child(4),
@@ -861,6 +1111,19 @@ input[type="range"] {
 
   .country-card-toggle {
     cursor: default;
+  }
+
+  .score-modal {
+    padding: 22px;
+  }
+
+  .score-modal-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+
+  .score-modal-close {
+    justify-self: end;
   }
 }
 

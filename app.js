@@ -23,11 +23,16 @@ const state = {
   lenses: [],
   updateLog: [],
   activeLens: "fab12i_synergy",
+  lastPresetLens: "fab12i_synergy",
+  customWeights: {},
   activeEcosystemCountry: "All",
   activeEcosystemLayer: "All",
   activeEcosystemMode: "All",
   activeCaseFilter: "All",
-  selectedCountry: "singapore"
+  selectedCountry: "singapore",
+  candidateScope: "baseline_only",
+  hideSingaporeHeatmap: true,
+  nonSingaporeOnlyHeatmap: true
 };
 
 const ecosystemFilters = [
@@ -72,6 +77,42 @@ const scoreLabels = {
   customer_coverage_score: "customer coverage",
   partner_potential_score: "partner potential",
   execution_risk_penalty: "execution risk penalty"
+};
+
+const scoringFactorKeys = [
+  "policy_score",
+  "ecosystem_score",
+  "talent_score",
+  "infrastructure_score",
+  "customer_proximity_score",
+  "cost_efficiency_score",
+  "geopolitical_stability_score",
+  "time_to_market_score",
+  "esg_readiness_score",
+  "fab12i_synergy_score",
+  "umc_global_layout_fit_score",
+  "ecosystem_adjacency_score",
+  "customer_coverage_score",
+  "partner_potential_score",
+  "execution_risk_penalty"
+];
+
+const factorDefinitions = {
+  policy_score: "Strength of policy incentives, investment agencies, tax support, grants, and semiconductor-specific government backing.",
+  ecosystem_score: "Depth of the local semiconductor base across fabs, OSATs, suppliers, design activity, and adjacent electronics manufacturing.",
+  talent_score: "Availability of engineers, technicians, operators, FAEs, account support talent, and training programs.",
+  infrastructure_score: "Readiness of industrial parks, transport links, utilities, cleanroom-capable sites, and operating reliability.",
+  customer_proximity_score: "Proximity to UMC customer decision makers, manufacturing sites, regional headquarters, and demand clusters.",
+  cost_efficiency_score: "Relative operating cost advantage for support, engineering, supplier coordination, and scalable commercial presence.",
+  geopolitical_stability_score: "Political, legal, regulatory, trade, and business-continuity stability relevant to semiconductor operations.",
+  time_to_market_score: "How quickly UMC could establish presence through office, partnership, brownfield, support hub, or supplier collaboration.",
+  esg_readiness_score: "Power, water, environmental permitting, ESG expectations, and infrastructure resilience for semiconductor operations.",
+  fab12i_synergy_score: "How strongly the location supports UMC Singapore Fab 12i operations, customers, logistics, and regional manufacturing strategy.",
+  umc_global_layout_fit_score: "How well the location complements UMC's existing global foundry footprint and regional risk diversification.",
+  ecosystem_adjacency_score: "Proximity to upstream suppliers, OSATs, EMS, IC design, materials, equipment, logistics, and end customers.",
+  customer_coverage_score: "Ability to support UMC customers across automotive, consumer, communication, IoT, power, display, industrial, and connectivity applications.",
+  partner_potential_score: "Likelihood that UMC can enter through partnership, JV, supplier collaboration, OSAT adjacency, or customer support rather than greenfield capex.",
+  execution_risk_penalty: "Execution difficulty from permitting, capex scale, staffing, qualification, utility constraints, and operational complexity. Higher raw score reduces the final result."
 };
 
 const modeNeedMap = {
@@ -181,11 +222,42 @@ async function loadData() {
   ] = await Promise.all(Object.values(files).map((url) => fetch(url).then((response) => response.json())));
 
   Object.assign(state, { countries, modes, cases, sources, ecosystem, customers, policies, clusters, lenses, updateLog });
+  state.customWeights = weightsFromLens(activeLens());
   render();
 }
 
 function activeLens() {
+  if (state.activeLens === "custom_weight_mode") {
+    return {
+      id: "custom_weight_mode",
+      name: "Custom Weight Mode",
+      description: "User-adjustable score weights. Positive weights are normalized automatically; execution risk is treated as a negative adjustment.",
+      weights: state.customWeights
+    };
+  }
   return state.lenses.find((lens) => lens.id === state.activeLens) || state.lenses[0];
+}
+
+function presetLensById(id = state.lastPresetLens) {
+  return state.lenses.find((lens) => lens.id === id) || state.lenses[0];
+}
+
+function weightsFromLens(lens) {
+  return scoringFactorKeys.reduce((weights, key) => {
+    weights[key] = Number(lens?.weights?.[key] || 0);
+    return weights;
+  }, {});
+}
+
+function sliderValueForWeight(key, weight) {
+  return key === "execution_risk_penalty" ? Math.abs(weight || 0) : Math.max(weight || 0, 0);
+}
+
+function positiveWeightTotal(weights = activeLens().weights) {
+  return Object.entries(weights).reduce((sum, [key, weight]) => {
+    if (key === "execution_risk_penalty") return sum;
+    return sum + Math.max(Number(weight) || 0, 0);
+  }, 0);
 }
 
 function sourceById(id) {
@@ -230,6 +302,68 @@ function strategyScore(country, mode, lens = activeLens()) {
   return clamp(Math.round(raw), 1, 100);
 }
 
+function singaporeCountry() {
+  return state.countries.find((country) => country.id === "singapore");
+}
+
+function nonSingaporeCountries() {
+  return state.countries.filter((country) => country.id !== "singapore");
+}
+
+function candidateCountries() {
+  return state.candidateScope === "include_singapore" ? state.countries : nonSingaporeCountries();
+}
+
+function matrixCountries() {
+  const hideSingapore = state.candidateScope !== "include_singapore" || state.hideSingaporeHeatmap || state.nonSingaporeOnlyHeatmap;
+  return hideSingapore ? nonSingaporeCountries() : state.countries;
+}
+
+function scopeNoteText() {
+  if (state.candidateScope === "include_singapore") {
+    return "Singapore is included as a normal candidate in ranking, heatmap, and recommendations.";
+  }
+  if (state.candidateScope === "exclude_singapore") {
+    return "Singapore Fab 12i remains the regional anchor; this view compares next-step non-Singapore options.";
+  }
+  return "Singapore Fab 12i is shown as the regional baseline. Rankings and recommendations compare non-Singapore next-step options.";
+}
+
+function baselineMetrics(country, mode, lens = activeLens()) {
+  const singapore = singaporeCountry();
+  if (!singapore || country.id === "singapore") {
+    return {
+      singapore_baseline_gap: 0,
+      fab12i_extension_value: 0,
+      complementarity_score: 0,
+      non_singapore_next_step_score: strategyScore(country, mode, lens)
+    };
+  }
+  const score = strategyScore(country, mode, lens);
+  const singaporeScore = strategyScore(singapore, mode, lens);
+  const singapore_baseline_gap = Math.max(singaporeScore - score, 0);
+  const fab12i_extension_value = clamp(Math.round((
+    (country.fab12i_synergy_score || 0) * 0.34 +
+    (country.customer_coverage_score || 0) * 0.22 +
+    (country.ecosystem_adjacency_score || 0) * 0.22 +
+    (country.partner_potential_score || 0) * 0.22
+  ) * 20), 1, 100);
+  const complementarity_score = clamp(Math.round((
+    (country.partner_potential_score || 0) * 0.28 +
+    (country.ecosystem_adjacency_score || 0) * 0.24 +
+    (country.cost_efficiency_score || 0) * 0.18 +
+    (country.customer_coverage_score || 0) * 0.18 +
+    (country.fab12i_synergy_score || 0) * 0.12
+  ) * 20), 1, 100);
+  const non_singapore_next_step_score = clamp(Math.round(
+    (score * 0.52) +
+    (fab12i_extension_value * 0.26) +
+    (complementarity_score * 0.22) -
+    (singapore_baseline_gap * 0.12)
+  ), 1, 100);
+  return { singapore_baseline_gap, fab12i_extension_value, complementarity_score, non_singapore_next_step_score };
+}
+
 function recommendationLabel(score) {
   if (score >= 82) return "Strong Fit";
   if (score >= 70) return "Viable";
@@ -244,8 +378,8 @@ function heatClass(score) {
   return "heat-low";
 }
 
-function strategies(lens = activeLens()) {
-  return state.countries.flatMap((country) => {
+function strategies(lens = activeLens(), countries = candidateCountries()) {
+  return countries.flatMap((country) => {
     return state.modes.map((mode) => ({
       country,
       mode,
@@ -254,10 +388,15 @@ function strategies(lens = activeLens()) {
       modeFit: modeFit(country, mode.id),
       countryAttractiveness: country.country_attractiveness_score,
       expansionModeFit: country.expansion_mode_fit_score,
+      ...baselineMetrics(country, mode, lens),
       label: recommendationLabel(strategyScore(country, mode, lens)),
       explanation: explainScore(country, mode, lens)
     }));
-  }).sort((a, b) => b.score - a.score);
+  }).sort((a, b) => {
+    const aScore = state.candidateScope === "baseline_only" ? a.non_singapore_next_step_score : a.score;
+    const bScore = state.candidateScope === "baseline_only" ? b.non_singapore_next_step_score : b.score;
+    return bScore - aScore;
+  });
 }
 
 function explainScore(country, mode, lens = activeLens()) {
@@ -303,6 +442,7 @@ function freshnessBadge(item) {
 }
 
 function render() {
+  renderCandidateScope();
   renderSummary();
   renderExecutiveCards();
   renderMatrix();
@@ -316,10 +456,70 @@ function render() {
   renderSources();
 }
 
+function renderCandidateScope() {
+  const options = [
+    ["baseline_only", "Use Singapore as baseline only"],
+    ["include_singapore", "Include Singapore as candidate"],
+    ["exclude_singapore", "Exclude Singapore from candidate ranking"]
+  ];
+  const controls = document.getElementById("candidateScopeControls");
+  if (controls) {
+    controls.innerHTML = options.map(([value, label]) => `
+      <label class="scope-option ${state.candidateScope === value ? "active" : ""}">
+        <input type="radio" name="candidateScope" value="${value}" ${state.candidateScope === value ? "checked" : ""}>
+        <span>${label}</span>
+      </label>
+    `).join("");
+    controls.querySelectorAll("input[name='candidateScope']").forEach((input) => {
+      input.addEventListener("change", () => {
+        state.candidateScope = input.value;
+        if (input.value === "include_singapore") {
+          state.hideSingaporeHeatmap = false;
+          state.nonSingaporeOnlyHeatmap = false;
+        } else {
+          state.hideSingaporeHeatmap = true;
+          state.nonSingaporeOnlyHeatmap = true;
+        }
+        render();
+      });
+    });
+  }
+  const note = document.getElementById("scopeNote");
+  if (note) note.textContent = scopeNoteText();
+  renderSingaporeBaselineCard();
+}
+
+function renderSingaporeBaselineCard() {
+  const container = document.getElementById("singaporeBaselineCard");
+  const singapore = singaporeCountry();
+  if (!container || !singapore) return;
+  if (state.candidateScope === "include_singapore") {
+    container.innerHTML = "";
+    container.hidden = true;
+    return;
+  }
+  container.hidden = false;
+  const bestSingapore = strategies(activeLens(), [singapore])[0];
+  container.innerHTML = `
+    <article class="baseline-panel">
+      <span class="badge">Singapore baseline</span>
+      <h3>Fab 12i regional anchor</h3>
+      <p><strong>${bestSingapore.mode.name}: ${bestSingapore.score}</strong></p>
+      <p>Singapore is not ranked as a next-step market in this view. It remains the UMC manufacturing anchor used to benchmark gap, complementarity, and Fab 12i extension value.</p>
+      <div class="baseline-metrics">
+        <div><span>Lens score</span><strong>${weightedScore(singapore)}</strong></div>
+        <div><span>Fab 12i synergy</span><strong>${singapore.fab12i_synergy_score}/5</strong></div>
+        <div><span>Customer coverage</span><strong>${singapore.customer_coverage_score}/5</strong></div>
+        <div><span>Infrastructure</span><strong>${singapore.infrastructure_score}/5</strong></div>
+      </div>
+    </article>
+  `;
+}
+
 function renderSummary() {
   const top = strategies()[0];
   document.getElementById("topRecommendation").textContent = `${top.country.name} + ${top.mode.name}`;
-  document.getElementById("topRecommendationText").textContent = `Score ${top.score}. ${top.explanation}`;
+  document.getElementById("topRecommendationText").textContent = `${state.candidateScope === "baseline_only" ? `Next-step score ${top.non_singapore_next_step_score}` : `Score ${top.score}`}. ${top.explanation}`;
   document.getElementById("bestSales").textContent = bestForMode("sales_office").country.name;
   document.getElementById("bestFoundry").textContent = bestForMode("foundry").country.name;
   document.getElementById("bestPackaging").textContent = bestForMode("advanced_packaging").country.name;
@@ -332,22 +532,23 @@ function bestForMode(modeId) {
 
 function renderExecutiveCards() {
   const lens = activeLens();
+  const nonSingapore = nonSingaporeCountries();
   const cards = [
-    ["Best under active lens", strategies(lens)[0]],
-    ["Fab 12i synergy", strategies(state.lenses.find((item) => item.id === "fab12i_synergy"))[0]],
-    ["Advanced packaging ecosystem", strategies(state.lenses.find((item) => item.id === "advanced_packaging_ecosystem")).find((item) => item.mode.id === "advanced_packaging")],
-    ["Sales and customer engineering", strategies(state.lenses.find((item) => item.id === "sales_support_coverage"))[0],
-    ],
-    ["Low risk / fast entry", strategies(state.lenses.find((item) => item.id === "low_risk_fast_entry"))[0]],
-    ["Best foundry option", bestForMode("foundry")]
+    [state.candidateScope === "include_singapore" ? "Best under active lens" : "Best non-Singapore overall", strategies(lens)[0]],
+    ["Best non-Singapore advanced packaging option", strategies(lens, nonSingapore).find((item) => item.mode.id === "advanced_packaging")],
+    ["Best non-Singapore sales office option", strategies(lens, nonSingapore).find((item) => item.mode.id === "sales_office")],
+    ["Best non-Singapore customer engineering support option", strategies(lens, nonSingapore).find((item) => item.mode.id === "customer_support_call_center")],
+    ["Best Fab 12i extension market", strategies(lens, nonSingapore).sort((a, b) => b.fab12i_extension_value - a.fab12i_extension_value)[0]],
+    ["Best long-term watchlist market", strategies(lens, nonSingapore).sort((a, b) => (b.complementarity_score + (b.country.time_to_market_score || 0) * 10) - (a.complementarity_score + (a.country.time_to_market_score || 0) * 10))[0]]
   ];
 
   document.getElementById("executiveCards").innerHTML = cards.map(([title, item]) => `
     <article class="executive-card">
       <span class="badge">${title}</span>
       <h3>${item.country.name} | ${item.mode.name}</h3>
-      <p><strong>${item.score}: ${item.label}</strong></p>
+      <p><strong>${state.candidateScope === "baseline_only" ? item.non_singapore_next_step_score : item.score}: ${item.label}</strong></p>
       <p>${item.explanation}</p>
+      ${item.country.id !== "singapore" ? `<p><strong>Baseline metrics:</strong> gap to Singapore ${item.singapore_baseline_gap}; complementarity ${item.complementarity_score}; Fab 12i extension value ${item.fab12i_extension_value}.</p>` : ""}
       ${freshnessBadge(item.country)}
       <div class="source-badges">${sourceBadges(item.country.source_ids)}</div>
     </article>
@@ -356,28 +557,177 @@ function renderExecutiveCards() {
 
 function renderMatrix() {
   const topKeys = new Set(strategies().slice(0, 3).map((item) => `${item.country.id}-${item.mode.id}`));
-  document.getElementById("matrixBody").innerHTML = state.countries.map((country) => {
+  const hideCheckbox = document.getElementById("hideSingaporeHeatmap");
+  const nonSingaporeCheckbox = document.getElementById("nonSingaporeOnlyHeatmap");
+  if (hideCheckbox) {
+    hideCheckbox.checked = state.hideSingaporeHeatmap;
+    hideCheckbox.onchange = () => {
+      state.hideSingaporeHeatmap = hideCheckbox.checked;
+      renderMatrix();
+    };
+  }
+  if (nonSingaporeCheckbox) {
+    nonSingaporeCheckbox.checked = state.nonSingaporeOnlyHeatmap;
+    nonSingaporeCheckbox.onchange = () => {
+      state.nonSingaporeOnlyHeatmap = nonSingaporeCheckbox.checked;
+      if (nonSingaporeCheckbox.checked) state.hideSingaporeHeatmap = true;
+      renderMatrix();
+    };
+  }
+  document.getElementById("matrixBody").innerHTML = matrixCountries().map((country) => {
     const cells = state.modes.map((mode) => {
       const score = strategyScore(country, mode);
+      const metrics = baselineMetrics(country, mode);
       return `
         <td class="heat-cell ${heatClass(score)} ${topKeys.has(`${country.id}-${mode.id}`) ? "top-strategy-cell" : ""}">
           <strong>${score}</strong>
           <span>${recommendationLabel(score)}</span>
           <small>${activeLens().name}</small>
+          ${country.id !== "singapore" ? `<small>Gap ${metrics.singapore_baseline_gap} | Ext ${metrics.fab12i_extension_value}</small>` : ""}
+          <button class="explain-btn" type="button" data-explain-country="${country.id}" data-explain-mode="${mode.id}" aria-label="Explain ${country.name} ${mode.name} score">Explain Score</button>
         </td>
       `;
     }).join("");
     return `<tr><th scope="row">${country.name}<br><small>${weightedScore(country)} lens score</small></th>${cells}</tr>`;
   }).join("");
+  const matrixNote = document.getElementById("matrixComparisonNote");
+  if (matrixNote) {
+    matrixNote.textContent = state.candidateScope === "include_singapore" && !state.hideSingaporeHeatmap && !state.nonSingaporeOnlyHeatmap
+      ? "Heatmap includes Singapore as a candidate using normal scoring."
+      : "Singapore Fab 12i remains the regional anchor; this heatmap compares next-step non-Singapore options and shows gap / extension signals where available.";
+  }
+
+  document.querySelectorAll("[data-explain-country]").forEach((button) => {
+    button.addEventListener("click", () => {
+      showScoreExplanation(button.dataset.explainCountry, button.dataset.explainMode);
+    });
+  });
+}
+
+function scoreBreakdown(country, mode, lens = activeLens()) {
+  const lensEntries = scoringFactorKeys.map((key) => [key, Number(lens.weights[key] || 0)]);
+  const positiveWeight = lensEntries.reduce((sum, [key, weight]) => {
+    if (key === "execution_risk_penalty") return sum;
+    return sum + Math.max(weight, 0);
+  }, 0);
+  const penaltyWeight = lensEntries.reduce((sum, [key, weight]) => {
+    if (key !== "execution_risk_penalty") return sum;
+    return sum + Math.abs(Math.min(weight, 0));
+  }, 0);
+  const modeCriteria = modeFitCriteria[mode.id] || {};
+  const positiveModeWeight = Object.values(modeCriteria).reduce((sum, weight) => sum + Math.max(weight, 0), 0);
+  const countryConfidence = sourceConfidence(country);
+
+  return scoringFactorKeys.map((key) => {
+    const raw = Number(country[key] || 0);
+    const weight = Number(lens.weights[key] || 0);
+    const modeAdjustment = Number(modeCriteria[key] || 0);
+    let weightedContribution = 0;
+    if (weight > 0 && positiveWeight) {
+      weightedContribution = (raw * weight) / (positiveWeight * 5) * 100;
+    }
+    if (weight < 0 && penaltyWeight) {
+      weightedContribution = -((raw * Math.abs(weight)) / (penaltyWeight * 5) * 22);
+    }
+
+    let modeContribution = 0;
+    if (modeAdjustment > 0 && positiveModeWeight) {
+      modeContribution = (raw * modeAdjustment) / (positiveModeWeight * 5) * 100;
+    }
+    if (modeAdjustment < 0) {
+      modeContribution = -(raw * Math.abs(modeAdjustment) * 4);
+    }
+
+    return {
+      key,
+      label: labelForKey(key),
+      raw,
+      weight,
+      weightedContribution,
+      modeAdjustment,
+      finalContribution: (weightedContribution * 0.56) + (modeContribution * 0.44),
+      confidence: countryConfidence
+    };
+  });
+}
+
+function sourceConfidence(item) {
+  if (item.confidence) return item.confidence;
+  const confidences = (item.source_ids || []).map((id) => sourceById(id)?.confidence).filter(Boolean);
+  return confidences.length ? [...new Set(confidences)].join(", ") : "not specified";
+}
+
+function showScoreExplanation(countryId, modeId) {
+  const country = state.countries.find((item) => item.id === countryId);
+  const mode = state.modes.find((item) => item.id === modeId);
+  const modal = document.getElementById("scoreModal");
+  if (!country || !mode || !modal) return;
+
+  const lens = activeLens();
+  const rows = scoreBreakdown(country, mode, lens);
+  document.getElementById("scoreModalTitle").textContent = `${country.name} + ${mode.name}`;
+  document.getElementById("scoreModalSummary").innerHTML = `
+    <strong>${strategyScore(country, mode, lens)}: ${recommendationLabel(strategyScore(country, mode, lens))}</strong>
+    under ${lens.name}. Country lens score ${weightedScore(country, lens)}; mode fit ${modeFit(country, mode.id)}.
+  `;
+  document.getElementById("scoreModalBody").innerHTML = `
+    <div class="table-wrap breakdown-wrap">
+      <table class="breakdown-table">
+        <thead>
+          <tr>
+            <th>Factor name</th>
+            <th>Raw score</th>
+            <th>Weight</th>
+            <th>Weighted contribution</th>
+            <th>Mode adjustment</th>
+            <th>Final contribution</th>
+            <th>Source confidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows.map((row) => `
+            <tr>
+              <td><strong>${row.label}</strong><br><small>${row.key}</small></td>
+              <td>${row.raw}/5</td>
+              <td>${formatScoreNumber(row.weight)}</td>
+              <td>${formatScoreNumber(row.weightedContribution)}</td>
+              <td>${formatScoreNumber(row.modeAdjustment)}</td>
+              <td>${formatScoreNumber(row.finalContribution)}</td>
+              <td>${row.confidence}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>
+    <p class="modal-note">Final contribution is directional and combines the normalized country lens contribution with the expansion-mode adjustment. The displayed final strategy score also applies mode/lens modifiers and recommended-mode bonus.</p>
+  `;
+  modal.hidden = false;
+  modal.querySelector(".score-modal-close").focus();
+}
+
+function formatScoreNumber(value) {
+  const rounded = Math.round(value * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+}
+
+function closeScoreExplanation() {
+  const modal = document.getElementById("scoreModal");
+  if (modal) modal.hidden = true;
 }
 
 function renderLensModel() {
-  document.getElementById("lensSelector").innerHTML = state.lenses.map((lens) => `
+  document.getElementById("lensSelector").innerHTML = `
+    ${state.lenses.map((lens) => `
     <button type="button" class="${lens.id === state.activeLens ? "active" : ""}" data-lens="${lens.id}" aria-label="Use ${lens.name} scoring lens">${lens.name}</button>
-  `).join("");
+    `).join("")}
+    <button type="button" class="${state.activeLens === "custom_weight_mode" ? "active" : ""}" data-lens="custom_weight_mode" aria-label="Use Custom Weight Mode scoring lens">Custom Weight Mode</button>
+  `;
 
   document.querySelectorAll("[data-lens]").forEach((button) => {
     button.addEventListener("click", () => {
+      if (button.dataset.lens !== "custom_weight_mode") {
+        state.lastPresetLens = button.dataset.lens;
+      }
       state.activeLens = button.dataset.lens;
       render();
     });
@@ -388,21 +738,121 @@ function renderLensModel() {
     <div class="formula-card">
       <h3>${lens.name}</h3>
       <p>${lens.description}</p>
-      <p><strong>Formula:</strong> UMC lens score + expansion-mode-specific fit + mode/lens modifier + recommended-mode bonus. Foundry, packaging, sales, and customer engineering support use different fit weights. Execution risk penalty reduces scores.</p>
-    </div>
-    ${Object.entries(lens.weights).map(([key, value]) => `
-      <div class="control compact-control">
-        <label><span>${labelForKey(key)}</span><span>${value}</span></label>
+      <p><strong>Formula:</strong> normalized country score from weighted 1-5 factors + expansion-mode-specific fit + mode/lens modifier + recommended-mode bonus. Foundry, packaging, sales, and customer engineering support use different fit weights. Execution risk penalty reduces scores.</p>
+      <div class="weight-actions">
+        <button type="button" id="resetWeights">Reset to Preset</button>
+        <button type="button" id="exportWeights">Export Current Weights</button>
       </div>
-    `).join("")}
+    </div>
+    ${state.activeLens === "custom_weight_mode" ? renderCustomWeightControls(lens.weights) : renderPresetWeightList(lens.weights)}
+    ${renderFactorDefinitions()}
   `;
 
-  document.getElementById("weightTotal").textContent = lens.name;
+  document.getElementById("weightTotal").textContent = state.activeLens === "custom_weight_mode"
+    ? `${positiveWeightTotal(lens.weights)} positive weight`
+    : lens.name;
+  bindWeightControls();
   renderRanking();
 }
 
+function renderPresetWeightList(weights) {
+  return Object.entries(weights).map(([key, value]) => `
+    <div class="control compact-control">
+      <label><span>${labelForKey(key)}</span><span>${value}</span></label>
+    </div>
+  `).join("");
+}
+
+function renderCustomWeightControls(weights) {
+  return `
+    <div class="custom-weight-grid">
+      ${scoringFactorKeys.map((key) => {
+        const displayValue = sliderValueForWeight(key, weights[key]);
+        const storedValue = key === "execution_risk_penalty" ? `-${displayValue}` : displayValue;
+        return `
+          <div class="control custom-control">
+            <label for="weight_${key}">
+              <span>${labelForKey(key)}</span>
+              <span id="value_${key}">${storedValue}</span>
+            </label>
+            <input id="weight_${key}" type="range" min="0" max="30" step="1" value="${displayValue}" data-custom-weight="${key}" aria-label="Weight for ${labelForKey(key)}">
+            <p>${factorDefinitions[key]}</p>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderFactorDefinitions() {
+  return `
+    <div class="factor-definitions">
+      <h3>Factor Definitions</h3>
+      <dl>
+        ${scoringFactorKeys.map((key) => `
+          <div>
+            <dt>${key}</dt>
+            <dd>${factorDefinitions[key]}</dd>
+          </div>
+        `).join("")}
+      </dl>
+    </div>
+  `;
+}
+
+function bindWeightControls() {
+  document.getElementById("resetWeights")?.addEventListener("click", () => {
+    state.customWeights = weightsFromLens(presetLensById());
+    if (state.activeLens === "custom_weight_mode") {
+      render();
+    }
+  });
+
+  document.getElementById("exportWeights")?.addEventListener("click", exportCurrentWeights);
+
+  document.querySelectorAll("[data-custom-weight]").forEach((slider) => {
+    slider.addEventListener("input", () => {
+      const key = slider.dataset.customWeight;
+      const value = Number(slider.value);
+      state.customWeights[key] = key === "execution_risk_penalty" ? -value : value;
+      const valueEl = document.getElementById(`value_${key}`);
+      if (valueEl) valueEl.textContent = key === "execution_risk_penalty" ? `-${value}` : value;
+      document.getElementById("weightTotal").textContent = `${positiveWeightTotal(state.customWeights)} positive weight`;
+      renderSummary();
+      renderSingaporeBaselineCard();
+      renderExecutiveCards();
+      renderMatrix();
+      renderRanking();
+      renderRecommendations();
+      renderDeepDive();
+      renderCountryCards();
+    });
+  });
+}
+
+function exportCurrentWeights() {
+  const lens = activeLens();
+  const payload = {
+    exported_at: new Date().toISOString(),
+    scoring_mode: lens.name,
+    lens_id: lens.id,
+    positive_weight_total: positiveWeightTotal(lens.weights),
+    weights: lens.weights,
+    note: "Raw factor scores are 1-5. Positive weights are normalized; execution_risk_penalty reduces the final score."
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `umc-current-weights-${lens.id}.json`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
 function renderRanking() {
-  const ranking = [...state.countries].sort((a, b) => weightedScore(b) - weightedScore(a));
+  const ranking = [...candidateCountries()].sort((a, b) => weightedScore(b) - weightedScore(a));
   const max = Math.max(...ranking.map((country) => weightedScore(country)), 1);
   document.getElementById("rankingList").innerHTML = `
     <table class="ranking-table">
@@ -415,11 +865,12 @@ function renderRanking() {
             <td>${index + 1}</td>
             <td><strong>${country.name}</strong><div class="rank-track" aria-hidden="true"><span style="width:${(score / max) * 100}%"></span></div></td>
             <td><strong>${score}</strong></td>
-            <td>${best.mode.name} (${best.score})</td>
+            <td>${best.mode.name} (${state.candidateScope === "baseline_only" ? best.non_singapore_next_step_score : best.score})</td>
           </tr>`;
         }).join("")}
       </tbody>
     </table>
+    <p class="comparison-note">${scopeNoteText()}</p>
   `;
 }
 
@@ -438,7 +889,7 @@ function renderDeepDive() {
   const country = state.countries.find((item) => item.id === state.selectedCountry) || state.countries[0];
   const policy = state.policies.find((item) => item.country === country.name);
   const clusters = state.clusters.filter((item) => item.country === country.name);
-  const best = strategies().find((item) => item.country.id === country.id);
+  const best = strategies(activeLens(), [country])[0];
 
   document.getElementById("countryDetail").innerHTML = `
     <div class="detail-grid">
@@ -468,7 +919,8 @@ function renderDeepDive() {
 function renderCountryCards() {
   document.getElementById("countryCards").innerHTML = state.countries.map((country) => {
     const cases = state.cases.filter((item) => item.country === country.name);
-    const bestModes = strategies().filter((item) => item.country.id === country.id).slice(0, 2).map((item) => item.mode.name).join(", ");
+    const countryStrategies = strategies(activeLens(), [country]);
+    const bestModes = countryStrategies.slice(0, 2).map((item) => item.mode.name).join(", ");
     return `
       <article class="country-card">
         <button class="country-card-toggle" type="button" aria-expanded="false" aria-controls="${country.id}_body">
@@ -476,7 +928,7 @@ function renderCountryCards() {
         </button>
         <div id="${country.id}_body" class="country-card-body">
           <p><strong>Best modes:</strong> ${bestModes}</p>
-          <p><strong>UMC strategy:</strong> ${strategies().find((item) => item.country.id === country.id).explanation}</p>
+          <p><strong>UMC strategy:</strong> ${countryStrategies[0].explanation}</p>
           ${freshnessBadge(country)}
           ${countrySection("UMC-specific scores", `Fab 12i synergy ${country.fab12i_synergy_score}/5; global layout fit ${country.umc_global_layout_fit_score}/5; ecosystem adjacency ${country.ecosystem_adjacency_score}/5; customer coverage ${country.customer_coverage_score}/5; partner potential ${country.partner_potential_score}/5.`)}
           ${countrySection("Risks", country.risks.join(" "))}
@@ -637,14 +1089,25 @@ function renderCases() {
 }
 
 function renderRecommendations() {
-  document.getElementById("recommendationCards").innerHTML = strategies().slice(0, 3).map((item, index) => `
+  const nonSingapore = nonSingaporeCountries();
+  const recommendationSet = state.candidateScope === "include_singapore"
+    ? strategies().slice(0, 3).map((item, index) => [`Top ${index + 1}`, item])
+    : [
+      ["Best non-Singapore advanced packaging option", strategies(activeLens(), nonSingapore).find((item) => item.mode.id === "advanced_packaging")],
+      ["Best non-Singapore sales office option", strategies(activeLens(), nonSingapore).find((item) => item.mode.id === "sales_office")],
+      ["Best non-Singapore customer engineering support option", strategies(activeLens(), nonSingapore).find((item) => item.mode.id === "customer_support_call_center")],
+      ["Best Fab 12i extension market", strategies(activeLens(), nonSingapore).sort((a, b) => b.fab12i_extension_value - a.fab12i_extension_value)[0]],
+      ["Best long-term watchlist market", strategies(activeLens(), nonSingapore).sort((a, b) => (b.complementarity_score + (b.country.time_to_market_score || 0) * 10) - (a.complementarity_score + (a.country.time_to_market_score || 0) * 10))[0]]
+    ];
+  document.getElementById("recommendationCards").innerHTML = recommendationSet.map(([title, item]) => `
     <article class="recommendation-card top-strategy">
-      <span class="badge">Top ${index + 1}</span>
+      <span class="badge">${title}</span>
       <h3>${item.country.name} + ${item.mode.name}</h3>
-      <p><strong>${item.score}: ${item.label}</strong></p>
+      <p><strong>${state.candidateScope === "baseline_only" ? item.non_singapore_next_step_score : item.score}: ${item.label}</strong></p>
       <p>${item.explanation}</p>
       <p><strong>UMC strategic need:</strong> ${modeNeedMap[item.mode.id]}</p>
       <p><strong>Score inputs:</strong> country attractiveness ${item.country.country_attractiveness_score}/5; mode fit ${item.country.expansion_mode_fit_score}/5; Fab 12i synergy ${item.country.fab12i_synergy_score}/5; global layout fit ${item.country.umc_global_layout_fit_score}/5; risk penalty ${item.country.execution_risk_penalty}/5.</p>
+      ${item.country.id !== "singapore" ? `<p><strong>Singapore baseline comparison:</strong> singapore_baseline_gap ${item.singapore_baseline_gap}; complementarity_score ${item.complementarity_score}; fab12i_extension_value ${item.fab12i_extension_value}; non_singapore_next_step_score ${item.non_singapore_next_step_score}.</p>` : ""}
       ${freshnessBadge(item.country)}
     </article>
   `).join("");
@@ -659,6 +1122,18 @@ function renderSources() {
     </article>
   `).join("");
 }
+
+document.addEventListener("click", (event) => {
+  if (event.target.matches("[data-close-score-modal]") || event.target.id === "scoreModal") {
+    closeScoreExplanation();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeScoreExplanation();
+  }
+});
 
 loadData().catch((error) => {
   document.body.innerHTML = `

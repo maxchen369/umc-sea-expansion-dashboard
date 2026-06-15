@@ -3,5 +3,10 @@
     "date": "2026-06-13",
     "change": "Converted dashboard into UMC-specific strategic expansion model with Fab 12i synergy, ecosystem filters, scoring lenses, and data freshness badges.",
     "author": "Codex"
+  },
+  {
+    "date": "2026-06-15",
+    "change": "Expanded ecosystem data from RESEARCH_ECOSYSTEM_EXPANSION_2026.md; replaced placeholder ecosystem records and sources with source-backed entities across all six Southeast Asian countries; added Fab 12i next-step relevance fields.",
+    "author": "Codex"
   }
 ]

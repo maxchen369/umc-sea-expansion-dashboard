@@ -19,6 +19,7 @@
         <a href="#summary">Summary</a>
         <a href="#matrix">Matrix</a>
         <a href="#model">Lenses</a>
+        <a href="#score-transparency">Transparency</a>
         <a href="#deep-dive">Deep Dive</a>
         <a href="#ecosystem">Ecosystem</a>
         <a href="#recommendation">Recommendation</a>
@@ -40,6 +41,17 @@
           <div id="topRecommendation" class="hero-score">Loading</div>
           <p id="topRecommendationText" class="muted">Loading model output...</p>
         </div>
+      </section>
+
+      <section class="section scope-section" aria-labelledby="scopeHeading">
+        <div class="section-heading">
+          <p class="eyebrow">Singapore baseline setting</p>
+          <h2 id="scopeHeading">Choose how Singapore is treated</h2>
+          <p>Singapore is treated as UMC's existing regional anchor, not always as a new expansion candidate. This mode helps evaluate where UMC should go next after Fab 12i.</p>
+        </div>
+        <div id="candidateScopeControls" class="scope-controls" role="radiogroup" aria-label="Singapore candidate treatment"></div>
+        <div id="scopeNote" class="comparison-note" aria-live="polite"></div>
+        <div id="singaporeBaselineCard" class="baseline-card"></div>
       </section>
 
       <section class="section kpi-grid" aria-label="Executive summary metrics">
@@ -80,6 +92,10 @@
           <h2>Recommendation score heatmap</h2>
           <p>Each cell recalculates a country x expansion mode strategy score from the current slider weights.</p>
         </div>
+        <div class="heatmap-options" aria-label="Heatmap Singapore filters">
+          <label><input id="hideSingaporeHeatmap" type="checkbox"> Hide Singapore</label>
+          <label><input id="nonSingaporeOnlyHeatmap" type="checkbox"> Show only non-Singapore options</label>
+        </div>
         <div class="table-wrap">
           <table class="matrix-table">
             <thead>
@@ -94,6 +110,7 @@
             <tbody id="matrixBody"></tbody>
           </table>
         </div>
+        <p id="matrixComparisonNote" class="comparison-note"></p>
       </section>
 
       <section id="model" class="section model-section">
@@ -114,6 +131,40 @@
             </div>
             <div id="rankingList" class="ranking-list"></div>
           </div>
+        </div>
+      </section>
+
+      <section id="score-transparency" class="section transparency-section">
+        <div class="section-heading">
+          <p class="eyebrow">Score transparency</p>
+          <h2>How scores are calculated</h2>
+          <p>Use Custom Weight Mode to change assumptions, then open any heatmap cell with Explain Score to audit the contribution by factor.</p>
+        </div>
+        <div class="methodology-grid">
+          <article>
+            <h3>Raw inputs</h3>
+            <p>Country and UMC-specific factor scores use a 1-5 scale before conversion into a 0-100 strategy score.</p>
+          </article>
+          <article>
+            <h3>Adjustable weights</h3>
+            <p>Preset lenses remain available. Custom Weight Mode exposes every scoring factor with sliders from 0 to 30.</p>
+          </article>
+          <article>
+            <h3>Normalization</h3>
+            <p>Positive weights are normalized automatically so high total weight does not inflate final scores.</p>
+          </article>
+          <article>
+            <h3>Execution risk</h3>
+            <p>Execution risk is modeled as a negative adjustment. Higher execution risk reduces the country lens score and mode fit.</p>
+          </article>
+          <article>
+            <h3>Mode adjustments</h3>
+            <p>Each expansion mode applies different adjustments because foundry, advanced packaging, sales office, and customer engineering support have different requirements.</p>
+          </article>
+          <article>
+            <h3>Audit trail</h3>
+            <p>Explain Score shows raw score, selected weight, weighted contribution, mode adjustment, final contribution, and source confidence.</p>
+          </article>
         </div>
       </section>
 
@@ -210,6 +261,18 @@
             <h3>Data freshness</h3>
             <p>Cards show published date, retrieved date, data year, and source confidence. Placeholder sources should be replaced before formal use.</p>
           </article>
+          <article>
+            <h3>Singapore candidate view</h3>
+            <p>Include Singapore as candidate ranks Fab 12i against all other countries using normal scoring.</p>
+          </article>
+          <article>
+            <h3>Singapore baseline view</h3>
+            <p>Use Singapore as baseline only keeps Fab 12i separate and calculates non-Singapore gap, complementarity, and extension value.</p>
+          </article>
+          <article>
+            <h3>Non-Singapore next step</h3>
+            <p>Exclude Singapore from candidate ranking compares only next-step markets while preserving Singapore as the regional anchor context.</p>
+          </article>
         </div>
       </section>
     </main>
@@ -217,6 +280,20 @@
     <footer class="footer">
       <p>Static prototype for strategic discussion. Update data files before using for investment committee materials.</p>
     </footer>
+
+    <div id="scoreModal" class="modal-backdrop" hidden>
+      <section class="score-modal" role="dialog" aria-modal="true" aria-labelledby="scoreModalTitle">
+        <div class="score-modal-header">
+          <div>
+            <p class="eyebrow">Explain Score</p>
+            <h2 id="scoreModalTitle">Score breakdown</h2>
+            <p id="scoreModalSummary" class="muted"></p>
+          </div>
+          <button class="score-modal-close" type="button" data-close-score-modal aria-label="Close score explanation">Close</button>
+        </div>
+        <div id="scoreModalBody"></div>
+      </section>
+    </div>
 
     <script src="app.js"></script>
   </body>

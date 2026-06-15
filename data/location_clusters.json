@@ -5,65 +5,106 @@
     "location": "Pasir Ris Wafer Fab Park",
     "ecosystem_layer": "wafer fabrication",
     "value_chain_position": "UMC Fab 12i manufacturing anchor",
-    "best_fit_modes": ["foundry", "sales_office", "customer_support_call_center"],
-    "relevant_expansion_modes": ["foundry", "sales_office", "customer_support_call_center"],
+    "best_fit_modes": [
+      "foundry",
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "relevant_expansion_modes": [
+      "foundry",
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
     "umc_angle": "Fab 12i anchor, manufacturing assurance, and customer engineering interface.",
     "relevance_to_umc": "Highest Fab 12i synergy location for UMC regional manufacturing assurance and customer support linkage.",
+    "fab12i_next_step_relevance": "Fab 12i anchor, manufacturing assurance, and customer engineering interface.",
     "sales_relevance_score": 5,
     "customer_support_relevance_score": 5,
     "foundry_relevance_score": 5,
     "advanced_packaging_relevance_score": 3,
     "fab12i_synergy_score": 5,
-    "source_ids": ["src_umc_singapore_expansion", "src_edb_semiconductors"],
+    "source_ids": [
+      "src_umc_singapore_expansion",
+      "src_edb_semiconductors"
+    ],
     "published_date": "2025-01-01",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2025,
     "confidence": "High",
     "source_type": "company_official"
   },
   {
     "country": "Singapore",
-    "cluster": "North Coast Wafer Fab Park",
-    "location": "North Coast Wafer Fab Park",
+    "cluster": "Woodlands / North Coast manufacturing corridor",
+    "location": "Woodlands / North Coast Wafer Fab Park",
     "ecosystem_layer": "wafer fabrication",
-    "value_chain_position": "large memory fab and utility-demand cluster",
-    "best_fit_modes": ["foundry"],
-    "relevant_expansion_modes": ["foundry", "customer_support_call_center"],
-    "umc_angle": "Evidence of Singapore fab scale and power / utilities constraints.",
-    "relevance_to_umc": "Useful for adjusting foundry feasibility, ESG, power, and infrastructure risk assumptions for Singapore.",
-    "sales_relevance_score": 2,
-    "customer_support_relevance_score": 2,
-    "foundry_relevance_score": 4,
-    "advanced_packaging_relevance_score": 2,
+    "value_chain_position": "peer foundry and memory fab corridor",
+    "best_fit_modes": [
+      "foundry",
+      "advanced_packaging",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "relevant_expansion_modes": [
+      "foundry",
+      "advanced_packaging",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "umc_angle": "Peer fab scale plus power and utility constraint signal.",
+    "relevance_to_umc": "Useful for adjusting foundry feasibility, ESG, power, and infrastructure assumptions for Singapore.",
+    "fab12i_next_step_relevance": "Peer fab scale plus power and utility constraint signal.",
+    "sales_relevance_score": 3,
+    "customer_support_relevance_score": 4,
+    "foundry_relevance_score": 5,
+    "advanced_packaging_relevance_score": 4,
     "fab12i_synergy_score": 4,
-    "source_ids": ["src_micron_singapore_fab10b", "src_micron_singapore_power_constraints"],
+    "source_ids": [
+      "src_gf_singapore",
+      "src_micron_singapore_fab10b"
+    ],
     "published_date": "2026-01-28",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2026,
     "confidence": "Medium",
     "source_type": "credible_news"
   },
   {
     "country": "Singapore",
-    "cluster": "Woodlands",
-    "location": "Woodlands",
-    "ecosystem_layer": "wafer fabrication",
-    "value_chain_position": "peer foundry manufacturing cluster",
-    "best_fit_modes": ["foundry", "sales_office"],
-    "relevant_expansion_modes": ["foundry", "sales_office"],
-    "umc_angle": "Peer foundry execution proof point.",
-    "relevance_to_umc": "Supports Singapore foundry viability where reliability and customer assurance justify premium cost.",
+    "cluster": "A*STAR / specialty R&D ecosystem",
+    "location": "Singapore",
+    "ecosystem_layer": "IC design",
+    "value_chain_position": "public R&D and specialty semiconductor ecosystem",
+    "best_fit_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "advanced_packaging",
+      "foundry"
+    ],
+    "relevant_expansion_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "advanced_packaging",
+      "foundry"
+    ],
+    "umc_angle": "Specialty R&D and customer co-development support around Fab 12i.",
+    "relevance_to_umc": "Supports technical collaboration, design support, and advanced packaging exploration.",
+    "fab12i_next_step_relevance": "Specialty R&D and customer co-development support around Fab 12i.",
     "sales_relevance_score": 4,
-    "customer_support_relevance_score": 3,
-    "foundry_relevance_score": 5,
-    "advanced_packaging_relevance_score": 2,
+    "customer_support_relevance_score": 5,
+    "foundry_relevance_score": 4,
+    "advanced_packaging_relevance_score": 4,
     "fab12i_synergy_score": 4,
-    "source_ids": ["src_gf_singapore"],
-    "published_date": "2023-09-12",
-    "retrieved_date": "2026-06-14",
-    "data_year": 2023,
+    "source_ids": [
+      "src_astar_ime"
+    ],
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-15",
+    "data_year": 2025,
     "confidence": "High",
-    "source_type": "company_official"
+    "source_type": "government"
   },
   {
     "country": "Malaysia",
@@ -71,18 +112,34 @@
     "location": "Penang",
     "ecosystem_layer": "OSAT",
     "value_chain_position": "OSAT, packaging, testing, equipment, and IC design talent cluster",
-    "best_fit_modes": ["advanced_packaging", "customer_support_call_center", "sales_office"],
-    "relevant_expansion_modes": ["advanced_packaging", "customer_support_call_center", "sales_office"],
-    "umc_angle": "OSAT, packaging, testing, supplier, engineering, and customer support ecosystem.",
+    "best_fit_modes": [
+      "advanced_packaging",
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office"
+    ],
+    "relevant_expansion_modes": [
+      "advanced_packaging",
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office"
+    ],
+    "umc_angle": "Primary non-Singapore OSAT, packaging, testing, supplier, engineering, and customer-support corridor.",
     "relevance_to_umc": "Primary non-Singapore cluster for OSAT partnership, advanced packaging adjacency, and customer engineering support.",
+    "fab12i_next_step_relevance": "Primary non-Singapore OSAT, packaging, testing, supplier, engineering, and customer-support corridor.",
     "sales_relevance_score": 4,
     "customer_support_relevance_score": 5,
     "foundry_relevance_score": 2,
     "advanced_packaging_relevance_score": 5,
     "fab12i_synergy_score": 4,
-    "source_ids": ["src_malaysia_nss", "src_penang_design_talent", "src_penang_osat_ate"],
+    "source_ids": [
+      "src_malaysia_nss",
+      "src_ase_global",
+      "src_oppstar",
+      "src_penang_design_talent"
+    ],
     "published_date": "2025-01-01",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2025,
     "confidence": "Medium",
     "source_type": "government"
@@ -93,108 +150,323 @@
     "location": "Kulim",
     "ecosystem_layer": "wafer fabrication",
     "value_chain_position": "power semiconductor and manufacturing-adjacent cluster",
-    "best_fit_modes": ["foundry", "advanced_packaging"],
-    "relevant_expansion_modes": ["foundry", "advanced_packaging", "sales_office"],
-    "umc_angle": "Manufacturing-adjacent option requiring utilities and anchor-customer diligence.",
+    "best_fit_modes": [
+      "foundry",
+      "advanced_packaging",
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "relevant_expansion_modes": [
+      "foundry",
+      "advanced_packaging",
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "umc_angle": "Power semiconductor and specialty customer adjacency requiring utilities and anchor-customer diligence.",
     "relevance_to_umc": "Relevant to UMC specialty, power, automotive, and industrial customer adjacency.",
+    "fab12i_next_step_relevance": "Power semiconductor and specialty customer adjacency requiring utilities and anchor-customer diligence.",
     "sales_relevance_score": 4,
-    "customer_support_relevance_score": 3,
+    "customer_support_relevance_score": 4,
     "foundry_relevance_score": 4,
     "advanced_packaging_relevance_score": 3,
     "fab12i_synergy_score": 3,
-    "source_ids": ["src_infineon_kulim", "src_malaysia_nss"],
+    "source_ids": [
+      "src_infineon_kulim",
+      "src_malaysia_nss",
+      "src_intel_malaysia"
+    ],
     "published_date": "2024-08-08",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2024,
     "confidence": "Medium",
     "source_type": "company_official"
   },
   {
     "country": "Vietnam",
-    "cluster": "Bac Ninh",
-    "location": "Bac Ninh",
+    "cluster": "Bac Ninh / Bac Giang",
+    "location": "Bac Ninh / Bac Giang",
     "ecosystem_layer": "advanced packaging",
-    "value_chain_position": "advanced SiP assembly and test cluster",
-    "best_fit_modes": ["advanced_packaging", "customer_support_call_center"],
-    "relevant_expansion_modes": ["advanced_packaging", "customer_support_call_center"],
-    "umc_angle": "Emerging SiP, assembly, and test adjacency.",
+    "value_chain_position": "advanced SiP, assembly, packaging, and test corridor",
+    "best_fit_modes": [
+      "advanced_packaging",
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office"
+    ],
+    "relevant_expansion_modes": [
+      "advanced_packaging",
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office"
+    ],
+    "umc_angle": "Emerging SiP, assembly, and test adjacency for future Fab 12i customer flows.",
     "relevance_to_umc": "Supports Vietnam as future back-end partnership and customer support adjacency market.",
+    "fab12i_next_step_relevance": "Emerging SiP, assembly, and test adjacency for future Fab 12i customer flows.",
     "sales_relevance_score": 3,
     "customer_support_relevance_score": 4,
     "foundry_relevance_score": 1,
     "advanced_packaging_relevance_score": 4,
     "fab12i_synergy_score": 3,
-    "source_ids": ["src_amkor_vietnam"],
-    "published_date": "2023-10-11",
-    "retrieved_date": "2026-06-14",
-    "data_year": 2023,
-    "confidence": "High",
+    "source_ids": [
+      "src_amkor_vietnam",
+      "src_hana_micron",
+      "src_samsung_vietnam"
+    ],
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-15",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_type": "company_official"
+  },
+  {
+    "country": "Vietnam",
+    "cluster": "Saigon Hi-Tech Park",
+    "location": "Ho Chi Minh City",
+    "ecosystem_layer": "testing",
+    "value_chain_position": "IDM assembly/test and electronics technology park",
+    "best_fit_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office",
+      "advanced_packaging"
+    ],
+    "relevant_expansion_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office",
+      "advanced_packaging"
+    ],
+    "umc_angle": "Back-end operations and technical workforce signal for southern Vietnam.",
+    "relevance_to_umc": "Supports Vietnam customer engineering and support-hub monitoring.",
+    "fab12i_next_step_relevance": "Back-end operations and technical workforce signal for southern Vietnam.",
+    "sales_relevance_score": 3,
+    "customer_support_relevance_score": 4,
+    "foundry_relevance_score": 1,
+    "advanced_packaging_relevance_score": 3,
+    "fab12i_synergy_score": 2,
+    "source_ids": [
+      "src_intel_vietnam"
+    ],
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-15",
+    "data_year": 2025,
+    "confidence": "Medium",
     "source_type": "company_official"
   },
   {
     "country": "Thailand",
     "cluster": "Eastern Economic Corridor",
-    "location": "Eastern Economic Corridor",
+    "location": "Chonburi / Rayong / Chachoengsao",
     "ecosystem_layer": "end customers",
-    "value_chain_position": "automotive, industrial electronics, PCB, and EMS demand cluster",
-    "best_fit_modes": ["sales_office", "customer_support_call_center"],
-    "relevant_expansion_modes": ["sales_office", "customer_support_call_center"],
+    "value_chain_position": "automotive, industrial electronics, logistics, and demand corridor",
+    "best_fit_modes": [
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
     "umc_angle": "Automotive, industrial, power, and connectivity customer coverage.",
-    "relevance_to_umc": "Low-confidence placeholder pending source-specific BOI/EEC verification.",
-    "sales_relevance_score": 4,
+    "relevance_to_umc": "Demand-side coverage cluster for UMC mature-node customer support from Singapore.",
+    "fab12i_next_step_relevance": "Automotive, industrial, power, and connectivity customer coverage.",
+    "sales_relevance_score": 5,
     "customer_support_relevance_score": 4,
     "foundry_relevance_score": 1,
     "advanced_packaging_relevance_score": 2,
     "fab12i_synergy_score": 2,
-    "source_ids": ["src_thailand_boi_placeholder"],
+    "source_ids": [
+      "src_thailand_eec",
+      "src_thailand_boi"
+    ],
     "published_date": "2025-01-01",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2025,
-    "confidence": "Low",
-    "source_type": "placeholder"
+    "confidence": "Medium",
+    "source_type": "government"
+  },
+  {
+    "country": "Thailand",
+    "cluster": "Ayutthaya / Chonburi semiconductor test and electronics",
+    "location": "Ayutthaya / Chonburi",
+    "ecosystem_layer": "testing",
+    "value_chain_position": "assembly, test, analog, and electronics manufacturing cluster",
+    "best_fit_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "advanced_packaging",
+      "sales_office"
+    ],
+    "relevant_expansion_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "advanced_packaging",
+      "sales_office"
+    ],
+    "umc_angle": "Back-end/test and industrial electronics support node for Fab 12i customers.",
+    "relevance_to_umc": "Supports Thailand as customer engineering and back-end watchlist.",
+    "fab12i_next_step_relevance": "Back-end/test and industrial electronics support node for Fab 12i customers.",
+    "sales_relevance_score": 4,
+    "customer_support_relevance_score": 4,
+    "foundry_relevance_score": 1,
+    "advanced_packaging_relevance_score": 3,
+    "fab12i_synergy_score": 2,
+    "source_ids": [
+      "src_analog_devices",
+      "src_stars_microelectronics",
+      "src_utac_group"
+    ],
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-15",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_type": "company_official"
   },
   {
     "country": "Philippines",
-    "cluster": "CALABARZON / Clark / Metro Manila / Cebu",
-    "location": "CALABARZON / Clark / Metro Manila / Cebu",
-    "ecosystem_layer": "customer engineering support",
-    "value_chain_position": "technical support, account operations, assembly, and test",
-    "best_fit_modes": ["customer_support_call_center", "advanced_packaging"],
-    "relevant_expansion_modes": ["customer_support_call_center", "advanced_packaging"],
-    "umc_angle": "Technical support, account operations, assembly/test adjacency.",
+    "cluster": "CALABARZON / Clark / Baguio",
+    "location": "CALABARZON / Clark / Baguio",
+    "ecosystem_layer": "testing",
+    "value_chain_position": "semiconductor assembly/test, technical support, and logistics corridor",
+    "best_fit_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "advanced_packaging",
+      "sales_office"
+    ],
+    "relevant_expansion_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "advanced_packaging",
+      "sales_office"
+    ],
+    "umc_angle": "Technical support, account operations, assembly/test adjacency for Fab 12i customer coverage.",
     "relevance_to_umc": "Best fit for B2B customer engineering support rather than front-end foundry.",
-    "sales_relevance_score": 3,
+    "fab12i_next_step_relevance": "Technical support, account operations, assembly/test adjacency for Fab 12i customer coverage.",
+    "sales_relevance_score": 4,
     "customer_support_relevance_score": 5,
     "foundry_relevance_score": 1,
     "advanced_packaging_relevance_score": 3,
     "fab12i_synergy_score": 2,
-    "source_ids": ["src_oecd_philippines"],
+    "source_ids": [
+      "src_oecd_philippines",
+      "src_ti_philippines",
+      "src_peza_bcda"
+    ],
     "published_date": "2024-12-09",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2024,
     "confidence": "High",
     "source_type": "industry_report"
   },
   {
+    "country": "Philippines",
+    "cluster": "Cavite / Laguna power and EMS corridor",
+    "location": "Cavite / Laguna",
+    "ecosystem_layer": "EMS",
+    "value_chain_position": "analog test, power semiconductor assembly, and EMS corridor",
+    "best_fit_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office",
+      "advanced_packaging"
+    ],
+    "relevant_expansion_modes": [
+      "customer_engineering_support",
+      "customer_support_call_center",
+      "sales_office",
+      "advanced_packaging"
+    ],
+    "umc_angle": "Power, analog, and EMS support node for quality and logistics coordination.",
+    "relevance_to_umc": "Supports UMC support hub and account operations options.",
+    "fab12i_next_step_relevance": "Power, analog, and EMS support node for quality and logistics coordination.",
+    "sales_relevance_score": 4,
+    "customer_support_relevance_score": 5,
+    "foundry_relevance_score": 1,
+    "advanced_packaging_relevance_score": 3,
+    "fab12i_synergy_score": 2,
+    "source_ids": [
+      "src_analog_devices",
+      "src_imi_philippines"
+    ],
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-15",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_type": "company_official"
+  },
+  {
     "country": "Indonesia",
-    "cluster": "Jakarta / Batam / West Java / Central Java",
-    "location": "Jakarta / Batam / West Java / Central Java",
+    "cluster": "Batam",
+    "location": "Batam",
+    "ecosystem_layer": "logistics",
+    "value_chain_position": "Singapore-adjacent electronics manufacturing, back-end, and logistics corridor",
+    "best_fit_modes": [
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "umc_angle": "Low-cost support/logistics adjacency around Fab 12i; not a foundry base.",
+    "relevance_to_umc": "Supports support/logistics watchlist near Singapore.",
+    "fab12i_next_step_relevance": "Low-cost support/logistics adjacency around Fab 12i; not a foundry base.",
+    "sales_relevance_score": 4,
+    "customer_support_relevance_score": 4,
+    "foundry_relevance_score": 1,
+    "advanced_packaging_relevance_score": 1,
+    "fab12i_synergy_score": 3,
+    "source_ids": [
+      "src_bp_batam",
+      "src_sat_nusapersada",
+      "src_infineon_indonesia",
+      "src_batamindo"
+    ],
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-15",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_type": "government"
+  },
+  {
+    "country": "Indonesia",
+    "cluster": "Jakarta / West Java automotive demand",
+    "location": "Jakarta / West Java / Central Java",
     "ecosystem_layer": "end customers",
-    "value_chain_position": "long-term automotive, consumer, industrial, EMS, and logistics option",
-    "best_fit_modes": ["sales_office", "customer_support_call_center"],
-    "relevant_expansion_modes": ["sales_office", "customer_support_call_center"],
-    "umc_angle": "Long-term demand monitoring and market coverage.",
-    "relevance_to_umc": "Low-confidence placeholder; current evidence supports watchlist market development rather than semiconductor manufacturing.",
+    "value_chain_position": "EV, automotive, consumer electronics, and industrial demand corridor",
+    "best_fit_modes": [
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_support",
+      "customer_support_call_center"
+    ],
+    "umc_angle": "Long-term demand monitoring and market coverage, not capital-intensive manufacturing.",
+    "relevance_to_umc": "Demand-side coverage option for automotive, power, consumer, and industrial customers.",
+    "fab12i_next_step_relevance": "Long-term demand monitoring and market coverage, not capital-intensive manufacturing.",
     "sales_relevance_score": 4,
     "customer_support_relevance_score": 3,
     "foundry_relevance_score": 1,
     "advanced_packaging_relevance_score": 1,
     "fab12i_synergy_score": 1,
-    "source_ids": ["src_indonesia_placeholder"],
+    "source_ids": [
+      "src_invest_indonesia",
+      "src_danantara"
+    ],
     "published_date": "2025-01-01",
-    "retrieved_date": "2026-06-14",
+    "retrieved_date": "2026-06-15",
     "data_year": 2025,
-    "confidence": "Low",
-    "source_type": "placeholder"
+    "confidence": "Medium",
+    "source_type": "government"
   }
 ]
