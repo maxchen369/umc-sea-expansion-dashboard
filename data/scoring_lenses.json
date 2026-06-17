@@ -35,8 +35,8 @@
   },
   {
     "id": "advanced_packaging_ecosystem",
-    "name": "Advanced Packaging Ecosystem",
-    "description": "Prioritizes OSAT, testing, substrate and equipment adjacency, logistics, customer demand, partnership potential, and proximity to UMC wafer output.",
+    "name": "Packaging / OSAT Ecosystem",
+    "description": "Prioritizes OSAT, packaging, assembly, testing, supplier adjacency, logistics, customer demand, partnership potential, and proximity to UMC wafer output.",
     "weights": {
       "ecosystem_adjacency_score": 24,
       "partner_potential_score": 20,

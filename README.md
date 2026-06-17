@@ -10,7 +10,8 @@ The model now centers on:
 - Communication, consumer, automotive, IoT, display, power, and connectivity customer coverage
 - Upstream and downstream semiconductor ecosystem adjacency
 - Sales office and B2B customer engineering support needs
-- Advanced packaging, OSAT, assembly, and test partnerships
+- Packaging / OSAT partnership options before any greenfield back-end investment
+- Stage 0 diligence questions for ROIC, capex, customer validation, partner validation, incentives, utilities, and talent
 
 The app uses only HTML, CSS, and vanilla JavaScript. There is no backend, build step, package manager, or external library.
 
@@ -22,15 +23,12 @@ styles.css
 app.js
 data/countries.json
 data/expansion_modes.json
-data/case_studies.json
-data/sources.json
-data/ecosystem_entities.json
-data/customer_segments.json
-data/policies.json
-data/location_clusters.json
 data/scoring_lenses.json
-data/update_log.json
+data/ecosystem_cases.json
+data/sources.json
+data/decision_readiness.json
 README.md
+CHANGELOG.md
 ```
 
 ## Run Locally
@@ -62,19 +60,16 @@ All paths are relative, so the app can run from GitHub Pages without configurati
 ## Update JSON Data
 
 - `data/countries.json`: country scores, UMC-specific scores, risks, source IDs, and data freshness.
-- `data/case_studies.json`: peer cases with ecosystem layer, value-chain position, UMC relevance, source IDs, dates, and confidence.
-- `data/ecosystem_entities.json`: ecosystem map entries for filters.
-- `data/customer_segments.json`: UMC-relevant customer segments and technology fit.
-- `data/policies.json`: policy summaries and UMC implications.
-- `data/location_clusters.json`: location-level expansion fit.
+- `data/expansion_modes.json`: four practical expansion modes used by the screening model.
 - `data/scoring_lenses.json`: lens-specific weights.
-- `data/sources.json`: source metadata. Replace placeholder URLs before formal use.
-- `data/update_log.json`: model update notes.
+- `data/ecosystem_cases.json`: merged ecosystem evidence, comparable cases, policy anchors, customer clusters, and partner candidates.
+- `data/decision_readiness.json`: decision readiness labels, unvalidated diligence fields, and next diligence questions.
+- `data/sources.json`: source metadata. Replace low-confidence items before formal investment committee use.
 
 ## Methodology Notes
 
-Scores are preliminary strategic estimates, not investment advice. The model is UMC-specific and should not be reused as a generic semiconductor country ranking.
+Scores are preliminary strategic estimates, not investment advice. The dashboard is a Stage 0 strategic screening tool and should not be reused as a generic semiconductor country ranking.
 
-Foundry, advanced packaging, sales office, and customer engineering support should not use the same weights. Each has different capex intensity, ecosystem requirements, risk profile, and time-to-market logic.
+Foundry / manufacturing expansion, packaging / OSAT partnership, sales office, and customer engineering hub should not use the same decision logic. Each has different capex intensity, ecosystem requirements, risk profile, and time-to-market logic.
 
 Data freshness badges show published date, retrieved date, data year, and source confidence for cards that rely on structured data.

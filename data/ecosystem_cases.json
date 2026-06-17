@@ -1,0 +1,833 @@
+[
+  {
+    "id": "umc_fab12i",
+    "name": "UMC Fab 12i",
+    "country": "Singapore",
+    "location": "Pasir Ris Wafer Fab Park, Singapore",
+    "category": "wafer_manufacturing",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "front-end foundry manufacturing anchor",
+    "relevance_to_umc": "Direct UMC regional manufacturing anchor for 22/28nm and specialty technology strategy.",
+    "relevant_expansion_modes": [
+      "foundry_manufacturing_expansion",
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Baseline asset around which all Southeast Asia sales, support, back-end adjacency, and partner options should be evaluated.",
+    "data_year": 2022,
+    "confidence": "High",
+    "source_ids": [
+      "src_umc_singapore_expansion"
+    ]
+  },
+  {
+    "id": "singapore_edb_semiconductor_platform",
+    "name": "Singapore EDB semiconductor industry platform",
+    "country": "Singapore",
+    "location": "Singapore",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "national investment promotion, ecosystem coordination, and industry development",
+    "relevance_to_umc": "Supports Singapore as a stable, institutionally backed regional anchor for manufacturing and customer assurance.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "foundry_manufacturing_expansion",
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "EDB ecosystem support is relevant for future site, supplier, workforce, ESG, and customer-coverage discussions around Fab 12i.",
+    "data_year": 2025,
+    "confidence": "High",
+    "source_ids": [
+      "src_edb_semiconductors"
+    ]
+  },
+  {
+    "id": "gf_singapore_expansion_fab",
+    "name": "GlobalFoundries Singapore expansion fab",
+    "country": "Singapore",
+    "location": "Woodlands, Singapore",
+    "category": "wafer_manufacturing",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "front-end foundry manufacturing",
+    "relevance_to_umc": "Peer foundry expansion validates Singapore as a premium manufacturing location for mature and specialty-node capacity.",
+    "relevant_expansion_modes": [
+      "foundry_manufacturing_expansion",
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Reinforces that Singapore can support multiple foundry anchors, but also intensifies talent and utilities competition.",
+    "data_year": 2023,
+    "confidence": "High",
+    "source_ids": [
+      "src_gf_singapore"
+    ]
+  },
+  {
+    "id": "micron_singapore_fab10b_hbm",
+    "name": "Micron Singapore Fab 10B / HBM assembly plan",
+    "country": "Singapore",
+    "location": "North Coast Wafer Fab Park, Singapore",
+    "category": "wafer_manufacturing",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "memory wafer fabrication and HBM assembly",
+    "relevance_to_umc": "Reinforces Singapore advanced manufacturing depth while highlighting land, power, and engineering-talent competition.",
+    "relevant_expansion_modes": [
+      "foundry_manufacturing_expansion",
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Important signal for Fab 12i utilities, ESG, workforce, and supplier-infrastructure constraints.",
+    "data_year": 2026,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_micron_singapore_fab10b",
+      "src_micron_singapore_power_constraints"
+    ]
+  },
+  {
+    "id": "astar_ime_singapore",
+    "name": "A*STAR Institute of Microelectronics",
+    "country": "Singapore",
+    "location": "Singapore",
+    "category": "ic_design_ip",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "applied semiconductor R&D, prototyping, and ecosystem collaboration",
+    "relevance_to_umc": "Relevant to specialty technology, silicon photonics, heterogeneous integration, and customer co-development ecosystem.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "packaging_osat_partnership",
+      "foundry_manufacturing_expansion",
+      "sales_office"
+    ],
+    "decision_relevance": "Could support technical collaboration and talent pipeline around Fab 12i-adjacent specialty applications.",
+    "data_year": 2025,
+    "confidence": "High",
+    "source_ids": [
+      "src_astar_ime"
+    ]
+  },
+  {
+    "id": "applied_materials_singapore",
+    "name": "Applied Materials Singapore",
+    "country": "Singapore",
+    "location": "Singapore",
+    "category": "wafer_manufacturing",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "wafer fab equipment, services, and process-support ecosystem",
+    "relevance_to_umc": "Equipment and services depth supports Fab 12i uptime, process support, and future manufacturing optionality.",
+    "relevant_expansion_modes": [
+      "foundry_manufacturing_expansion",
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Supplier proximity can reduce service response friction and support equipment ecosystem scoring.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_applied_materials_singapore"
+    ]
+  },
+  {
+    "id": "utac_singapore",
+    "name": "UTAC Singapore",
+    "country": "Singapore",
+    "location": "Singapore",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor test and assembly services",
+    "relevance_to_umc": "Provides back-end and test adjacency for customers using Singapore manufacturing or regional supply chains.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Potential partner or comparable for test, reliability, and customer quality-support workflows around Fab 12i output.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_utac_group"
+    ]
+  },
+  {
+    "id": "malaysia_national_semiconductor_strategy",
+    "name": "Malaysia National Semiconductor Strategy",
+    "country": "Malaysia",
+    "location": "Malaysia",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "policy, incentives, talent, IC design, advanced packaging, equipment, and manufacturing roadmap",
+    "relevance_to_umc": "Makes Malaysia the strongest non-Singapore policy platform for staged packaging, support, and partner-led expansion.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "packaging_osat_partnership",
+      "customer_engineering_hub",
+      "foundry_manufacturing_expansion"
+    ],
+    "decision_relevance": "Malaysia can complement Fab 12i through near-region OSAT, support, and specialty/power semiconductor adjacency.",
+    "data_year": 2024,
+    "confidence": "High",
+    "source_ids": [
+      "src_malaysia_nss",
+      "src_malaysia_wsj_chip_hub"
+    ]
+  },
+  {
+    "id": "intel_malaysia_advanced_packaging",
+    "name": "Intel Malaysia advanced packaging expansion",
+    "country": "Malaysia",
+    "location": "Penang and Kulim, Malaysia",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "back-end manufacturing, packaging, and test",
+    "relevance_to_umc": "Validates Malaysia as a global-scale back-end and packaging hub with engineering depth.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Strong candidate ecosystem for back-end partnerships and customer qualification support near Singapore.",
+    "data_year": 2026,
+    "confidence": "High",
+    "source_ids": [
+      "src_intel_malaysia",
+      "src_intel_advanced_packaging_2026"
+    ]
+  },
+  {
+    "id": "infineon_kulim_sic_power",
+    "name": "Infineon Kulim SiC power semiconductor fab",
+    "country": "Malaysia",
+    "location": "Kulim, Kedah, Malaysia",
+    "category": "wafer_manufacturing",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "front-end power semiconductor manufacturing",
+    "relevance_to_umc": "Strong specialty, power, and automotive adjacency for UMC mature-node and specialty customer base.",
+    "relevant_expansion_modes": [
+      "foundry_manufacturing_expansion",
+      "packaging_osat_partnership",
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Supports a Singapore-Malaysia corridor for power, automotive, and industrial customers.",
+    "data_year": 2024,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_infineon_kulim",
+      "src_malaysia_nss"
+    ]
+  },
+  {
+    "id": "ase_malaysia_penang",
+    "name": "ASE Malaysia / Penang OSAT operations",
+    "country": "Malaysia",
+    "location": "Penang, Malaysia",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "assembly, packaging, and test",
+    "relevance_to_umc": "Major OSAT presence strengthens Penang as a partner-led packaging and customer-support candidate.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Penang can complement Singapore wafer output with nearby back-end and test capabilities.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_ase_global"
+    ]
+  },
+  {
+    "id": "inari_amertron_malaysia",
+    "name": "Inari Amertron",
+    "country": "Malaysia",
+    "location": "Penang and other Malaysia sites",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "outsourced assembly, RF test, and electronics services",
+    "relevance_to_umc": "Adds local OSAT/test density and RF/connectivity customer adjacency.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Supports back-end and customer-engineering corridor logic between Fab 12i and Malaysia.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_inari_amertron"
+    ]
+  },
+  {
+    "id": "unisem_malaysia",
+    "name": "Unisem Malaysia",
+    "country": "Malaysia",
+    "location": "Ipoh, Perak and other Malaysia operations",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor assembly and test",
+    "relevance_to_umc": "Adds mature OSAT capacity and back-end supplier depth.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Potential customer-support and back-end partner reference for Fab 12i customers.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_unisem_group"
+    ]
+  },
+  {
+    "id": "oppstar_malaysia_ic_design",
+    "name": "Oppstar",
+    "country": "Malaysia",
+    "location": "Penang, Malaysia",
+    "category": "policy_incentives",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "IC design, design services, and semiconductor engineering talent",
+    "relevance_to_umc": "Adds design-services and engineering talent depth near the Penang OSAT cluster.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub",
+      "packaging_osat_partnership"
+    ],
+    "decision_relevance": "Can support design enablement, customer engineering, and DFM conversations for regional customers.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_oppstar"
+    ]
+  },
+  {
+    "id": "penang_silicon_design_talent",
+    "name": "Penang Silicon Design @5km+ / chip design talent ecosystem",
+    "country": "Malaysia",
+    "location": "Penang, Malaysia",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "design talent, workforce development, and ecosystem clustering",
+    "relevance_to_umc": "Improves Malaysia suitability for customer engineering, design support, and account-technical roles.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub",
+      "packaging_osat_partnership"
+    ],
+    "decision_relevance": "Helps build a nearby engineering-support base for Fab 12i customers.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_penang_design_talent"
+    ]
+  },
+  {
+    "id": "amkor_vietnam_bac_ninh",
+    "name": "Amkor Technology Vietnam",
+    "country": "Vietnam",
+    "location": "Yen Phong II-C Industrial Park, Bac Ninh, Vietnam",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "advanced SiP assembly and test",
+    "relevance_to_umc": "Best verified Vietnam back-end anchor for advanced packaging and customer support monitoring.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Potential future back-end adjacency for Fab 12i customer flows, though maturity is lower than Malaysia.",
+    "data_year": 2023,
+    "confidence": "High",
+    "source_ids": [
+      "src_amkor_vietnam"
+    ]
+  },
+  {
+    "id": "hana_micron_vietnam",
+    "name": "Hana Micron Vietnam",
+    "country": "Vietnam",
+    "location": "Bac Giang / northern Vietnam",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor assembly, packaging, and test",
+    "relevance_to_umc": "Adds a second Korean-linked back-end anchor in Vietnam northern electronics corridor.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Potential partner-monitoring item for packaging/test services near key EMS clusters.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_hana_micron"
+    ]
+  },
+  {
+    "id": "intel_products_vietnam",
+    "name": "Intel Products Vietnam",
+    "country": "Vietnam",
+    "location": "Saigon Hi-Tech Park, Ho Chi Minh City, Vietnam",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "back-end assembly and test manufacturing",
+    "relevance_to_umc": "Demonstrates Vietnam can operate high-volume semiconductor back-end manufacturing for a global IDM.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "sales_office",
+      "packaging_osat_partnership"
+    ],
+    "decision_relevance": "Useful comparable for operational maturity, customer engineering, and back-end workforce development.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_intel_vietnam"
+    ]
+  },
+  {
+    "id": "fpt_semiconductor_vietnam",
+    "name": "FPT Semiconductor",
+    "country": "Vietnam",
+    "location": "Hanoi / Ho Chi Minh City, Vietnam",
+    "category": "policy_incentives",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "chip design, power management ICs, and local design talent development",
+    "relevance_to_umc": "Supports Vietnam emerging fabless/design-services ecosystem and long-term foundry customer development.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Potential future design/customer pipeline for mature-node or specialty foundry engagement.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_fpt_semiconductor"
+    ]
+  },
+  {
+    "id": "vietnam_nic_semiconductor_talent",
+    "name": "Vietnam National Innovation Center semiconductor initiatives",
+    "country": "Vietnam",
+    "location": "Hanoi / Hoa Lac and national programs",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "workforce development, innovation programs, and ecosystem partnerships",
+    "relevance_to_umc": "Supports long-term customer engineering and design-support talent assumptions.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Could provide future engineering pipeline for Fab 12i customer support coverage.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_vietnam_nic"
+    ]
+  },
+  {
+    "id": "samsung_vietnam_electronics_cluster",
+    "name": "Samsung Vietnam electronics manufacturing cluster",
+    "country": "Vietnam",
+    "location": "Bac Ninh, Thai Nguyen, Ho Chi Minh City, Vietnam",
+    "category": "electronics_demand_ems",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "downstream electronics manufacturing and supplier ecosystem",
+    "relevance_to_umc": "Supports customer proximity for consumer, display, connectivity, IoT, and electronics supply-chain accounts.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Demand-side support option rather than direct Fab 12i manufacturing extension.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_samsung_vietnam"
+    ]
+  },
+  {
+    "id": "vietnam_semiconductor_strategy",
+    "name": "Vietnam semiconductor industry development strategy",
+    "country": "Vietnam",
+    "location": "Vietnam",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "policy roadmap for design, packaging, workforce, and ecosystem development",
+    "relevance_to_umc": "Supports Vietnam as an emerging long-term customer engineering and design-support market.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub",
+      "packaging_osat_partnership"
+    ],
+    "decision_relevance": "Useful for monitoring future Fab 12i customer-support coverage, not immediate fab expansion.",
+    "data_year": 2024,
+    "confidence": "Low",
+    "source_ids": [
+      "src_vietnam_mic_strategy"
+    ]
+  },
+  {
+    "id": "thailand_boi_semiconductor_incentives",
+    "name": "Thailand Board of Investment semiconductor / electronics incentives",
+    "country": "Thailand",
+    "location": "Thailand",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "investment promotion and incentives",
+    "relevance_to_umc": "Supports Thailand as a policy-backed watchlist for electronics, power, sensors, automotive, and industrial demand.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub",
+      "packaging_osat_partnership",
+      "foundry_manufacturing_expansion"
+    ],
+    "decision_relevance": "Useful for sales/support coverage from Singapore into automotive and industrial customer clusters.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_thailand_boi"
+    ]
+  },
+  {
+    "id": "thailand_eec_electronics_auto",
+    "name": "Eastern Economic Corridor electronics / automotive cluster",
+    "country": "Thailand",
+    "location": "Chonburi, Rayong, Chachoengsao, Thailand",
+    "category": "equipment_materials_infrastructure",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "downstream electronics, automotive, EV, logistics, and industrial manufacturing corridor",
+    "relevance_to_umc": "Strong demand-side fit for automotive, industrial, power, connectivity, and display-related mature-node customers.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Good candidate for customer coverage from Singapore Fab 12i rather than direct manufacturing expansion.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_thailand_eec"
+    ]
+  },
+  {
+    "id": "analog_devices_thailand",
+    "name": "Analog Devices Thailand",
+    "country": "Thailand",
+    "location": "Chonburi, Thailand",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor test and support operations",
+    "relevance_to_umc": "Validates Thailand as a location for analog and mixed-signal semiconductor test activity linked to UMC-relevant customer segments.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Supports Thailand coverage for analog, power, sensor, automotive, and industrial customers served from Fab 12i.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_analog_devices"
+    ]
+  },
+  {
+    "id": "utac_thailand",
+    "name": "UTAC Thailand",
+    "country": "Thailand",
+    "location": "Thailand",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor assembly and test services",
+    "relevance_to_umc": "Adds packaging/test adjacency in Thailand for mature-node and mixed-signal customer support.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Potential downstream test-support node for Fab 12i customer workflows.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_utac_group"
+    ]
+  },
+  {
+    "id": "stars_microelectronics_thailand",
+    "name": "Stars Microelectronics Thailand",
+    "country": "Thailand",
+    "location": "Ayutthaya, Thailand",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "assembly, test, electronics manufacturing, and module services",
+    "relevance_to_umc": "Local semiconductor/electronics manufacturing supplier relevant to customer support and back-end partner mapping.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Supports Thailand as a customer engineering and back-end watchlist around Fab 12i customers.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_stars_microelectronics"
+    ]
+  },
+  {
+    "id": "thailand_hdd_precision_electronics",
+    "name": "Thailand HDD and precision electronics manufacturing cluster",
+    "country": "Thailand",
+    "location": "Bangkok metro, Ayutthaya, Chonburi, and related industrial zones",
+    "category": "electronics_demand_ems",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "precision electronics, storage, motors, sensors, and supply-chain manufacturing",
+    "relevance_to_umc": "Mature electronics manufacturing supports demand mapping for mature-node analog, power, sensors, motor-control, and connectivity ICs.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Supports sales/support coverage from Singapore into Thailand industrial electronics customers.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_western_digital_seagate_thailand"
+    ]
+  },
+  {
+    "id": "philippines_oecd_semiconductor_ecosystem",
+    "name": "Philippines semiconductor ecosystem",
+    "country": "Philippines",
+    "location": "Philippines",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "semiconductor ecosystem assessment and development recommendations",
+    "relevance_to_umc": "Supports Philippines as a support, assembly/test, and account-operations candidate rather than near-term front-end fab location.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "packaging_osat_partnership",
+      "sales_office"
+    ],
+    "decision_relevance": "Potential support hub for Fab 12i customers requiring documentation, quality, logistics, and account operations.",
+    "data_year": 2024,
+    "confidence": "High",
+    "source_ids": [
+      "src_oecd_philippines"
+    ]
+  },
+  {
+    "id": "texas_instruments_philippines",
+    "name": "Texas Instruments Philippines",
+    "country": "Philippines",
+    "location": "Baguio and Clark, Philippines",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor assembly, test, and manufacturing support",
+    "relevance_to_umc": "Validates Philippines back-end semiconductor operations and analog/embedded customer relevance.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Useful comparable for customer engineering and manufacturing-support hub models.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_ti_philippines"
+    ]
+  },
+  {
+    "id": "analog_devices_philippines",
+    "name": "Analog Devices Philippines",
+    "country": "Philippines",
+    "location": "General Trias, Cavite, Philippines",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor test facility",
+    "relevance_to_umc": "Aligns with UMC analog, power, automotive, industrial, and sensor customer segments.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Supports Philippines as a remote/nearshore support node for mature-node and specialty customers.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_analog_devices"
+    ]
+  },
+  {
+    "id": "imi_psi_philippines",
+    "name": "Integrated Micro-Electronics and PSi Technologies",
+    "country": "Philippines",
+    "location": "Laguna / CALABARZON, Philippines",
+    "category": "wafer_manufacturing",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "electronics manufacturing, power semiconductor assembly, and test services",
+    "relevance_to_umc": "Supports power, automotive, industrial, and electronics customer support use cases.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "packaging_osat_partnership",
+      "sales_office"
+    ],
+    "decision_relevance": "Potential support and quality-coordination ecosystem for Fab 12i customers with Philippines back-end or EMS flows.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_imi_philippines"
+    ]
+  },
+  {
+    "id": "amkor_philippines",
+    "name": "Amkor Philippines",
+    "country": "Philippines",
+    "location": "Philippines",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor package and test services",
+    "relevance_to_umc": "Adds OSAT depth and long-running back-end semiconductor experience.",
+    "relevant_expansion_modes": [
+      "packaging_osat_partnership",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Potential comparable/partner ecosystem for support and back-end routing decisions.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_amkor_vietnam"
+    ]
+  },
+  {
+    "id": "clark_calabarzon_logistics_corridor",
+    "name": "Clark and CALABARZON electronics / logistics corridor",
+    "country": "Philippines",
+    "location": "Clark, Laguna, Cavite, Batangas, Philippines",
+    "category": "equipment_materials_infrastructure",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "industrial parks, logistics, electronics manufacturing, and support operations",
+    "relevance_to_umc": "Supports low-capex account operations, logistics coordination, and technical support hub options.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Possible distributed customer-support node for Fab 12i customers across ASEAN.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_peza_bcda"
+    ]
+  },
+  {
+    "id": "batam_electronics_logistics_cluster",
+    "name": "Batam electronics and logistics cluster",
+    "country": "Indonesia",
+    "location": "Batam, Riau Islands, Indonesia",
+    "category": "equipment_materials_infrastructure",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "electronics manufacturing, logistics, and Singapore-adjacent industrial base",
+    "relevance_to_umc": "Supports low-cost customer-support and logistics watchlist near Singapore, but not a foundry base.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Singapore proximity makes Batam relevant for low-cost support/logistics adjacency around Fab 12i.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_bp_batam"
+    ]
+  },
+  {
+    "id": "sat_nusapersada_batam",
+    "name": "PT Sat Nusapersada",
+    "country": "Indonesia",
+    "location": "Batam, Indonesia",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "electronics manufacturing and assembly services",
+    "relevance_to_umc": "Adds downstream electronics manufacturing evidence for Indonesia demand and support coverage.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Potential customer-support/logistics coverage point for electronics customers served from Singapore.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_sat_nusapersada"
+    ]
+  },
+  {
+    "id": "infineon_batam_operations",
+    "name": "Infineon Batam operations",
+    "country": "Indonesia",
+    "location": "Batam, Indonesia",
+    "category": "packaging_assembly_test",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "semiconductor back-end manufacturing",
+    "relevance_to_umc": "Supports Indonesia limited semiconductor manufacturing evidence, especially for power and industrial semiconductor supply chains.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "sales_office",
+      "packaging_osat_partnership"
+    ],
+    "decision_relevance": "Relevant to power/industrial customer-support coverage near Singapore, but not a Fab 12i manufacturing extension.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_infineon_indonesia"
+    ]
+  },
+  {
+    "id": "indonesia_ev_automotive_demand",
+    "name": "Indonesia EV and automotive electronics demand cluster",
+    "country": "Indonesia",
+    "location": "Jakarta, West Java, Central Java, and industrial zones",
+    "category": "equipment_materials_infrastructure",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "EV battery, automotive, consumer electronics, and industrial demand",
+    "relevance_to_umc": "Long-term demand-side option for automotive, power, connectivity, consumer, and industrial IC customers.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub"
+    ],
+    "decision_relevance": "Supports market-development coverage from Singapore rather than manufacturing investment.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_invest_indonesia"
+    ]
+  },
+  {
+    "id": "batamindo_industrial_park",
+    "name": "Batamindo Industrial Park",
+    "country": "Indonesia",
+    "location": "Batam, Indonesia",
+    "category": "equipment_materials_infrastructure",
+    "company_or_policy": "company / ecosystem anchor",
+    "description": "industrial estate, manufacturing infrastructure, and Singapore-linked logistics",
+    "relevance_to_umc": "Potential low-cost support/logistics adjacency for Singapore Fab 12i, but not a semiconductor manufacturing anchor by itself.",
+    "relevant_expansion_modes": [
+      "customer_engineering_hub",
+      "sales_office"
+    ],
+    "decision_relevance": "Could support non-fab activities near Singapore if UMC wants cost-flexible operations.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_batamindo"
+    ]
+  },
+  {
+    "id": "danantara_indonesia",
+    "name": "Danantara Indonesia",
+    "country": "Indonesia",
+    "location": "Jakarta, Indonesia",
+    "category": "policy_incentives",
+    "company_or_policy": "policy / public ecosystem",
+    "description": "strategic investment vehicle and industrial-policy funding platform",
+    "relevance_to_umc": "Potential policy/investment counterparty if Indonesia pursues semiconductor design, training, or supply-chain security programs.",
+    "relevant_expansion_modes": [
+      "sales_office",
+      "customer_engineering_hub",
+      "watchlist"
+    ],
+    "decision_relevance": "Could matter only if paired with verified semiconductor workforce or Arm/IP partnership; otherwise it is a macro policy signal.",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_ids": [
+      "src_danantara"
+    ]
+  }
+]

@@ -4,77 +4,69 @@
     "name": "Sales Office",
     "capex_level": "Low",
     "execution_complexity": "Low",
-    "strategic_relevance_to_umc": "High",
-    "description": "A regional or country-level commercial presence for customer coverage, distribution management, partner development, executive relationships, and demand sensing.",
+    "strategic_relevance_to_umc": "Medium",
+    "description": "Regional account coverage, customer relationship management, demand sensing, and government / ecosystem relationships.",
     "best_fit_conditions": [
-      "High customer concentration or regional headquarters density",
-      "Need for faster account coverage across automotive, industrial, communications, and consumer semiconductor customers",
-      "Market is strategically important but does not yet justify manufacturing capex"
+      "Named account density",
+      "Need for local relationship coverage",
+      "Low-capex market sensing before larger commitments"
     ],
     "key_risks": [
-      "Limited strategic value if not tied to named account ownership",
-      "Can become symbolic without field-application engineering and senior relationship coverage",
-      "May duplicate existing Taiwan or Singapore coverage if scope is unclear"
+      "Low impact if account ownership is unclear",
+      "Can duplicate Singapore or Taiwan coverage"
     ]
   },
   {
-    "id": "foundry",
-    "name": "Foundry",
+    "id": "customer_engineering_hub",
+    "name": "Customer Engineering Hub",
+    "capex_level": "Low to medium",
+    "execution_complexity": "Medium",
+    "strategic_relevance_to_umc": "High",
+    "description": "FAE support, design-in support, quality issue coordination, Fab 12i customer support, and technical account support.",
+    "best_fit_conditions": [
+      "Available engineering talent",
+      "Customer and EMS proximity",
+      "Clear escalation path into Fab 12i and Taiwan engineering teams"
+    ],
+    "key_risks": [
+      "Weak value if limited to generic support",
+      "Requires training, escalation discipline, and customer validation"
+    ]
+  },
+  {
+    "id": "packaging_osat_partnership",
+    "name": "Packaging / OSAT Partnership",
+    "capex_level": "Medium",
+    "execution_complexity": "Medium to high",
+    "strategic_relevance_to_umc": "High",
+    "description": "Partner-first access to advanced packaging, testing, assembly coordination, and turnkey wafer-to-package support.",
+    "best_fit_conditions": [
+      "OSAT and test ecosystem depth",
+      "Partner shortlist",
+      "Customer overlap with Fab 12i output"
+    ],
+    "key_risks": [
+      "Partner economics may not support UMC differentiation",
+      "Customer qualification and IP boundaries require diligence"
+    ]
+  },
+  {
+    "id": "foundry_manufacturing_expansion",
+    "name": "Foundry / Manufacturing Expansion",
     "capex_level": "Very high",
     "execution_complexity": "Very high",
-    "strategic_relevance_to_umc": "Very high",
-    "description": "Wafer fabrication footprint for mature and specialty process nodes, potentially serving automotive, industrial, display, power management, IoT, and communications customers.",
+    "strategic_relevance_to_umc": "High but gated",
+    "description": "Direct manufacturing capacity or specialty process expansion. Highest capex and execution risk.",
     "best_fit_conditions": [
-      "Reliable power, water, land, logistics, and environmental permitting",
-      "Long-term subsidy support and clear government execution capacity",
-      "Anchor customer commitments or strategic supply-chain resilience requirements",
-      "Availability of process, equipment, facilities, and operations talent"
+      "Anchor customer commitments",
+      "Government incentives",
+      "Power / water / permitting readiness",
+      "Engineering talent"
     ],
     "key_risks": [
-      "Large upfront capex and long payback period",
-      "Utilities, water, and ESG constraints can delay ramp-up",
-      "Talent shortages can raise cost and yield risk",
-      "Demand cyclicality may undermine utilization"
-    ]
-  },
-  {
-    "id": "advanced_packaging",
-    "name": "Advanced Packaging",
-    "capex_level": "High",
-    "execution_complexity": "High",
-    "strategic_relevance_to_umc": "High",
-    "description": "Back-end integration activities such as advanced assembly, test, system-in-package, fan-out, 2.5D/3D integration support, and chiplet-adjacent ecosystem participation.",
-    "best_fit_conditions": [
-      "Existing OSAT, substrate, equipment, and back-end supplier ecosystem",
-      "Customer demand for higher-value mature-node integration",
-      "Ability to partner before committing to full owned capacity",
-      "Strong engineering workforce and reliable logistics"
-    ],
-    "key_risks": [
-      "Technology roadmap can shift quickly toward more advanced process integration",
-      "Margins depend on customer mix, yield, and equipment utilization",
-      "Competition from established OSAT providers may limit differentiation",
-      "Requires careful IP, quality, and customer qualification management"
-    ]
-  },
-  {
-    "id": "customer_support_call_center",
-    "name": "Customer Support Center",
-    "capex_level": "Low",
-    "execution_complexity": "Medium",
-    "strategic_relevance_to_umc": "Medium",
-    "description": "Regional support operation for technical triage, customer service, logistics coordination, order support, documentation, and field-application engineering handoff.",
-    "best_fit_conditions": [
-      "Large multilingual or English-language service talent pool",
-      "Competitive operating cost and strong business process discipline",
-      "Need for regional timezone coverage and faster customer response",
-      "Clear integration with sales, field engineering, and supply-chain teams"
-    ],
-    "key_risks": [
-      "Low value if limited to generic call handling without technical escalation",
-      "Quality risk if training, knowledge management, and escalation paths are weak",
-      "Sensitive customer issues still require direct engineering ownership",
-      "Attrition can erode service quality"
+      "Large capex and long payback",
+      "Utility and ESG risk",
+      "Utilization and yield risk"
     ]
   }
 ]

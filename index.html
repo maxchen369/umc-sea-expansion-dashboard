@@ -11,285 +11,153 @@
       <div class="brand">
         <span class="brand-mark">UMC</span>
         <div>
-          <p class="eyebrow">Strategy dashboard</p>
+          <p class="eyebrow">Stage 0 strategic screening</p>
           <h1>Southeast Asia Expansion Dashboard</h1>
         </div>
       </div>
       <nav class="nav" aria-label="Dashboard sections">
         <a href="#summary">Summary</a>
-        <a href="#matrix">Matrix</a>
-        <a href="#model">Lenses</a>
-        <a href="#score-transparency">Transparency</a>
-        <a href="#deep-dive">Deep Dive</a>
-        <a href="#ecosystem">Ecosystem</a>
-        <a href="#recommendation">Recommendation</a>
+        <a href="#scorecard">Scorecard</a>
+        <a href="#ecosystem">Evidence</a>
+        <a href="#decision-funnel">Decision Funnel</a>
+        <a href="#countries">Countries</a>
+        <a href="#sources">Sources</a>
       </nav>
     </header>
 
     <main>
-      <section id="summary" class="hero section">
+      <section id="summary" class="section hero">
         <div class="hero-copy">
-          <p class="eyebrow">June 2026 working view</p>
-          <h2>UMC-specific expansion model for Southeast Asia.</h2>
-          <p>
-            The model anchors on UMC Singapore Fab 12i, UMC's global foundry footprint, 22/28nm and specialty technology
-            demand, customer engineering coverage, OSAT adjacency, and regional ecosystem depth.
-          </p>
+          <p class="eyebrow">Management question</p>
+          <h2>Where should UMC study next after Singapore Fab 12i?</h2>
+          <p>This dashboard is a Stage 0 strategic screening tool. It helps prioritize diligence targets, but does not replace ROIC modeling, customer validation, partner negotiation, government incentive confirmation, or engineering feasibility assessment.</p>
         </div>
-        <div class="hero-panel" aria-label="Top recommendation">
-          <p class="panel-label">Base case priority</p>
-          <div id="topRecommendation" class="hero-score">Loading</div>
-          <p id="topRecommendationText" class="muted">Loading model output...</p>
-        </div>
+        <aside class="hero-panel">
+          <label class="toggle-row">
+            <input id="baselineToggle" type="checkbox" checked>
+            <span>Treat Singapore Fab 12i as existing baseline</span>
+          </label>
+          <p id="baselineNote" class="muted"></p>
+          <div id="baselineCard"></div>
+        </aside>
       </section>
 
-      <section class="section scope-section" aria-labelledby="scopeHeading">
+      <section class="section summary-grid" aria-label="Executive summary">
+        <article class="summary-card">
+          <span>Top next-step option</span>
+          <strong id="topRecommendation">Loading</strong>
+          <p id="topRecommendationText">Loading screening output...</p>
+        </article>
+        <article class="summary-card">
+          <span>Most realistic entry mode</span>
+          <strong id="topMode">-</strong>
+          <p>Partnership-first and customer-validation options are preferred before owned capex.</p>
+        </article>
+        <article class="summary-card">
+          <span>Key caveat</span>
+          <strong>Stage 0 only</strong>
+          <p>High score means worth deeper diligence, not approve investment.</p>
+        </article>
+      </section>
+
+      <section id="scorecard" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Singapore baseline setting</p>
-          <h2 id="scopeHeading">Choose how Singapore is treated</h2>
-          <p>Singapore is treated as UMC's existing regional anchor, not always as a new expansion candidate. This mode helps evaluate where UMC should go next after Fab 12i.</p>
+          <p class="eyebrow">Strategic scorecard</p>
+          <h2>Country x expansion mode matrix</h2>
+          <p>Scores are screening signals for prioritizing diligence targets.</p>
         </div>
-        <div id="candidateScopeControls" class="scope-controls" role="radiogroup" aria-label="Singapore candidate treatment"></div>
-        <div id="scopeNote" class="comparison-note" aria-live="polite"></div>
-        <div id="singaporeBaselineCard" class="baseline-card"></div>
-      </section>
-
-      <section class="section kpi-grid" aria-label="Executive summary metrics">
-        <article class="kpi">
-          <span>Best commercial hub</span>
-          <strong id="bestSales">-</strong>
-          <p>Customer proximity, rule of law, travel connectivity, and regional headquarters fit.</p>
-        </article>
-        <article class="kpi">
-          <span>Best foundry option</span>
-          <strong id="bestFoundry">-</strong>
-          <p>Infrastructure, utilities, permitting confidence, ecosystem maturity, and capex risk.</p>
-        </article>
-        <article class="kpi">
-          <span>Best packaging option</span>
-          <strong id="bestPackaging">-</strong>
-          <p>OSAT density, advanced packaging momentum, talent, and supplier adjacency.</p>
-        </article>
-        <article class="kpi">
-          <span>Best support option</span>
-          <strong id="bestSupport">-</strong>
-          <p>Language coverage, operating cost, service talent, and timezone coverage.</p>
-        </article>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Auto-generated strategy calls</p>
-          <h2>Executive Summary Cards</h2>
-          <p>These recommendations update when scenario presets or slider assumptions change.</p>
+        <div class="scorecard-tools">
+          <div>
+            <p class="filter-label">Scoring lens</p>
+            <div id="lensSelector" class="button-row"></div>
+          </div>
+          <details class="score-help">
+            <summary>How to read the score</summary>
+            <ul>
+              <li>Raw scores are 1-5 directional estimates.</li>
+              <li>Lens weights convert raw scores into a 0-100 ranking.</li>
+              <li>The score is a screening signal, not an investment decision.</li>
+              <li>High score means worth deeper diligence, not approve investment.</li>
+              <li>Final decisions require ROIC, capex, customer validation, partner validation, and government incentive review.</li>
+            </ul>
+          </details>
         </div>
-        <div id="executiveCards" class="executive-grid" aria-live="polite"></div>
-      </section>
-
-      <section id="matrix" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Country x expansion mode matrix</p>
-          <h2>Recommendation score heatmap</h2>
-          <p>Each cell recalculates a country x expansion mode strategy score from the current slider weights.</p>
-        </div>
-        <div class="heatmap-options" aria-label="Heatmap Singapore filters">
-          <label><input id="hideSingaporeHeatmap" type="checkbox"> Hide Singapore</label>
-          <label><input id="nonSingaporeOnlyHeatmap" type="checkbox"> Show only non-Singapore options</label>
-        </div>
+        <div id="customWeightsPanel" class="custom-panel"></div>
         <div class="table-wrap">
           <table class="matrix-table">
             <thead>
               <tr>
                 <th>Country</th>
                 <th>Sales Office</th>
-                <th>Foundry</th>
-                <th>Advanced Packaging</th>
-                <th>Customer Support Center</th>
+                <th>Customer Engineering Hub</th>
+                <th>Packaging / OSAT Partnership</th>
+                <th>Foundry / Manufacturing Expansion</th>
               </tr>
             </thead>
             <tbody id="matrixBody"></tbody>
           </table>
         </div>
-        <p id="matrixComparisonNote" class="comparison-note"></p>
-      </section>
-
-      <section id="model" class="section model-section">
-        <div class="section-heading">
-          <p class="eyebrow">UMC-specific scoring lenses</p>
-          <h2>Choose the strategic lens</h2>
-          <p>Each lens uses a different weighting logic. Foundry, advanced packaging, sales, and customer engineering support should not share one generic model.</p>
-        </div>
-        <div class="model-layout">
-          <div>
-            <div id="lensSelector" class="scenario-presets" aria-label="Scoring lenses"></div>
-            <div id="weightControls" class="controls"></div>
-          </div>
-          <div class="rank-panel">
-            <div class="rank-header">
-              <h3>Weighted country ranking</h3>
-              <span id="weightTotal">100%</span>
-            </div>
-            <div id="rankingList" class="ranking-list"></div>
-          </div>
-        </div>
-      </section>
-
-      <section id="score-transparency" class="section transparency-section">
-        <div class="section-heading">
-          <p class="eyebrow">Score transparency</p>
-          <h2>How scores are calculated</h2>
-          <p>Use Custom Weight Mode to change assumptions, then open any heatmap cell with Explain Score to audit the contribution by factor.</p>
-        </div>
-        <div class="methodology-grid">
-          <article>
-            <h3>Raw inputs</h3>
-            <p>Country and UMC-specific factor scores use a 1-5 scale before conversion into a 0-100 strategy score.</p>
-          </article>
-          <article>
-            <h3>Adjustable weights</h3>
-            <p>Preset lenses remain available. Custom Weight Mode exposes every scoring factor with sliders from 0 to 30.</p>
-          </article>
-          <article>
-            <h3>Normalization</h3>
-            <p>Positive weights are normalized automatically so high total weight does not inflate final scores.</p>
-          </article>
-          <article>
-            <h3>Execution risk</h3>
-            <p>Execution risk is modeled as a negative adjustment. Higher execution risk reduces the country lens score and mode fit.</p>
-          </article>
-          <article>
-            <h3>Mode adjustments</h3>
-            <p>Each expansion mode applies different adjustments because foundry, advanced packaging, sales office, and customer engineering support have different requirements.</p>
-          </article>
-          <article>
-            <h3>Audit trail</h3>
-            <p>Explain Score shows raw score, selected weight, weighted contribution, mode adjustment, final contribution, and source confidence.</p>
-          </article>
-        </div>
       </section>
 
       <section id="ecosystem" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Ecosystem map</p>
-          <h2>Upstream, downstream, and customer-support adjacency</h2>
-          <p>Filter ecosystem entities by country, semiconductor layer, and relevant expansion mode to understand where UMC can extend Fab 12i's regional role.</p>
+          <p class="eyebrow">Evidence base</p>
+          <h2>Ecosystem & Comparable Cases</h2>
+          <p>Peer cases, policy evidence, customer demand clusters, infrastructure, and partner candidates are grouped under one taxonomy.</p>
         </div>
-        <div class="ecosystem-filter-stack">
+        <div class="filter-stack">
           <div>
             <p class="filter-label">Country</p>
-            <div id="ecosystemCountryFilters" class="filter-row" aria-label="Ecosystem country filters"></div>
+            <div id="countryFilters" class="button-row"></div>
           </div>
           <div>
-            <p class="filter-label">Layer</p>
-            <div id="ecosystemLayerFilters" class="filter-row" aria-label="Ecosystem layer filters"></div>
+            <p class="filter-label">Category</p>
+            <div id="categoryFilters" class="button-row"></div>
           </div>
           <div>
-            <p class="filter-label">Expansion mode</p>
-            <div id="ecosystemModeFilters" class="filter-row" aria-label="Ecosystem expansion mode filters"></div>
+            <p class="filter-label">Expansion relevance</p>
+            <div id="modeFilters" class="button-row"></div>
           </div>
         </div>
-        <div id="ecosystemSummary" class="ecosystem-summary"></div>
-        <div id="ecosystemGrid" class="case-grid"></div>
+        <div id="ecosystemCards" class="card-grid"></div>
       </section>
 
-      <section id="deep-dive" class="section">
+      <section id="decision-funnel" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Decision funnel</p>
+          <h2>Top diligence targets</h2>
+          <p>Recommendations distinguish strategic attractiveness from financial feasibility and decision readiness.</p>
+        </div>
+        <div id="decisionCards" class="decision-grid"></div>
+      </section>
+
+      <section id="countries" class="section">
         <div class="section-heading">
           <p class="eyebrow">Country deep dive</p>
-          <h2>Market detail</h2>
-          <p>Select a country to view rationale, risks, recommended entry posture, and source trail.</p>
+          <h2>Concise country view</h2>
+          <p>Best-fit modes, evidence, risks, and diligence questions by country.</p>
         </div>
-        <div id="countryTabs" class="tabs" role="tablist" aria-label="Countries"></div>
-        <article id="countryDetail" class="country-detail"></article>
-        <div id="countryCards" class="country-card-grid"></div>
+        <div id="countryCards" class="country-grid"></div>
       </section>
 
-      <section id="case-studies" class="section">
+      <section id="sources" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Peer case studies</p>
-          <h2>Comparable expansion moves</h2>
-          <p>Selected examples show how semiconductor peers have used ASEAN as a resilience, packaging, and customer access platform.</p>
+          <p class="eyebrow">Sources & data freshness</p>
+          <h2>Reference trail</h2>
         </div>
-        <div id="caseFilters" class="filter-row" aria-label="Case study filters"></div>
-        <div id="caseStudyGrid" class="case-grid"></div>
-      </section>
-
-      <section id="recommendation" class="section recommendation-section">
-        <div class="section-heading">
-          <p class="eyebrow">Recommendation engine</p>
-          <h2>Sequenced market entry plan</h2>
-          <p>The recommendation combines weighted score, implementation risk, and mode-specific suitability.</p>
-        </div>
-        <div id="recommendationCards" class="recommendation-grid"></div>
-      </section>
-
-      <section class="section sources-section">
-        <div class="section-heading">
-          <p class="eyebrow">Source trail</p>
-          <h2>Reference links</h2>
-          <p>Open-source references used to frame the directional assumptions in this dashboard.</p>
-        </div>
-        <div id="sourcesList" class="sources-list"></div>
-      </section>
-
-      <section id="methodology" class="section methodology-section">
-        <div class="section-heading">
-          <p class="eyebrow">Methodology & assumptions</p>
-          <h2>How to read the model</h2>
-        </div>
-        <div class="methodology-grid">
-          <article>
-            <h3>Scoring basis</h3>
-            <p>Scores are preliminary strategic estimates, not investment advice. Country inputs use a 1-5 scale before weighted conversion to a 1-100 score.</p>
-          </article>
-          <article>
-            <h3>UMC-specific model</h3>
-            <p>The model is specific to UMC, Fab 12i, mature-node and specialty foundry demand, customer engineering support, and OSAT adjacency.</p>
-          </article>
-          <article>
-            <h3>Separate lenses</h3>
-            <p>Foundry, advanced packaging, sales office, and customer engineering support should not use the same weights because their capex, risk, and ecosystem requirements differ.</p>
-          </article>
-          <article>
-            <h3>Capital intensity</h3>
-            <p>Foundry expansion has much higher capital intensity and execution risk than sales office or customer support operations.</p>
-          </article>
-          <article>
-            <h3>Support center definition</h3>
-            <p>Customer support center means B2B technical support, FAE support, customer engineering support, and account operations, not consumer call center.</p>
-          </article>
-          <article>
-            <h3>Data freshness</h3>
-            <p>Cards show published date, retrieved date, data year, and source confidence. Placeholder sources should be replaced before formal use.</p>
-          </article>
-          <article>
-            <h3>Singapore candidate view</h3>
-            <p>Include Singapore as candidate ranks Fab 12i against all other countries using normal scoring.</p>
-          </article>
-          <article>
-            <h3>Singapore baseline view</h3>
-            <p>Use Singapore as baseline only keeps Fab 12i separate and calculates non-Singapore gap, complementarity, and extension value.</p>
-          </article>
-          <article>
-            <h3>Non-Singapore next step</h3>
-            <p>Exclude Singapore from candidate ranking compares only next-step markets while preserving Singapore as the regional anchor context.</p>
-          </article>
-        </div>
+        <div id="sourcesList" class="source-list"></div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>Static prototype for strategic discussion. Update data files before using for investment committee materials.</p>
-    </footer>
-
     <div id="scoreModal" class="modal-backdrop" hidden>
       <section class="score-modal" role="dialog" aria-modal="true" aria-labelledby="scoreModalTitle">
-        <div class="score-modal-header">
+        <div class="modal-header">
           <div>
-            <p class="eyebrow">Explain Score</p>
+            <p class="eyebrow">Explain score</p>
             <h2 id="scoreModalTitle">Score breakdown</h2>
             <p id="scoreModalSummary" class="muted"></p>
           </div>
-          <button class="score-modal-close" type="button" data-close-score-modal aria-label="Close score explanation">Close</button>
+          <button type="button" data-close-modal>Close</button>
         </div>
         <div id="scoreModalBody"></div>
       </section>

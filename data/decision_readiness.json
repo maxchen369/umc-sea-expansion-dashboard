@@ -1,0 +1,146 @@
+[
+  {
+    "country_id": "singapore",
+    "country": "Singapore",
+    "decision_readiness": "Existing anchor",
+    "strategic_attractiveness": "High",
+    "financial_feasibility": "Medium",
+    "recommended_next_step": "Existing regional anchor; Use as baseline for next-step comparisons",
+    "unvalidated_items": [
+      "capex / opex estimate",
+      "revenue mechanism",
+      "ROIC / payback",
+      "customer overlap",
+      "partner shortlist",
+      "government incentives",
+      "tax and subsidy detail",
+      "power / water / infrastructure readiness",
+      "engineering talent availability"
+    ],
+    "diligence_questions": [
+      "What named UMC customers would use a Singapore next-step presence?",
+      "Which partner or government counterparty is credible enough for a Stage 1 diligence workstream?",
+      "What capex, opex, ROIC, payback, and incentive assumptions would change the recommendation?"
+    ]
+  },
+  {
+    "country_id": "malaysia",
+    "country": "Malaysia",
+    "decision_readiness": "Needs commercial and financial validation",
+    "strategic_attractiveness": "High",
+    "financial_feasibility": "Medium",
+    "recommended_next_step": "Partner shortlist + customer overlap analysis; OSAT economics and incentive review",
+    "unvalidated_items": [
+      "capex / opex estimate",
+      "revenue mechanism",
+      "ROIC / payback",
+      "customer overlap",
+      "partner shortlist",
+      "government incentives",
+      "tax and subsidy detail",
+      "power / water / infrastructure readiness",
+      "engineering talent availability"
+    ],
+    "diligence_questions": [
+      "What named UMC customers would use a Malaysia next-step presence?",
+      "Which partner or government counterparty is credible enough for a Stage 1 diligence workstream?",
+      "What capex, opex, ROIC, payback, and incentive assumptions would change the recommendation?"
+    ]
+  },
+  {
+    "country_id": "vietnam",
+    "country": "Vietnam",
+    "decision_readiness": "Needs commercial and financial validation",
+    "strategic_attractiveness": "High",
+    "financial_feasibility": "Medium pending validation",
+    "recommended_next_step": "Customer engineering validation; EMS and packaging partner maturity review",
+    "unvalidated_items": [
+      "capex / opex estimate",
+      "revenue mechanism",
+      "ROIC / payback",
+      "customer overlap",
+      "partner shortlist",
+      "government incentives",
+      "tax and subsidy detail",
+      "power / water / infrastructure readiness",
+      "engineering talent availability"
+    ],
+    "diligence_questions": [
+      "What named UMC customers would use a Vietnam next-step presence?",
+      "Which partner or government counterparty is credible enough for a Stage 1 diligence workstream?",
+      "What capex, opex, ROIC, payback, and incentive assumptions would change the recommendation?"
+    ]
+  },
+  {
+    "country_id": "thailand",
+    "country": "Thailand",
+    "decision_readiness": "Needs commercial and financial validation",
+    "strategic_attractiveness": "High",
+    "financial_feasibility": "Medium pending validation",
+    "recommended_next_step": "Automotive / industrial customer overlap; Specialty process demand validation",
+    "unvalidated_items": [
+      "capex / opex estimate",
+      "revenue mechanism",
+      "ROIC / payback",
+      "customer overlap",
+      "partner shortlist",
+      "government incentives",
+      "tax and subsidy detail",
+      "power / water / infrastructure readiness",
+      "engineering talent availability"
+    ],
+    "diligence_questions": [
+      "What named UMC customers would use a Thailand next-step presence?",
+      "Which partner or government counterparty is credible enough for a Stage 1 diligence workstream?",
+      "What capex, opex, ROIC, payback, and incentive assumptions would change the recommendation?"
+    ]
+  },
+  {
+    "country_id": "philippines",
+    "country": "Philippines",
+    "decision_readiness": "Needs commercial and financial validation",
+    "strategic_attractiveness": "High",
+    "financial_feasibility": "Medium pending validation",
+    "recommended_next_step": "Support hub service model; Talent and escalation workflow validation",
+    "unvalidated_items": [
+      "capex / opex estimate",
+      "revenue mechanism",
+      "ROIC / payback",
+      "customer overlap",
+      "partner shortlist",
+      "government incentives",
+      "tax and subsidy detail",
+      "power / water / infrastructure readiness",
+      "engineering talent availability"
+    ],
+    "diligence_questions": [
+      "What named UMC customers would use a Philippines next-step presence?",
+      "Which partner or government counterparty is credible enough for a Stage 1 diligence workstream?",
+      "What capex, opex, ROIC, payback, and incentive assumptions would change the recommendation?"
+    ]
+  },
+  {
+    "country_id": "indonesia",
+    "country": "Indonesia",
+    "decision_readiness": "Needs commercial and financial validation",
+    "strategic_attractiveness": "High",
+    "financial_feasibility": "Low pending validation",
+    "recommended_next_step": "Policy/design ecosystem monitoring; Customer demand and partner evidence validation",
+    "unvalidated_items": [
+      "capex / opex estimate",
+      "revenue mechanism",
+      "ROIC / payback",
+      "customer overlap",
+      "partner shortlist",
+      "government incentives",
+      "tax and subsidy detail",
+      "power / water / infrastructure readiness",
+      "engineering talent availability"
+    ],
+    "diligence_questions": [
+      "What named UMC customers would use a Indonesia next-step presence?",
+      "Which partner or government counterparty is credible enough for a Stage 1 diligence workstream?",
+      "What capex, opex, ROIC, payback, and incentive assumptions would change the recommendation?"
+    ]
+  }
+]
