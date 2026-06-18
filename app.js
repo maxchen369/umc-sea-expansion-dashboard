@@ -13,7 +13,10 @@ const state = {
   lenses: [],
   ecosystemCases: [],
   sources: [],
-  decisionReadiness: [],
+  decisionReadiness: {
+    universal_investment_gates: [],
+    countries: []
+  },
   baselineSingapore: true,
   activeLens: "fab12i_synergy",
   customWeights: {},
@@ -219,7 +222,43 @@ function evidenceFor(country, modeId) {
 }
 
 function readinessFor(country) {
-  return state.decisionReadiness.find((item) => item.country_id === country.id) || {};
+  const readinessRows = Array.isArray(state.decisionReadiness)
+    ? state.decisionReadiness
+    : state.decisionReadiness.countries || [];
+  return readinessRows.find((item) => item.country_id === country.id) || {};
+}
+
+function strategyQuestionsFor(country, modeId) {
+  const readiness = readinessFor(country);
+  return readiness.strategy_questions?.[modeId] || [];
+}
+
+function decisionStrategies() {
+  const pool = allStrategies();
+  const selected = [];
+  const used = new Set();
+  const addFirst = (predicate) => {
+    const item = pool.find((candidate) => predicate(candidate) && !used.has(candidate.country.id));
+    if (item) {
+      selected.push(item);
+      used.add(item.country.id);
+    }
+  };
+
+  addFirst((item) => item.mode.id === "packaging_osat_partnership");
+  addFirst((item) => item.mode.id === "customer_engineering_hub");
+  addFirst((item) => item.country.id === "thailand");
+  addFirst((item) => item.country.id === "philippines");
+  addFirst((item) => item.country.id === "indonesia");
+
+  pool.forEach((item) => {
+    if (selected.length < 5 && !used.has(item.country.id)) {
+      selected.push(item);
+      used.add(item.country.id);
+    }
+  });
+
+  return selected;
 }
 
 function render() {
@@ -230,6 +269,7 @@ function render() {
   renderMatrix();
   renderEvidenceFilters();
   renderEvidence();
+  renderUniversalGates();
   renderDecisionFunnel();
   renderCountryCards();
   renderSources();
@@ -378,11 +418,19 @@ function renderEvidence() {
   `).join("") || `<p class="muted">No evidence matches the selected filters.</p>`;
 }
 
+function renderUniversalGates() {
+  const gates = Array.isArray(state.decisionReadiness)
+    ? []
+    : state.decisionReadiness.universal_investment_gates || [];
+  document.getElementById("universalGates").innerHTML = gates.map((gate) => `<li>${gate}</li>`).join("");
+}
+
 function renderDecisionFunnel() {
-  document.getElementById("decisionCards").innerHTML = allStrategies().slice(0, 5).map((item) => {
+  document.getElementById("decisionCards").innerHTML = decisionStrategies().map((item) => {
     const country = item.country;
     const readiness = item.readiness;
     const mode = item.mode;
+    const questions = strategyQuestionsFor(country, mode.id);
     return `
       <article class="decision-card">
         <span class="readiness">${readiness.decision_readiness || "Needs commercial and financial validation"}</span>
@@ -392,10 +440,8 @@ function renderDecisionFunnel() {
         <p><strong>Screening score:</strong> ${item.score} | <strong>Strategic signal before feasibility gating:</strong> ${item.strategicScore}</p>
         <p><strong>Recommended entry mode:</strong> ${entryMode(mode.id)}</p>
         <p><strong>Decision supported:</strong> Whether to open a Stage 1 diligence workstream, not whether to approve investment.</p>
-        <p><strong>What remains unvalidated:</strong></p>
-        <ul class="checklist">${(readiness.unvalidated_items || []).map((field) => `<li>${field}</li>`).join("")}</ul>
-        <p><strong>Next diligence questions:</strong></p>
-        <ul>${(readiness.diligence_questions || []).map((question) => `<li>${question}</li>`).join("")}</ul>
+        <p><strong>Strategy-specific diligence:</strong></p>
+        <ul>${questions.map((question) => `<li>${question}</li>`).join("")}</ul>
       </article>
     `;
   }).join("");
@@ -410,12 +456,21 @@ function renderCountryCards() {
       <article class="country-card">
         <h3>${country.name}</h3>
         <p>${country.summary}</p>
-        <p><strong>Best-fit modes:</strong> ${countryStrategies.map((item) => item.mode.name).join(", ")}</p>
+        <p><strong>Best-fit mode:</strong> ${modeLabels[readiness.best_fit_expansion_mode] || countryStrategies[0]?.mode.name || "Watchlist"}</p>
+        <p><strong>Unique opportunity:</strong> ${readiness.unique_opportunity || "Requires deeper country diligence."}</p>
+        <p><strong>Unique risk:</strong> ${readiness.unique_risk || (country.risks || []).slice(0, 1).join(" ")}</p>
         <p><strong>Key evidence:</strong> ${evidence.map((item) => item.name).join("; ")}</p>
-        <p><strong>Key risks:</strong> ${(country.risks || []).slice(0, 2).join(" ")}</p>
         <details>
-          <summary>Next diligence questions</summary>
-          <ul>${(readiness.diligence_questions || []).map((question) => `<li>${question}</li>`).join("")}</ul>
+          <summary>Country-specific questions</summary>
+          <ul>${(readiness.location_level_questions || []).map((question) => `<li>${question}</li>`).join("")}</ul>
+        </details>
+        <details>
+          <summary>Evidence gaps</summary>
+          <ul>${(readiness.evidence_gaps || []).map((gap) => `<li>${gap}</li>`).join("")}</ul>
+        </details>
+        <details>
+          <summary>What moves priority up or down</summary>
+          <ul>${(readiness.priority_movers || []).map((item) => `<li>${item}</li>`).join("")}</ul>
         </details>
       </article>
     `;

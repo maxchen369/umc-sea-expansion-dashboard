@@ -153,6 +153,7 @@ main {
 .evidence-card,
 .decision-card,
 .country-card,
+.gate-list,
 .source-list article,
 .custom-panel {
   border: 1px solid var(--line);
@@ -208,7 +209,8 @@ input {
 .summary-card,
 .evidence-card,
 .decision-card,
-.country-card {
+.country-card,
+.gate-list {
   padding: 18px;
 }
 
@@ -311,10 +313,21 @@ input {
 
 .score-help ul,
 .decision-card ul,
-.country-card ul {
+.country-card ul,
+.gate-list {
   margin: 10px 0 0;
   padding-left: 20px;
   color: var(--muted);
+}
+
+.compact-section {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.gate-list {
+  display: grid;
+  gap: 8px 22px;
 }
 
 .custom-panel {
@@ -543,6 +556,10 @@ input:focus-visible {
   .decision-grid,
   .country-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gate-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .scorecard-tools {
