@@ -5,12 +5,14 @@ Static single-page web app for evaluating UMC-specific expansion options in Sout
 The model now centers on:
 
 - UMC Singapore Fab 12i as the regional manufacturing anchor
+- Fab 12i P3 ramp execution as the primary near-term recommendation
 - UMC's global foundry footprint
 - 22/28nm and specialty technology demand
 - Communication, consumer, automotive, IoT, display, power, and connectivity customer coverage
 - Upstream and downstream semiconductor ecosystem adjacency
 - Sales office and B2B customer engineering support needs
 - Packaging / OSAT partnership options before any greenfield back-end investment
+- Conditional watchlist triggers before Malaysia / Vietnam / Thailand / Philippines / Indonesia options move to Stage 1
 - Stage 0 diligence questions for ROIC, capex, customer validation, partner validation, incentives, utilities, and talent
 
 The app uses only HTML, CSS, and vanilla JavaScript. There is no backend, build step, package manager, or external library.
@@ -24,7 +26,9 @@ app.js
 data/countries.json
 data/expansion_modes.json
 data/scoring_lenses.json
-data/ecosystem_cases.json
+data/evidence_library.json
+data/decision_strategies.json
+data/country_profiles.json
 data/sources.json
 data/decision_readiness.json
 README.md
@@ -60,16 +64,18 @@ All paths are relative, so the app can run from GitHub Pages without configurati
 ## Update JSON Data
 
 - `data/countries.json`: country scores, UMC-specific scores, risks, source IDs, and data freshness.
-- `data/expansion_modes.json`: four practical expansion modes used by the screening model.
+- `data/expansion_modes.json`: practical expansion modes, including the no-new-external-expansion Fab 12i P3 optimization option.
 - `data/scoring_lenses.json`: lens-specific weights.
-- `data/ecosystem_cases.json`: merged ecosystem evidence, comparable cases, policy anchors, customer clusters, and partner candidates.
-- `data/decision_readiness.json`: decision readiness labels, unvalidated diligence fields, and next diligence questions.
+- `data/evidence_library.json`: evidence records with separate `evidence_type` and `industry_category` fields.
+- `data/decision_strategies.json`: strategy-level recommendations, gate status, next action, and suggested owner.
+- `data/country_profiles.json`: country-specific thesis, role, advantage, risk, locations, priority movers, top evidence, and evidence gaps.
+- `data/decision_readiness.json`: legacy scoring support for country readiness labels used by the scorecard logic.
 - `data/sources.json`: source metadata. Replace low-confidence items before formal investment committee use.
 
 ## Methodology Notes
 
 Scores are preliminary strategic estimates, not investment advice. The dashboard is a Stage 0 strategic screening tool and should not be reused as a generic semiconductor country ranking.
 
-Foundry / manufacturing expansion, packaging / OSAT partnership, sales office, and customer engineering hub should not use the same decision logic. Each has different capex intensity, ecosystem requirements, risk profile, and time-to-market logic.
+The dashboard should not force a new non-Singapore recommendation. Fab 12i P3 optimization, foundry / manufacturing expansion, packaging / OSAT partnership, sales office, and customer engineering hub should not use the same decision logic. Each has different capex intensity, ecosystem requirements, risk profile, and time-to-market logic.
 
 Data freshness badges show published date, retrieved date, data year, and source confidence for cards that rely on structured data.

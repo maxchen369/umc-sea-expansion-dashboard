@@ -23,7 +23,7 @@
     "customer_coverage_score": 5,
     "partner_potential_score": 4,
     "execution_risk_penalty": 1,
-    "summary": "Singapore is UMC's Southeast Asia manufacturing anchor through Fab 12i and the strongest base for regional manufacturing assurance, senior customer engagement, and customer engineering coordination.",
+    "summary": "Singapore is UMC's Southeast Asia manufacturing anchor through Fab 12i, and Fab 12i P3 execution is the primary near-term capital-allocation priority before any new non-Singapore expansion.",
     "strengths": [
       "Direct operational synergy with UMC Fab 12i",
       "Strong wafer fabrication, equipment, logistics, and engineering ecosystem",
@@ -35,6 +35,7 @@
       "Advanced packaging and support operations need careful cost discipline"
     ],
     "recommended_modes": [
+      "optimize_existing_fab12i_p3",
       "sales_office",
       "foundry_manufacturing_expansion",
       "packaging_osat_partnership",
@@ -76,7 +77,7 @@
     "customer_coverage_score": 4,
     "partner_potential_score": 5,
     "execution_risk_penalty": 2,
-    "summary": "Malaysia is the strongest non-Singapore option for UMC advanced packaging, OSAT adjacency, and staged manufacturing-adjacent partnerships linked to Fab 12i customer demand.",
+    "summary": "Malaysia remains a conditional ecosystem option for UMC Packaging / OSAT Partnership, but current capital allocation should prioritize Fab 12i P3 execution until customer demand, partner economics, incentives, and ROIC are validated.",
     "strengths": [
       "Deep OSAT, test, packaging, equipment, and supplier ecosystem",
       "National semiconductor strategy supports higher-value chip activities",
@@ -84,15 +85,14 @@
     ],
     "risks": [
       "Rising competition for semiconductor engineering talent",
-      "Foundry commitments require water, power, permitting, and anchor-customer diligence",
+      "OSAT ecosystem depth does not automatically create UMC customer overlap or acceptable partner economics",
       "Execution quality varies by state and industrial park"
     ],
     "recommended_modes": [
+      "watchlist",
       "packaging_osat_partnership",
-      "sales_office",
       "customer_engineering_hub",
-      "foundry_manufacturing_expansion",
-      "watchlist"
+      "sales_office"
     ],
     "source_ids": [
       "src_malaysia_nss",
@@ -141,10 +141,9 @@
       "Province-level execution and infrastructure consistency require diligence"
     ],
     "recommended_modes": [
+      "watchlist",
       "customer_engineering_hub",
-      "sales_office",
-      "packaging_osat_partnership",
-      "watchlist"
+      "sales_office"
     ],
     "source_ids": [
       "src_amkor_vietnam",
@@ -194,9 +193,9 @@
       "Limited advanced packaging and foundry supplier density"
     ],
     "recommended_modes": [
+      "watchlist",
       "sales_office",
-      "customer_engineering_hub",
-      "watchlist"
+      "customer_engineering_hub"
     ],
     "source_ids": [
       "src_thailand_boi",
@@ -245,9 +244,9 @@
       "Policy competitiveness requires project-specific validation"
     ],
     "recommended_modes": [
+      "watchlist",
       "customer_engineering_hub",
-      "packaging_osat_partnership",
-      "watchlist"
+      "sales_office"
     ],
     "source_ids": [
       "src_oecd_philippines",
@@ -296,9 +295,9 @@
       "Slower time to market from permitting, infrastructure, and coordination requirements"
     ],
     "recommended_modes": [
+      "watchlist",
       "sales_office",
-      "customer_engineering_hub",
-      "watchlist"
+      "customer_engineering_hub"
     ],
     "source_ids": [
       "src_bp_batam",

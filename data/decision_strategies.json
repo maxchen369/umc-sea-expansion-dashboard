@@ -1,0 +1,134 @@
+[
+  {
+    "id": "optimize_fab12i_p3",
+    "strategy_name": "Optimize Singapore Fab 12i P3 / No New External Expansion",
+    "country": "Singapore",
+    "expansion_mode": "optimize_existing_fab12i_p3",
+    "status": "Primary recommendation",
+    "strategic_rationale": "Prioritize Fab 12i P3 ramp, customer qualification, utilization, and capital efficiency before committing to new non-Singapore expansion.",
+    "decision_supported": "Proceed with Fab 12i P3 execution focus; keep external options monitored but do not approve new external capex.",
+    "gate_status": {
+      "customer_overlap": "Validated",
+      "revenue_mechanism": "Validated",
+      "partner_shortlist": "Not required",
+      "government_incentives_tax": "Partial",
+      "capex_opex_estimate": "Partial",
+      "roic_payback": "Partial",
+      "infrastructure_utilities": "Partial",
+      "engineering_talent": "Partial",
+      "legal_regulatory": "Partial"
+    },
+    "next_action": "Track P3 ramp, customer qualification, utilization, margin, and capex discipline before opening external Stage 1 workstreams.",
+    "suggested_owner": "Operations"
+  },
+  {
+    "id": "malaysia_packaging_osat_watchlist",
+    "strategy_name": "Malaysia Packaging / OSAT Watchlist",
+    "country": "Malaysia",
+    "expansion_mode": "packaging_osat_partnership",
+    "status": "Watchlist / Do not approve capex",
+    "strategic_rationale": "Malaysia has the deepest nearby OSAT and packaging ecosystem, but ecosystem strength does not automatically create UMC customer demand or acceptable economics.",
+    "decision_supported": "Stay in Watchlist until customer overlap, packaging attach-rate, partner economics, incentives, and ROIC are validated.",
+    "gate_status": {
+      "customer_overlap": "Not validated",
+      "revenue_mechanism": "Not validated",
+      "partner_shortlist": "Partial",
+      "government_incentives_tax": "Partial",
+      "capex_opex_estimate": "Not validated",
+      "roic_payback": "Not validated",
+      "infrastructure_utilities": "Not required",
+      "engineering_talent": "Partial",
+      "legal_regulatory": "Not validated"
+    },
+    "next_action": "Build named customer overlap, attach-rate, partner shortlist, incentive, and ROIC model before Stage 1.",
+    "suggested_owner": "Strategy / Finance / Sales / BD"
+  },
+  {
+    "id": "vietnam_customer_engineering_watchlist",
+    "strategy_name": "Vietnam Customer Engineering / EMS Watchlist",
+    "country": "Vietnam",
+    "expansion_mode": "customer_engineering_hub",
+    "status": "Watchlist",
+    "strategic_rationale": "Vietnam is relevant as an EMS-linked customer engineering and account-operations option, but UMC-specific customer support demand is still proxy-based.",
+    "decision_supported": "Keep monitoring; do not launch a hub until named customer workflows and technical support demand are validated.",
+    "gate_status": {
+      "customer_overlap": "Not validated",
+      "revenue_mechanism": "Partial",
+      "partner_shortlist": "Not required",
+      "government_incentives_tax": "Partial",
+      "capex_opex_estimate": "Partial",
+      "roic_payback": "Not validated",
+      "infrastructure_utilities": "Partial",
+      "engineering_talent": "Partial",
+      "legal_regulatory": "Partial"
+    },
+    "next_action": "Map EMS-linked UMC customers and support workflows that require local engineering rather than regional account coverage.",
+    "suggested_owner": "Sales / BD / Technology / Engineering"
+  },
+  {
+    "id": "thailand_auto_power_watchlist",
+    "strategy_name": "Thailand Automotive / Power Specialty Watchlist",
+    "country": "Thailand",
+    "expansion_mode": "sales_office",
+    "status": "Watchlist",
+    "strategic_rationale": "Thailand has automotive, industrial, power, and electronics demand signals relevant to UMC specialty processes, but customer-specific demand remains unvalidated.",
+    "decision_supported": "Use as a demand-sensing watchlist; do not open Stage 1 unless named accounts justify coverage or engineering support.",
+    "gate_status": {
+      "customer_overlap": "Not validated",
+      "revenue_mechanism": "Not validated",
+      "partner_shortlist": "Not required",
+      "government_incentives_tax": "Partial",
+      "capex_opex_estimate": "Partial",
+      "roic_payback": "Not validated",
+      "infrastructure_utilities": "Partial",
+      "engineering_talent": "Partial",
+      "legal_regulatory": "Partial"
+    },
+    "next_action": "Validate automotive, power, and industrial account overlap with Fab 12i product families.",
+    "suggested_owner": "Sales / BD"
+  },
+  {
+    "id": "philippines_support_ops_watchlist",
+    "strategy_name": "Philippines Support / Account Operations Watchlist",
+    "country": "Philippines",
+    "expansion_mode": "customer_engineering_hub",
+    "status": "Watchlist",
+    "strategic_rationale": "The Philippines may fit support, account operations, and selected technical escalation workflows, but the role must be specific rather than generic back-office support.",
+    "decision_supported": "Keep as a support-model watchlist; do not launch without validated workflows, talent fit, and escalation model.",
+    "gate_status": {
+      "customer_overlap": "Not validated",
+      "revenue_mechanism": "Partial",
+      "partner_shortlist": "Not required",
+      "government_incentives_tax": "Partial",
+      "capex_opex_estimate": "Partial",
+      "roic_payback": "Not validated",
+      "infrastructure_utilities": "Partial",
+      "engineering_talent": "Partial",
+      "legal_regulatory": "Partial"
+    },
+    "next_action": "Define whether the opportunity is account operations, quality triage, FAE support, or documentation support.",
+    "suggested_owner": "Operations / Technology / Engineering"
+  },
+  {
+    "id": "indonesia_design_policy_watchlist",
+    "strategy_name": "Indonesia IC Design / Policy Watchlist",
+    "country": "Indonesia",
+    "expansion_mode": "sales_office",
+    "status": "Screening only",
+    "strategic_rationale": "Indonesia has long-term market, policy, and IC design signals, but those signals do not yet imply manufacturing or customer-support readiness for UMC.",
+    "decision_supported": "Monitor policy and customer development; do not approve capex or Stage 1 operating setup.",
+    "gate_status": {
+      "customer_overlap": "Not validated",
+      "revenue_mechanism": "Not validated",
+      "partner_shortlist": "Not validated",
+      "government_incentives_tax": "Partial",
+      "capex_opex_estimate": "Not validated",
+      "roic_payback": "Not validated",
+      "infrastructure_utilities": "Blocker",
+      "engineering_talent": "Not validated",
+      "legal_regulatory": "Partial"
+    },
+    "next_action": "Monitor IC design, policy, and end-market development for evidence of UMC-relevant mature-node demand.",
+    "suggested_owner": "Strategy"
+  }
+]

@@ -2,7 +2,9 @@ const files = {
   countries: "data/countries.json",
   modes: "data/expansion_modes.json",
   lenses: "data/scoring_lenses.json",
-  ecosystemCases: "data/ecosystem_cases.json",
+  evidenceLibrary: "data/evidence_library.json",
+  decisionStrategies: "data/decision_strategies.json",
+  countryProfiles: "data/country_profiles.json",
   sources: "data/sources.json",
   decisionReadiness: "data/decision_readiness.json"
 };
@@ -11,7 +13,9 @@ const state = {
   countries: [],
   modes: [],
   lenses: [],
-  ecosystemCases: [],
+  evidenceLibrary: [],
+  decisionStrategies: [],
+  countryProfiles: [],
   sources: [],
   decisionReadiness: {
     universal_investment_gates: [],
@@ -20,8 +24,7 @@ const state = {
   baselineSingapore: true,
   activeLens: "fab12i_synergy",
   customWeights: {},
-  evidenceCountry: "All",
-  evidenceCategory: "All",
+  evidenceType: "All",
   evidenceMode: "All"
 };
 
@@ -61,16 +64,27 @@ const labels = {
   execution_risk_penalty: "Execution risk penalty"
 };
 
-const categoryLabels = {
+const evidenceTypeLabels = {
+  company_ecosystem: "Company / Ecosystem",
+  policy_incentives: "Policy & Incentives",
+  customer_demand_signal: "Customer / Demand Signal",
+  infrastructure_talent: "Infrastructure / Talent",
+  partner_candidate: "Partner Candidate"
+};
+
+const industryCategoryLabels = {
   policy_incentives: "Policy & Incentives",
   wafer_manufacturing: "Wafer Manufacturing",
   packaging_assembly_test: "Packaging, Assembly & Test",
   ic_design_ip: "IC Design & IP",
-  equipment_materials_infrastructure: "Equipment, Materials & Infrastructure",
-  electronics_demand_ems: "Electronics Demand & EMS"
+  equipment_materials: "Equipment & Materials",
+  electronics_ems: "Electronics & EMS",
+  public_policy: "Public Policy",
+  infrastructure: "Infrastructure"
 };
 
 const modeLabels = {
+  optimize_existing_fab12i_p3: "Optimize Fab 12i P3 / no new external expansion",
   sales_office: "Sales office",
   customer_engineering_hub: "Customer engineering hub",
   packaging_osat_partnership: "Packaging / OSAT partnership",
@@ -79,6 +93,15 @@ const modeLabels = {
 };
 
 const modeFitCriteria = {
+  optimize_existing_fab12i_p3: {
+    fab12i_synergy_score: 0.28,
+    umc_global_layout_fit_score: 0.2,
+    customer_coverage_score: 0.14,
+    time_to_market_score: 0.12,
+    infrastructure_score: 0.1,
+    esg_readiness_score: 0.08,
+    execution_risk_penalty: -0.08
+  },
   sales_office: {
     customer_coverage_score: 0.26,
     customer_proximity_score: 0.2,
@@ -118,10 +141,10 @@ const modeFitCriteria = {
 };
 
 async function loadData() {
-  const [countries, modes, lenses, ecosystemCases, sources, decisionReadiness] = await Promise.all(
+  const [countries, modes, lenses, evidenceLibrary, decisionStrategies, countryProfiles, sources, decisionReadiness] = await Promise.all(
     Object.values(files).map((url) => fetch(url).then((response) => response.json()))
   );
-  Object.assign(state, { countries, modes, lenses, ecosystemCases, sources, decisionReadiness });
+  Object.assign(state, { countries, modes, lenses, evidenceLibrary, decisionStrategies, countryProfiles, sources, decisionReadiness });
   state.customWeights = weightsFromLens(activeLens());
   render();
 }
@@ -151,6 +174,33 @@ function candidates() {
 
 function singapore() {
   return state.countries.find((country) => country.id === "singapore");
+}
+
+function modeById(modeId) {
+  return state.modes.find((mode) => mode.id === modeId) || { id: modeId, name: modeLabels[modeId] || modeId };
+}
+
+function externalModes() {
+  return state.modes.filter((mode) => mode.id !== "optimize_existing_fab12i_p3");
+}
+
+function fab12iP3Strategy() {
+  const country = singapore();
+  const mode = modeById("optimize_existing_fab12i_p3");
+  if (!country || !mode) return null;
+  const metrics = baselineMetrics(country, mode.id);
+  const readiness = readinessFor(country);
+  return {
+    country,
+    mode,
+    score: 94,
+    strategicScore: 94,
+    rawScore: strategyScore(country, mode.id),
+    metrics,
+    readiness,
+    evidence: evidenceFor(country, mode.id),
+    decisionLabel: "Optimize Existing Fab 12i P3 / No New External Expansion"
+  };
 }
 
 function weightedScore(country, lens = activeLens()) {
@@ -194,13 +244,14 @@ function baselineMetrics(country, modeId) {
 }
 
 function allStrategies(countries = candidates()) {
-  return countries.flatMap((country) => state.modes.map((mode) => {
+  const strategies = countries.flatMap((country) => state.modes.map((mode) => {
     const metrics = baselineMetrics(country, mode.id);
     const strategicScore = state.baselineSingapore ? metrics.nextStepScore : strategyScore(country, mode.id);
     const realismAdjustment = {
+      optimize_existing_fab12i_p3: country.id === "singapore" ? 12 : -80,
       sales_office: 2,
       customer_engineering_hub: 4,
-      packaging_osat_partnership: 5,
+      packaging_osat_partnership: country.id === "malaysia" ? -16 : -4,
       foundry_manufacturing_expansion: -30
     }[mode.id] || 0;
     const score = clamp(strategicScore + realismAdjustment, 1, 100);
@@ -214,11 +265,17 @@ function allStrategies(countries = candidates()) {
       readiness: readinessFor(country),
       evidence: evidenceFor(country, mode.id)
     };
-  })).sort((a, b) => b.score - a.score);
+  }));
+  const includeInternalOption = state.baselineSingapore && countries.length === candidates().length;
+  if (includeInternalOption) {
+    const internal = fab12iP3Strategy();
+    if (internal) strategies.push(internal);
+  }
+  return strategies.sort((a, b) => b.score - a.score);
 }
 
 function evidenceFor(country, modeId) {
-  return state.ecosystemCases.filter((item) => item.country === country.name && item.relevant_expansion_modes.includes(modeId));
+  return state.evidenceLibrary.filter((item) => item.country === country.name && item.relevant_expansion_modes.includes(modeId));
 }
 
 function readinessFor(country) {
@@ -228,37 +285,8 @@ function readinessFor(country) {
   return readinessRows.find((item) => item.country_id === country.id) || {};
 }
 
-function strategyQuestionsFor(country, modeId) {
-  const readiness = readinessFor(country);
-  return readiness.strategy_questions?.[modeId] || [];
-}
-
-function decisionStrategies() {
-  const pool = allStrategies();
-  const selected = [];
-  const used = new Set();
-  const addFirst = (predicate) => {
-    const item = pool.find((candidate) => predicate(candidate) && !used.has(candidate.country.id));
-    if (item) {
-      selected.push(item);
-      used.add(item.country.id);
-    }
-  };
-
-  addFirst((item) => item.mode.id === "packaging_osat_partnership");
-  addFirst((item) => item.mode.id === "customer_engineering_hub");
-  addFirst((item) => item.country.id === "thailand");
-  addFirst((item) => item.country.id === "philippines");
-  addFirst((item) => item.country.id === "indonesia");
-
-  pool.forEach((item) => {
-    if (selected.length < 5 && !used.has(item.country.id)) {
-      selected.push(item);
-      used.add(item.country.id);
-    }
-  });
-
-  return selected;
+function primaryDecisionStrategy() {
+  return state.decisionStrategies[0] || null;
 }
 
 function render() {
@@ -269,7 +297,6 @@ function render() {
   renderMatrix();
   renderEvidenceFilters();
   renderEvidence();
-  renderUniversalGates();
   renderDecisionFunnel();
   renderCountryCards();
   renderSources();
@@ -283,7 +310,7 @@ function renderBaseline() {
     render();
   };
   document.getElementById("baselineNote").textContent = state.baselineSingapore
-    ? "Singapore Fab 12i is treated as UMC's existing Southeast Asia anchor. This view compares where UMC could expand next outside Singapore."
+    ? "Singapore Fab 12i is treated as UMC's existing Southeast Asia anchor. This view allows the best next step to be no new external expansion while Fab 12i P3 ramps."
     : "Singapore is included as a normal candidate in the ranking and heatmap.";
   const anchor = singapore();
   document.getElementById("baselineCard").innerHTML = state.baselineSingapore && anchor ? `
@@ -300,10 +327,11 @@ function renderBaseline() {
 }
 
 function renderSummary() {
-  const top = allStrategies()[0];
-  document.getElementById("topRecommendation").textContent = `${top.country.name} - ${top.mode.name}`;
-  document.getElementById("topRecommendationText").textContent = `${top.country.name} is a priority diligence target, not an investment approval. Recommended next step: ${top.readiness.recommended_next_step || "commercial and financial validation"}.`;
-  document.getElementById("topMode").textContent = top.mode.name;
+  const top = primaryDecisionStrategy();
+  const mode = modeById(top?.expansion_mode);
+  document.getElementById("topRecommendation").textContent = top?.strategy_name || "Loading";
+  document.getElementById("topRecommendationText").textContent = top?.strategic_rationale || "Loading screening output...";
+  document.getElementById("topMode").textContent = mode.name;
 }
 
 function renderLensSelector() {
@@ -356,7 +384,7 @@ function renderCustomWeights() {
 
 function renderMatrix() {
   document.getElementById("matrixBody").innerHTML = candidates().map((country) => {
-    const cells = state.modes.map((mode) => {
+    const cells = externalModes().map((mode) => {
       const score = state.baselineSingapore ? baselineMetrics(country, mode.id).nextStepScore : strategyScore(country, mode.id);
       const metrics = baselineMetrics(country, mode.id);
       return `
@@ -379,11 +407,9 @@ function renderMatrix() {
 }
 
 function renderEvidenceFilters() {
-  const countries = ["All", ...state.countries.map((country) => country.name)];
-  const categories = ["All", ...Object.keys(categoryLabels)];
-  const modes = ["All", "sales_office", "customer_engineering_hub", "packaging_osat_partnership", "foundry_manufacturing_expansion", "watchlist"];
-  renderFilter("countryFilters", countries, state.evidenceCountry, (value) => state.evidenceCountry = value, (value) => value);
-  renderFilter("categoryFilters", categories, state.evidenceCategory, (value) => state.evidenceCategory = value, (value) => categoryLabels[value] || value);
+  const types = ["All", ...Object.keys(evidenceTypeLabels)];
+  const modes = ["All", "optimize_existing_fab12i_p3", "sales_office", "customer_engineering_hub", "packaging_osat_partnership", "foundry_manufacturing_expansion", "watchlist"];
+  renderFilter("evidenceTypeFilters", types, state.evidenceType, (value) => state.evidenceType = value, (value) => evidenceTypeLabels[value] || value);
   renderFilter("modeFilters", modes, state.evidenceMode, (value) => state.evidenceMode = value, (value) => modeLabels[value] || value);
 }
 
@@ -400,81 +426,187 @@ function renderFilter(id, values, active, setter, labeler) {
 }
 
 function renderEvidence() {
-  const items = state.ecosystemCases.filter((item) => {
-    const countryMatch = state.evidenceCountry === "All" || item.country === state.evidenceCountry;
-    const categoryMatch = state.evidenceCategory === "All" || item.category === state.evidenceCategory;
+  const items = state.evidenceLibrary.filter((item) => {
+    const typeMatch = state.evidenceType === "All" || item.evidence_type === state.evidenceType;
     const modeMatch = state.evidenceMode === "All" || item.relevant_expansion_modes.includes(state.evidenceMode);
-    return countryMatch && categoryMatch && modeMatch;
+    return typeMatch && modeMatch;
   });
-  document.getElementById("ecosystemCards").innerHTML = items.map((item) => `
-    <article class="evidence-card">
-      <span class="badge">${categoryLabels[item.category]}</span>
-      <h3>${item.name}</h3>
-      <p><strong>${item.country} | ${item.location}</strong></p>
-      <p>${item.relevance_to_umc}</p>
-      <p><strong>Relevant modes:</strong> ${item.relevant_expansion_modes.map((mode) => modeLabels[mode]).join(", ")}</p>
-      <p><strong>Confidence:</strong> ${item.confidence} | <strong>Data year:</strong> ${item.data_year}</p>
-    </article>
-  `).join("") || `<p class="muted">No evidence matches the selected filters.</p>`;
-}
-
-function renderUniversalGates() {
-  const gates = Array.isArray(state.decisionReadiness)
-    ? []
-    : state.decisionReadiness.universal_investment_gates || [];
-  document.getElementById("universalGates").innerHTML = gates.map((gate) => `<li>${gate}</li>`).join("");
+  const order = preferredCountryOrder();
+  const grouped = groupBy(items, "country");
+  const countries = Object.keys(grouped).sort((a, b) => {
+    const ai = order.indexOf(a);
+    const bi = order.indexOf(b);
+    return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi) || a.localeCompare(b);
+  });
+  const preferredOpenCountry = primaryDecisionStrategy()?.country || countries[0];
+  const openCountry = countries.includes(preferredOpenCountry) ? preferredOpenCountry : countries[0];
+  document.getElementById("evidenceLibrary").innerHTML = countries.map((country) => {
+    const countryItems = grouped[country];
+    const typeGroups = groupBy(countryItems, "evidence_type");
+    const latestYear = Math.max(...countryItems.map((item) => Number(item.data_year) || 0));
+    const confidence = highestConfidence(countryItems);
+    const strongestMode = strongestEvidenceMode(countryItems, country);
+    return `
+      <details class="evidence-country" ${country === openCountry ? "open" : ""}>
+        <summary>
+          <span>${country}</span>
+          <small>${countryItems.length} items | ${strongestMode} | ${confidence} confidence | Latest ${latestYear}</small>
+        </summary>
+        <div class="evidence-type-groups">
+          ${Object.keys(evidenceTypeLabels).filter((type) => typeGroups[type]?.length).map((type) => `
+            <section class="evidence-type-group">
+              <h3>${evidenceTypeLabels[type]}</h3>
+              <div class="evidence-card-grid">
+                ${typeGroups[type].map(renderEvidenceCard).join("")}
+              </div>
+            </section>
+          `).join("")}
+        </div>
+      </details>
+    `;
+  }).join("") || `<p class="muted">No evidence matches the selected filters.</p>`;
 }
 
 function renderDecisionFunnel() {
-  document.getElementById("decisionCards").innerHTML = decisionStrategies().map((item) => {
-    const country = item.country;
-    const readiness = item.readiness;
-    const mode = item.mode;
-    const questions = strategyQuestionsFor(country, mode.id);
+  document.getElementById("decisionCards").innerHTML = state.decisionStrategies.map((strategy) => {
+    const gateSummary = summarizeGates(strategy.gate_status);
     return `
       <article class="decision-card">
-        <span class="readiness">${readiness.decision_readiness || "Needs commercial and financial validation"}</span>
-        <h3>${country.name} ${mode.name} is a priority diligence target</h3>
-        <p><strong>Strategic attractiveness:</strong> ${readiness.strategic_attractiveness || "Medium"}</p>
-        <p><strong>Financial feasibility:</strong> ${readiness.financial_feasibility || "Medium pending validation"}</p>
-        <p><strong>Screening score:</strong> ${item.score} | <strong>Strategic signal before feasibility gating:</strong> ${item.strategicScore}</p>
-        <p><strong>Recommended entry mode:</strong> ${entryMode(mode.id)}</p>
-        <p><strong>Decision supported:</strong> Whether to open a Stage 1 diligence workstream, not whether to approve investment.</p>
-        <p><strong>Strategy-specific diligence:</strong></p>
-        <ul>${questions.map((question) => `<li>${question}</li>`).join("")}</ul>
+        <span class="readiness">${strategy.status}</span>
+        <h3>${strategy.strategy_name}</h3>
+        <p><strong>Strategic rationale:</strong> ${strategy.strategic_rationale}</p>
+        <p><strong>Decision supported:</strong> ${strategy.decision_supported}</p>
+        <div class="gate-summary">
+          <span class="${gateSummary.canProceed ? "gate-ok" : "gate-hold"}">${gateSummary.decision}</span>
+          <small>${gateSummary.blockers} blockers | ${gateSummary.notValidated} not validated</small>
+        </div>
+        <div class="gate-grid">
+          ${Object.entries(strategy.gate_status).map(([key, status]) => `
+            <div class="gate-pill ${gateClass(status)}">
+              <span>${gateLabel(key)}</span>
+              <strong>${status}</strong>
+            </div>
+          `).join("")}
+        </div>
+        <p><strong>Next action:</strong> ${strategy.next_action}</p>
+        <p><strong>Suggested owner:</strong> ${strategy.suggested_owner}</p>
       </article>
     `;
   }).join("");
 }
 
 function renderCountryCards() {
-  document.getElementById("countryCards").innerHTML = state.countries.map((country) => {
-    const countryStrategies = allStrategies([country]).slice(0, 2);
-    const readiness = readinessFor(country);
-    const evidence = state.ecosystemCases.filter((item) => item.country === country.name).slice(0, 3);
+  document.getElementById("countryCards").innerHTML = state.countryProfiles.map((profile) => {
+    const evidence = profile.top_evidence_ids
+      .map((id) => state.evidenceLibrary.find((item) => item.id === id))
+      .filter(Boolean);
     return `
       <article class="country-card">
-        <h3>${country.name}</h3>
-        <p>${country.summary}</p>
-        <p><strong>Best-fit mode:</strong> ${modeLabels[readiness.best_fit_expansion_mode] || countryStrategies[0]?.mode.name || "Watchlist"}</p>
-        <p><strong>Unique opportunity:</strong> ${readiness.unique_opportunity || "Requires deeper country diligence."}</p>
-        <p><strong>Unique risk:</strong> ${readiness.unique_risk || (country.risks || []).slice(0, 1).join(" ")}</p>
+        <h3>${profile.country}</h3>
+        <p><strong>Thesis:</strong> ${profile.thesis}</p>
+        <p><strong>Best-fit role:</strong> ${profile.best_fit_role}</p>
+        <p><strong>Unique advantage:</strong> ${profile.unique_advantage}</p>
+        <p><strong>Unique risk:</strong> ${profile.unique_risk}</p>
+        <p><strong>Relevant locations:</strong> ${profile.relevant_locations.join(", ")}</p>
         <p><strong>Key evidence:</strong> ${evidence.map((item) => item.name).join("; ")}</p>
         <details>
-          <summary>Country-specific questions</summary>
-          <ul>${(readiness.location_level_questions || []).map((question) => `<li>${question}</li>`).join("")}</ul>
+          <summary>What moves priority up</summary>
+          <ul>${profile.move_up_triggers.map((item) => `<li>${item}</li>`).join("")}</ul>
+        </details>
+        <details>
+          <summary>What moves priority down</summary>
+          <ul>${profile.move_down_triggers.map((item) => `<li>${item}</li>`).join("")}</ul>
         </details>
         <details>
           <summary>Evidence gaps</summary>
-          <ul>${(readiness.evidence_gaps || []).map((gap) => `<li>${gap}</li>`).join("")}</ul>
-        </details>
-        <details>
-          <summary>What moves priority up or down</summary>
-          <ul>${(readiness.priority_movers || []).map((item) => `<li>${item}</li>`).join("")}</ul>
+          <ul>${profile.evidence_gaps.map((gap) => `<li>${gap}</li>`).join("")}</ul>
         </details>
       </article>
     `;
   }).join("");
+}
+
+function renderEvidenceCard(item) {
+  return `
+    <article class="evidence-card">
+      <div class="evidence-card-top">
+        <span class="badge">${evidenceTypeLabels[item.evidence_type]}</span>
+        <span class="badge muted-badge">${industryCategoryLabels[item.industry_category] || item.industry_category}</span>
+      </div>
+      <h4>${item.name}</h4>
+      <p><strong>Location:</strong> ${item.location}</p>
+      <p><strong>What it supports:</strong> ${item.supports_which_strategy.join(", ")}</p>
+      <p><strong>Relevance to UMC:</strong> ${item.relevance_to_umc}</p>
+      <p><strong>Limitation:</strong> ${item.limitation}</p>
+      <p><strong>Relevant expansion mode:</strong> ${item.relevant_expansion_modes.map((mode) => modeLabels[mode]).join(", ")}</p>
+      <p><strong>Confidence:</strong> ${item.confidence} | <strong>Data year:</strong> ${item.data_year}</p>
+    </article>
+  `;
+}
+
+function preferredCountryOrder() {
+  return state.decisionStrategies.map((strategy) => strategy.country);
+}
+
+function strongestEvidenceMode(items, country) {
+  const strategyMode = state.decisionStrategies.find((strategy) => strategy.country === country)?.expansion_mode;
+  if (strategyMode) return modeLabels[strategyMode] || strategyMode;
+  const counts = {};
+  items.forEach((item) => {
+    item.relevant_expansion_modes.forEach((mode) => {
+      counts[mode] = (counts[mode] || 0) + 1;
+    });
+  });
+  const mode = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0];
+  return modeLabels[mode] || "Watchlist";
+}
+
+function highestConfidence(items) {
+  const rank = { High: 3, Medium: 2, Low: 1 };
+  return items.map((item) => item.confidence).sort((a, b) => (rank[b] || 0) - (rank[a] || 0))[0] || "Unknown";
+}
+
+function summarizeGates(gates) {
+  const statuses = Object.values(gates || {});
+  const blockers = statuses.filter((status) => status === "Blocker").length;
+  const notValidated = statuses.filter((status) => status === "Not validated").length;
+  const canProceed = blockers === 0 && notValidated === 0;
+  const decision = canProceed ? "Can proceed to execution / Stage 1" : "Stay in Watchlist / Do not approve capex";
+  return { blockers, notValidated, canProceed, decision };
+}
+
+function gateLabel(key) {
+  const labels = {
+    customer_overlap: "Customer overlap",
+    revenue_mechanism: "Revenue mechanism",
+    partner_shortlist: "Partner shortlist",
+    government_incentives_tax: "Government incentives / tax",
+    capex_opex_estimate: "Capex / opex estimate",
+    roic_payback: "ROIC / payback",
+    infrastructure_utilities: "Infrastructure / utilities",
+    engineering_talent: "Engineering talent",
+    legal_regulatory: "Legal / regulatory"
+  };
+  return labels[key] || key;
+}
+
+function gateClass(status) {
+  return {
+    "Validated": "gate-validated",
+    "Partial": "gate-partial",
+    "Not validated": "gate-missing",
+    "Not required": "gate-na",
+    "Blocker": "gate-blocker"
+  }[status] || "gate-missing";
+}
+
+function groupBy(items, key) {
+  return items.reduce((groups, item) => {
+    const value = item[key] || "Other";
+    groups[value] = groups[value] || [];
+    groups[value].push(item);
+    return groups;
+  }, {});
 }
 
 function renderSources() {
@@ -510,9 +642,10 @@ function showExplanation(countryId, modeId) {
 
 function entryMode(modeId) {
   const map = {
+    optimize_existing_fab12i_p3: "execute committed Fab 12i P3 ramp before new external capex",
     sales_office: "representative office or focused account coverage",
     customer_engineering_hub: "customer engineering hub with FAE and quality escalation",
-    packaging_osat_partnership: "partnership-first OSAT coordination before greenfield capex",
+    packaging_osat_partnership: "conditional watchlist until demand, partner economics, incentives, and ROIC are validated",
     foundry_manufacturing_expansion: "manufacturing diligence only after customer, incentive, utility, and ROIC validation"
   };
   return map[modeId] || "watchlist";

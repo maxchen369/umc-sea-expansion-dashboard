@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-06-23
+
+- Renamed the evidence section to "Evidence Library".
+- Replaced the flat evidence card layout with a country accordion grouped by evidence type.
+- Split evidence classification into `evidence_type` and `industry_category` in `data/evidence_library.json`.
+- Removed the standalone Universal Investment Gates section.
+- Refactored Decision Funnel into strategy-level gate cards with status, next action, and suggested owner.
+- Refactored Country Deep Dive into Country Profiles focused on country thesis, role, risks, triggers, evidence, and evidence gaps.
+
+## 2026-06-21
+
+- Added "Optimize Existing Fab 12i P3 / No New External Expansion" as an eligible expansion mode.
+- Updated recommendation logic so the dashboard can rank no new external expansion above non-Singapore options.
+- Reclassified Malaysia Packaging / OSAT Partnership as a conditional watchlist pending customer demand, attach-rate, partner economics, incentives, and ROIC validation.
+- Added TSMC-Amkor Arizona model comparison evidence to clarify why Malaysia OSAT ecosystem strength alone does not justify UMC expansion.
+- Updated the decision funnel around Fab 12i P3 execution first, with Malaysia, Vietnam, Thailand, Philippines, and Indonesia as trigger-gated watchlist options.
+
 ## 2026-06-17
 
 - Simplified Singapore baseline handling to one toggle: "Treat Singapore Fab 12i as existing baseline".

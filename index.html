@@ -18,10 +18,9 @@
       <nav class="nav" aria-label="Dashboard sections">
         <a href="#summary">Summary</a>
         <a href="#scorecard">Scorecard</a>
-        <a href="#ecosystem">Evidence</a>
-        <a href="#universal-gates">Gates</a>
+        <a href="#evidence">Evidence</a>
         <a href="#decision-funnel">Decision Funnel</a>
-        <a href="#countries">Countries</a>
+        <a href="#countries">Country Profiles</a>
         <a href="#sources">Sources</a>
       </nav>
     </header>
@@ -30,7 +29,7 @@
       <section id="summary" class="section hero">
         <div class="hero-copy">
           <p class="eyebrow">Management question</p>
-          <h2>Where should UMC study next after Singapore Fab 12i?</h2>
+          <h2>Should UMC expand externally now, or focus on Fab 12i P3 execution?</h2>
           <p>This dashboard is a Stage 0 strategic screening tool. It helps prioritize diligence targets, but does not replace ROIC modeling, customer validation, partner negotiation, government incentive confirmation, or engineering feasibility assessment.</p>
         </div>
         <aside class="hero-panel">
@@ -52,7 +51,7 @@
         <article class="summary-card">
           <span>Most realistic entry mode</span>
           <strong id="topMode">-</strong>
-          <p>Partnership-first and customer-validation options are preferred before owned capex.</p>
+          <p>Committed Fab 12i P3 execution is preferred before new external capex unless triggers are validated.</p>
         </article>
         <article class="summary-card">
           <span>Key caveat</span>
@@ -100,52 +99,39 @@
         </div>
       </section>
 
-      <section id="ecosystem" class="section">
+      <section id="evidence" class="section">
         <div class="section-heading">
           <p class="eyebrow">Evidence base</p>
-          <h2>Ecosystem & Comparable Cases</h2>
-          <p>Peer cases, policy evidence, customer demand clusters, infrastructure, and partner candidates are grouped under one taxonomy.</p>
+          <h2>Evidence Library</h2>
+          <p>Company evidence, policy evidence, demand signals, infrastructure, talent, and partner candidates grouped by country.</p>
         </div>
         <div class="filter-stack">
           <div>
-            <p class="filter-label">Country</p>
-            <div id="countryFilters" class="button-row"></div>
-          </div>
-          <div>
-            <p class="filter-label">Category</p>
-            <div id="categoryFilters" class="button-row"></div>
+            <p class="filter-label">Evidence type</p>
+            <div id="evidenceTypeFilters" class="button-row"></div>
           </div>
           <div>
             <p class="filter-label">Expansion relevance</p>
             <div id="modeFilters" class="button-row"></div>
           </div>
         </div>
-        <div id="ecosystemCards" class="card-grid"></div>
-      </section>
-
-      <section id="universal-gates" class="section compact-section">
-        <div class="section-heading">
-          <p class="eyebrow">Universal investment gates</p>
-          <h2>Applies to every serious option</h2>
-          <p>These items are common diligence gates and are listed once to avoid repeating them inside every strategy or country card.</p>
-        </div>
-        <ul id="universalGates" class="gate-list"></ul>
+        <div id="evidenceLibrary" class="evidence-library"></div>
       </section>
 
       <section id="decision-funnel" class="section">
         <div class="section-heading">
           <p class="eyebrow">Decision funnel</p>
-          <h2>Top diligence targets</h2>
-          <p>Strategy-specific diligence only: what to validate for each top recommendation.</p>
+          <h2>Strategy-level stage gates</h2>
+          <p>Gate status by strategy: what can proceed, what remains watchlist, and who owns the next action.</p>
         </div>
         <div id="decisionCards" class="decision-grid"></div>
       </section>
 
       <section id="countries" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Country deep dive</p>
-          <h2>Concise country view</h2>
-          <p>Country-specific issues only: unique opportunity, unique risk, location questions, evidence gaps, and what changes priority.</p>
+          <p class="eyebrow">Country profiles</p>
+          <h2>Country-specific role and triggers</h2>
+          <p>Country thesis, best-fit role, unique advantage, unique risk, locations, priority movers, and evidence gaps.</p>
         </div>
         <div id="countryCards" class="country-grid"></div>
       </section>

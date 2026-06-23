@@ -1,5 +1,22 @@
 [
   {
+    "id": "optimize_existing_fab12i_p3",
+    "name": "Optimize Existing Fab 12i P3 / No New External Expansion",
+    "capex_level": "Committed / controlled",
+    "execution_complexity": "Medium",
+    "strategic_relevance_to_umc": "Highest near-term priority",
+    "description": "Prioritize Fab 12i P3 ramp, customer qualification, utilization, and capital efficiency before committing to new non-Singapore expansion.",
+    "best_fit_conditions": [
+      "Fab 12i P3 ramp and customer qualification remain the dominant execution priority",
+      "External OSAT, support, or manufacturing options lack validated customer demand and ROIC",
+      "UMC wants to preserve optionality for future Malaysia / Vietnam / Thailand / Philippines / Indonesia opportunities"
+    ],
+    "key_risks": [
+      "May defer useful ecosystem learning if external triggers become visible",
+      "Requires disciplined tracking of customer, partner, incentive, and ROIC triggers"
+    ]
+  },
+  {
     "id": "sales_office",
     "name": "Sales Office",
     "capex_level": "Low",

@@ -1,0 +1,74 @@
+[
+  {
+    "country": "Singapore",
+    "thesis": "Existing Fab 12i and P3 ramp are the primary near-term Southeast Asia priority.",
+    "best_fit_role": "Front-end manufacturing anchor and customer qualification base.",
+    "unique_advantage": "Direct operational control, customer assurance, mature supplier base, and Fab 12i execution leverage.",
+    "unique_risk": "High cost, utilities pressure, and management distraction if additional external options are opened too early.",
+    "relevant_locations": ["Pasir Ris Wafer Fab Park", "Woodlands", "Tampines", "one-north"],
+    "move_up_triggers": ["P3 ramp remains the central constraint for customers, utilization, and margin improvement."],
+    "move_down_triggers": ["P3 reaches stable ramp and external options show validated customer demand, partner economics, incentives, and ROIC."],
+    "top_evidence_ids": ["umc_fab12i", "singapore_edb_semiconductor_platform", "gf_singapore_expansion_fab"],
+    "evidence_gaps": ["P3 ramp milestones by customer and product family", "Utilization and margin thresholds for reopening external Stage 1 options"]
+  },
+  {
+    "country": "Malaysia",
+    "thesis": "Strong non-Singapore packaging / OSAT ecosystem watchlist.",
+    "best_fit_role": "Packaging / OSAT coordination, not greenfield owned investment.",
+    "unique_advantage": "Penang / Kulim semiconductor ecosystem, OSAT density, and policy support.",
+    "unique_risk": "Customer overlap, attach-rate, partner economics, and incentives remain unvalidated.",
+    "relevant_locations": ["Penang", "Kulim", "Kuala Lumpur", "Johor"],
+    "move_up_triggers": ["UMC customer overlap, packaging attach-rate, partner economics, incentives, and ROIC are validated."],
+    "move_down_triggers": ["Fab 12i P3 ramp absorbs capital or no customer-specific packaging demand emerges."],
+    "top_evidence_ids": ["malaysia_national_semiconductor_strategy", "intel_malaysia_advanced_packaging", "ase_malaysia_penang", "oppstar_malaysia_ic_design"],
+    "evidence_gaps": ["Named UMC wafer flows needing Malaysia packaging or test", "Partner shortlist economics", "ROIC / payback versus hurdle rate"]
+  },
+  {
+    "country": "Vietnam",
+    "thesis": "EMS-linked customer engineering watchlist.",
+    "best_fit_role": "Customer engineering or account operations linked to EMS and electronics clusters.",
+    "unique_advantage": "Large electronics manufacturing footprint and improving semiconductor policy attention.",
+    "unique_risk": "Ecosystem relevance to UMC customers is still proxy-based.",
+    "relevant_locations": ["Bac Ninh", "Ho Chi Minh City", "Hanoi", "Da Nang"],
+    "move_up_triggers": ["Named Fab 12i customers require local technical support near Vietnam EMS flows."],
+    "move_down_triggers": ["Demand is limited to account coverage or generic support that can be handled from Singapore."],
+    "top_evidence_ids": ["amkor_vietnam_bac_ninh", "intel_products_vietnam", "samsung_vietnam_electronics_cluster"],
+    "evidence_gaps": ["UMC customer overlap in Vietnam EMS clusters", "Local FAE and semiconductor quality support depth"]
+  },
+  {
+    "country": "Thailand",
+    "thesis": "Automotive, power, and industrial specialty-process watchlist.",
+    "best_fit_role": "Demand sensing and selective account coverage for specialty mature-node customers.",
+    "unique_advantage": "Automotive, industrial, electronics, and logistics base in Bangkok and the Eastern Economic Corridor.",
+    "unique_risk": "Policy and demand signals do not yet prove UMC-specific revenue.",
+    "relevant_locations": ["Bangkok", "Eastern Economic Corridor", "Chonburi", "Rayong"],
+    "move_up_triggers": ["Named automotive, power, or industrial customers validate specialty-process demand."],
+    "move_down_triggers": ["Customer overlap remains thin or policy execution does not translate into semiconductor demand."],
+    "top_evidence_ids": ["thailand_boi_semiconductor_incentives", "thailand_eec_electronics_auto", "analog_devices_thailand"],
+    "evidence_gaps": ["Named UMC customer overlap", "Specialty process demand by product family"]
+  },
+  {
+    "country": "Philippines",
+    "thesis": "Customer support and account operations watchlist.",
+    "best_fit_role": "Support hub, account operations, quality triage, or documentation support.",
+    "unique_advantage": "English-language technical workforce and established electronics / back-end semiconductor operations.",
+    "unique_risk": "Support role may be too generic unless tied to Fab 12i customer workflows.",
+    "relevant_locations": ["Metro Manila", "CALABARZON", "Clark", "Cebu"],
+    "move_up_triggers": ["Specific Fab 12i customer workflows require Philippines-based support capacity."],
+    "move_down_triggers": ["The opportunity is generic back-office support or can be handled from Singapore or Malaysia."],
+    "top_evidence_ids": ["philippines_oecd_semiconductor_ecosystem", "texas_instruments_philippines", "analog_devices_philippines"],
+    "evidence_gaps": ["Semiconductor-specific support talent depth", "Escalation model tied to Fab 12i products"]
+  },
+  {
+    "country": "Indonesia",
+    "thesis": "Long-term IC design / policy watchlist.",
+    "best_fit_role": "Policy monitoring, market development, and long-term design ecosystem tracking.",
+    "unique_advantage": "Large domestic market and long-term automotive, consumer, EV, and industrial demand potential.",
+    "unique_risk": "Policy signals do not yet imply manufacturing readiness or UMC-specific customer density.",
+    "relevant_locations": ["Jakarta", "Batam", "West Java", "Central Java"],
+    "move_up_triggers": ["IC design, policy, or end-market programs create named UMC-relevant mature-node demand."],
+    "move_down_triggers": ["Policy programs remain broad and do not create customer demand or partner maturity."],
+    "top_evidence_ids": ["danantara_indonesia", "indonesia_ev_automotive_demand", "batam_electronics_logistics_cluster"],
+    "evidence_gaps": ["Named fabless, EMS, or end-customer demand", "Partner maturity for customer engineering or manufacturing collaboration"]
+  }
+]
