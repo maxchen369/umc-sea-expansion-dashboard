@@ -3,6 +3,7 @@ const files = {
   modes: "data/expansion_modes.json",
   lenses: "data/scoring_lenses.json",
   evidenceLibrary: "data/evidence_library.json",
+  decisionClaims: "data/decision_claims.json",
   decisionStrategies: "data/decision_strategies.json",
   countryProfiles: "data/country_profiles.json",
   sources: "data/sources.json",
@@ -14,6 +15,7 @@ const state = {
   modes: [],
   lenses: [],
   evidenceLibrary: [],
+  decisionClaims: [],
   decisionStrategies: [],
   countryProfiles: [],
   sources: [],
@@ -24,8 +26,9 @@ const state = {
   baselineSingapore: true,
   activeLens: "fab12i_synergy",
   customWeights: {},
-  decisionRole: "All",
-  evidenceMode: "All"
+  evidenceClaim: "All",
+  evidenceCountry: "All",
+  evidenceConfidence: "All"
 };
 
 const factorKeys = [
@@ -64,29 +67,8 @@ const labels = {
   execution_risk_penalty: "Execution risk penalty"
 };
 
-const entityTypeLabels = {
-  company: "Company",
-  government_policy: "Government / Policy",
-  industrial_cluster: "Industrial Cluster",
-  research_institution: "Research Institution",
-  comparable_case: "Comparable Case",
-  infrastructure_asset: "Infrastructure Asset"
-};
-
-const decisionRoleLabels = {
-  anchor_asset: "Anchor Asset",
-  partner_candidate: "Partner Candidate",
-  customer_demand_signal: "Customer / Demand Signal",
-  talent_signal: "Talent Signal",
-  policy_incentive_signal: "Policy / Incentive Signal",
-  infrastructure_signal: "Infrastructure Signal",
-  comparable_model: "Comparable Model",
-  risk_signal: "Risk Signal"
-};
-
 const industryCategoryLabels = {
-  policy_incentives: "Policy & Incentives",
-  wafer_manufacturing: "Wafer Manufacturing",
+  foundry_wafer_manufacturing: "Foundry / Wafer Manufacturing",
   packaging_assembly_test: "Packaging, Assembly & Test",
   ic_design_ip: "IC Design & IP",
   equipment_materials: "Equipment & Materials",
@@ -153,10 +135,10 @@ const modeFitCriteria = {
 };
 
 async function loadData() {
-  const [countries, modes, lenses, evidenceLibrary, decisionStrategies, countryProfiles, sources, decisionReadiness] = await Promise.all(
+  const [countries, modes, lenses, evidenceLibrary, decisionClaims, decisionStrategies, countryProfiles, sources, decisionReadiness] = await Promise.all(
     Object.values(files).map((url) => fetch(url).then((response) => response.json()))
   );
-  Object.assign(state, { countries, modes, lenses, evidenceLibrary, decisionStrategies, countryProfiles, sources, decisionReadiness });
+  Object.assign(state, { countries, modes, lenses, evidenceLibrary, decisionClaims, decisionStrategies, countryProfiles, sources, decisionReadiness });
   state.customWeights = weightsFromLens(activeLens());
   render();
 }
@@ -287,7 +269,7 @@ function allStrategies(countries = candidates()) {
 }
 
 function evidenceFor(country, modeId) {
-  return state.evidenceLibrary.filter((item) => item.country === country.name && item.relevant_expansion_modes.includes(modeId));
+  return state.evidenceLibrary.filter((item) => item.country === country.name && strategyMode(item.related_strategy_id) === modeId);
 }
 
 function readinessFor(country) {
@@ -299,6 +281,30 @@ function readinessFor(country) {
 
 function primaryDecisionStrategy() {
   return state.decisionStrategies[0] || null;
+}
+
+function claimById(id) {
+  return state.decisionClaims.find((claim) => claim.id === id);
+}
+
+function strategyName(id) {
+  return state.decisionStrategies.find((strategy) => strategy.id === id)?.strategy_name || id;
+}
+
+function strategyMode(id) {
+  return state.decisionStrategies.find((strategy) => strategy.id === id)?.expansion_mode;
+}
+
+function claimForStrategy(strategyId) {
+  const map = {
+    optimize_fab12i_p3: "focus_fab12i_p3",
+    malaysia_packaging_osat_watchlist: "malaysia_osat_watchlist",
+    vietnam_customer_engineering_watchlist: "sales_engineering_customer_validation",
+    thailand_auto_power_watchlist: "sales_engineering_customer_validation",
+    philippines_support_ops_watchlist: "sales_engineering_customer_validation",
+    indonesia_design_policy_watchlist: "other_sea_watchlists"
+  };
+  return claimById(map[strategyId]);
 }
 
 function render() {
@@ -419,10 +425,12 @@ function renderMatrix() {
 }
 
 function renderEvidenceFilters() {
-  const roles = ["All", ...Object.keys(decisionRoleLabels)];
-  const modes = ["All", "optimize_existing_fab12i_p3", "sales_office", "customer_engineering_hub", "packaging_osat_partnership", "foundry_manufacturing_expansion", "watchlist"];
-  renderFilter("decisionRoleFilters", roles, state.decisionRole, (value) => state.decisionRole = value, (value) => decisionRoleLabels[value] || value);
-  renderFilter("modeFilters", modes, state.evidenceMode, (value) => state.evidenceMode = value, (value) => modeLabels[value] || value);
+  const claims = ["All", ...state.decisionClaims.map((claim) => claim.id)];
+  const countries = ["All", ...new Set(state.evidenceLibrary.map((item) => item.country))];
+  const confidence = ["All", "High", "Medium", "Low"];
+  renderFilter("claimFilters", claims, state.evidenceClaim, (value) => state.evidenceClaim = value, (value) => claimById(value)?.claim_title || value);
+  renderFilter("countryFilters", countries, state.evidenceCountry, (value) => state.evidenceCountry = value, (value) => value);
+  renderFilter("confidenceFilters", confidence, state.evidenceConfidence, (value) => state.evidenceConfidence = value, (value) => value);
 }
 
 function renderFilter(id, values, active, setter, labeler) {
@@ -439,40 +447,35 @@ function renderFilter(id, values, active, setter, labeler) {
 
 function renderEvidence() {
   const items = state.evidenceLibrary.filter((item) => {
-    const roleMatch = state.decisionRole === "All" || item.decision_role.includes(state.decisionRole);
-    const modeMatch = state.evidenceMode === "All" || item.relevant_expansion_modes.includes(state.evidenceMode);
-    return roleMatch && modeMatch;
+    const claimMatch = state.evidenceClaim === "All" || item.decision_claim_id === state.evidenceClaim;
+    const countryMatch = state.evidenceCountry === "All" || item.country === state.evidenceCountry;
+    const confidenceMatch = state.evidenceConfidence === "All" || item.confidence === state.evidenceConfidence;
+    return claimMatch && countryMatch && confidenceMatch;
   });
-  const order = preferredCountryOrder();
-  const grouped = groupBy(items, "country");
-  const countries = Object.keys(grouped).sort((a, b) => {
-    const ai = order.indexOf(a);
-    const bi = order.indexOf(b);
-    return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi) || a.localeCompare(b);
-  });
-  const preferredOpenCountry = primaryDecisionStrategy()?.country || countries[0];
-  const openCountry = countries.includes(preferredOpenCountry) ? preferredOpenCountry : countries[0];
-  document.getElementById("evidenceLibrary").innerHTML = countries.map((country) => {
-    const countryItems = grouped[country];
-    const industryGroups = groupBy(countryItems, "industry_category");
-    const latestYear = Math.max(...countryItems.map((item) => Number(item.data_year) || 0));
-    const confidence = highestConfidence(countryItems);
-    const strongestMode = strongestEvidenceMode(countryItems, country);
+  const grouped = groupBy(items, "decision_claim_id");
+  const claims = state.decisionClaims.filter((claim) => grouped[claim.id]?.length);
+  document.getElementById("evidenceLibrary").innerHTML = claims.map((claim, index) => {
+    const claimItems = grouped[claim.id];
+    const summary = claimEvidenceSummary(claim.id);
     return `
-      <details class="evidence-country" ${country === openCountry ? "open" : ""}>
+      <details id="claim-${claim.id}" class="evidence-country" ${index < 2 ? "open" : ""}>
         <summary>
-          <span>${country}</span>
-          <small>${countryItems.length} items | ${strongestMode} | ${confidence} confidence | Latest ${latestYear}</small>
+          <span>${claim.claim_title}</span>
+          <small>${claim.evidence_strength} evidence | ${summary.evidenceCount} evidence items | ${claim.validation_gaps.length} validation gaps</small>
         </summary>
+        <article class="claim-summary-card">
+          <h3>${claim.claim_title}</h3>
+          <p><strong>Interpretation:</strong> ${claim.management_interpretation}</p>
+          <p><strong>Evidence strength:</strong> ${claim.evidence_strength}</p>
+          <p><strong>Recommended action:</strong> ${claim.recommended_action}</p>
+          <p><strong>Validation gaps:</strong> ${claim.validation_gaps.join("; ")}</p>
+        </article>
         <div class="evidence-type-groups">
-          ${Object.keys(industryCategoryLabels).filter((category) => industryGroups[category]?.length).map((category) => `
-            <section class="evidence-type-group">
-              <h3>${industryCategoryLabels[category]}</h3>
-              <div class="evidence-card-grid">
-                ${industryGroups[category].map(renderEvidenceCard).join("")}
-              </div>
-            </section>
-          `).join("")}
+          <section class="evidence-type-group">
+            <div class="evidence-card-grid">
+              ${claimItems.map(renderEvidenceCard).join("")}
+            </div>
+          </section>
         </div>
       </details>
     `;
@@ -482,6 +485,8 @@ function renderEvidence() {
 function renderDecisionFunnel() {
   document.getElementById("decisionCards").innerHTML = state.decisionStrategies.map((strategy) => {
     const gateSummary = summarizeGates(strategy.gate_status);
+    const claim = claimForStrategy(strategy.id);
+    const evidence = claim ? state.evidenceLibrary.filter((item) => item.decision_claim_id === claim.id) : [];
     return `
       <article class="decision-card">
         <span class="readiness">${strategy.status}</span>
@@ -500,6 +505,14 @@ function renderDecisionFunnel() {
             </div>
           `).join("")}
         </div>
+        ${claim ? `
+          <div class="linked-evidence">
+            <p><strong>Evidence:</strong> ${evidence.length} items | <strong>Strength:</strong> ${claim.evidence_strength}</p>
+            <p><strong>Top linked evidence:</strong> ${evidence.slice(0, 3).map((item) => item.title).join("; ")}</p>
+            <p><strong>Unresolved evidence gaps:</strong> ${claim.validation_gaps.join("; ")}</p>
+            <button type="button" class="text-button" data-view-claim="${claim.id}">View supporting evidence</button>
+          </div>
+        ` : ""}
         <p><strong>Next action:</strong> ${strategy.next_action}</p>
         <p><strong>Suggested owner:</strong> ${strategy.suggested_owner}</p>
       </article>
@@ -520,7 +533,7 @@ function renderCountryCards() {
         <p><strong>Unique advantage:</strong> ${profile.unique_advantage}</p>
         <p><strong>Unique risk:</strong> ${profile.unique_risk}</p>
         <p><strong>Relevant locations:</strong> ${profile.relevant_locations.join(", ")}</p>
-        <p><strong>Key evidence:</strong> ${evidence.map((item) => item.name).join("; ")}</p>
+        <p><strong>Key evidence:</strong> ${evidence.map((item) => item.title).join("; ")}</p>
         <details>
           <summary>What moves priority up</summary>
           <ul>${profile.move_up_triggers.map((item) => `<li>${item}</li>`).join("")}</ul>
@@ -542,41 +555,26 @@ function renderEvidenceCard(item) {
   return `
     <article class="evidence-card">
       <div class="evidence-card-top">
-        <span class="badge">${entityTypeLabels[item.entity_type] || item.entity_type}</span>
         <span class="badge muted-badge">${industryCategoryLabels[item.industry_category] || item.industry_category}</span>
       </div>
-      <h4>${item.name}</h4>
-      <p><strong>Location:</strong> ${item.location}</p>
-      <p><strong>What it supports:</strong> ${item.supports_which_strategy.join(", ")}</p>
-      <p><strong>Decision role:</strong> ${item.decision_role.map((role) => decisionRoleLabels[role] || role).join(", ")}</p>
-      <p><strong>Relevance to UMC:</strong> ${item.relevance_to_umc}</p>
+      <h4>${item.title}</h4>
+      <p><strong>Country / location:</strong> ${item.country} | ${item.location}</p>
+      <p><strong>What it supports:</strong> ${item.what_it_supports}</p>
+      <p><strong>Decision implication:</strong> ${item.decision_implication}</p>
       <p><strong>Limitation:</strong> ${item.limitation}</p>
-      <p><strong>Relevant expansion mode:</strong> ${item.relevant_expansion_modes.map((mode) => modeLabels[mode]).join(", ")}</p>
+      <p><strong>What to validate next:</strong> ${item.what_to_validate_next.join("; ")}</p>
+      <p><strong>Related strategy:</strong> ${strategyName(item.related_strategy_id)}</p>
       <p><strong>Confidence:</strong> ${item.confidence} | <strong>Data year:</strong> ${item.data_year}</p>
+      <p><strong>Source:</strong> ${item.source_badge || `${item.source_ids.length} source(s)`}</p>
     </article>
   `;
 }
 
-function preferredCountryOrder() {
-  return state.decisionStrategies.map((strategy) => strategy.country);
-}
-
-function strongestEvidenceMode(items, country) {
-  const strategyMode = state.decisionStrategies.find((strategy) => strategy.country === country)?.expansion_mode;
-  if (strategyMode) return modeLabels[strategyMode] || strategyMode;
-  const counts = {};
-  items.forEach((item) => {
-    item.relevant_expansion_modes.forEach((mode) => {
-      counts[mode] = (counts[mode] || 0) + 1;
-    });
-  });
-  const mode = Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0];
-  return modeLabels[mode] || "Watchlist";
-}
-
-function highestConfidence(items) {
-  const rank = { High: 3, Medium: 2, Low: 1 };
-  return items.map((item) => item.confidence).sort((a, b) => (rank[b] || 0) - (rank[a] || 0))[0] || "Unknown";
+function claimEvidenceSummary(claimId) {
+  const items = state.evidenceLibrary.filter((item) => item.decision_claim_id === claimId);
+  return {
+    evidenceCount: items.length
+  };
 }
 
 function summarizeGates(gates) {
@@ -685,6 +683,15 @@ function clamp(value, min, max) {
 document.addEventListener("click", (event) => {
   if (event.target.matches("[data-close-modal]") || event.target.id === "scoreModal") {
     document.getElementById("scoreModal").hidden = true;
+  }
+  const claimButton = event.target.closest("[data-view-claim]");
+  if (claimButton) {
+    state.evidenceClaim = claimButton.dataset.viewClaim;
+    state.evidenceCountry = "All";
+    state.evidenceConfidence = "All";
+    renderEvidenceFilters();
+    renderEvidence();
+    document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 });
 

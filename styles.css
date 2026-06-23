@@ -152,6 +152,7 @@ main {
 .score-help,
 .evidence-card,
 .evidence-country,
+.claim-summary-card,
 .decision-card,
 .country-card,
 .source-list article,
@@ -208,6 +209,7 @@ input {
 
 .summary-card,
 .evidence-card,
+.claim-summary-card,
 .decision-card,
 .country-card {
   padding: 18px;
@@ -431,6 +433,7 @@ td small {
 }
 
 .evidence-card p,
+.claim-summary-card p,
 .decision-card p,
 .country-card p,
 .source-list p {
@@ -459,6 +462,16 @@ td small {
 .evidence-country summary small {
   color: var(--muted);
   font-weight: 700;
+}
+
+.claim-summary-card {
+  margin: 0 18px 18px;
+  box-shadow: none;
+  background: #f8fbff;
+}
+
+.claim-summary-card h3 {
+  margin: 0 0 8px;
 }
 
 .evidence-type-groups {

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "focus_fab12i_p3",
+    "claim_title": "Focus on Fab 12i P3 before new external expansion",
+    "claim_description": "Evidence supporting the view that UMC should prioritize executing Singapore Fab 12i P3 instead of launching new non-Singapore expansion.",
+    "management_interpretation": "Singapore Fab 12i P3 is the clearest near-term execution priority. External options should remain gated until customer, financial, and operational triggers are validated.",
+    "evidence_strength": "Strong",
+    "recommended_action": "Prioritize P3 ramp, customer qualification, utilization, and capital discipline before opening external Stage 1 workstreams.",
+    "validation_gaps": [
+      "P3 ramp status by customer and product family",
+      "Utilization and margin thresholds for reopening external Stage 1 workstreams",
+      "Customer qualification milestones that must be completed before new external capex"
+    ]
+  },
+  {
+    "id": "malaysia_osat_watchlist",
+    "claim_title": "Malaysia Packaging / OSAT as conditional watchlist",
+    "claim_description": "Evidence showing Malaysia has relevant packaging, assembly, testing, OSAT, or semiconductor ecosystem depth, but not enough to justify immediate investment.",
+    "management_interpretation": "Malaysia has relevant packaging and OSAT ecosystem depth, but current evidence supports monitoring and partner diligence, not immediate UMC investment.",
+    "evidence_strength": "Medium",
+    "recommended_action": "Keep as watchlist. Move to Stage 1 only after customer overlap, partner economics, packaging attach-rate, incentives, and ROIC are validated.",
+    "validation_gaps": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate for relevant Fab 12i output",
+      "Partner shortlist and commercial economics",
+      "Government incentive package",
+      "ROIC / payback versus hurdle rate"
+    ]
+  },
+  {
+    "id": "gate_out_external_foundry",
+    "claim_title": "Gate out non-Singapore foundry expansion for now",
+    "claim_description": "Evidence or logic showing that new foundry / manufacturing expansion outside Singapore is too capex-heavy or insufficiently validated.",
+    "management_interpretation": "The evidence does not support a new non-Singapore foundry commitment. Foundry expansion should remain gated by customer commitments, utilities, incentives, talent, and ROIC.",
+    "evidence_strength": "Medium",
+    "recommended_action": "Do not open non-Singapore foundry Stage 1 diligence until anchor customers, utilities, incentives, and economics are materially stronger.",
+    "validation_gaps": [
+      "Anchor customer commitments",
+      "Power, water, permitting, and ESG readiness",
+      "Engineering talent depth",
+      "Capex, payback, and utilization model"
+    ]
+  },
+  {
+    "id": "sales_engineering_customer_validation",
+    "claim_title": "Sales / customer engineering requires customer validation",
+    "claim_description": "Evidence related to customer proximity, EMS clusters, regional support, FAE, or customer engineering needs, but requiring UMC internal customer and revenue data.",
+    "management_interpretation": "Regional support opportunities may exist, but the evidence is mostly proxy-based. UMC needs named customer workflows, revenue mechanism, and support workload before adding local teams.",
+    "evidence_strength": "Medium",
+    "recommended_action": "Validate named accounts, FAE workload, quality escalation paths, and revenue mechanism before launching a support hub or office.",
+    "validation_gaps": [
+      "Named customer overlap",
+      "Local FAE or quality support workload",
+      "Revenue mechanism and account ownership",
+      "Escalation model into Fab 12i and Taiwan engineering"
+    ]
+  },
+  {
+    "id": "other_sea_watchlists",
+    "claim_title": "Other SEA markets remain watchlists",
+    "claim_description": "Evidence for Vietnam, Thailand, Philippines, and Indonesia as policy, EMS, automotive, support, or IC design watchlists rather than near-term expansion locations.",
+    "management_interpretation": "Vietnam, Thailand, Philippines, and Indonesia provide useful monitoring signals, but current evidence supports watchlist status rather than near-term expansion.",
+    "evidence_strength": "Weak",
+    "recommended_action": "Monitor policy, customer, EMS, automotive, support, and IC design signals without approving new capex.",
+    "validation_gaps": [
+      "UMC-specific customer demand",
+      "Partner maturity",
+      "Execution readiness",
+      "Revenue mechanism",
+      "ROIC or support-cost case"
+    ]
+  }
+]
