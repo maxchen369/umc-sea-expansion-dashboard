@@ -66,7 +66,7 @@ All paths are relative, so the app can run from GitHub Pages without configurati
 - `data/countries.json`: country scores, UMC-specific scores, risks, source IDs, and data freshness.
 - `data/expansion_modes.json`: practical expansion modes, including the no-new-external-expansion Fab 12i P3 optimization option.
 - `data/scoring_lenses.json`: lens-specific weights.
-- `data/evidence_library.json`: evidence records with separate `evidence_type` and `industry_category` fields.
+- `data/evidence_library.json`: evidence records with separate `entity_type`, `industry_category`, and `decision_role` fields.
 - `data/decision_strategies.json`: strategy-level recommendations, gate status, next action, and suggested owner.
 - `data/country_profiles.json`: country-specific thesis, role, advantage, risk, locations, priority movers, top evidence, and evidence gaps.
 - `data/decision_readiness.json`: legacy scoring support for country readiness labels used by the scorecard logic.

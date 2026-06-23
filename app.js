@@ -24,7 +24,7 @@ const state = {
   baselineSingapore: true,
   activeLens: "fab12i_synergy",
   customWeights: {},
-  evidenceType: "All",
+  decisionRole: "All",
   evidenceMode: "All"
 };
 
@@ -64,12 +64,24 @@ const labels = {
   execution_risk_penalty: "Execution risk penalty"
 };
 
-const evidenceTypeLabels = {
-  company_ecosystem: "Company / Ecosystem",
-  policy_incentives: "Policy & Incentives",
+const entityTypeLabels = {
+  company: "Company",
+  government_policy: "Government / Policy",
+  industrial_cluster: "Industrial Cluster",
+  research_institution: "Research Institution",
+  comparable_case: "Comparable Case",
+  infrastructure_asset: "Infrastructure Asset"
+};
+
+const decisionRoleLabels = {
+  anchor_asset: "Anchor Asset",
+  partner_candidate: "Partner Candidate",
   customer_demand_signal: "Customer / Demand Signal",
-  infrastructure_talent: "Infrastructure / Talent",
-  partner_candidate: "Partner Candidate"
+  talent_signal: "Talent Signal",
+  policy_incentive_signal: "Policy / Incentive Signal",
+  infrastructure_signal: "Infrastructure Signal",
+  comparable_model: "Comparable Model",
+  risk_signal: "Risk Signal"
 };
 
 const industryCategoryLabels = {
@@ -407,9 +419,9 @@ function renderMatrix() {
 }
 
 function renderEvidenceFilters() {
-  const types = ["All", ...Object.keys(evidenceTypeLabels)];
+  const roles = ["All", ...Object.keys(decisionRoleLabels)];
   const modes = ["All", "optimize_existing_fab12i_p3", "sales_office", "customer_engineering_hub", "packaging_osat_partnership", "foundry_manufacturing_expansion", "watchlist"];
-  renderFilter("evidenceTypeFilters", types, state.evidenceType, (value) => state.evidenceType = value, (value) => evidenceTypeLabels[value] || value);
+  renderFilter("decisionRoleFilters", roles, state.decisionRole, (value) => state.decisionRole = value, (value) => decisionRoleLabels[value] || value);
   renderFilter("modeFilters", modes, state.evidenceMode, (value) => state.evidenceMode = value, (value) => modeLabels[value] || value);
 }
 
@@ -427,9 +439,9 @@ function renderFilter(id, values, active, setter, labeler) {
 
 function renderEvidence() {
   const items = state.evidenceLibrary.filter((item) => {
-    const typeMatch = state.evidenceType === "All" || item.evidence_type === state.evidenceType;
+    const roleMatch = state.decisionRole === "All" || item.decision_role.includes(state.decisionRole);
     const modeMatch = state.evidenceMode === "All" || item.relevant_expansion_modes.includes(state.evidenceMode);
-    return typeMatch && modeMatch;
+    return roleMatch && modeMatch;
   });
   const order = preferredCountryOrder();
   const grouped = groupBy(items, "country");
@@ -442,7 +454,7 @@ function renderEvidence() {
   const openCountry = countries.includes(preferredOpenCountry) ? preferredOpenCountry : countries[0];
   document.getElementById("evidenceLibrary").innerHTML = countries.map((country) => {
     const countryItems = grouped[country];
-    const typeGroups = groupBy(countryItems, "evidence_type");
+    const industryGroups = groupBy(countryItems, "industry_category");
     const latestYear = Math.max(...countryItems.map((item) => Number(item.data_year) || 0));
     const confidence = highestConfidence(countryItems);
     const strongestMode = strongestEvidenceMode(countryItems, country);
@@ -453,11 +465,11 @@ function renderEvidence() {
           <small>${countryItems.length} items | ${strongestMode} | ${confidence} confidence | Latest ${latestYear}</small>
         </summary>
         <div class="evidence-type-groups">
-          ${Object.keys(evidenceTypeLabels).filter((type) => typeGroups[type]?.length).map((type) => `
+          ${Object.keys(industryCategoryLabels).filter((category) => industryGroups[category]?.length).map((category) => `
             <section class="evidence-type-group">
-              <h3>${evidenceTypeLabels[type]}</h3>
+              <h3>${industryCategoryLabels[category]}</h3>
               <div class="evidence-card-grid">
-                ${typeGroups[type].map(renderEvidenceCard).join("")}
+                ${industryGroups[category].map(renderEvidenceCard).join("")}
               </div>
             </section>
           `).join("")}
@@ -530,12 +542,13 @@ function renderEvidenceCard(item) {
   return `
     <article class="evidence-card">
       <div class="evidence-card-top">
-        <span class="badge">${evidenceTypeLabels[item.evidence_type]}</span>
+        <span class="badge">${entityTypeLabels[item.entity_type] || item.entity_type}</span>
         <span class="badge muted-badge">${industryCategoryLabels[item.industry_category] || item.industry_category}</span>
       </div>
       <h4>${item.name}</h4>
       <p><strong>Location:</strong> ${item.location}</p>
       <p><strong>What it supports:</strong> ${item.supports_which_strategy.join(", ")}</p>
+      <p><strong>Decision role:</strong> ${item.decision_role.map((role) => decisionRoleLabels[role] || role).join(", ")}</p>
       <p><strong>Relevance to UMC:</strong> ${item.relevance_to_umc}</p>
       <p><strong>Limitation:</strong> ${item.limitation}</p>
       <p><strong>Relevant expansion mode:</strong> ${item.relevant_expansion_modes.map((mode) => modeLabels[mode]).join(", ")}</p>

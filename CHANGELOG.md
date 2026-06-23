@@ -3,11 +3,12 @@
 ## 2026-06-23
 
 - Renamed the evidence section to "Evidence Library".
-- Replaced the flat evidence card layout with a country accordion grouped by evidence type.
-- Split evidence classification into `evidence_type` and `industry_category` in `data/evidence_library.json`.
+- Replaced the flat evidence card layout with a country accordion grouped by industry category.
+- Replaced mutually exclusive evidence classification with `entity_type`, `industry_category`, and multi-value `decision_role` in `data/evidence_library.json`.
 - Removed the standalone Universal Investment Gates section.
 - Refactored Decision Funnel into strategy-level gate cards with status, next action, and suggested owner.
 - Refactored Country Deep Dive into Country Profiles focused on country thesis, role, risks, triggers, evidence, and evidence gaps.
+- Updated Evidence Library grouping from evidence type to industry category, with entity and decision-role badges on each card.
 
 ## 2026-06-21
 

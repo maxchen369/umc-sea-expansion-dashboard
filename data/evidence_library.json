@@ -4,7 +4,6 @@
     "name": "UMC Fab 12i",
     "country": "Singapore",
     "location": "Pasir Ris Wafer Fab Park, Singapore",
-    "evidence_type": "company_ecosystem",
     "industry_category": "wafer_manufacturing",
     "description": "front-end foundry manufacturing anchor",
     "supports_which_strategy": [
@@ -13,7 +12,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Direct UMC regional manufacturing anchor for 22/28nm and specialty technology strategy.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Existing anchor evidence; it supports baseline logic but does not by itself approve incremental expansion.",
     "relevant_expansion_modes": [
       "foundry_manufacturing_expansion",
       "sales_office",
@@ -23,6 +22,10 @@
     "data_year": 2022,
     "source_ids": [
       "src_umc_singapore_expansion"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "anchor_asset"
     ]
   },
   {
@@ -30,7 +33,6 @@
     "name": "Singapore EDB semiconductor industry platform",
     "country": "Singapore",
     "location": "Singapore",
-    "evidence_type": "policy_incentives",
     "industry_category": "public_policy",
     "description": "national investment promotion, ecosystem coordination, and industry development",
     "supports_which_strategy": [
@@ -40,7 +42,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Supports Singapore as a stable, institutionally backed regional anchor for manufacturing and customer assurance.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "foundry_manufacturing_expansion",
@@ -51,6 +53,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_edb_semiconductors"
+    ],
+    "entity_type": "government_policy",
+    "decision_role": [
+      "policy_incentive_signal",
+      "infrastructure_signal"
     ]
   },
   {
@@ -58,7 +65,6 @@
     "name": "GlobalFoundries Singapore expansion fab",
     "country": "Singapore",
     "location": "Woodlands, Singapore",
-    "evidence_type": "company_ecosystem",
     "industry_category": "wafer_manufacturing",
     "description": "front-end foundry manufacturing",
     "supports_which_strategy": [
@@ -67,7 +73,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Peer foundry expansion validates Singapore as a premium manufacturing location for mature and specialty-node capacity.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
     "relevant_expansion_modes": [
       "foundry_manufacturing_expansion",
       "sales_office",
@@ -77,6 +83,11 @@
     "data_year": 2023,
     "source_ids": [
       "src_gf_singapore"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "infrastructure_signal"
     ]
   },
   {
@@ -84,7 +95,6 @@
     "name": "Micron Singapore Fab 10B / HBM assembly plan",
     "country": "Singapore",
     "location": "North Coast Wafer Fab Park, Singapore",
-    "evidence_type": "company_ecosystem",
     "industry_category": "wafer_manufacturing",
     "description": "memory wafer fabrication and HBM assembly",
     "supports_which_strategy": [
@@ -93,7 +103,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Reinforces Singapore advanced manufacturing depth while highlighting land, power, and engineering-talent competition.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
     "relevant_expansion_modes": [
       "foundry_manufacturing_expansion",
       "packaging_osat_partnership",
@@ -104,6 +114,12 @@
     "source_ids": [
       "src_micron_singapore_fab10b",
       "src_micron_singapore_power_constraints"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "risk_signal",
+      "infrastructure_signal"
     ]
   },
   {
@@ -111,7 +127,6 @@
     "name": "A*STAR Institute of Microelectronics",
     "country": "Singapore",
     "location": "Singapore",
-    "evidence_type": "policy_incentives",
     "industry_category": "ic_design_ip",
     "description": "applied semiconductor R&D, prototyping, and ecosystem collaboration",
     "supports_which_strategy": [
@@ -121,7 +136,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Relevant to specialty technology, silicon photonics, heterogeneous integration, and customer co-development ecosystem.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "packaging_osat_partnership",
@@ -132,6 +147,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_astar_ime"
+    ],
+    "entity_type": "research_institution",
+    "decision_role": [
+      "talent_signal",
+      "infrastructure_signal"
     ]
   },
   {
@@ -139,7 +159,6 @@
     "name": "Applied Materials Singapore",
     "country": "Singapore",
     "location": "Singapore",
-    "evidence_type": "company_ecosystem",
     "industry_category": "wafer_manufacturing",
     "description": "wafer fab equipment, services, and process-support ecosystem",
     "supports_which_strategy": [
@@ -148,7 +167,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Equipment and services depth supports Fab 12i uptime, process support, and future manufacturing optionality.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
     "relevant_expansion_modes": [
       "foundry_manufacturing_expansion",
       "packaging_osat_partnership",
@@ -158,6 +177,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_applied_materials_singapore"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "infrastructure_signal"
     ]
   },
   {
@@ -165,7 +188,6 @@
     "name": "UTAC Singapore",
     "country": "Singapore",
     "location": "Singapore",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor test and assembly services",
     "supports_which_strategy": [
@@ -174,7 +196,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Provides back-end and test adjacency for customers using Singapore manufacturing or regional supply chains.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub",
@@ -184,6 +206,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_utac_group"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -191,8 +217,7 @@
     "name": "Malaysia National Semiconductor Strategy",
     "country": "Malaysia",
     "location": "Malaysia",
-    "evidence_type": "policy_incentives",
-    "industry_category": "ic_design_ip",
+    "industry_category": "public_policy",
     "description": "policy, incentives, talent, IC design, advanced packaging, equipment, and manufacturing roadmap",
     "supports_which_strategy": [
       "Sales Office",
@@ -201,7 +226,7 @@
       "Foundry / Manufacturing Expansion"
     ],
     "relevance_to_umc": "Makes Malaysia a leading conditional non-Singapore policy platform for staged packaging, support, and partner-led options.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "packaging_osat_partnership",
@@ -213,6 +238,12 @@
     "source_ids": [
       "src_malaysia_nss",
       "src_malaysia_wsj_chip_hub"
+    ],
+    "entity_type": "government_policy",
+    "decision_role": [
+      "policy_incentive_signal",
+      "talent_signal",
+      "infrastructure_signal"
     ]
   },
   {
@@ -220,7 +251,6 @@
     "name": "Intel Malaysia advanced packaging expansion",
     "country": "Malaysia",
     "location": "Penang and Kulim, Malaysia",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "back-end manufacturing, packaging, and test",
     "supports_which_strategy": [
@@ -228,7 +258,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Validates Malaysia as a global-scale back-end and packaging hub with engineering depth.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub"
@@ -238,6 +268,12 @@
     "source_ids": [
       "src_intel_malaysia",
       "src_intel_advanced_packaging_2026"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "infrastructure_signal",
+      "talent_signal"
     ]
   },
   {
@@ -245,7 +281,6 @@
     "name": "Infineon Kulim SiC power semiconductor fab",
     "country": "Malaysia",
     "location": "Kulim, Kedah, Malaysia",
-    "evidence_type": "partner_candidate",
     "industry_category": "wafer_manufacturing",
     "description": "front-end power semiconductor manufacturing",
     "supports_which_strategy": [
@@ -255,7 +290,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Strong specialty, power, and automotive adjacency for UMC mature-node and specialty customer base.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "foundry_manufacturing_expansion",
       "packaging_osat_partnership",
@@ -267,6 +302,11 @@
     "source_ids": [
       "src_infineon_kulim",
       "src_malaysia_nss"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "customer_demand_signal"
     ]
   },
   {
@@ -274,7 +314,6 @@
     "name": "ASE Malaysia / Penang OSAT operations",
     "country": "Malaysia",
     "location": "Penang, Malaysia",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "assembly, packaging, and test",
     "supports_which_strategy": [
@@ -283,7 +322,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Major OSAT presence strengthens Penang as a partner-led packaging and customer-support candidate.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub",
@@ -293,6 +332,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_ase_global"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -300,7 +343,6 @@
     "name": "Inari Amertron",
     "country": "Malaysia",
     "location": "Penang and other Malaysia sites",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "outsourced assembly, RF test, and electronics services",
     "supports_which_strategy": [
@@ -309,7 +351,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Adds local OSAT/test density and RF/connectivity customer adjacency.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub",
@@ -319,6 +361,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_inari_amertron"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -326,7 +372,6 @@
     "name": "Unisem Malaysia",
     "country": "Malaysia",
     "location": "Ipoh, Perak and other Malaysia operations",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor assembly and test",
     "supports_which_strategy": [
@@ -334,7 +379,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Adds mature OSAT capacity and back-end supplier depth.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub"
@@ -343,6 +388,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_unisem_group"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -350,7 +399,6 @@
     "name": "Oppstar",
     "country": "Malaysia",
     "location": "Penang, Malaysia",
-    "evidence_type": "company_ecosystem",
     "industry_category": "ic_design_ip",
     "description": "IC design, design services, and semiconductor engineering talent",
     "supports_which_strategy": [
@@ -359,7 +407,7 @@
       "Packaging / OSAT Partnership"
     ],
     "relevance_to_umc": "Adds design-services and engineering talent depth near the Penang OSAT cluster.",
-    "limitation": "Capability signal only; availability, cost, and UMC-specific operating fit need validation.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub",
@@ -369,6 +417,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_oppstar"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "talent_signal"
     ]
   },
   {
@@ -376,7 +428,6 @@
     "name": "Penang Silicon Design @5km+ / chip design talent ecosystem",
     "country": "Malaysia",
     "location": "Penang, Malaysia",
-    "evidence_type": "policy_incentives",
     "industry_category": "ic_design_ip",
     "description": "design talent, workforce development, and ecosystem clustering",
     "supports_which_strategy": [
@@ -385,7 +436,7 @@
       "Packaging / OSAT Partnership"
     ],
     "relevance_to_umc": "Improves Malaysia suitability for customer engineering, design support, and account-technical roles.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub",
@@ -395,6 +446,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_penang_design_talent"
+    ],
+    "entity_type": "industrial_cluster",
+    "decision_role": [
+      "talent_signal",
+      "infrastructure_signal"
     ]
   },
   {
@@ -402,7 +458,6 @@
     "name": "Amkor Technology Vietnam",
     "country": "Vietnam",
     "location": "Yen Phong II-C Industrial Park, Bac Ninh, Vietnam",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "advanced SiP assembly and test",
     "supports_which_strategy": [
@@ -411,7 +466,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Best verified Vietnam back-end anchor for advanced packaging and customer support monitoring.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub",
@@ -421,6 +476,11 @@
     "data_year": 2023,
     "source_ids": [
       "src_amkor_vietnam"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "partner_candidate"
     ]
   },
   {
@@ -428,7 +488,6 @@
     "name": "Hana Micron Vietnam",
     "country": "Vietnam",
     "location": "Bac Giang / northern Vietnam",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor assembly, packaging, and test",
     "supports_which_strategy": [
@@ -436,7 +495,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Adds a second Korean-linked back-end anchor in Vietnam northern electronics corridor.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub"
@@ -445,6 +504,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_hana_micron"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -452,7 +515,6 @@
     "name": "Intel Products Vietnam",
     "country": "Vietnam",
     "location": "Saigon Hi-Tech Park, Ho Chi Minh City, Vietnam",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "back-end assembly and test manufacturing",
     "supports_which_strategy": [
@@ -461,7 +523,7 @@
       "Packaging / OSAT Partnership"
     ],
     "relevance_to_umc": "Demonstrates Vietnam can operate high-volume semiconductor back-end manufacturing for a global IDM.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "sales_office",
@@ -471,6 +533,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_intel_vietnam"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "talent_signal"
     ]
   },
   {
@@ -478,7 +545,6 @@
     "name": "FPT Semiconductor",
     "country": "Vietnam",
     "location": "Hanoi / Ho Chi Minh City, Vietnam",
-    "evidence_type": "infrastructure_talent",
     "industry_category": "ic_design_ip",
     "description": "chip design, power management ICs, and local design talent development",
     "supports_which_strategy": [
@@ -486,7 +552,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Supports Vietnam emerging fabless/design-services ecosystem and long-term foundry customer development.",
-    "limitation": "Capability signal only; availability, cost, and UMC-specific operating fit need validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -495,6 +561,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_fpt_semiconductor"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "talent_signal",
+      "customer_demand_signal"
     ]
   },
   {
@@ -502,7 +573,6 @@
     "name": "Vietnam National Innovation Center semiconductor initiatives",
     "country": "Vietnam",
     "location": "Hanoi / Hoa Lac and national programs",
-    "evidence_type": "policy_incentives",
     "industry_category": "infrastructure",
     "description": "workforce development, innovation programs, and ecosystem partnerships",
     "supports_which_strategy": [
@@ -510,7 +580,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Supports long-term customer engineering and design-support talent assumptions.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -519,6 +589,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_vietnam_nic"
+    ],
+    "entity_type": "government_policy",
+    "decision_role": [
+      "talent_signal",
+      "policy_incentive_signal"
     ]
   },
   {
@@ -526,7 +601,6 @@
     "name": "Samsung Vietnam electronics manufacturing cluster",
     "country": "Vietnam",
     "location": "Bac Ninh, Thai Nguyen, Ho Chi Minh City, Vietnam",
-    "evidence_type": "company_ecosystem",
     "industry_category": "electronics_ems",
     "description": "downstream electronics manufacturing and supplier ecosystem",
     "supports_which_strategy": [
@@ -534,7 +608,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Supports customer proximity for consumer, display, connectivity, IoT, and electronics supply-chain accounts.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -543,6 +617,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_samsung_vietnam"
+    ],
+    "entity_type": "industrial_cluster",
+    "decision_role": [
+      "customer_demand_signal"
     ]
   },
   {
@@ -550,8 +628,7 @@
     "name": "Vietnam semiconductor industry development strategy",
     "country": "Vietnam",
     "location": "Vietnam",
-    "evidence_type": "policy_incentives",
-    "industry_category": "infrastructure",
+    "industry_category": "public_policy",
     "description": "policy roadmap for design, packaging, workforce, and ecosystem development",
     "supports_which_strategy": [
       "Sales Office",
@@ -559,7 +636,7 @@
       "Packaging / OSAT Partnership"
     ],
     "relevance_to_umc": "Supports Vietnam as an emerging long-term customer engineering and design-support market.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub",
@@ -569,6 +646,11 @@
     "data_year": 2024,
     "source_ids": [
       "src_vietnam_mic_strategy"
+    ],
+    "entity_type": "government_policy",
+    "decision_role": [
+      "policy_incentive_signal",
+      "talent_signal"
     ]
   },
   {
@@ -576,7 +658,6 @@
     "name": "Thailand Board of Investment semiconductor / electronics incentives",
     "country": "Thailand",
     "location": "Thailand",
-    "evidence_type": "policy_incentives",
     "industry_category": "public_policy",
     "description": "investment promotion and incentives",
     "supports_which_strategy": [
@@ -586,7 +667,7 @@
       "Foundry / Manufacturing Expansion"
     ],
     "relevance_to_umc": "Supports Thailand as a policy-backed watchlist for electronics, power, sensors, automotive, and industrial demand.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub",
@@ -597,6 +678,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_thailand_boi"
+    ],
+    "entity_type": "government_policy",
+    "decision_role": [
+      "policy_incentive_signal"
     ]
   },
   {
@@ -604,7 +689,6 @@
     "name": "Eastern Economic Corridor electronics / automotive cluster",
     "country": "Thailand",
     "location": "Chonburi, Rayong, Chachoengsao, Thailand",
-    "evidence_type": "policy_incentives",
     "industry_category": "electronics_ems",
     "description": "downstream electronics, automotive, EV, logistics, and industrial manufacturing corridor",
     "supports_which_strategy": [
@@ -612,7 +696,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Strong demand-side fit for automotive, industrial, power, connectivity, and display-related mature-node customers.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -621,6 +705,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_thailand_eec"
+    ],
+    "entity_type": "industrial_cluster",
+    "decision_role": [
+      "customer_demand_signal",
+      "infrastructure_signal"
     ]
   },
   {
@@ -628,7 +717,6 @@
     "name": "Analog Devices Thailand",
     "country": "Thailand",
     "location": "Chonburi, Thailand",
-    "evidence_type": "company_ecosystem",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor test and support operations",
     "supports_which_strategy": [
@@ -636,7 +724,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Validates Thailand as a location for analog and mixed-signal semiconductor test activity linked to UMC-relevant customer segments.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "sales_office"
@@ -645,6 +733,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_analog_devices"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "customer_demand_signal"
     ]
   },
   {
@@ -652,7 +745,6 @@
     "name": "UTAC Thailand",
     "country": "Thailand",
     "location": "Thailand",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor assembly and test services",
     "supports_which_strategy": [
@@ -660,7 +752,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Adds packaging/test adjacency in Thailand for mature-node and mixed-signal customer support.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub"
@@ -669,6 +761,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_utac_group"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -676,7 +772,6 @@
     "name": "Stars Microelectronics Thailand",
     "country": "Thailand",
     "location": "Ayutthaya, Thailand",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "assembly, test, electronics manufacturing, and module services",
     "supports_which_strategy": [
@@ -685,7 +780,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Local semiconductor/electronics manufacturing supplier relevant to customer support and back-end partner mapping.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub",
@@ -695,6 +790,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_stars_microelectronics"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate",
+      "customer_demand_signal"
     ]
   },
   {
@@ -702,7 +802,6 @@
     "name": "Thailand HDD and precision electronics manufacturing cluster",
     "country": "Thailand",
     "location": "Bangkok metro, Ayutthaya, Chonburi, and related industrial zones",
-    "evidence_type": "customer_demand_signal",
     "industry_category": "electronics_ems",
     "description": "precision electronics, storage, motors, sensors, and supply-chain manufacturing",
     "supports_which_strategy": [
@@ -710,7 +809,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Mature electronics manufacturing supports demand mapping for mature-node analog, power, sensors, motor-control, and connectivity ICs.",
-    "limitation": "Demand proxy only; UMC-specific customer overlap and revenue mechanism are not validated.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -719,6 +818,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_western_digital_seagate_thailand"
+    ],
+    "entity_type": "industrial_cluster",
+    "decision_role": [
+      "customer_demand_signal"
     ]
   },
   {
@@ -726,7 +829,6 @@
     "name": "Philippines semiconductor ecosystem",
     "country": "Philippines",
     "location": "Philippines",
-    "evidence_type": "policy_incentives",
     "industry_category": "public_policy",
     "description": "semiconductor ecosystem assessment and development recommendations",
     "supports_which_strategy": [
@@ -735,7 +837,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Supports Philippines as a support, assembly/test, and account-operations candidate rather than near-term front-end fab location.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "packaging_osat_partnership",
@@ -745,6 +847,11 @@
     "data_year": 2024,
     "source_ids": [
       "src_oecd_philippines"
+    ],
+    "entity_type": "comparable_case",
+    "decision_role": [
+      "infrastructure_signal",
+      "risk_signal"
     ]
   },
   {
@@ -752,7 +859,6 @@
     "name": "Texas Instruments Philippines",
     "country": "Philippines",
     "location": "Baguio and Clark, Philippines",
-    "evidence_type": "company_ecosystem",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor assembly, test, and manufacturing support",
     "supports_which_strategy": [
@@ -760,7 +866,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Validates Philippines back-end semiconductor operations and analog/embedded customer relevance.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "sales_office"
@@ -769,6 +875,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_ti_philippines"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "customer_demand_signal"
     ]
   },
   {
@@ -776,7 +887,6 @@
     "name": "Analog Devices Philippines",
     "country": "Philippines",
     "location": "General Trias, Cavite, Philippines",
-    "evidence_type": "company_ecosystem",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor test facility",
     "supports_which_strategy": [
@@ -784,7 +894,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Aligns with UMC analog, power, automotive, industrial, and sensor customer segments.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "sales_office"
@@ -793,6 +903,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_analog_devices"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "customer_demand_signal"
     ]
   },
   {
@@ -800,7 +915,6 @@
     "name": "Integrated Micro-Electronics and PSi Technologies",
     "country": "Philippines",
     "location": "Laguna / CALABARZON, Philippines",
-    "evidence_type": "company_ecosystem",
     "industry_category": "wafer_manufacturing",
     "description": "electronics manufacturing, power semiconductor assembly, and test services",
     "supports_which_strategy": [
@@ -809,7 +923,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Supports power, automotive, industrial, and electronics customer support use cases.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "packaging_osat_partnership",
@@ -819,6 +933,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_imi_philippines"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate",
+      "customer_demand_signal"
     ]
   },
   {
@@ -826,7 +945,6 @@
     "name": "Amkor Philippines",
     "country": "Philippines",
     "location": "Philippines",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor package and test services",
     "supports_which_strategy": [
@@ -834,7 +952,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Adds OSAT depth and long-running back-end semiconductor experience.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
     "relevant_expansion_modes": [
       "packaging_osat_partnership",
       "customer_engineering_hub"
@@ -843,6 +961,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_amkor_vietnam"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "partner_candidate"
     ]
   },
   {
@@ -850,15 +972,14 @@
     "name": "Clark and CALABARZON electronics / logistics corridor",
     "country": "Philippines",
     "location": "Clark, Laguna, Cavite, Batangas, Philippines",
-    "evidence_type": "policy_incentives",
-    "industry_category": "electronics_ems",
+    "industry_category": "infrastructure",
     "description": "industrial parks, logistics, electronics manufacturing, and support operations",
     "supports_which_strategy": [
       "Sales Office",
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Supports low-capex account operations, logistics coordination, and technical support hub options.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -867,6 +988,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_peza_bcda"
+    ],
+    "entity_type": "infrastructure_asset",
+    "decision_role": [
+      "infrastructure_signal"
     ]
   },
   {
@@ -874,15 +999,14 @@
     "name": "Batam electronics and logistics cluster",
     "country": "Indonesia",
     "location": "Batam, Riau Islands, Indonesia",
-    "evidence_type": "policy_incentives",
-    "industry_category": "electronics_ems",
+    "industry_category": "infrastructure",
     "description": "electronics manufacturing, logistics, and Singapore-adjacent industrial base",
     "supports_which_strategy": [
       "Sales Office",
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Supports low-cost customer-support and logistics watchlist near Singapore, but not a foundry base.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -891,6 +1015,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_bp_batam"
+    ],
+    "entity_type": "industrial_cluster",
+    "decision_role": [
+      "infrastructure_signal",
+      "customer_demand_signal"
     ]
   },
   {
@@ -898,7 +1027,6 @@
     "name": "PT Sat Nusapersada",
     "country": "Indonesia",
     "location": "Batam, Indonesia",
-    "evidence_type": "company_ecosystem",
     "industry_category": "packaging_assembly_test",
     "description": "electronics manufacturing and assembly services",
     "supports_which_strategy": [
@@ -906,7 +1034,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Adds downstream electronics manufacturing evidence for Indonesia demand and support coverage.",
-    "limitation": "Ecosystem evidence only; it does not by itself justify capex or Stage 1 approval.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -915,6 +1043,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_sat_nusapersada"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "customer_demand_signal"
     ]
   },
   {
@@ -922,7 +1054,6 @@
     "name": "Infineon Batam operations",
     "country": "Indonesia",
     "location": "Batam, Indonesia",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "semiconductor back-end manufacturing",
     "supports_which_strategy": [
@@ -931,7 +1062,7 @@
       "Packaging / OSAT Partnership"
     ],
     "relevance_to_umc": "Supports Indonesia limited semiconductor manufacturing evidence, especially for power and industrial semiconductor supply chains.",
-    "limitation": "Potential partner or comparable only; commercial terms, capacity, IP boundaries, and customer attach-rate are unvalidated.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "sales_office",
@@ -941,6 +1072,11 @@
     "data_year": 2025,
     "source_ids": [
       "src_infineon_indonesia"
+    ],
+    "entity_type": "company",
+    "decision_role": [
+      "comparable_model",
+      "customer_demand_signal"
     ]
   },
   {
@@ -948,7 +1084,6 @@
     "name": "Indonesia EV and automotive electronics demand cluster",
     "country": "Indonesia",
     "location": "Jakarta, West Java, Central Java, and industrial zones",
-    "evidence_type": "policy_incentives",
     "industry_category": "electronics_ems",
     "description": "EV battery, automotive, consumer electronics, and industrial demand",
     "supports_which_strategy": [
@@ -956,7 +1091,7 @@
       "Customer Engineering Hub"
     ],
     "relevance_to_umc": "Long-term demand-side option for automotive, power, connectivity, consumer, and industrial IC customers.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub"
@@ -965,6 +1100,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_invest_indonesia"
+    ],
+    "entity_type": "industrial_cluster",
+    "decision_role": [
+      "customer_demand_signal"
     ]
   },
   {
@@ -972,7 +1111,6 @@
     "name": "Batamindo Industrial Park",
     "country": "Indonesia",
     "location": "Batam, Indonesia",
-    "evidence_type": "infrastructure_talent",
     "industry_category": "infrastructure",
     "description": "industrial estate, manufacturing infrastructure, and Singapore-linked logistics",
     "supports_which_strategy": [
@@ -980,7 +1118,7 @@
       "Sales Office"
     ],
     "relevance_to_umc": "Potential low-cost support/logistics adjacency for Singapore Fab 12i, but not a semiconductor manufacturing anchor by itself.",
-    "limitation": "Capability signal only; availability, cost, and UMC-specific operating fit need validation.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
     "relevant_expansion_modes": [
       "customer_engineering_hub",
       "sales_office"
@@ -989,6 +1127,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_batamindo"
+    ],
+    "entity_type": "infrastructure_asset",
+    "decision_role": [
+      "infrastructure_signal"
     ]
   },
   {
@@ -996,7 +1138,6 @@
     "name": "Danantara Indonesia",
     "country": "Indonesia",
     "location": "Jakarta, Indonesia",
-    "evidence_type": "policy_incentives",
     "industry_category": "public_policy",
     "description": "strategic investment vehicle and industrial-policy funding platform",
     "supports_which_strategy": [
@@ -1005,7 +1146,7 @@
       "Watchlist"
     ],
     "relevance_to_umc": "Potential policy/investment counterparty if Indonesia pursues semiconductor design, training, or supply-chain security programs.",
-    "limitation": "Policy signal only; project-specific incentives, execution detail, and economics still need validation.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
     "relevant_expansion_modes": [
       "sales_office",
       "customer_engineering_hub",
@@ -1015,6 +1156,10 @@
     "data_year": 2025,
     "source_ids": [
       "src_danantara"
+    ],
+    "entity_type": "government_policy",
+    "decision_role": [
+      "policy_incentive_signal"
     ]
   },
   {
@@ -1022,7 +1167,6 @@
     "name": "TSMC-Amkor Arizona model comparison",
     "country": "Comparison",
     "location": "Arizona model compared with Southeast Asia",
-    "evidence_type": "partner_candidate",
     "industry_category": "packaging_assembly_test",
     "description": "front-end fab anchor plus local OSAT packaging partnership model",
     "supports_which_strategy": [
@@ -1031,7 +1175,7 @@
       "Watchlist"
     ],
     "relevance_to_umc": "TSMC-Amkor Arizona works because of a front-end fab anchor, local packaging gap, OSAT capex, government subsidies, and anchor customer demand. For UMC Southeast Asia, Singapore Fab 12i P3 is already the main front-end anchor.",
-    "limitation": "Comparable model only; does not prove UMC customer demand, partner economics, incentives, or ROIC in Southeast Asia.",
+    "limitation": "Comparable evidence only; it does not prove UMC customer demand, partner economics, incentives, or ROIC.",
     "relevant_expansion_modes": [
       "optimize_existing_fab12i_p3",
       "packaging_osat_partnership",
@@ -1039,6 +1183,10 @@
     ],
     "confidence": "Medium",
     "data_year": 2026,
-    "source_ids": []
+    "source_ids": [],
+    "entity_type": "comparable_case",
+    "decision_role": [
+      "comparable_model"
+    ]
   }
 ]
