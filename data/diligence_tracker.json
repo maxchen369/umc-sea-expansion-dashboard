@@ -1,0 +1,128 @@
+[
+  {
+    "item": "UMC internal customer overlap by country",
+    "related_strategy": "Malaysia, Vietnam, Thailand, Philippines, Indonesia watchlists",
+    "why_it_matters": "No non-Singapore option should move beyond Stage 0 without named customer relevance.",
+    "current_status": "Open",
+    "owner": "Sales / BD",
+    "next_action": "Map Fab 12i and UMC mature-node customers by SEA manufacturing, EMS, packaging, and support footprint.",
+    "decision_impact": "Blocks Stage 1 for sales, engineering, packaging, and foundry options."
+  },
+  {
+    "item": "Revenue mechanism",
+    "related_strategy": "All non-Singapore options",
+    "why_it_matters": "A local presence only matters if it creates revenue, retention, cycle-time, yield, or support-cost benefit.",
+    "current_status": "Open",
+    "owner": "Finance / Sales",
+    "next_action": "Define whether value comes from wafer pull, packaging attach, support fees, retention, or cost avoidance.",
+    "decision_impact": "Blocks investment-ready status."
+  },
+  {
+    "item": "Partner shortlist",
+    "related_strategy": "Malaysia Packaging / OSAT Watchlist",
+    "why_it_matters": "Malaysia is only actionable if a named partner model exists with capacity, quality, IP, and commercial fit.",
+    "current_status": "Partial",
+    "owner": "BD / Procurement / Legal",
+    "next_action": "Shortlist OSAT, test, substrate, equipment, and service partners; screen conflicts and customer acceptance.",
+    "decision_impact": "Required before Malaysia can move from conditional watchlist to Stage 1."
+  },
+  {
+    "item": "Partner economics",
+    "related_strategy": "Malaysia Packaging / OSAT Watchlist",
+    "why_it_matters": "Ecosystem depth does not prove margin, yield, cycle-time, or commercial benefit to UMC.",
+    "current_status": "Open",
+    "owner": "Finance / BD",
+    "next_action": "Request indicative pricing, yield responsibility, capacity commitments, and commercial terms.",
+    "decision_impact": "Blocks Malaysia investment recommendation."
+  },
+  {
+    "item": "Packaging attach-rate",
+    "related_strategy": "Malaysia Packaging / OSAT Watchlist",
+    "why_it_matters": "Without attach-rate, Malaysia OSAT adjacency cannot be converted into revenue or ROIC.",
+    "current_status": "Open",
+    "owner": "Sales / Product / Operations",
+    "next_action": "Estimate Fab 12i wafer output and customer packages that could realistically attach to Malaysia partners.",
+    "decision_impact": "Blocks revenue model and ROIC."
+  },
+  {
+    "item": "Capex / opex estimate",
+    "related_strategy": "All new operating or investment options",
+    "why_it_matters": "Management cannot compare watchlists without cost envelope and operating model.",
+    "current_status": "Open",
+    "owner": "Finance / Operations",
+    "next_action": "Prepare light capex / opex ranges for partnership, office, support hub, and manufacturing scenarios.",
+    "decision_impact": "Blocks Stage 1 approval."
+  },
+  {
+    "item": "ROIC / payback",
+    "related_strategy": "All non-Singapore options",
+    "why_it_matters": "The dashboard should not imply investment readiness without hurdle-rate comparison.",
+    "current_status": "Open",
+    "owner": "Finance",
+    "next_action": "Build preliminary ROIC and payback model using validated revenue, capex, opex, incentives, and utilization inputs.",
+    "decision_impact": "Blocks investment recommendation."
+  },
+  {
+    "item": "Government incentive details",
+    "related_strategy": "Malaysia, Vietnam, Thailand, Philippines, Indonesia",
+    "why_it_matters": "Policy statements do not equal project-specific cash grants, tax holidays, land, power, or permitting terms.",
+    "current_status": "Partial",
+    "owner": "Government Affairs / Finance / Legal",
+    "next_action": "Request project-specific incentive menus and eligibility conditions by country and site.",
+    "decision_impact": "Can change economics but does not override customer and ROIC gates."
+  },
+  {
+    "item": "Tax treatment",
+    "related_strategy": "All non-Singapore options",
+    "why_it_matters": "Tax leakage, transfer pricing, withholding, and incentive clawbacks affect ROIC.",
+    "current_status": "Open",
+    "owner": "Tax / Legal / Finance",
+    "next_action": "Prepare country-level tax issue list for partnership, services, and capex scenarios.",
+    "decision_impact": "Required before Stage 1 financial model."
+  },
+  {
+    "item": "Utility cost and reliability",
+    "related_strategy": "Foundry expansion and operating hubs",
+    "why_it_matters": "Power reliability and tariff structure affect manufacturing feasibility and support-site resilience.",
+    "current_status": "Open",
+    "owner": "Facilities / Operations",
+    "next_action": "Collect site-level electricity tariffs, outage history, redundancy options, and service-level commitments.",
+    "decision_impact": "Blocks non-Singapore foundry expansion; informs support hub economics."
+  },
+  {
+    "item": "Power / water availability",
+    "related_strategy": "Non-Singapore Foundry / Manufacturing Expansion",
+    "why_it_matters": "Fab expansion requires validated power, water, environmental permitting, and redundancy.",
+    "current_status": "Open",
+    "owner": "Operations / Facilities / EHS",
+    "next_action": "Do not begin Stage 1 until site-level utility envelopes and permitting paths are documented.",
+    "decision_impact": "Hard blocker for foundry expansion."
+  },
+  {
+    "item": "Semiconductor-specific salary data",
+    "related_strategy": "All people-dependent watchlists",
+    "why_it_matters": "Generic engineer wages do not price FAE, process, packaging, quality, or product engineering roles.",
+    "current_status": "Open",
+    "owner": "HR / Finance",
+    "next_action": "Collect salary bands by function and seniority in Singapore, Malaysia, Vietnam, Thailand, Philippines, and Indonesia.",
+    "decision_impact": "Required for support hub and partner economics."
+  },
+  {
+    "item": "Talent availability by function",
+    "related_strategy": "Customer engineering, support, packaging, manufacturing",
+    "why_it_matters": "A country may have engineers but not the specific semiconductor functions UMC needs.",
+    "current_status": "Open",
+    "owner": "HR / Engineering",
+    "next_action": "Validate availability for FAE, quality, test, packaging, process, equipment, product, and program roles.",
+    "decision_impact": "Blocks role-specific Stage 1 plans."
+  },
+  {
+    "item": "Legal / regulatory feasibility",
+    "related_strategy": "All non-Singapore options",
+    "why_it_matters": "Entity setup, employment, customer data, export controls, incentives, and IP boundaries affect feasibility.",
+    "current_status": "Open",
+    "owner": "Legal / Compliance",
+    "next_action": "Prepare country-specific legal feasibility memo by option type.",
+    "decision_impact": "Required before any operating launch or partner transaction."
+  }
+]

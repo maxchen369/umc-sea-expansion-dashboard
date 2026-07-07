@@ -1,0 +1,122 @@
+[
+  {
+    "workstream": "Sales / BD",
+    "diligence_item": "UMC internal customer overlap by country",
+    "related_option": "sales_office",
+    "related_country": "Malaysia, Vietnam, Thailand, Indonesia, Philippines",
+    "why_it_matters": "Commercial presence only matters where named UMC accounts or prospects require local coverage.",
+    "owner": "Sales / BD",
+    "next_action": "Map Fab 12i and mature-node customers to SEA manufacturing, EMS, packaging, and support footprints.",
+    "output_needed": "Country-by-customer overlap map with account owner and estimated opportunity type."
+  },
+  {
+    "workstream": "Sales / BD",
+    "diligence_item": "Customer support workflow demand",
+    "related_option": "customer_engineering_hub",
+    "related_country": "Malaysia, Vietnam, Thailand, Philippines",
+    "why_it_matters": "A hub requires UMC-specific FAE, quality, design-in, or escalation workload.",
+    "owner": "Sales / BD / Technology / Engineering",
+    "next_action": "Interview account teams and identify workflows that cannot be handled from Singapore or Taiwan.",
+    "output_needed": "Validated workflow list with volume, urgency, and customer owner."
+  },
+  {
+    "workstream": "Finance",
+    "diligence_item": "Revenue mechanism and cost-benefit logic",
+    "related_option": "sales_office",
+    "related_country": "All non-Singapore countries",
+    "why_it_matters": "Management needs to know whether value comes from revenue, retention, support efficiency, cycle time, or option learning.",
+    "owner": "Finance / Sales",
+    "next_action": "Define value mechanism by option family and country.",
+    "output_needed": "Option-level financial logic memo with measurable benefit drivers."
+  },
+  {
+    "workstream": "Finance",
+    "diligence_item": "Capex, opex, payback, and ROIC ranges",
+    "related_option": "foundry_manufacturing_expansion",
+    "related_country": "Malaysia, Vietnam, Thailand, Indonesia, Philippines",
+    "why_it_matters": "Manufacturing expansion and partnership options need cost envelopes before deeper comparison.",
+    "owner": "Finance / Operations",
+    "next_action": "Prepare light scenario ranges for office, hub, partnership, and manufacturing models.",
+    "output_needed": "Scenario model with assumptions, sensitivities, and unresolved inputs."
+  },
+  {
+    "workstream": "Operations",
+    "diligence_item": "Utility cost, reliability, power, and water availability",
+    "related_option": "foundry_manufacturing_expansion",
+    "related_country": "Malaysia, Vietnam, Thailand, Indonesia, Philippines",
+    "why_it_matters": "Manufacturing feasibility depends on site-level power, water, redundancy, permitting, and reliability.",
+    "owner": "Operations / Facilities / EHS",
+    "next_action": "Collect site-level tariff, outage, power, water, and permitting data.",
+    "output_needed": "Country/site utility fact pack with data gaps clearly marked."
+  },
+  {
+    "workstream": "Technology / Engineering",
+    "diligence_item": "Function-specific engineering talent availability",
+    "related_option": "customer_engineering_hub",
+    "related_country": "Malaysia, Vietnam, Thailand, Philippines",
+    "why_it_matters": "Generic engineering supply does not confirm FAE, product, quality, test, packaging, or process capability.",
+    "owner": "Technology / Engineering / HR",
+    "next_action": "Define target roles and validate available talent pools by country.",
+    "output_needed": "Role-by-country talent availability and training gap assessment."
+  },
+  {
+    "workstream": "Technology / Engineering",
+    "diligence_item": "Fab 12i P3 baseline constraints and extension needs",
+    "related_option": "optimize_existing_fab12i_p3",
+    "related_country": "Singapore",
+    "why_it_matters": "Post-P3 options should be compared against actual customer, technology, capacity, and support constraints.",
+    "owner": "Operations / Technology / Engineering",
+    "next_action": "Summarize P3 ramp milestones, customer qualification status, and support bottlenecks.",
+    "output_needed": "Fab 12i P3 baseline fact pack for option comparison."
+  },
+  {
+    "workstream": "Procurement / Partnering",
+    "diligence_item": "OSAT and packaging partner shortlist",
+    "related_option": "packaging_osat_partnership",
+    "related_country": "Malaysia, Vietnam, Thailand, Philippines",
+    "why_it_matters": "Partner-first logic requires named partners with capacity, quality, commercial, and IP fit.",
+    "owner": "Procurement / Partnering / BD",
+    "next_action": "Create partner screen across OSAT, test, substrate, materials, and logistics nodes.",
+    "output_needed": "Partner shortlist with capability, commercial fit, risk, and validation status."
+  },
+  {
+    "workstream": "Procurement / Partnering",
+    "diligence_item": "Packaging attach-rate and customer acceptance",
+    "related_option": "packaging_osat_partnership",
+    "related_country": "Malaysia",
+    "why_it_matters": "A partner ecosystem matters only if Fab 12i customers can and will attach relevant package/test flows.",
+    "owner": "Procurement / Partnering / Sales / Product",
+    "next_action": "Estimate attach-rate by customer/product and identify qualification or IP constraints.",
+    "output_needed": "Attach-rate and customer acceptance model."
+  },
+  {
+    "workstream": "Government Affairs",
+    "diligence_item": "Project-specific incentives and policy terms",
+    "related_option": "foundry_manufacturing_expansion",
+    "related_country": "Malaysia, Vietnam, Thailand, Indonesia, Philippines",
+    "why_it_matters": "Policy headlines are not project terms; incentives need eligibility, timing, conditions, and clawback details.",
+    "owner": "Government Affairs / Finance",
+    "next_action": "Request country-level incentive menus for each option type.",
+    "output_needed": "Incentive comparison matrix by option, country, and eligibility condition."
+  },
+  {
+    "workstream": "Legal / Tax",
+    "diligence_item": "Entity, tax, export-control, IP, and partner-structure review",
+    "related_option": "packaging_osat_partnership",
+    "related_country": "Malaysia, Vietnam, Thailand, Indonesia, Philippines",
+    "why_it_matters": "Operating setup and partner models can create tax, IP, customer-data, and compliance constraints.",
+    "owner": "Legal / Tax / Compliance",
+    "next_action": "Prepare issue list by option family and country.",
+    "output_needed": "Legal and tax feasibility memo with open issues and required counsel review."
+  },
+  {
+    "workstream": "HR / Talent",
+    "diligence_item": "Semiconductor salary bands by function",
+    "related_option": "customer_engineering_hub",
+    "related_country": "Malaysia, Vietnam, Thailand, Philippines, Indonesia",
+    "why_it_matters": "Cost comparison requires semiconductor-specific roles rather than generic engineer salary proxies.",
+    "owner": "HR / Talent / Finance",
+    "next_action": "Collect salary bands for FAE, quality, test, packaging, process, product, and program roles.",
+    "output_needed": "Function-level salary range and hiring competitiveness table."
+  }
+]

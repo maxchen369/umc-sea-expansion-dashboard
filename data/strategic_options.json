@@ -1,0 +1,82 @@
+[
+  {
+    "id": "optimize_existing_fab12i_p3",
+    "name": "Optimize Existing Fab 12i P3",
+    "purpose": "Use Singapore Fab 12i P3 as the baseline anchor while management evaluates post-P3 regional options.",
+    "business_logic": "Preserve execution focus, customer qualification discipline, utilization learning, and capital efficiency from the existing Singapore platform.",
+    "capex_level": "Committed / controlled",
+    "execution_complexity": "Medium",
+    "relevant_countries": ["Singapore"],
+    "why_it_might_matter_for_umc": "It provides the operational baseline against which Southeast Asia options should be compared.",
+    "data_needed_before_action": [
+      "P3 ramp status by customer and product family",
+      "Utilization and margin trajectory",
+      "Customer qualification milestones",
+      "Post-P3 capacity or support constraints"
+    ]
+  },
+  {
+    "id": "sales_office",
+    "name": "Sales Office",
+    "purpose": "Provide local account coverage, demand sensing, government and ecosystem relationships, and customer development after Fab 12i P3.",
+    "business_logic": "A low-capex commercial presence may be useful where UMC has enough named account density or needs closer market sensing.",
+    "capex_level": "Low",
+    "execution_complexity": "Low",
+    "relevant_countries": ["Malaysia", "Vietnam", "Thailand", "Indonesia", "Philippines"],
+    "why_it_might_matter_for_umc": "It can clarify mature-node demand, specialty-product pull, and customer support needs before larger commitments.",
+    "data_needed_before_action": [
+      "Named customer overlap",
+      "Account ownership model",
+      "Revenue mechanism",
+      "Local coverage need versus Singapore or Taiwan coverage"
+    ]
+  },
+  {
+    "id": "customer_engineering_hub",
+    "name": "Customer Engineering Hub",
+    "purpose": "Support design-in, FAE, quality issue coordination, EMS-linked support, and Fab 12i customer escalation workflows.",
+    "business_logic": "A technical support hub may matter where customer workflows require local engineering rather than remote coverage.",
+    "capex_level": "Low to medium",
+    "execution_complexity": "Medium",
+    "relevant_countries": ["Malaysia", "Vietnam", "Thailand", "Philippines"],
+    "why_it_might_matter_for_umc": "It could improve customer response, support design-ins, and reduce escalation friction if customer workflows are validated.",
+    "data_needed_before_action": [
+      "FAE and quality support workload",
+      "Talent availability by function",
+      "Escalation model into Singapore and Taiwan",
+      "Support-cost or revenue impact"
+    ]
+  },
+  {
+    "id": "packaging_osat_partnership",
+    "name": "Packaging / OSAT Partnership",
+    "purpose": "Explore partner-first access to packaging, assembly, test, and wafer-to-package coordination after Fab 12i P3.",
+    "business_logic": "Partnership may capture ecosystem benefits without immediately committing to owned back-end capacity.",
+    "capex_level": "Medium",
+    "execution_complexity": "Medium to high",
+    "relevant_countries": ["Malaysia", "Vietnam", "Thailand", "Philippines"],
+    "why_it_might_matter_for_umc": "It could extend Fab 12i customer value if there is validated attach-rate, partner fit, and customer acceptance.",
+    "data_needed_before_action": [
+      "Customer package attach-rate",
+      "Partner shortlist",
+      "Commercial terms and IP boundaries",
+      "Yield, cycle-time, qualification, and ROIC impact"
+    ]
+  },
+  {
+    "id": "foundry_manufacturing_expansion",
+    "name": "Foundry / Manufacturing Expansion",
+    "purpose": "Evaluate whether any post-P3 non-Singapore manufacturing role could be relevant over a longer horizon.",
+    "business_logic": "Manufacturing expansion is the highest-capex option and requires the strongest objective validation before serious study.",
+    "capex_level": "Very high",
+    "execution_complexity": "Very high",
+    "relevant_countries": ["Malaysia", "Vietnam", "Thailand", "Indonesia", "Philippines"],
+    "why_it_might_matter_for_umc": "It is strategically material only if customer commitments, utilities, talent, incentives, and economics are strong enough.",
+    "data_needed_before_action": [
+      "Anchor customer commitments",
+      "Power, water, land, permitting, and ESG envelope",
+      "Engineering talent depth",
+      "Capex, opex, utilization, payback, and ROIC model"
+    ]
+  }
+]

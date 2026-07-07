@@ -1,0 +1,250 @@
+[
+  {
+    "country": "Singapore",
+    "has_12_inch_wafer_fab": "Yes",
+    "electricity_cost": "high regional cost; project tariff data gap",
+    "outage_hours": "data gap",
+    "firms_experiencing_outages_pct": "data gap",
+    "semiconductor_cluster_locations": [
+      "Pasir Ris Wafer Fab Park",
+      "Woodlands",
+      "Tampines",
+      "one-north"
+    ],
+    "value_chain_position": "Front-end wafer fabrication anchor; equipment, R&D, and customer assurance platform",
+    "representative_companies": [
+      "UMC",
+      "GlobalFoundries",
+      "Micron",
+      "Applied Materials",
+      "UTAC"
+    ],
+    "materials_consumables_localization": "Strongest regional supplier and logistics depth; site-specific consumables localization data gap",
+    "engineering_talent_supply": "High semiconductor engineering depth; cost and hiring velocity require validation",
+    "engineer_salary_range": "data gap",
+    "key_limitation": "High operating cost and utility constraints; external options should not distract from P3 execution.",
+    "data_quality": "High / some utility-cost data gaps",
+    "estimate_flag": "No score used; cost and outage values require project-specific validation.",
+    "source_ids": [
+      "src_umc_singapore_expansion",
+      "src_edb_semiconductors",
+      "src_gf_singapore",
+      "src_micron_singapore_power_constraints"
+    ],
+    "industry_position": "Existing regional wafer-fab anchor and specialty manufacturing platform",
+    "data_gaps": [
+      "Project tariff",
+      "P3 customer/product ramp details",
+      "Post-P3 capacity constraint"
+    ]
+  },
+  {
+    "country": "Malaysia",
+    "has_12_inch_wafer_fab": "No UMC-relevant 12-inch foundry anchor identified",
+    "electricity_cost": "lower than Singapore est.; project tariff data gap",
+    "outage_hours": "data gap",
+    "firms_experiencing_outages_pct": "data gap",
+    "semiconductor_cluster_locations": [
+      "Penang",
+      "Kulim",
+      "Kuala Lumpur",
+      "Johor"
+    ],
+    "value_chain_position": "Packaging / OSAT, equipment, IC design, and power semiconductor ecosystem",
+    "representative_companies": [
+      "Intel",
+      "Infineon",
+      "AMD",
+      "Micron",
+      "ASE",
+      "AT&S",
+      "Inari Amertron",
+      "Unisem"
+    ],
+    "materials_consumables_localization": "Strong OSAT and equipment adjacency; wafer-fab-grade localization requires validation",
+    "engineering_talent_supply": "Strongest non-Singapore semiconductor talent signal; competition for engineers rising",
+    "engineer_salary_range": "data gap",
+    "key_limitation": "Ecosystem strength does not prove UMC customer demand, partner economics, incentives, or ROIC.",
+    "data_quality": "High for ecosystem; data gap for UMC economics",
+    "estimate_flag": "Electricity and talent-cost comparisons are est. until validated by site and function.",
+    "source_ids": [
+      "src_malaysia_nss",
+      "src_malaysia_wsj_chip_hub",
+      "src_intel_malaysia",
+      "src_ase_global",
+      "src_penang_design_talent"
+    ],
+    "industry_position": "Largest non-Singapore semiconductor back-end / OSAT and equipment ecosystem signal",
+    "data_gaps": [
+      "UMC customer overlap",
+      "Partner economics",
+      "Packaging attach-rate",
+      "Project incentives",
+      "Engineer salary range"
+    ]
+  },
+  {
+    "country": "Vietnam",
+    "has_12_inch_wafer_fab": "No",
+    "electricity_cost": "low-to-mid regional cost est.; project tariff data gap",
+    "outage_hours": "data gap",
+    "firms_experiencing_outages_pct": "data gap",
+    "semiconductor_cluster_locations": [
+      "Bac Ninh",
+      "Ho Chi Minh City",
+      "Hanoi",
+      "Da Nang"
+    ],
+    "value_chain_position": "EMS, assembly/test, customer engineering watchlist",
+    "representative_companies": [
+      "Amkor",
+      "Intel Products Vietnam",
+      "Samsung",
+      "FPT Semiconductor",
+      "Hana Micron"
+    ],
+    "materials_consumables_localization": "Developing; stronger for electronics manufacturing than foundry-grade supply",
+    "engineering_talent_supply": "Developing semiconductor talent initiatives; function-specific availability data gap",
+    "engineer_salary_range": "data gap",
+    "key_limitation": "UMC customer overlap and local FAE workload are proxy-based.",
+    "data_quality": "Medium",
+    "estimate_flag": "Cost and talent statements are est.; customer overlap is a data gap.",
+    "source_ids": [
+      "src_amkor_vietnam",
+      "src_intel_vietnam",
+      "src_samsung_vietnam",
+      "src_vietnam_nic",
+      "src_vietnam_mic_strategy"
+    ],
+    "industry_position": "Electronics manufacturing, EMS, and assembly/test growth market",
+    "data_gaps": [
+      "UMC customer overlap",
+      "FAE workload",
+      "Semiconductor salary data",
+      "Utility reliability by site"
+    ]
+  },
+  {
+    "country": "Thailand",
+    "has_12_inch_wafer_fab": "No UMC-relevant 12-inch foundry anchor identified",
+    "electricity_cost": "mid regional cost est.; project tariff data gap",
+    "outage_hours": "data gap",
+    "firms_experiencing_outages_pct": "data gap",
+    "semiconductor_cluster_locations": [
+      "Bangkok",
+      "Eastern Economic Corridor",
+      "Chonburi",
+      "Rayong",
+      "Ayutthaya"
+    ],
+    "value_chain_position": "Automotive, power, industrial, and electronics demand-sensing watchlist",
+    "representative_companies": [
+      "Analog Devices",
+      "UTAC",
+      "Stars Microelectronics",
+      "Western Digital",
+      "Seagate"
+    ],
+    "materials_consumables_localization": "Electronics and precision manufacturing base; semiconductor-specific materials depth data gap",
+    "engineering_talent_supply": "Industrial and electronics engineering base; semiconductor process talent data gap",
+    "engineer_salary_range": "data gap",
+    "key_limitation": "Demand signals do not prove UMC-specific revenue or specialty-process pull.",
+    "data_quality": "Medium",
+    "estimate_flag": "Electricity and talent data are est.; UMC customer demand is a data gap.",
+    "source_ids": [
+      "src_thailand_boi",
+      "src_thailand_eec",
+      "src_analog_devices",
+      "src_utac_group",
+      "src_stars_microelectronics"
+    ],
+    "industry_position": "Automotive, industrial, power, electronics, and precision manufacturing base",
+    "data_gaps": [
+      "Named UMC account demand",
+      "Specialty process pull",
+      "Semiconductor talent by function",
+      "Project incentives"
+    ]
+  },
+  {
+    "country": "Philippines",
+    "has_12_inch_wafer_fab": "No",
+    "electricity_cost": "mid-to-high regional cost est.; project tariff data gap",
+    "outage_hours": "data gap",
+    "firms_experiencing_outages_pct": "data gap",
+    "semiconductor_cluster_locations": [
+      "Metro Manila",
+      "CALABARZON",
+      "Clark",
+      "Cebu",
+      "Baguio"
+    ],
+    "value_chain_position": "Support operations, assembly/test, and account-operations watchlist",
+    "representative_companies": [
+      "Texas Instruments",
+      "Analog Devices",
+      "Integrated Micro-Electronics",
+      "Amkor"
+    ],
+    "materials_consumables_localization": "Back-end and electronics support; foundry-grade materials localization data gap",
+    "engineering_talent_supply": "Strong English-language support workforce; semiconductor-specific role depth requires validation",
+    "engineer_salary_range": "data gap",
+    "key_limitation": "Support opportunity may be generic unless tied to Fab 12i customer workflows.",
+    "data_quality": "Medium",
+    "estimate_flag": "Support talent fit and salary data are est.; workflow demand is a data gap.",
+    "source_ids": [
+      "src_oecd_philippines",
+      "src_ti_philippines",
+      "src_analog_devices",
+      "src_imi_philippines",
+      "src_peza_bcda"
+    ],
+    "industry_position": "Assembly/test, electronics, and technical support ecosystem",
+    "data_gaps": [
+      "Support workflow demand",
+      "FAE talent depth",
+      "Infrastructure reliability by site",
+      "Salary bands"
+    ]
+  },
+  {
+    "country": "Indonesia",
+    "has_12_inch_wafer_fab": "No",
+    "electricity_cost": "low-to-mid regional cost est.; site reliability data gap",
+    "outage_hours": "data gap",
+    "firms_experiencing_outages_pct": "data gap",
+    "semiconductor_cluster_locations": [
+      "Jakarta",
+      "Batam",
+      "West Java",
+      "Central Java"
+    ],
+    "value_chain_position": "Long-term IC design, policy, market-development, and electronics logistics watchlist",
+    "representative_companies": [
+      "Sat Nusapersada",
+      "Infineon Batam",
+      "Batamindo Industrial Park",
+      "Danantara Indonesia"
+    ],
+    "materials_consumables_localization": "Early-stage semiconductor supply; electronics and logistics stronger than foundry ecosystem",
+    "engineering_talent_supply": "Large workforce; semiconductor-specific depth and partner maturity are data gaps",
+    "engineer_salary_range": "data gap",
+    "key_limitation": "Policy and market size do not prove manufacturing readiness or UMC customer density.",
+    "data_quality": "Low-to-medium",
+    "estimate_flag": "Cost and talent statements are est.; utilities, customers, and partners are data gaps.",
+    "source_ids": [
+      "src_bp_batam",
+      "src_sat_nusapersada",
+      "src_infineon_indonesia",
+      "src_invest_indonesia",
+      "src_danantara"
+    ],
+    "industry_position": "Long-term market, IC design / policy, and electronics logistics watchlist",
+    "data_gaps": [
+      "Named customer demand",
+      "Partner maturity",
+      "Utility reliability",
+      "Semiconductor talent depth"
+    ]
+  }
+]

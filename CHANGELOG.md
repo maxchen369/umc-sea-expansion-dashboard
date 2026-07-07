@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-07-07
+
+- Repositioned the dashboard as a Strategic Overview for UMC Southeast Asia options after Singapore Fab 12i P3.
+- Replaced Management Conclusion with Strategic Overview language: baseline assumption, option landscape, discussion aid, and diligence roadmap.
+- Replaced Strategic Options & Gate Status with a Strategic Option Map using five option families: Optimize Existing Fab 12i P3, Sales Office, Customer Engineering Hub, Packaging / OSAT Partnership, and Foundry / Manufacturing Expansion.
+- Added `data/strategic_options.json` for purpose, business logic, capex level, execution complexity, relevant countries, UMC relevance, and data needed before action.
+- Renamed the active metrics surface to Country Fact Base and ordered non-Singapore countries as Malaysia, Vietnam, Thailand, Indonesia, and Philippines.
+- Reworked active evidence display as an Option Evidence Matrix grouped by strategic option first and country second.
+- Added option mapping, direct/proxy/background evidence strength, what-it-proves, and what-it-does-not-prove fields to all active evidence records.
+- Made Case Dossiers option-linked and collapsible by default, grouped by option and country.
+- Added `data/diligence_workplan.json` and replaced approval-gate tracker UI with a Diligence Workplan organized by workstream and output needed.
+- Updated README to reflect the new strategic overview objective and active data files.
+
+## 2026-07-05
+
+- Refactored the app from a score-driven dashboard into a Stage 0 Screening & Diligence Dashboard.
+- Added a Management Conclusion section: focus on Singapore Fab 12i P3 execution and defer new non-Singapore expansion.
+- Replaced scorecard UI with Strategic Options & Gate Status cards using decision statuses, blockers, required validation, owners, and next actions.
+- Added `data/objective_country_metrics.json` and an Objective Country Metrics section with sortable table, comparison cards, metric details, estimate flags, and data gaps.
+- Added `data/case_dossiers.json` and promoted only fact-bearing cases with implications, limitations, and validation steps.
+- Added `data/diligence_tracker.json` and an Open Diligence Tracker for Stage 0-to-Stage 1 gaps.
+- Enriched all evidence records with explicit `evidence_role` and `factual_detail` fields.
+- Removed scoring lenses, custom weights, score matrix, and score explanation modal from the active UI.
+- Updated README for the new Stage 0 data model and GitHub Pages-compatible static structure.
+
 ## 2026-06-23
 
 - Renamed Evidence Library to "Evidence-to-Decision Map".

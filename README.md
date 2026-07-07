@@ -1,19 +1,18 @@
-# UMC Southeast Asia Expansion Dashboard
+# UMC Southeast Asia Strategic Overview Dashboard
 
-Static single-page web app for evaluating UMC-specific expansion options in Southeast Asia.
+Static single-page dashboard for organizing UMC Southeast Asia strategic options after Singapore Fab 12i P3.
 
-The model now centers on:
+The dashboard is a management-facing discussion aid and diligence roadmap. It does not try to directly answer whether UMC should build a new fab or make a specific investment.
 
-- UMC Singapore Fab 12i as the regional manufacturing anchor
-- Fab 12i P3 ramp execution as the primary near-term recommendation
-- UMC's global foundry footprint
-- 22/28nm and specialty technology demand
-- Communication, consumer, automotive, IoT, display, power, and connectivity customer coverage
-- Upstream and downstream semiconductor ecosystem adjacency
-- Sales office and B2B customer engineering support needs
-- Packaging / OSAT partnership options before any greenfield back-end investment
-- Conditional watchlist triggers before Malaysia / Vietnam / Thailand / Philippines / Indonesia options move to Stage 1
-- Stage 0 diligence questions for ROIC, capex, customer validation, partner validation, incentives, utilities, and talent
+The active dashboard centers on:
+
+- Strategic Overview: Singapore Fab 12i P3 as the existing baseline / anchor.
+- Strategic Option Map: option families, business logic, capex level, complexity, relevant countries, and data needed before action.
+- Country Fact Base: objective country facts, estimates, and data gaps for Malaysia, Vietnam, Thailand, Indonesia, and the Philippines.
+- Option Evidence Matrix: evidence grouped by strategic option first and country second.
+- Case Dossiers: option-linked cases with headline implication and expandable details.
+- Diligence Workplan: workstreams, diligence items, related option/country, owners, next actions, and outputs needed.
+- Short Country Fact Sheets: thesis, relevant options, strongest fact, biggest constraint, and data gap.
 
 The app uses only HTML, CSS, and vanilla JavaScript. There is no backend, build step, package manager, or external library.
 
@@ -23,18 +22,18 @@ The app uses only HTML, CSS, and vanilla JavaScript. There is no backend, build 
 index.html
 styles.css
 app.js
-data/countries.json
-data/expansion_modes.json
-data/scoring_lenses.json
+data/strategic_options.json
+data/objective_country_metrics.json
 data/evidence_library.json
-data/decision_claims.json
-data/decision_strategies.json
+data/case_dossiers.json
+data/diligence_workplan.json
 data/country_profiles.json
 data/sources.json
-data/decision_readiness.json
 README.md
 CHANGELOG.md
 ```
+
+Legacy files such as `data/countries.json`, `data/expansion_modes.json`, `data/scoring_lenses.json`, `data/decision_claims.json`, `data/decision_strategies.json`, and `data/decision_readiness.json` may remain in the repository as historical appendix data, but the current dashboard does not load them.
 
 ## Run Locally
 
@@ -60,24 +59,24 @@ http://localhost:8000
 5. Choose the `main` branch and `/root`.
 6. Save and open the GitHub Pages URL after deployment finishes.
 
-All paths are relative, so the app can run from GitHub Pages without configuration.
+All active paths are relative, so the app can run from GitHub Pages without configuration.
 
-## Update JSON Data
+## Active Data Files
 
-- `data/countries.json`: country scores, UMC-specific scores, risks, source IDs, and data freshness.
-- `data/expansion_modes.json`: practical expansion modes, including the no-new-external-expansion Fab 12i P3 optimization option.
-- `data/scoring_lenses.json`: lens-specific weights.
-- `data/evidence_library.json`: decision-oriented evidence records mapped to decision claims, decision implication, limitation, industry category, and next validation.
-- `data/decision_claims.json`: management decision claims, interpretation, evidence strength, recommended action, and validation gaps.
-- `data/decision_strategies.json`: strategy-level recommendations, gate status, next action, and suggested owner.
-- `data/country_profiles.json`: country-specific thesis, role, advantage, risk, locations, priority movers, top evidence, and evidence gaps.
-- `data/decision_readiness.json`: legacy scoring support for country readiness labels used by the scorecard logic.
-- `data/sources.json`: source metadata. Replace low-confidence items before formal investment committee use.
+- `data/strategic_options.json`: five option families after Fab 12i P3.
+- `data/objective_country_metrics.json`: country fact base with appendix-style objective facts, estimates, and data gaps.
+- `data/evidence_library.json`: evidence records mapped to `option_id` with direct/proxy/background strength labels.
+- `data/case_dossiers.json`: promoted option-linked cases with implications and expandable details.
+- `data/diligence_workplan.json`: team workstreams and outputs needed for next diligence.
+- `data/country_profiles.json`: short country thesis inputs used for country fact sheets.
+- `data/sources.json`: source metadata and reference trail.
 
 ## Methodology Notes
 
-Scores are preliminary strategic estimates, not investment advice. The dashboard is a Stage 0 strategic screening tool and should not be reused as a generic semiconductor country ranking.
+This dashboard avoids subjective lenses, weighted ordering, final-answer framing, and numeric country grades as management outputs. Evidence is classified as:
 
-The dashboard should not force a new non-Singapore recommendation. Fab 12i P3 optimization, foundry / manufacturing expansion, packaging / OSAT partnership, sales office, and customer engineering hub should not use the same decision logic. Each has different capex intensity, ecosystem requirements, risk profile, and time-to-market logic.
+- `direct`: directly relevant to an option.
+- `proxy`: suggests relevance but requires UMC internal validation.
+- `background`: useful context, not actionable alone.
 
-Data freshness badges show published date, retrieved date, data year, and source confidence for cards that rely on structured data.
+Country facts preserve `est.` where values are estimated and show `data gap` where appendix data is missing.

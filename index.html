@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UMC Southeast Asia Expansion Dashboard</title>
+    <title>UMC Southeast Asia Strategic Overview</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -11,157 +11,143 @@
       <div class="brand">
         <span class="brand-mark">UMC</span>
         <div>
-          <p class="eyebrow">Stage 0 strategic screening</p>
-          <h1>Southeast Asia Expansion Dashboard</h1>
+          <p class="eyebrow">Strategic overview</p>
+          <h1>Southeast Asia Options After Fab 12i P3</h1>
         </div>
       </div>
       <nav class="nav" aria-label="Dashboard sections">
-        <a href="#summary">Summary</a>
-        <a href="#scorecard">Scorecard</a>
-        <a href="#evidence">Evidence</a>
-        <a href="#decision-funnel">Decision Funnel</a>
-        <a href="#countries">Country Profiles</a>
+        <a href="#overview">Overview</a>
+        <a href="#options">Option Map</a>
+        <a href="#facts">Fact Base</a>
+        <a href="#evidence">Evidence Matrix</a>
+        <a href="#cases">Dossiers</a>
+        <a href="#workplan">Workplan</a>
+        <a href="#countries">Country Sheets</a>
         <a href="#sources">Sources</a>
       </nav>
     </header>
 
     <main>
-      <section id="summary" class="section hero">
+      <section id="overview" class="section hero">
         <div class="hero-copy">
-          <p class="eyebrow">Management question</p>
-          <h2>Should UMC expand externally now, or focus on Fab 12i P3 execution?</h2>
-          <p>This dashboard is a Stage 0 strategic screening tool. It helps prioritize diligence targets, but does not replace ROIC modeling, customer validation, partner negotiation, government incentive confirmation, or engineering feasibility assessment.</p>
+          <p class="eyebrow">Strategic Overview</p>
+          <h2 id="overviewTitle">Strategic options after Singapore Fab 12i P3</h2>
+          <p>This dashboard maps strategic options, relevant countries, objective country facts, ecosystem signals, data gaps, and diligence workstreams. It is a management discussion aid, not an investment authorization tool.</p>
         </div>
         <aside class="hero-panel">
-          <label class="toggle-row">
-            <input id="baselineToggle" type="checkbox" checked>
-            <span>Treat Singapore Fab 12i as existing baseline</span>
-          </label>
-          <p id="baselineNote" class="muted"></p>
-          <div id="baselineCard"></div>
+          <div class="panel-row">
+            <span>Baseline assumption</span>
+            <strong id="baselineAssumption">Singapore Fab 12i P3 is the existing baseline and regional anchor.</strong>
+          </div>
+          <div class="panel-row">
+            <span>Current option landscape</span>
+            <strong id="optionLandscape">Loading options...</strong>
+          </div>
+          <div class="panel-row">
+            <span>Diligence roadmap</span>
+            <strong id="roadmapNote">Loading workstreams...</strong>
+          </div>
         </aside>
       </section>
 
-      <section class="section summary-grid" aria-label="Executive summary">
-        <article class="summary-card">
-          <span>Top next-step option</span>
-          <strong id="topRecommendation">Loading</strong>
-          <p id="topRecommendationText">Loading screening output...</p>
-        </article>
-        <article class="summary-card">
-          <span>Most realistic entry mode</span>
-          <strong id="topMode">-</strong>
-          <p>Committed Fab 12i P3 execution is preferred before new external capex unless triggers are validated.</p>
-        </article>
-        <article class="summary-card">
-          <span>Key caveat</span>
-          <strong>Stage 0 only</strong>
-          <p>High score means worth deeper diligence, not approve investment.</p>
-        </article>
+      <section id="options" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Strategic Option Map</p>
+          <h2>Option families after Fab 12i P3</h2>
+          <p>Each option shows purpose, business logic, capex level, execution complexity, relevant countries, UMC relevance, and data needed before action.</p>
+        </div>
+        <div id="optionCards" class="strategy-grid"></div>
       </section>
 
-      <section id="scorecard" class="section">
+      <section id="facts" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Strategic scorecard</p>
-          <h2>Country x expansion mode matrix</h2>
-          <p>Scores are screening signals for prioritizing diligence targets.</p>
+          <p class="eyebrow">Country Fact Base</p>
+          <h2>Objective facts, estimates, and data gaps</h2>
+          <p>Country facts are shown for Malaysia, Vietnam, Thailand, Indonesia, and the Philippines. Estimated values preserve “est.” and missing values show “data gap.”</p>
         </div>
-        <div class="scorecard-tools">
-          <div>
-            <p class="filter-label">Scoring lens</p>
-            <div id="lensSelector" class="button-row"></div>
-          </div>
-          <details class="score-help">
-            <summary>How to read the score</summary>
-            <ul>
-              <li>Raw scores are 1-5 directional estimates.</li>
-              <li>Lens weights convert raw scores into a 0-100 ranking.</li>
-              <li>The score is a screening signal, not an investment decision.</li>
-              <li>High score means worth deeper diligence, not approve investment.</li>
-              <li>Final decisions require ROIC, capex, customer validation, partner validation, and government incentive review.</li>
-            </ul>
-          </details>
-        </div>
-        <div id="customWeightsPanel" class="custom-panel"></div>
+        <div id="metricCards" class="metric-grid"></div>
         <div class="table-wrap">
-          <table class="matrix-table">
-            <thead>
-              <tr>
-                <th>Country</th>
-                <th>Sales Office</th>
-                <th>Customer Engineering Hub</th>
-                <th>Packaging / OSAT Partnership</th>
-                <th>Foundry / Manufacturing Expansion</th>
-              </tr>
-            </thead>
-            <tbody id="matrixBody"></tbody>
+          <table class="metrics-table">
+            <thead id="metricTableHead"></thead>
+            <tbody id="metricTableBody"></tbody>
           </table>
         </div>
       </section>
 
       <section id="evidence" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Evidence base</p>
-          <h2>Evidence-to-Decision Map</h2>
-          <p>Evidence grouped by decision claim, showing what supports the recommendation, what needs validation, and what remains watchlist context.</p>
+          <p class="eyebrow">Option Evidence Matrix</p>
+          <h2>Evidence grouped by option and country</h2>
+          <p>Evidence strength is labeled as direct, proxy, or background. Proxy evidence requires UMC internal validation before it can support action.</p>
         </div>
         <div class="filter-stack">
           <div>
-            <p class="filter-label">Decision claim</p>
-            <div id="claimFilters" class="button-row"></div>
+            <p class="filter-label">Strategic option</p>
+            <div id="optionFilters" class="button-row"></div>
           </div>
           <div>
             <p class="filter-label">Country</p>
             <div id="countryFilters" class="button-row"></div>
           </div>
           <div>
-            <p class="filter-label">Confidence</p>
-            <div id="confidenceFilters" class="button-row"></div>
+            <p class="filter-label">Evidence strength</p>
+            <div id="strengthFilters" class="button-row"></div>
           </div>
         </div>
         <div id="evidenceLibrary" class="evidence-library"></div>
       </section>
 
-      <section id="decision-funnel" class="section">
+      <section id="cases" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Decision funnel</p>
-          <h2>Strategy-level stage gates</h2>
-          <p>Gate status by strategy: what can proceed, what remains watchlist, and who owns the next action.</p>
+          <p class="eyebrow">Case Dossiers</p>
+          <h2>Option-linked cases and ecosystem signals</h2>
+          <p>Default view shows headline and implication. Expand each case for activity, scale, relevance, limitations, and next validation.</p>
         </div>
-        <div id="decisionCards" class="decision-grid"></div>
+        <div id="caseDossiers" class="evidence-library"></div>
+      </section>
+
+      <section id="workplan" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Diligence Workplan</p>
+          <h2>Workstreams and outputs needed next</h2>
+          <p>This is a workplan for investigation, not a decision gate.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="diligence-table">
+            <thead>
+              <tr>
+                <th>Workstream</th>
+                <th>Diligence item</th>
+                <th>Related option</th>
+                <th>Related country</th>
+                <th>Why it matters</th>
+                <th>Owner</th>
+                <th>Next action</th>
+                <th>Output needed</th>
+              </tr>
+            </thead>
+            <tbody id="diligenceTableBody"></tbody>
+          </table>
+        </div>
       </section>
 
       <section id="countries" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Country profiles</p>
-          <h2>Country-specific role and triggers</h2>
-          <p>Country thesis, best-fit role, unique advantage, unique risk, locations, priority movers, and evidence gaps.</p>
+          <p class="eyebrow">Country Fact Sheets</p>
+          <h2>Short country view</h2>
+          <p>Country sheets summarize thesis, relevant options, strongest fact, biggest constraint, and data gap.</p>
         </div>
         <div id="countryCards" class="country-grid"></div>
       </section>
 
       <section id="sources" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Sources & data freshness</p>
+          <p class="eyebrow">Sources & Data Freshness</p>
           <h2>Reference trail</h2>
         </div>
         <div id="sourcesList" class="source-list"></div>
       </section>
     </main>
-
-    <div id="scoreModal" class="modal-backdrop" hidden>
-      <section class="score-modal" role="dialog" aria-modal="true" aria-labelledby="scoreModalTitle">
-        <div class="modal-header">
-          <div>
-            <p class="eyebrow">Explain score</p>
-            <h2 id="scoreModalTitle">Score breakdown</h2>
-            <p id="scoreModalSummary" class="muted"></p>
-          </div>
-          <button type="button" data-close-modal>Close</button>
-        </div>
-        <div id="scoreModalBody"></div>
-      </section>
-    </div>
 
     <script src="app.js"></script>
   </body>

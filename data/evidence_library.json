@@ -20,7 +20,13 @@
     "source_ids": [
       "src_umc_singapore_expansion"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "supports",
+    "factual_detail": "UMC operates Fab 12i in Pasir Ris Wafer Fab Park; the record anchors the recommendation to execute the existing Singapore P3 path before new external capex.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Existing anchor evidence; it supports baseline logic but does not by itself approve incremental expansion."
   },
   {
     "id": "singapore_edb_semiconductor_platform",
@@ -43,7 +49,13 @@
     "source_ids": [
       "src_edb_semiconductors"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Singapore EDB identifies semiconductors as a national industry platform with wafer fabrication, equipment, R&D, and supply-chain depth.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
   },
   {
     "id": "gf_singapore_expansion_fab",
@@ -66,7 +78,13 @@
     "source_ids": [
       "src_gf_singapore"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "GlobalFoundries opened a US$4 billion Singapore expansion fab in Woodlands, demonstrating Singapore wafer-fab execution depth.",
+    "option_id": "foundry_manufacturing_expansion",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows manufacturing, fab, utility, or policy context relevant to understanding manufacturing feasibility.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
   },
   {
     "id": "micron_singapore_fab10b_hbm",
@@ -91,7 +109,13 @@
       "src_micron_singapore_fab10b",
       "src_micron_singapore_power_constraints"
     ],
-    "source_badge": "2 sources"
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Micron Singapore Fab 10B / HBM-related plan highlights the scale of utility and infrastructure requirements for major semiconductor manufacturing.",
+    "option_id": "foundry_manufacturing_expansion",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows manufacturing, fab, utility, or policy context relevant to understanding manufacturing feasibility.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
   },
   {
     "id": "astar_ime_singapore",
@@ -114,7 +138,13 @@
     "source_ids": [
       "src_astar_ime"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "A*STAR IME provides Singapore-based microelectronics R&D capability relevant to specialty semiconductor ecosystem depth.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
   },
   {
     "id": "applied_materials_singapore",
@@ -137,7 +167,13 @@
     "source_ids": [
       "src_applied_materials_singapore"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Applied Materials Singapore is a semiconductor equipment ecosystem signal for Singapore supplier and service depth.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
   },
   {
     "id": "utac_singapore",
@@ -160,7 +196,13 @@
     "source_ids": [
       "src_utac_group"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "UTAC Singapore is a back-end semiconductor services signal within the existing Singapore ecosystem.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "malaysia_national_semiconductor_strategy",
@@ -186,7 +228,13 @@
       "src_malaysia_nss",
       "src_malaysia_wsj_chip_hub"
     ],
-    "source_badge": "2 sources"
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Malaysia National Semiconductor Strategy is a policy signal for higher-value semiconductor activity, but it is not a UMC project incentive package.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
   },
   {
     "id": "intel_malaysia_advanced_packaging",
@@ -212,7 +260,13 @@
       "src_intel_malaysia",
       "src_intel_advanced_packaging_2026"
     ],
-    "source_badge": "2 sources"
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Intel Malaysia advanced packaging expansion shows Malaysia can host sophisticated back-end semiconductor operations.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
   },
   {
     "id": "infineon_kulim_sic_power",
@@ -237,7 +291,13 @@
       "src_infineon_kulim",
       "src_malaysia_nss"
     ],
-    "source_badge": "2 sources"
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Infineon Kulim SiC expansion shows Malaysia power-semiconductor manufacturing depth, but it does not validate UMC foundry economics.",
+    "option_id": "foundry_manufacturing_expansion",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows manufacturing, fab, utility, or policy context relevant to understanding manufacturing feasibility.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "ase_malaysia_penang",
@@ -262,7 +322,13 @@
     "source_ids": [
       "src_ase_global"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "ASE Malaysia / Penang operations indicate OSAT ecosystem depth in Malaysia.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "inari_amertron_malaysia",
@@ -287,7 +353,13 @@
     "source_ids": [
       "src_inari_amertron"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Inari Amertron is a Malaysia-based outsourced semiconductor assembly/test and RF test ecosystem signal.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "unisem_malaysia",
@@ -312,7 +384,13 @@
     "source_ids": [
       "src_unisem_group"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Unisem Malaysia is a local OSAT ecosystem signal with operations in Ipoh and other Malaysia sites.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "oppstar_malaysia_ic_design",
@@ -336,7 +414,13 @@
     "source_ids": [
       "src_oppstar"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Oppstar is a Penang IC design and design-services ecosystem signal.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
   },
   {
     "id": "penang_silicon_design_talent",
@@ -360,7 +444,13 @@
     "source_ids": [
       "src_penang_design_talent"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Penang Silicon Design @5km+ / chip design talent ecosystem indicates policy and training activity around semiconductor design talent.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
   },
   {
     "id": "amkor_vietnam_bac_ninh",
@@ -384,7 +474,13 @@
     "source_ids": [
       "src_amkor_vietnam"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Amkor Technology Vietnam in Bac Ninh is a back-end semiconductor campus signal for Vietnam assembly/test relevance.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "hana_micron_vietnam",
@@ -408,7 +504,13 @@
     "source_ids": [
       "src_hana_micron"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Hana Micron Vietnam is a northern Vietnam assembly/test ecosystem signal.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "intel_products_vietnam",
@@ -432,7 +534,13 @@
     "source_ids": [
       "src_intel_vietnam"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Intel Products Vietnam in Saigon Hi-Tech Park is an assembly/test and manufacturing ecosystem signal.",
+    "option_id": "sales_office",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
   },
   {
     "id": "fpt_semiconductor_vietnam",
@@ -456,7 +564,13 @@
     "source_ids": [
       "src_fpt_semiconductor"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "FPT Semiconductor is a Vietnam chip design and semiconductor business signal.",
+    "option_id": "sales_office",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "vietnam_nic_semiconductor_talent",
@@ -480,7 +594,13 @@
     "source_ids": [
       "src_vietnam_nic"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Vietnam National Innovation Center semiconductor initiatives indicate emerging talent and ecosystem-development effort.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
   },
   {
     "id": "samsung_vietnam_electronics_cluster",
@@ -504,7 +624,13 @@
     "source_ids": [
       "src_samsung_vietnam"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Samsung Vietnam anchors a large electronics manufacturing cluster relevant to EMS-linked customer engineering diligence.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "vietnam_semiconductor_strategy",
@@ -528,7 +654,13 @@
     "source_ids": [
       "src_vietnam_mic_strategy"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Vietnam semiconductor strategy indicates policy ambition, but not UMC-specific customer demand or project economics.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
   },
   {
     "id": "thailand_boi_semiconductor_incentives",
@@ -552,7 +684,13 @@
     "source_ids": [
       "src_thailand_boi"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Thailand BOI semiconductor / electronics incentives are policy signals requiring project-specific eligibility and economics validation.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
   },
   {
     "id": "thailand_eec_electronics_auto",
@@ -576,7 +714,13 @@
     "source_ids": [
       "src_thailand_eec"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Thailand Eastern Economic Corridor connects electronics and automotive manufacturing demand signals.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "analog_devices_thailand",
@@ -600,7 +744,13 @@
     "source_ids": [
       "src_analog_devices"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Analog Devices Thailand is a semiconductor company presence signal tied to Thailand electronics and industrial activity.",
+    "option_id": "sales_office",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "utac_thailand",
@@ -624,7 +774,13 @@
     "source_ids": [
       "src_utac_group"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "UTAC Thailand is a back-end semiconductor services signal within Thailand.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "stars_microelectronics_thailand",
@@ -648,7 +804,13 @@
     "source_ids": [
       "src_stars_microelectronics"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Stars Microelectronics Thailand is a local electronics and semiconductor assembly/test ecosystem signal.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "thailand_hdd_precision_electronics",
@@ -672,7 +834,13 @@
     "source_ids": [
       "src_western_digital_seagate_thailand"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Thailand HDD and precision electronics cluster indicates manufacturing and supply-chain depth, not UMC wafer demand by itself.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "philippines_oecd_semiconductor_ecosystem",
@@ -696,7 +864,13 @@
     "source_ids": [
       "src_oecd_philippines"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "OECD Philippines semiconductor ecosystem reference supports a broad ecosystem signal for support and back-end watchlist status.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
   },
   {
     "id": "texas_instruments_philippines",
@@ -720,7 +894,13 @@
     "source_ids": [
       "src_ti_philippines"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Texas Instruments Philippines operations in Baguio and Clark signal semiconductor operations and talent presence.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "analog_devices_philippines",
@@ -744,7 +924,13 @@
     "source_ids": [
       "src_analog_devices"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Analog Devices Philippines in General Trias, Cavite signals semiconductor operations presence.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "imi_psi_philippines",
@@ -768,7 +954,13 @@
     "source_ids": [
       "src_imi_philippines"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Integrated Micro-Electronics and PSi Technologies indicate Philippine electronics and semiconductor support ecosystem activity.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "amkor_philippines",
@@ -792,7 +984,13 @@
     "source_ids": [
       "src_amkor_vietnam"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Amkor Philippines is a back-end semiconductor presence signal, but the current source detail is limited.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
   },
   {
     "id": "clark_calabarzon_logistics_corridor",
@@ -816,7 +1014,13 @@
     "source_ids": [
       "src_peza_bcda"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Clark and CALABARZON provide electronics and logistics corridor signals for Philippine support operations.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
   },
   {
     "id": "batam_electronics_logistics_cluster",
@@ -840,7 +1044,13 @@
     "source_ids": [
       "src_bp_batam"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Batam electronics and logistics cluster provides Indonesia adjacency to Singapore, but not foundry readiness.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "sat_nusapersada_batam",
@@ -864,7 +1074,13 @@
     "source_ids": [
       "src_sat_nusapersada"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "PT Sat Nusapersada is an electronics manufacturing signal in Batam.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "infineon_batam_operations",
@@ -888,7 +1104,13 @@
     "source_ids": [
       "src_infineon_indonesia"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Infineon Batam operations signal semiconductor company presence in Indonesia.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "indonesia_ev_automotive_demand",
@@ -912,7 +1134,13 @@
     "source_ids": [
       "src_invest_indonesia"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Indonesia EV and automotive demand cluster is a long-term end-market signal requiring UMC-specific demand validation.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
   },
   {
     "id": "batamindo_industrial_park",
@@ -936,7 +1164,13 @@
     "source_ids": [
       "src_batamindo"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Batamindo Industrial Park is a logistics and industrial-base signal near Singapore.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
   },
   {
     "id": "danantara_indonesia",
@@ -960,7 +1194,13 @@
     "source_ids": [
       "src_danantara"
     ],
-    "source_badge": "1 source"
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Danantara Indonesia is a policy and investment-institution signal, not a semiconductor project commitment.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
   },
   {
     "id": "tsmc_amkor_arizona_model_comparison",
@@ -982,7 +1222,15 @@
     ],
     "confidence": "Medium",
     "data_year": 2026,
-    "source_ids": [],
-    "source_badge": "No source listed"
+    "source_ids": [
+      "src_tsmc_amkor_arizona"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "challenges",
+    "factual_detail": "TSMC-Amkor Arizona model is a comparison case showing that OSAT partnership logic requires customer, partner, and economics validation.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Comparable evidence only; it does not prove UMC customer demand, partner economics, incentives, or ROIC."
   }
 ]

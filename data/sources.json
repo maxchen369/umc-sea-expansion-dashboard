@@ -557,5 +557,18 @@
     "data_year": 2025,
     "confidence": "Medium",
     "source_type": "government"
+  },
+  {
+    "id": "src_tsmc_amkor_arizona",
+    "title": "TSMC-Amkor Arizona advanced packaging and test collaboration references",
+    "publisher": "TSMC / Amkor public announcements and industry coverage",
+    "year": 2025,
+    "url": "https://amkor.com/",
+    "note": "Comparable partnership model reference used only to frame diligence questions for OSAT partnership logic; not evidence of UMC demand or Malaysia economics.",
+    "published_date": "2025-01-01",
+    "retrieved_date": "2026-06-17",
+    "data_year": 2025,
+    "confidence": "Medium",
+    "source_type": "company"
   }
 ]
