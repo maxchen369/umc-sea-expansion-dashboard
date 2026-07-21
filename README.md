@@ -1,82 +1,76 @@
-# UMC Southeast Asia Strategic Overview Dashboard
+# Southeast Asia Semiconductor — Consultant Dashboard
 
-Static single-page dashboard for organizing UMC Southeast Asia strategic options after Singapore Fab 12i P3.
+A static, single-page dashboard that organizes messy public data on the Southeast Asian semiconductor landscape into a systematic, decision-useful framework.
 
-The dashboard is a management-facing discussion aid and diligence roadmap. It does not try to directly answer whether UMC should build a new fab or make a specific investment.
+It is built **outside-in**, from public data only, from the viewpoint of an external industry-research consultant advising a specialty (mature-node) foundry that already has a Singapore anchor. It uses **no internal customer, capacity, or financial data**. It does not rank countries, score them, or recommend an investment; it makes the demand, competitive, and infrastructure layers visible and honestly quality-tagged so a human can form a judgment.
 
-The active dashboard centers on:
+## Organizing principle
 
-- Strategic Overview: Singapore Fab 12i P3 as the existing baseline / anchor.
-- Strategic Option Map: option families, business logic, capex level, complexity, relevant countries, and data needed before action.
-- Country Fact Base: objective country facts, estimates, and data gaps for Malaysia, Vietnam, Thailand, Indonesia, and the Philippines.
-- Option Evidence Matrix: evidence grouped by strategic option first and country second.
-- Case Dossiers: option-linked cases with headline implication and expandable details.
-- Diligence Workplan: workstreams, diligence items, related option/country, owners, next actions, and outputs needed.
-- Short Country Fact Sheets: thesis, relevant options, strongest fact, biggest constraint, and data gap.
+Modules are ordered by **decision driver**, not by data category. Every figure must change how a reader would judge; anything that does not is cut or demoted. Demand and competition (Modules 2–3) carry the most decision weight and are the least documented, so they lead. Infrastructure facts (Module 5) are the best documented but move the decision least, so they are demoted and every value is quality-tagged.
 
-The app uses only HTML, CSS, and vanilla JavaScript. There is no backend, build step, package manager, or external library.
+Structural finding that frames everything: **none of the five countries (Malaysia, Vietnam, Thailand, Indonesia, Philippines) has a confirmed commercial 300mm front-end fab; the region's only front-end anchor is Singapore.** So the "SEA ex-Singapore" question is a back-end adjacency, demand-sensing, and China+1 optionality question — not a front-end siting question.
 
-## Project Structure
+## Modules
+
+1. **Reading Frame** — outside-in caveat, the structural finding, and the A–D evidence-quality legend.
+2. **Demand & Strategic Drivers** — China+1, tariffs, Taiwan-concentration risk, and end-market gravity by country. *(the largest, least-documented driver)*
+3. **Competitive & Capacity Map** — peer foundry / IDM / OSAT footprints, split by front-end vs back-end, each read as validating / crowding / context.
+4. **Value-Chain Credibility Matrix** — where each country is credible / emerging / absent across six layers, referenced to Singapore.
+5. **Feasibility Inputs** — decision-magnitude inputs only (firm power availability, reliability, electricity price, experienced-engineer pool, EMC graduate share, supply-chain adjacency, incentives, binding constraint).
+6. **Cases & Policy Signals** — split into real manufacturing gravity vs signals not yet actionable (e.g., ARM × Danantara).
+7. **View-Changing Gaps** — the unknowns that would flip a judgment, ordered by decision weight, plus a compact source index.
+
+## Evidence quality tags
+
+Every value carries a tag (the spine of the dashboard):
+
+- **A** — Comparable / directly citable (source, year, definition clear).
+- **B** — Verified but not cross-comparable (definitions differ across countries/years).
+- **C** — Estimate / proxy (range, non-semiconductor role, or secondary source).
+- **D** — Author judgment / data gap (no unified public quantitative data).
+
+## Tech
+
+HTML, CSS, and vanilla JavaScript only. No backend, build step, package manager, or external library. Data lives in `data/*.json` and is loaded with `fetch`.
+
+## Project structure
 
 ```text
 index.html
 styles.css
 app.js
-data/strategic_options.json
-data/objective_country_metrics.json
-data/evidence_library.json
-data/case_dossiers.json
-data/diligence_workplan.json
-data/country_profiles.json
-data/sources.json
+data/frame.json                    # Module 1: reading frame + quality legend
+data/demand_drivers.json           # Module 2: structural drivers + end-market gravity
+data/competitive_map.json          # Module 3: competitor / capacity moves
+data/valuechain_credibility.json   # Module 4: credibility matrix
+data/feasibility_inputs.json       # Module 5: decision-magnitude inputs
+data/cases_signals.json            # Module 6: manufacturing cases vs signals
+data/view_changing_gaps.json       # Module 7: view-changing unknowns
+data/source_index.json             # source index
+data/archive/                      # superseded data files (not loaded)
 README.md
 CHANGELOG.md
 ```
 
-Legacy files such as `data/countries.json`, `data/expansion_modes.json`, `data/scoring_lenses.json`, `data/decision_claims.json`, `data/decision_strategies.json`, and `data/decision_readiness.json` may remain in the repository as historical appendix data, but the current dashboard does not load them.
+Primary source basis: `SEA_semiconductor_infra_verified_revised.docx` (July 2026 verified/revised appendix). The dashboard reflects its corrections — removed the erroneous Malaysia "sub-2-minute SAIDI" and "~600,000 E&E engineers" claims, reframed "~13%" as activity/market share (not physical capacity), updated EMC graduate shares to 2024, and downgraded the unconfirmed ARM × Danantara figures.
 
-## Run Locally
+## Run locally
 
-Because the app loads JSON files with `fetch`, run it through a local static server:
+The app loads JSON with `fetch`, so it must be served over HTTP (not opened via `file://`):
 
 ```powershell
 cd C:\Users\maxch\GPT
 python -m http.server 8000
 ```
 
-Open:
-
-```text
-http://localhost:8000
-```
+Open `http://localhost:8000`.
 
 ## Deploy on GitHub Pages
 
-1. Create a GitHub repository.
-2. Upload the project files to the repository root.
-3. Go to `Settings` > `Pages`.
-4. Set source to `Deploy from a branch`.
-5. Choose the `main` branch and `/root`.
-6. Save and open the GitHub Pages URL after deployment finishes.
+1. Push the project files to a GitHub repository root.
+2. `Settings` > `Pages` > source `Deploy from a branch`, `main` / `/root`.
+3. Open the GitHub Pages URL after deployment. All paths are relative, so no configuration is needed.
 
-All active paths are relative, so the app can run from GitHub Pages without configuration.
+## Scope and limits
 
-## Active Data Files
-
-- `data/strategic_options.json`: five option families after Fab 12i P3.
-- `data/objective_country_metrics.json`: country fact base with appendix-style objective facts, estimates, and data gaps.
-- `data/evidence_library.json`: evidence records mapped to `option_id` with direct/proxy/background strength labels.
-- `data/case_dossiers.json`: promoted option-linked cases with implications and expandable details.
-- `data/diligence_workplan.json`: team workstreams and outputs needed for next diligence.
-- `data/country_profiles.json`: short country thesis inputs used for country fact sheets.
-- `data/sources.json`: source metadata and reference trail.
-
-## Methodology Notes
-
-This dashboard avoids subjective lenses, weighted ordering, final-answer framing, and numeric country grades as management outputs. Evidence is classified as:
-
-- `direct`: directly relevant to an option.
-- `proxy`: suggests relevance but requires UMC internal validation.
-- `background`: useful context, not actionable alone.
-
-Country facts preserve `est.` where values are estimated and show `data gap` where appendix data is missing.
+This is orientation and structured-judgment material, not a decision engine. Its ceiling is set by what is publicly visible: Module 2 (demand) reaches only proxy / B–C confidence because real customer pull sits in internal data. Time-sensitive 2025–2026 competitive items (e.g., VIS–NXP ramp) are tagged C/D pending primary-source verification.

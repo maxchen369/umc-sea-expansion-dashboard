@@ -3,147 +3,126 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UMC Southeast Asia Strategic Overview</title>
+    <title>Southeast Asia Semiconductor — Consultant Dashboard</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="topbar">
       <div class="brand">
-        <span class="brand-mark">UMC</span>
+        <span class="brand-mark">SEA</span>
         <div>
-          <p class="eyebrow">Strategic overview</p>
-          <h1>Southeast Asia Options After Fab 12i P3</h1>
+          <p class="eyebrow">Industry research · outside-in</p>
+          <h1>Southeast Asia Semiconductor — Consultant View</h1>
         </div>
       </div>
       <nav class="nav" aria-label="Dashboard sections">
-        <a href="#overview">Overview</a>
-        <a href="#options">Option Map</a>
-        <a href="#facts">Fact Base</a>
-        <a href="#evidence">Evidence Matrix</a>
-        <a href="#cases">Dossiers</a>
-        <a href="#workplan">Workplan</a>
-        <a href="#countries">Country Sheets</a>
-        <a href="#sources">Sources</a>
+        <a href="#frame">Frame</a>
+        <a href="#demand">Demand</a>
+        <a href="#competition">Competition</a>
+        <a href="#valuechain">Value Chain</a>
+        <a href="#feasibility">Feasibility</a>
+        <a href="#cases">Cases &amp; Signals</a>
+        <a href="#gaps">View-Changing Gaps</a>
       </nav>
     </header>
 
     <main>
-      <section id="overview" class="section hero">
+      <section id="frame" class="section hero">
         <div class="hero-copy">
-          <p class="eyebrow">Strategic Overview</p>
-          <h2 id="overviewTitle">Strategic options after Singapore Fab 12i P3</h2>
-          <p>This dashboard maps strategic options, relevant countries, objective country facts, ecosystem signals, data gaps, and diligence workstreams. It is a management discussion aid, not an investment authorization tool.</p>
+          <p class="eyebrow">1. Reading Frame</p>
+          <h2 id="frameTitle">Reading frame</h2>
+          <p id="frameLens"></p>
+          <div class="finding" id="frameFinding"></div>
+          <p id="frameHow" class="muted-light"></p>
         </div>
         <aside class="hero-panel">
-          <div class="panel-row">
-            <span>Baseline assumption</span>
-            <strong id="baselineAssumption">Singapore Fab 12i P3 is the existing baseline and regional anchor.</strong>
-          </div>
-          <div class="panel-row">
-            <span>Current option landscape</span>
-            <strong id="optionLandscape">Loading options...</strong>
-          </div>
-          <div class="panel-row">
-            <span>Diligence roadmap</span>
-            <strong id="roadmapNote">Loading workstreams...</strong>
-          </div>
+          <p class="panel-title">Evidence quality legend</p>
+          <div id="qualityLegend"></div>
+          <p class="panel-foot" id="frameKnowledgeNote"></p>
         </aside>
       </section>
 
-      <section id="options" class="section">
+      <section id="demand" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Strategic Option Map</p>
-          <h2>Option families after Fab 12i P3</h2>
-          <p>Each option shows purpose, business logic, capex level, execution complexity, relevant countries, UMC relevance, and data needed before action.</p>
+          <p class="eyebrow">2. Demand &amp; Strategic Drivers</p>
+          <h2>Why anyone would want SEA capacity or service</h2>
+          <p id="demandNote" class="muted"></p>
         </div>
-        <div id="optionCards" class="strategy-grid"></div>
-      </section>
-
-      <section id="facts" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Country Fact Base</p>
-          <h2>Objective facts, estimates, and data gaps</h2>
-          <p>Country facts are shown for Malaysia, Vietnam, Thailand, Indonesia, and the Philippines. Estimated values preserve “est.” and missing values show “data gap.”</p>
-        </div>
-        <div id="metricCards" class="metric-grid"></div>
+        <h3 class="block-label">Structural drivers</h3>
+        <div id="structuralDrivers" class="card-grid"></div>
+        <h3 class="block-label">End-market gravity by country</h3>
         <div class="table-wrap">
-          <table class="metrics-table">
-            <thead id="metricTableHead"></thead>
-            <tbody id="metricTableBody"></tbody>
+          <table>
+            <thead><tr><th>Country</th><th>End markets</th><th>Foundry-relevant pull</th><th>Q</th></tr></thead>
+            <tbody id="endMarketBody"></tbody>
           </table>
         </div>
       </section>
 
-      <section id="evidence" class="section">
+      <section id="competition" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Option Evidence Matrix</p>
-          <h2>Evidence grouped by option and country</h2>
-          <p>Evidence strength is labeled as direct, proxy, or background. Proxy evidence requires UMC internal validation before it can support action.</p>
+          <p class="eyebrow">3. Competitive &amp; Capacity Map</p>
+          <h2>Who is already moving — and does it crowd or validate?</h2>
+          <p id="competitionNote" class="muted"></p>
         </div>
-        <div class="filter-stack">
-          <div>
-            <p class="filter-label">Strategic option</p>
-            <div id="optionFilters" class="button-row"></div>
-          </div>
-          <div>
-            <p class="filter-label">Country</p>
-            <div id="countryFilters" class="button-row"></div>
-          </div>
-          <div>
-            <p class="filter-label">Evidence strength</p>
-            <div id="strengthFilters" class="button-row"></div>
-          </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Player</th><th>Type</th><th>Location</th><th>Layer</th><th>Move</th><th>Reads as</th><th>Q</th></tr></thead>
+            <tbody id="competitionBody"></tbody>
+          </table>
         </div>
-        <div id="evidenceLibrary" class="evidence-library"></div>
+        <div class="finding" id="competitionSynthesis"></div>
+      </section>
+
+      <section id="valuechain" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">4. Value-Chain Credibility Matrix</p>
+          <h2>Where each country is actually credible</h2>
+          <p id="valueChainNote" class="muted"></p>
+        </div>
+        <div class="table-wrap">
+          <table class="valuechain-table">
+            <thead id="valueChainHead"></thead>
+            <tbody id="valueChainBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="feasibility" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">5. Feasibility Inputs (decision-magnitude only)</p>
+          <h2>If a back-end / adjacency move were considered, what actually binds it</h2>
+          <p id="feasibilityNote" class="muted"></p>
+        </div>
+        <div class="table-wrap">
+          <table class="valuechain-table">
+            <thead id="feasibilityHead"></thead>
+            <tbody id="feasibilityBody"></tbody>
+          </table>
+        </div>
       </section>
 
       <section id="cases" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Case Dossiers</p>
-          <h2>Option-linked cases and ecosystem signals</h2>
-          <p>Default view shows headline and implication. Expand each case for activity, scale, relevance, limitations, and next validation.</p>
+          <p class="eyebrow">6. Cases &amp; Policy Signals</p>
+          <h2>Real manufacturing gravity vs signals not yet actionable</h2>
+          <p id="casesNote" class="muted"></p>
         </div>
-        <div id="caseDossiers" class="evidence-library"></div>
+        <h3 class="block-label">Manufacturing-relevant cases</h3>
+        <div id="mfgCases" class="card-grid"></div>
+        <h3 class="block-label">Signals — not yet actionable</h3>
+        <div id="signalCases" class="card-grid"></div>
       </section>
 
-      <section id="workplan" class="section">
+      <section id="gaps" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Diligence Workplan</p>
-          <h2>Workstreams and outputs needed next</h2>
-          <p>This is a workplan for investigation, not a decision gate.</p>
+          <p class="eyebrow">7. View-Changing Gaps</p>
+          <h2>The unknowns that would flip a judgment</h2>
+          <p id="gapsNote" class="muted"></p>
         </div>
-        <div class="table-wrap">
-          <table class="diligence-table">
-            <thead>
-              <tr>
-                <th>Workstream</th>
-                <th>Diligence item</th>
-                <th>Related option</th>
-                <th>Related country</th>
-                <th>Why it matters</th>
-                <th>Owner</th>
-                <th>Next action</th>
-                <th>Output needed</th>
-              </tr>
-            </thead>
-            <tbody id="diligenceTableBody"></tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="countries" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Country Fact Sheets</p>
-          <h2>Short country view</h2>
-          <p>Country sheets summarize thesis, relevant options, strongest fact, biggest constraint, and data gap.</p>
-        </div>
-        <div id="countryCards" class="country-grid"></div>
-      </section>
-
-      <section id="sources" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Sources & Data Freshness</p>
-          <h2>Reference trail</h2>
+        <div id="gapsList" class="card-grid"></div>
+        <div class="section-heading" style="margin-top:28px">
+          <p class="eyebrow">Source index</p>
         </div>
         <div id="sourcesList" class="source-list"></div>
       </section>

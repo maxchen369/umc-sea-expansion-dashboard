@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-07-09
+
+- Re-architected the dashboard from an information overview into a consultant-view framework organized by decision driver, not data category.
+- Replaced the six sections with seven modules: Reading Frame, Demand & Strategic Drivers, Competitive & Capacity Map, Value-Chain Credibility Matrix, Feasibility Inputs, Cases & Policy Signals, and View-Changing Gaps.
+- Added Module 2 (Demand & Strategic Drivers) and Module 3 (Competitive & Capacity Map) — the previously missing demand and competition layers.
+- Introduced A/B/C/D evidence-quality tags on every value as the dashboard's spine.
+- Aligned all data to `SEA_semiconductor_infra_verified_revised.docx` (July 2026): removed erroneous "sub-2-minute SAIDI" and "~600,000 E&E engineers" claims, reframed "~13%" as activity/market share (not capacity), updated EMC graduate shares to 2024, downgraded unconfirmed ARM × Danantara figures.
+- Kept electricity price and EMC graduate share, merged into Module 5 (Feasibility Inputs) as secondary inputs.
+- Added new data files (`frame`, `demand_drivers`, `competitive_map`, `valuechain_credibility`, `feasibility_inputs`, `cases_signals`, `view_changing_gaps`, `source_index`); moved superseded files to `data/archive/`.
+- Fixed overlapping labels/values in the overview info card (panel rows now stack vertically).
+
 ## 2026-07-07
 
 - Repositioned the dashboard as a Strategic Overview for UMC Southeast Asia options after Singapore Fab 12i P3.
