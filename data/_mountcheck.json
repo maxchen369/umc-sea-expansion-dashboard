@@ -1,0 +1,6 @@
+{
+  "probe": "mount coherence check",
+  "note": "If bash can parse this newly-named file, host writes are correct and the mount cache is stale for previously-written filenames.",
+  "emdash": "value with an em dash — and ARM×Danantara and €5B and 130–40nm",
+  "nested": { "a": 1, "b": ["x", "y", "z"], "c": "closing string" }
+}

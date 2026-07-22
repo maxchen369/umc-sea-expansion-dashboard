@@ -1,0 +1,65 @@
+{
+  "note": "Module 2 — the demand side. Why anyone would want capacity or service in SEA. This is the largest decision driver and the least documented in public data; treat as directional, not precise. Quality tags apply.",
+  "structural_drivers": [
+    {
+      "driver": "China+1 / supply-chain derisking",
+      "what_it_is": "Since US export controls tightened (2022 onward), customers and OSATs have diversified assembly/test and some mature-node capacity out of China and, increasingly, out of single-Taiwan dependence. SEA is the primary landing zone for back-end diversification.",
+      "relevance_to_specialty_foundry": "Creates pull for geographically diversified mature/specialty capacity and for non-China back-end. It favors SEA back-end/OSAT and raises the option value of a non-Taiwan mature-node footprint — but the pull lands mostly on packaging/test, not front-end.",
+      "quality": "B",
+      "sources": ["reuters_my_strategy"]
+    },
+    {
+      "driver": "Tariff & trade-policy shifts",
+      "what_it_is": "US–China tariffs and potential semiconductor-specific tariffs push final-assembly and country-of-origin decisions toward SEA to preserve market access.",
+      "relevance_to_specialty_foundry": "Strengthens SEA assembly/test demand and could pull some substrate/packaging value; effect on front-end wafer siting is indirect. Policy is in flux — directional only.",
+      "quality": "C",
+      "sources": []
+    },
+    {
+      "driver": "Taiwan-concentration risk / customer dual-sourcing",
+      "what_it_is": "Automotive, industrial and MCU customers increasingly require a non-Taiwan source for mature/specialty nodes.",
+      "relevance_to_specialty_foundry": "Directly relevant to a specialty foundry's diversification thesis — but the credible non-Taiwan front-end answer in the region is Singapore (and peers building there), not the other five countries.",
+      "quality": "C",
+      "sources": []
+    },
+    {
+      "driver": "End-market gravity inside SEA",
+      "what_it_is": "SEA hosts large downstream demand: automotive & power (Thailand), electronics/EMS assembly (Vietnam, Malaysia, Philippines), and a fast-growing data-center cluster (Johor/Singapore).",
+      "relevance_to_specialty_foundry": "Downstream gravity pulls mature/specialty silicon (PMIC, power, RF, display-driver, MCU) into the region's supply chains and creates back-end and support-engineering adjacency — the most realistic SEA demand channel for a specialty foundry.",
+      "quality": "B",
+      "sources": ["semi_thailand", "oecd_philippines"]
+    }
+  ],
+  "end_market_gravity": [
+    {
+      "country": "Malaysia",
+      "end_markets": "Broad E&E, advanced packaging/substrates, and a large Johor data-center build-out adjacent to Singapore.",
+      "foundry_relevant_pull": "Back-end and advanced-packaging adjacency is the strongest of the five; DC cluster adds power/analog demand context.",
+      "quality": "B"
+    },
+    {
+      "country": "Vietnam",
+      "end_markets": "Large FDI electronics/EMS base (Samsung and suppliers); rising IC-design/R&D.",
+      "foundry_relevant_pull": "Demand is assembly- and design-driven; front-end pull is low. Relevant to support/FAE and packaging adjacency.",
+      "quality": "B"
+    },
+    {
+      "country": "Thailand",
+      "end_markets": "Automotive, power electronics, HDD, and broad electronics manufacturing; EEC corridor.",
+      "foundry_relevant_pull": "Mature-node and power/automotive demand is the clearest specialty channel — but the EV transition is reshaping the automotive base, so read as evolving.",
+      "quality": "C"
+    },
+    {
+      "country": "Indonesia",
+      "end_markets": "EV and local-content-driven electronics demand emerging; large domestic market.",
+      "foundry_relevant_pull": "Thin and policy-driven; demand is potential, not yet a supply-chain reality for specialty silicon.",
+      "quality": "C"
+    },
+    {
+      "country": "Philippines",
+      "end_markets": "ATP and electronics exports (world's 9th largest chip exporter, OECD); EMS base.",
+      "foundry_relevant_pull": "Back-end/ATP demand and English-language support; minimal design pull. Relevant to support operations, not front-end.",
+      "quality": "B"
+    }
+  ]
+}

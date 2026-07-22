@@ -1,0 +1,281 @@
+{
+  "universal_investment_gates": [
+    "capex / opex estimate",
+    "revenue mechanism",
+    "ROIC / payback model",
+    "customer overlap validation",
+    "partner shortlist",
+    "government incentives and tax treatment",
+    "power / water / infrastructure readiness",
+    "engineering talent availability",
+    "legal / regulatory feasibility",
+    "Fab 12i P3 ramp status"
+  ],
+  "countries": [
+    {
+      "country_id": "singapore",
+      "country": "Singapore",
+      "decision_readiness": "Primary recommendation",
+      "strategic_attractiveness": "High",
+      "financial_feasibility": "Highest near-term capital discipline",
+      "recommended_next_step": "Focus on executing Singapore Fab 12i P3; defer new non-Singapore expansion until commercial and financial triggers are validated.",
+      "best_fit_expansion_mode": "optimize_existing_fab12i_p3",
+      "unique_opportunity": "Fab 12i P3 already gives UMC the main Southeast Asia front-end anchor for customer qualification, utilization improvement, and capital-efficient execution.",
+      "unique_risk": "Premature external expansion could dilute management attention and capital before Fab 12i P3 ramp, customer qualification, and utilization are proven.",
+      "location_level_questions": [
+        "Which Fab 12i customer workflows still require local customer engineering expansion?",
+        "Which activities should remain in Singapore versus be extended into a lower-cost nearby market?"
+      ],
+      "evidence_gaps": [
+        "Incremental Fab 12i customer support workload by product family",
+        "Cost comparison for activities that could be located outside Singapore"
+      ],
+      "priority_movers": [
+        "Remains top priority while Fab 12i P3 ramp, customer qualification, and utilization are still the central execution tasks.",
+        "External options move up only after customer demand, partner economics, government incentives, ROIC, and Fab 12i P3 ramp status are validated."
+      ],
+      "strategy_questions": {
+        "optimize_existing_fab12i_p3": [
+          "Is Fab 12i P3 ramp on schedule for yield, utilization, and customer qualification?",
+          "Which customer qualification milestones must be completed before UMC considers new external Southeast Asia capex?",
+          "What utilization and margin targets define a successful P3 ramp?",
+          "Which Malaysia, Vietnam, Thailand, Philippines, or Indonesia options should remain monitored without committing capital?"
+        ],
+        "sales_office": [
+          "Which regional headquarters or anchor accounts still need Singapore-based coverage?",
+          "What account coverage should be shifted to non-Singapore markets?"
+        ],
+        "customer_engineering_hub": [
+          "Which Fab 12i customer engineering issues require on-site escalation in Singapore?",
+          "Which support workflows can be distributed to a lower-cost hub?"
+        ],
+        "packaging_osat_partnership": [
+          "Which wafer-to-package coordination work must stay near Fab 12i?",
+          "Which OSAT coordination work can be partnered outside Singapore?"
+        ],
+        "foundry_manufacturing_expansion": [
+          "What incremental specialty capacity would justify further Singapore manufacturing exposure?",
+          "How would additional expansion compare with non-Singapore next-step options?"
+        ]
+      }
+    },
+    {
+      "country_id": "malaysia",
+      "country": "Malaysia",
+      "decision_readiness": "Conditional watchlist",
+      "strategic_attractiveness": "High",
+      "financial_feasibility": "Unproven until customer overlap, attach-rate, partner economics, incentives, and ROIC are modeled",
+      "recommended_next_step": "Keep Malaysia Packaging / OSAT Partnership on watchlist while validating customer overlap, packaging attach-rate, partner shortlist, incentives, and ROIC.",
+      "best_fit_expansion_mode": "packaging_osat_partnership",
+      "unique_opportunity": "Penang and Kulim offer the deepest non-Singapore Packaging, Assembly & Test ecosystem for a possible partnership-first Fab 12i extension.",
+      "unique_risk": "Malaysia ecosystem strength does not automatically justify UMC expansion without validated customer demand, revenue mechanism, partner economics, government incentives, and ROIC.",
+      "location_level_questions": [
+        "Penang vs Kulim: which location best supports OSAT/test access and Fab 12i wafer-to-package coordination?",
+        "Which partner site has the right logistics, quality systems, and customer access?"
+      ],
+      "evidence_gaps": [
+        "Named customer overlap for UMC wafers needing Malaysia-based packaging or test",
+        "Packaging attach-rate estimate for relevant Fab 12i output",
+        "Partner capacity, shortlist, commercial terms, and incentive package detail",
+        "ROIC / payback model versus hurdle rate"
+      ],
+      "priority_movers": [
+        "Moves from Watchlist to Stage 1 only if identified customer demand exists.",
+        "Moves from Watchlist to Stage 1 only if a credible partner shortlist exists.",
+        "Moves from Watchlist to Stage 1 only if a clear revenue mechanism exists.",
+        "Moves from Watchlist to Stage 1 only if expected ROIC exceeds UMC's hurdle rate.",
+        "Moves from Watchlist to Stage 1 only if government incentives materially improve economics.",
+        "Moves from Watchlist to Stage 1 only if Fab 12i P3 ramp is on track."
+      ],
+      "strategy_questions": {
+        "packaging_osat_partnership": [
+          "Penang vs Kulim: where is OSAT and testing coordination strongest?",
+          "Which OSAT / testing partners should be shortlisted?",
+          "Is the right first step partnership, joint development, or customer engineering hub?",
+          "How would Fab 12i wafer-to-package support operate across logistics, quality, and escalation?",
+          "Which anchor customers or attach-rate assumptions validate the model?",
+          "Do government incentives materially improve project economics?",
+          "Does expected ROIC exceed UMC's hurdle rate after partner economics are modeled?"
+        ],
+        "customer_engineering_hub": [
+          "Which Penang/Kulim customers or partners need FAE and quality coordination tied to Fab 12i output?",
+          "Can a customer engineering hub improve packaging/test issue resolution without committing to capex?"
+        ],
+        "sales_office": [
+          "Which Malaysia-based EMS, OSAT, and electronics customers require direct account coverage?",
+          "Would sales coverage be standalone or paired with technical support?"
+        ],
+        "foundry_manufacturing_expansion": [
+          "Would Malaysia offer a credible specialty manufacturing case beyond OSAT adjacency?",
+          "What utility, permitting, and customer qualification hurdles would block a foundry option?"
+        ]
+      }
+    },
+    {
+      "country_id": "vietnam",
+      "country": "Vietnam",
+      "decision_readiness": "Needs commercial and financial validation",
+      "strategic_attractiveness": "Medium-high",
+      "financial_feasibility": "Medium pending customer support model",
+      "recommended_next_step": "Customer engineering validation; EMS and assembly ecosystem relevance review",
+      "best_fit_expansion_mode": "customer_engineering_hub",
+      "unique_opportunity": "Vietnam is a plausible EMS-linked customer engineering and account operations watchlist market.",
+      "unique_risk": "The ecosystem is more downstream and assembly-oriented, so it may not yet support a foundry-first or advanced packaging-first thesis.",
+      "location_level_questions": [
+        "Bac Ninh, Ho Chi Minh City, or Hanoi: which location best matches customer engineering and EMS coverage needs?",
+        "Which local customers or partners require technical escalation rather than account operations only?"
+      ],
+      "evidence_gaps": [
+        "Customer overlap with UMC communication, consumer, IoT, and display-related accounts",
+        "Depth of local FAE and semiconductor quality support talent"
+      ],
+      "priority_movers": [
+        "Moves up if EMS-linked customers need local technical support for Fab 12i products.",
+        "Moves down if local demand is mostly account operations rather than engineering support."
+      ],
+      "strategy_questions": {
+        "customer_engineering_hub": [
+          "Which EMS and assembly ecosystem nodes are relevant to UMC customer support?",
+          "How much customer overlap exists with UMC's current product and account base?",
+          "Is Vietnam better suited for customer engineering, account operations, or both?",
+          "Is technical support talent deep enough for FAE, quality, and design-in support?"
+        ],
+        "sales_office": [
+          "Which Vietnam electronics and EMS clusters justify local account coverage?",
+          "Would a representative office be enough before adding engineering support?"
+        ],
+        "packaging_osat_partnership": [
+          "Are local assembly and test players mature enough for Fab 12i wafer-to-package coordination?",
+          "Which partner capabilities are still missing versus Malaysia?"
+        ],
+        "foundry_manufacturing_expansion": [
+          "What policy, utility, and qualification gaps make foundry manufacturing a longer-term watchlist option?",
+          "What evidence would change Vietnam from support hub to manufacturing diligence?"
+        ]
+      }
+    },
+    {
+      "country_id": "thailand",
+      "country": "Thailand",
+      "decision_readiness": "Needs commercial and financial validation",
+      "strategic_attractiveness": "Medium-high",
+      "financial_feasibility": "Medium pending policy execution",
+      "recommended_next_step": "Automotive / industrial customer overlap; specialty process demand validation",
+      "best_fit_expansion_mode": "sales_office",
+      "unique_opportunity": "Thailand is a specialty-process watchlist market tied to automotive, power, industrial, and electronics demand clusters.",
+      "unique_risk": "Policy ambition and demand signals need proof before moving beyond sales coverage or customer engineering.",
+      "location_level_questions": [
+        "Bangkok/EEC: which customer cluster best supports automotive, power, and industrial electronics coverage?",
+        "Which local policy commitments are executable for semiconductor suppliers and customer support?"
+      ],
+      "evidence_gaps": [
+        "Named UMC customer overlap in automotive, power, and industrial electronics",
+        "Implementation detail for semiconductor policy, incentives, talent, and infrastructure"
+      ],
+      "priority_movers": [
+        "Moves up if automotive and power electronics customers validate specialty-process demand.",
+        "Moves down if policy remains aspirational or customer overlap is thin."
+      ],
+      "strategy_questions": {
+        "sales_office": [
+          "Which automotive, power, and industrial electronics accounts justify direct sales coverage?",
+          "Would sales coverage improve demand sensing for UMC specialty processes?"
+        ],
+        "customer_engineering_hub": [
+          "Does Thailand require FAE support or mainly regional account coverage?",
+          "Which quality or design-in workflows would benefit from local engineering support?"
+        ],
+        "packaging_osat_partnership": [
+          "Are there packaging, assembly, or test partners relevant to automotive and power electronics?",
+          "Would Thailand complement or duplicate Malaysia's packaging/test role?"
+        ],
+        "foundry_manufacturing_expansion": [
+          "Is the national semiconductor strategy executable enough to support manufacturing diligence?",
+          "Which specialty process demand would justify foundry-level review?"
+        ]
+      }
+    },
+    {
+      "country_id": "philippines",
+      "country": "Philippines",
+      "decision_readiness": "Needs commercial and financial validation",
+      "strategic_attractiveness": "Medium",
+      "financial_feasibility": "Medium pending support model",
+      "recommended_next_step": "Support hub service model; talent and escalation workflow validation",
+      "best_fit_expansion_mode": "customer_engineering_hub",
+      "unique_opportunity": "The Philippines is a support hub and allied supply-chain watchlist option, with account operations and technical escalation potential.",
+      "unique_risk": "It is not a foundry-first option without stronger manufacturing, utility, and customer evidence.",
+      "location_level_questions": [
+        "New Clark City, Manila, or Calabarzon: which location best fits support operations and supply-chain access?",
+        "Which functions should be technical support versus account operations?"
+      ],
+      "evidence_gaps": [
+        "Semiconductor-specific technical support talent depth",
+        "Customer overlap and escalation workflows tied to Fab 12i products"
+      ],
+      "priority_movers": [
+        "Moves up if customer support demand and allied supply-chain programs translate into named opportunities.",
+        "Moves down if the role is limited to generic back-office support."
+      ],
+      "strategy_questions": {
+        "customer_engineering_hub": [
+          "Which support workflows require semiconductor technical depth rather than account operations only?",
+          "Can the talent base support FAE coordination, quality triage, and customer engineering escalation?"
+        ],
+        "sales_office": [
+          "Which customers or government relationships require a local account presence?",
+          "Would coverage be better served from Singapore, Malaysia, or the Philippines?"
+        ],
+        "packaging_osat_partnership": [
+          "Which assembly/test capabilities are relevant to UMC products and Fab 12i output?",
+          "Does the partner base support a differentiated role versus Malaysia?"
+        ],
+        "foundry_manufacturing_expansion": [
+          "What would need to be true on utilities, policy, and customer qualification before foundry diligence?",
+          "Is the New Clark City supply-chain security concept relevant to UMC manufacturing or only watchlist evidence?"
+        ]
+      }
+    },
+    {
+      "country_id": "indonesia",
+      "country": "Indonesia",
+      "decision_readiness": "Screening only",
+      "strategic_attractiveness": "Medium",
+      "financial_feasibility": "Low pending validation",
+      "recommended_next_step": "Policy/design ecosystem monitoring; customer demand and partner evidence validation",
+      "best_fit_expansion_mode": "watchlist",
+      "unique_opportunity": "Indonesia is a long-term IC design, policy, and market watchlist option rather than an immediate manufacturing target.",
+      "unique_risk": "Manufacturing readiness and semiconductor customer density remain less proven than Malaysia, Singapore, or Vietnam.",
+      "location_level_questions": [
+        "Jakarta or Batam: which location best fits design ecosystem, policy engagement, or customer coverage?",
+        "Are Arm/Danantara-type initiatives creating UMC-relevant design demand or mainly workforce development?"
+      ],
+      "evidence_gaps": [
+        "Named fabless, EMS, or end-customer demand tied to UMC process nodes",
+        "Evidence of partner maturity for customer engineering or manufacturing collaboration"
+      ],
+      "priority_movers": [
+        "Moves up if IC design training produces customer demand tied to mature-node foundry services.",
+        "Moves down if policy partnerships do not create near-term commercial demand."
+      ],
+      "strategy_questions": {
+        "sales_office": [
+          "Which accounts or policy relationships justify a representative presence?",
+          "Is market coverage better handled regionally until customer density improves?"
+        ],
+        "customer_engineering_hub": [
+          "Is there enough semiconductor customer engineering demand beyond design training?",
+          "Which language, support, and technical skills would be required?"
+        ],
+        "packaging_osat_partnership": [
+          "Are any packaging, test, or EMS partners mature enough for UMC-relevant collaboration?",
+          "What evidence would move Indonesia beyond watchlist status?"
+        ],
+        "foundry_manufacturing_expansion": [
+          "What infrastructure, utility, customer, and policy evidence would be required before manufacturing diligence?",
+          "Would mature-node demand justify foundry review within the planning horizon?"
+        ]
+      }
+    }
+  ]
+}

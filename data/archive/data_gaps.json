@@ -1,0 +1,32 @@
+[
+  {
+    "gap": "EE bachelor/master annual degree awards (by level)",
+    "current_status": "Verified: UNESCO UIS and World Bank classify only down to the “Engineering, Manufacturing and Construction (EMC)” group — no standalone EE, no bachelor/master split. Approximated with EMC share / absolute counts (see Country Fact Base talent fields).",
+    "suggested_source": "National higher-education authorities' original yearbooks (MOHE Malaysia, MoET Vietnam, CHED Philippines, MHESI Thailand, BPS/Kemdikbud Indonesia); some require a data request rather than public download.",
+    "scope": "All five countries"
+  },
+  {
+    "gap": "Thailand & Indonesia precise industrial tariff tiers",
+    "current_status": "Shown as estimated ranges (est.).",
+    "suggested_source": "MEA/PEA (Thailand) and PLN I-3/I-4 tier (Indonesia) official tariff schedules.",
+    "scope": "Thailand, Indonesia"
+  },
+  {
+    "gap": "Quantitative indicators of materials localization",
+    "current_status": "Presented qualitatively (localization degree) — the scarcest public quantitative field.",
+    "suggested_source": "SEMI materials-market reports; national industry-association supply-chain white papers.",
+    "scope": "All five countries"
+  },
+  {
+    "gap": "Latest per-country SAIDI (2023–2025)",
+    "current_status": "Verified: a clean year-over-year comparable series is unavailable because regulators define SAIDI differently; main table uses the 2020 World Bank uniform caliber, with only mixed-caliber single points elsewhere.",
+    "suggested_source": "Utility-regulator annual reports (ST Malaysia, ERC Philippines, PLN Indonesia, EVN/NSMO Vietnam, ERC Thailand).",
+    "scope": "All five countries"
+  },
+  {
+    "gap": "Semiconductor-specific (not general-engineering) salaries",
+    "current_status": "Mostly general-engineering or IT salaries; semiconductor-role pay not cleanly separable.",
+    "suggested_source": "Robert Walters / Michael Page / Mercer country Salary Guides 2026.",
+    "scope": "All five countries"
+  }
+]

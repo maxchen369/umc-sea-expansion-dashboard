@@ -1,0 +1,1236 @@
+[
+  {
+    "id": "umc_fab12i",
+    "title": "UMC Fab 12i",
+    "country": "Singapore",
+    "location": "Pasir Ris Wafer Fab Park, Singapore",
+    "decision_claim_id": "focus_fab12i_p3",
+    "industry_category": "foundry_wafer_manufacturing",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "UMC Fab 12i supports using Singapore Fab 12i/P3 as the near-term anchor rather than opening a new external expansion path.",
+    "decision_implication": "Current management implication: prioritize Fab 12i P3 execution and defer new external capex.",
+    "limitation": "Existing anchor evidence; it supports baseline logic but does not by itself approve incremental expansion.",
+    "what_to_validate_next": [
+      "Fab 12i P3 ramp milestone status",
+      "Customer qualification progress",
+      "Utilization and margin targets"
+    ],
+    "confidence": "High",
+    "data_year": 2022,
+    "source_ids": [
+      "src_umc_singapore_expansion"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "supports",
+    "factual_detail": "UMC operates Fab 12i in Pasir Ris Wafer Fab Park; the record anchors the recommendation to execute the existing Singapore P3 path before new external capex.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Existing anchor evidence; it supports baseline logic but does not by itself approve incremental expansion."
+  },
+  {
+    "id": "singapore_edb_semiconductor_platform",
+    "title": "Singapore EDB semiconductor industry platform",
+    "country": "Singapore",
+    "location": "Singapore",
+    "decision_claim_id": "focus_fab12i_p3",
+    "industry_category": "public_policy",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "Singapore EDB semiconductor industry platform supports using Singapore Fab 12i/P3 as the near-term anchor rather than opening a new external expansion path.",
+    "decision_implication": "Current management implication: prioritize Fab 12i P3 execution and defer new external capex.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
+    "what_to_validate_next": [
+      "Fab 12i P3 ramp milestone status",
+      "Customer qualification progress",
+      "Utilization and margin targets"
+    ],
+    "confidence": "High",
+    "data_year": 2025,
+    "source_ids": [
+      "src_edb_semiconductors"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Singapore EDB identifies semiconductors as a national industry platform with wafer fabrication, equipment, R&D, and supply-chain depth.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
+  },
+  {
+    "id": "gf_singapore_expansion_fab",
+    "title": "GlobalFoundries Singapore expansion fab",
+    "country": "Singapore",
+    "location": "Woodlands, Singapore",
+    "decision_claim_id": "focus_fab12i_p3",
+    "industry_category": "foundry_wafer_manufacturing",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "GlobalFoundries Singapore expansion fab supports using Singapore Fab 12i/P3 as the near-term anchor rather than opening a new external expansion path.",
+    "decision_implication": "Current management implication: prioritize Fab 12i P3 execution and defer new external capex.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
+    "what_to_validate_next": [
+      "Fab 12i P3 ramp milestone status",
+      "Customer qualification progress",
+      "Utilization and margin targets"
+    ],
+    "confidence": "High",
+    "data_year": 2023,
+    "source_ids": [
+      "src_gf_singapore"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "GlobalFoundries opened a US$4 billion Singapore expansion fab in Woodlands, demonstrating Singapore wafer-fab execution depth.",
+    "option_id": "foundry_manufacturing_expansion",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows manufacturing, fab, utility, or policy context relevant to understanding manufacturing feasibility.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
+  },
+  {
+    "id": "micron_singapore_fab10b_hbm",
+    "title": "Micron Singapore Fab 10B / HBM assembly plan",
+    "country": "Singapore",
+    "location": "North Coast Wafer Fab Park, Singapore",
+    "decision_claim_id": "gate_out_external_foundry",
+    "industry_category": "foundry_wafer_manufacturing",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "Micron Singapore Fab 10B / HBM assembly plan highlights why new non-Singapore manufacturing commitments need stronger capex, utility, customer, and ROIC validation.",
+    "decision_implication": "Current management implication: gate out external foundry expansion until anchor customers, utilities, incentives, and ROIC are validated.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
+    "what_to_validate_next": [
+      "Anchor customer commitments",
+      "Power / water / permitting readiness",
+      "Capex and utilization model",
+      "Expected ROIC versus hurdle rate"
+    ],
+    "confidence": "Medium",
+    "data_year": 2026,
+    "source_ids": [
+      "src_micron_singapore_fab10b",
+      "src_micron_singapore_power_constraints"
+    ],
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Micron Singapore Fab 10B / HBM-related plan highlights the scale of utility and infrastructure requirements for major semiconductor manufacturing.",
+    "option_id": "foundry_manufacturing_expansion",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows manufacturing, fab, utility, or policy context relevant to understanding manufacturing feasibility.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
+  },
+  {
+    "id": "astar_ime_singapore",
+    "title": "A*STAR Institute of Microelectronics",
+    "country": "Singapore",
+    "location": "Singapore",
+    "decision_claim_id": "focus_fab12i_p3",
+    "industry_category": "ic_design_ip",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "A*STAR Institute of Microelectronics supports using Singapore Fab 12i/P3 as the near-term anchor rather than opening a new external expansion path.",
+    "decision_implication": "Current management implication: prioritize Fab 12i P3 execution and defer new external capex.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
+    "what_to_validate_next": [
+      "Fab 12i P3 ramp milestone status",
+      "Customer qualification progress",
+      "Utilization and margin targets"
+    ],
+    "confidence": "High",
+    "data_year": 2025,
+    "source_ids": [
+      "src_astar_ime"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "A*STAR IME provides Singapore-based microelectronics R&D capability relevant to specialty semiconductor ecosystem depth.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
+  },
+  {
+    "id": "applied_materials_singapore",
+    "title": "Applied Materials Singapore",
+    "country": "Singapore",
+    "location": "Singapore",
+    "decision_claim_id": "focus_fab12i_p3",
+    "industry_category": "foundry_wafer_manufacturing",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "Applied Materials Singapore supports using Singapore Fab 12i/P3 as the near-term anchor rather than opening a new external expansion path.",
+    "decision_implication": "Current management implication: prioritize Fab 12i P3 execution and defer new external capex.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
+    "what_to_validate_next": [
+      "Fab 12i P3 ramp milestone status",
+      "Customer qualification progress",
+      "Utilization and margin targets"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_applied_materials_singapore"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Applied Materials Singapore is a semiconductor equipment ecosystem signal for Singapore supplier and service depth.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
+  },
+  {
+    "id": "utac_singapore",
+    "title": "UTAC Singapore",
+    "country": "Singapore",
+    "location": "Singapore",
+    "decision_claim_id": "focus_fab12i_p3",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "UTAC Singapore supports using Singapore Fab 12i/P3 as the near-term anchor rather than opening a new external expansion path.",
+    "decision_implication": "Current management implication: prioritize Fab 12i P3 execution and defer new external capex.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "Fab 12i P3 ramp milestone status",
+      "Customer qualification progress",
+      "Utilization and margin targets"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_utac_group"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "UTAC Singapore is a back-end semiconductor services signal within the existing Singapore ecosystem.",
+    "option_id": "optimize_existing_fab12i_p3",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows Singapore is the existing baseline or has ecosystem facts relevant to using Fab 12i P3 as the comparison anchor.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "malaysia_national_semiconductor_strategy",
+    "title": "Malaysia National Semiconductor Strategy",
+    "country": "Malaysia",
+    "location": "Malaysia",
+    "decision_claim_id": "malaysia_osat_watchlist",
+    "industry_category": "public_policy",
+    "related_strategy_id": "malaysia_packaging_osat_watchlist",
+    "what_it_supports": "Malaysia National Semiconductor Strategy supports Malaysia as a conditional Packaging / OSAT watchlist, not an immediate investment recommendation.",
+    "decision_implication": "Current management implication: monitor Malaysia and conduct partner/customer diligence, but do not approve capex.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
+    "what_to_validate_next": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate",
+      "Partner economics and shortlist",
+      "Government incentives",
+      "ROIC / payback"
+    ],
+    "confidence": "High",
+    "data_year": 2024,
+    "source_ids": [
+      "src_malaysia_nss",
+      "src_malaysia_wsj_chip_hub"
+    ],
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Malaysia National Semiconductor Strategy is a policy signal for higher-value semiconductor activity, but it is not a UMC project incentive package.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
+  },
+  {
+    "id": "intel_malaysia_advanced_packaging",
+    "title": "Intel Malaysia advanced packaging expansion",
+    "country": "Malaysia",
+    "location": "Penang and Kulim, Malaysia",
+    "decision_claim_id": "malaysia_osat_watchlist",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "malaysia_packaging_osat_watchlist",
+    "what_it_supports": "Intel Malaysia advanced packaging expansion supports Malaysia as a conditional Packaging / OSAT watchlist, not an immediate investment recommendation.",
+    "decision_implication": "Current management implication: monitor Malaysia and conduct partner/customer diligence, but do not approve capex.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
+    "what_to_validate_next": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate",
+      "Partner economics and shortlist",
+      "Government incentives",
+      "ROIC / payback"
+    ],
+    "confidence": "High",
+    "data_year": 2026,
+    "source_ids": [
+      "src_intel_malaysia",
+      "src_intel_advanced_packaging_2026"
+    ],
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Intel Malaysia advanced packaging expansion shows Malaysia can host sophisticated back-end semiconductor operations.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
+  },
+  {
+    "id": "infineon_kulim_sic_power",
+    "title": "Infineon Kulim SiC power semiconductor fab",
+    "country": "Malaysia",
+    "location": "Kulim, Kedah, Malaysia",
+    "decision_claim_id": "gate_out_external_foundry",
+    "industry_category": "foundry_wafer_manufacturing",
+    "related_strategy_id": "optimize_fab12i_p3",
+    "what_it_supports": "Infineon Kulim SiC power semiconductor fab highlights why new non-Singapore manufacturing commitments need stronger capex, utility, customer, and ROIC validation.",
+    "decision_implication": "Current management implication: gate out external foundry expansion until anchor customers, utilities, incentives, and ROIC are validated.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Anchor customer commitments",
+      "Power / water / permitting readiness",
+      "Capex and utilization model",
+      "Expected ROIC versus hurdle rate"
+    ],
+    "confidence": "Medium",
+    "data_year": 2024,
+    "source_ids": [
+      "src_infineon_kulim",
+      "src_malaysia_nss"
+    ],
+    "source_badge": "2 sources",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Infineon Kulim SiC expansion shows Malaysia power-semiconductor manufacturing depth, but it does not validate UMC foundry economics.",
+    "option_id": "foundry_manufacturing_expansion",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows manufacturing, fab, utility, or policy context relevant to understanding manufacturing feasibility.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "ase_malaysia_penang",
+    "title": "ASE Malaysia / Penang OSAT operations",
+    "country": "Malaysia",
+    "location": "Penang, Malaysia",
+    "decision_claim_id": "malaysia_osat_watchlist",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "malaysia_packaging_osat_watchlist",
+    "what_it_supports": "ASE Malaysia / Penang OSAT operations supports Malaysia as a conditional Packaging / OSAT watchlist, not an immediate investment recommendation.",
+    "decision_implication": "Current management implication: monitor Malaysia and conduct partner/customer diligence, but do not approve capex.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate",
+      "Partner economics and shortlist",
+      "Government incentives",
+      "ROIC / payback"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_ase_global"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "ASE Malaysia / Penang operations indicate OSAT ecosystem depth in Malaysia.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "inari_amertron_malaysia",
+    "title": "Inari Amertron",
+    "country": "Malaysia",
+    "location": "Penang and other Malaysia sites",
+    "decision_claim_id": "malaysia_osat_watchlist",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "malaysia_packaging_osat_watchlist",
+    "what_it_supports": "Inari Amertron supports Malaysia as a conditional Packaging / OSAT watchlist, not an immediate investment recommendation.",
+    "decision_implication": "Current management implication: monitor Malaysia and conduct partner/customer diligence, but do not approve capex.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate",
+      "Partner economics and shortlist",
+      "Government incentives",
+      "ROIC / payback"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_inari_amertron"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Inari Amertron is a Malaysia-based outsourced semiconductor assembly/test and RF test ecosystem signal.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "unisem_malaysia",
+    "title": "Unisem Malaysia",
+    "country": "Malaysia",
+    "location": "Ipoh, Perak and other Malaysia operations",
+    "decision_claim_id": "malaysia_osat_watchlist",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "malaysia_packaging_osat_watchlist",
+    "what_it_supports": "Unisem Malaysia supports Malaysia as a conditional Packaging / OSAT watchlist, not an immediate investment recommendation.",
+    "decision_implication": "Current management implication: monitor Malaysia and conduct partner/customer diligence, but do not approve capex.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate",
+      "Partner economics and shortlist",
+      "Government incentives",
+      "ROIC / payback"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_unisem_group"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Unisem Malaysia is a local OSAT ecosystem signal with operations in Ipoh and other Malaysia sites.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "oppstar_malaysia_ic_design",
+    "title": "Oppstar",
+    "country": "Malaysia",
+    "location": "Penang, Malaysia",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "ic_design_ip",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Oppstar indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_oppstar"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Oppstar is a Penang IC design and design-services ecosystem signal.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
+  },
+  {
+    "id": "penang_silicon_design_talent",
+    "title": "Penang Silicon Design @5km+ / chip design talent ecosystem",
+    "country": "Malaysia",
+    "location": "Penang, Malaysia",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "ic_design_ip",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Penang Silicon Design @5km+ / chip design talent ecosystem indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_penang_design_talent"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Penang Silicon Design @5km+ / chip design talent ecosystem indicates policy and training activity around semiconductor design talent.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
+  },
+  {
+    "id": "amkor_vietnam_bac_ninh",
+    "title": "Amkor Technology Vietnam",
+    "country": "Vietnam",
+    "location": "Yen Phong II-C Industrial Park, Bac Ninh, Vietnam",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Amkor Technology Vietnam supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "High",
+    "data_year": 2023,
+    "source_ids": [
+      "src_amkor_vietnam"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Amkor Technology Vietnam in Bac Ninh is a back-end semiconductor campus signal for Vietnam assembly/test relevance.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "hana_micron_vietnam",
+    "title": "Hana Micron Vietnam",
+    "country": "Vietnam",
+    "location": "Bac Giang / northern Vietnam",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Hana Micron Vietnam supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_hana_micron"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Hana Micron Vietnam is a northern Vietnam assembly/test ecosystem signal.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "intel_products_vietnam",
+    "title": "Intel Products Vietnam",
+    "country": "Vietnam",
+    "location": "Saigon Hi-Tech Park, Ho Chi Minh City, Vietnam",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Intel Products Vietnam supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_intel_vietnam"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Intel Products Vietnam in Saigon Hi-Tech Park is an assembly/test and manufacturing ecosystem signal.",
+    "option_id": "sales_office",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Talent or capability signal only; availability, cost, depth, and UMC-specific operating fit need validation."
+  },
+  {
+    "id": "fpt_semiconductor_vietnam",
+    "title": "FPT Semiconductor",
+    "country": "Vietnam",
+    "location": "Hanoi / Ho Chi Minh City, Vietnam",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "ic_design_ip",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "FPT Semiconductor supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_fpt_semiconductor"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "FPT Semiconductor is a Vietnam chip design and semiconductor business signal.",
+    "option_id": "sales_office",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "vietnam_nic_semiconductor_talent",
+    "title": "Vietnam National Innovation Center semiconductor initiatives",
+    "country": "Vietnam",
+    "location": "Hanoi / Hoa Lac and national programs",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "infrastructure",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Vietnam National Innovation Center semiconductor initiatives supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_vietnam_nic"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Vietnam National Innovation Center semiconductor initiatives indicate emerging talent and ecosystem-development effort.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
+  },
+  {
+    "id": "samsung_vietnam_electronics_cluster",
+    "title": "Samsung Vietnam electronics manufacturing cluster",
+    "country": "Vietnam",
+    "location": "Bac Ninh, Thai Nguyen, Ho Chi Minh City, Vietnam",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "electronics_ems",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Samsung Vietnam electronics manufacturing cluster indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_samsung_vietnam"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Samsung Vietnam anchors a large electronics manufacturing cluster relevant to EMS-linked customer engineering diligence.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "vietnam_semiconductor_strategy",
+    "title": "Vietnam semiconductor industry development strategy",
+    "country": "Vietnam",
+    "location": "Vietnam",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "public_policy",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Vietnam semiconductor industry development strategy supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Low",
+    "data_year": 2024,
+    "source_ids": [
+      "src_vietnam_mic_strategy"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Vietnam semiconductor strategy indicates policy ambition, but not UMC-specific customer demand or project economics.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
+  },
+  {
+    "id": "thailand_boi_semiconductor_incentives",
+    "title": "Thailand Board of Investment semiconductor / electronics incentives",
+    "country": "Thailand",
+    "location": "Thailand",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "public_policy",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Thailand Board of Investment semiconductor / electronics incentives supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_thailand_boi"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Thailand BOI semiconductor / electronics incentives are policy signals requiring project-specific eligibility and economics validation.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
+  },
+  {
+    "id": "thailand_eec_electronics_auto",
+    "title": "Eastern Economic Corridor electronics / automotive cluster",
+    "country": "Thailand",
+    "location": "Chonburi, Rayong, Chachoengsao, Thailand",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "electronics_ems",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Eastern Economic Corridor electronics / automotive cluster indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_thailand_eec"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Thailand Eastern Economic Corridor connects electronics and automotive manufacturing demand signals.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "analog_devices_thailand",
+    "title": "Analog Devices Thailand",
+    "country": "Thailand",
+    "location": "Chonburi, Thailand",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Analog Devices Thailand indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_analog_devices"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Analog Devices Thailand is a semiconductor company presence signal tied to Thailand electronics and industrial activity.",
+    "option_id": "sales_office",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "utac_thailand",
+    "title": "UTAC Thailand",
+    "country": "Thailand",
+    "location": "Thailand",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "UTAC Thailand supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_utac_group"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "UTAC Thailand is a back-end semiconductor services signal within Thailand.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "stars_microelectronics_thailand",
+    "title": "Stars Microelectronics Thailand",
+    "country": "Thailand",
+    "location": "Ayutthaya, Thailand",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Stars Microelectronics Thailand supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_stars_microelectronics"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Stars Microelectronics Thailand is a local electronics and semiconductor assembly/test ecosystem signal.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "thailand_hdd_precision_electronics",
+    "title": "Thailand HDD and precision electronics manufacturing cluster",
+    "country": "Thailand",
+    "location": "Bangkok metro, Ayutthaya, Chonburi, and related industrial zones",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "electronics_ems",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Thailand HDD and precision electronics manufacturing cluster indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_western_digital_seagate_thailand"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Thailand HDD and precision electronics cluster indicates manufacturing and supply-chain depth, not UMC wafer demand by itself.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "philippines_oecd_semiconductor_ecosystem",
+    "title": "Philippines semiconductor ecosystem",
+    "country": "Philippines",
+    "location": "Philippines",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "public_policy",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Philippines semiconductor ecosystem supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "High",
+    "data_year": 2024,
+    "source_ids": [
+      "src_oecd_philippines"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "OECD Philippines semiconductor ecosystem reference supports a broad ecosystem signal for support and back-end watchlist status.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
+  },
+  {
+    "id": "texas_instruments_philippines",
+    "title": "Texas Instruments Philippines",
+    "country": "Philippines",
+    "location": "Baguio and Clark, Philippines",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Texas Instruments Philippines indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_ti_philippines"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Texas Instruments Philippines operations in Baguio and Clark signal semiconductor operations and talent presence.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "analog_devices_philippines",
+    "title": "Analog Devices Philippines",
+    "country": "Philippines",
+    "location": "General Trias, Cavite, Philippines",
+    "decision_claim_id": "sales_engineering_customer_validation",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "vietnam_customer_engineering_watchlist",
+    "what_it_supports": "Analog Devices Philippines indicates possible customer proximity or support needs, but only as a proxy until UMC validates named accounts and revenue.",
+    "decision_implication": "Current management implication: do not add local sales or engineering capacity without UMC-specific customer validation.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "Named accounts requiring local support",
+      "FAE / quality escalation workload",
+      "Revenue mechanism",
+      "Support ownership model"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_analog_devices"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "raises_diligence_question",
+    "factual_detail": "Analog Devices Philippines in General Trias, Cavite signals semiconductor operations presence.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "imi_psi_philippines",
+    "title": "Integrated Micro-Electronics and PSi Technologies",
+    "country": "Philippines",
+    "location": "Laguna / CALABARZON, Philippines",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "foundry_wafer_manufacturing",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Integrated Micro-Electronics and PSi Technologies supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_imi_philippines"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Integrated Micro-Electronics and PSi Technologies indicate Philippine electronics and semiconductor support ecosystem activity.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "amkor_philippines",
+    "title": "Amkor Philippines",
+    "country": "Philippines",
+    "location": "Philippines",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Amkor Philippines supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_amkor_vietnam"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Amkor Philippines is a back-end semiconductor presence signal, but the current source detail is limited.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Potential partner or partner-reference only; commercial terms, capacity, IP boundaries, customer attach-rate, and economics are not validated."
+  },
+  {
+    "id": "clark_calabarzon_logistics_corridor",
+    "title": "Clark and CALABARZON electronics / logistics corridor",
+    "country": "Philippines",
+    "location": "Clark, Laguna, Cavite, Batangas, Philippines",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "infrastructure",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Clark and CALABARZON electronics / logistics corridor supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_peza_bcda"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Clark and CALABARZON provide electronics and logistics corridor signals for Philippine support operations.",
+    "option_id": "customer_engineering_hub",
+    "evidence_strength": "background",
+    "what_it_proves": "Shows talent, EMS, design, support, or customer-adjacent ecosystem signals relevant to technical support workflows.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
+  },
+  {
+    "id": "batam_electronics_logistics_cluster",
+    "title": "Batam electronics and logistics cluster",
+    "country": "Indonesia",
+    "location": "Batam, Riau Islands, Indonesia",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "infrastructure",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Batam electronics and logistics cluster supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_bp_batam"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Batam electronics and logistics cluster provides Indonesia adjacency to Singapore, but not foundry readiness.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "sat_nusapersada_batam",
+    "title": "PT Sat Nusapersada",
+    "country": "Indonesia",
+    "location": "Batam, Indonesia",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "PT Sat Nusapersada supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_sat_nusapersada"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "PT Sat Nusapersada is an electronics manufacturing signal in Batam.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "infineon_batam_operations",
+    "title": "Infineon Batam operations",
+    "country": "Indonesia",
+    "location": "Batam, Indonesia",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Infineon Batam operations supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_infineon_indonesia"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Infineon Batam operations signal semiconductor company presence in Indonesia.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "indonesia_ev_automotive_demand",
+    "title": "Indonesia EV and automotive electronics demand cluster",
+    "country": "Indonesia",
+    "location": "Jakarta, West Java, Central Java, and industrial zones",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "electronics_ems",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Indonesia EV and automotive electronics demand cluster supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_invest_indonesia"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Indonesia EV and automotive demand cluster is a long-term end-market signal requiring UMC-specific demand validation.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Demand proxy only; UMC-specific customer overlap, revenue mechanism, and volume timing are not validated."
+  },
+  {
+    "id": "batamindo_industrial_park",
+    "title": "Batamindo Industrial Park",
+    "country": "Indonesia",
+    "location": "Batam, Indonesia",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "infrastructure",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Batamindo Industrial Park supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_batamindo"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Batamindo Industrial Park is a logistics and industrial-base signal near Singapore.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Infrastructure or ecosystem-readiness signal only; site-level availability, cost, and execution fit need validation."
+  },
+  {
+    "id": "danantara_indonesia",
+    "title": "Danantara Indonesia",
+    "country": "Indonesia",
+    "location": "Jakarta, Indonesia",
+    "decision_claim_id": "other_sea_watchlists",
+    "industry_category": "public_policy",
+    "related_strategy_id": "indonesia_design_policy_watchlist",
+    "what_it_supports": "Danantara Indonesia supports keeping this market on a watchlist rather than treating it as a near-term expansion location.",
+    "decision_implication": "Current management implication: keep as watchlist and collect stronger UMC-specific evidence before Stage 1.",
+    "limitation": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation.",
+    "what_to_validate_next": [
+      "UMC-specific customer demand",
+      "Local partner maturity",
+      "Execution readiness",
+      "Revenue or support-cost case"
+    ],
+    "confidence": "Medium",
+    "data_year": 2025,
+    "source_ids": [
+      "src_danantara"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "watchlist_signal",
+    "factual_detail": "Danantara Indonesia is a policy and investment-institution signal, not a semiconductor project commitment.",
+    "option_id": "sales_office",
+    "evidence_strength": "proxy",
+    "what_it_proves": "Shows market, policy, customer-proximity, or ecosystem signals that may justify commercial sensing.",
+    "what_it_does_not_prove": "Policy signal only; project-specific incentives, tax treatment, execution detail, and economics still need validation."
+  },
+  {
+    "id": "tsmc_amkor_arizona_model_comparison",
+    "title": "TSMC-Amkor Arizona model comparison",
+    "country": "Comparison",
+    "location": "Arizona model compared with Southeast Asia",
+    "decision_claim_id": "malaysia_osat_watchlist",
+    "industry_category": "packaging_assembly_test",
+    "related_strategy_id": "malaysia_packaging_osat_watchlist",
+    "what_it_supports": "TSMC-Amkor Arizona model comparison supports Malaysia as a conditional Packaging / OSAT watchlist, not an immediate investment recommendation.",
+    "decision_implication": "Current management implication: monitor Malaysia and conduct partner/customer diligence, but do not approve capex.",
+    "limitation": "Comparable evidence only; it does not prove UMC customer demand, partner economics, incentives, or ROIC.",
+    "what_to_validate_next": [
+      "Named UMC customer overlap",
+      "Packaging attach-rate",
+      "Partner economics and shortlist",
+      "Government incentives",
+      "ROIC / payback"
+    ],
+    "confidence": "Medium",
+    "data_year": 2026,
+    "source_ids": [
+      "src_tsmc_amkor_arizona"
+    ],
+    "source_badge": "1 source",
+    "evidence_role": "challenges",
+    "factual_detail": "TSMC-Amkor Arizona model is a comparison case showing that OSAT partnership logic requires customer, partner, and economics validation.",
+    "option_id": "packaging_osat_partnership",
+    "evidence_strength": "direct",
+    "what_it_proves": "Shows packaging, assembly, test, OSAT, or partner ecosystem presence relevant to a partner-first model.",
+    "what_it_does_not_prove": "Comparable evidence only; it does not prove UMC customer demand, partner economics, incentives, or ROIC."
+  }
+]

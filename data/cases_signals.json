@@ -1,0 +1,77 @@
+{
+  "note": "Module 6 — cases split by whether they are real manufacturing gravity or signals that are not yet actionable. Each: what happened, what it shows, what it does NOT show, quality tag, source.",
+  "manufacturing_relevant": [
+    {
+      "title": "Penang OSAT / advanced-packaging cluster",
+      "country": "Malaysia",
+      "layer": "Back-end (OSAT)",
+      "what_happened": "Decades-deep back-end cluster (Intel, Infineon, AMD, Micron, ASE, AT&S) across Penang/Kulim; ~13% of global packaging/assembly/test activity.",
+      "what_it_shows": "A mature, multi-firm back-end ecosystem a customer could rely on today — the strongest of the five and the most realistic partnership context.",
+      "what_it_does_not_show": "Not physical front-end capacity; '~13%' is activity/market share, not capacity. Does not establish partner economics.",
+      "quality": "B",
+      "sources": ["reuters_my_strategy"]
+    },
+    {
+      "title": "Infineon Kulim SiC + Thailand back-end fabs",
+      "country": "Malaysia / Thailand",
+      "layer": "Back-end / power IDM",
+      "what_happened": "Kulim: world's largest 200mm SiC power fab — Phase 1 opened Aug 2024 (~€2B), Phase 2 up to €5B. Thailand: new back-end fab in Samut Prakan (first building ready early 2026); older Bangkok/Nonthaburi back-end site divested to Malaysian Pacific Industries (completed Feb 2026) with a long-term supply agreement.",
+      "what_it_shows": "SEA's real specialty gravity is back-end and power/IDM manufacturing.",
+      "what_it_does_not_show": "Not an advanced-packaging foundry (Thailand is a back-end component base) and not front-end foundry siting.",
+      "quality": "A",
+      "sources": ["infineon_kulim", "infineon_thailand", "infineon_thailand_divest"]
+    },
+    {
+      "title": "Amkor Bac Ninh advanced-packaging campus",
+      "country": "Vietnam",
+      "layer": "Back-end (advanced SiP)",
+      "what_happened": "Large advanced-packaging assembly/test campus in northern Vietnam.",
+      "what_it_shows": "Vietnam is a credible, FDI-driven back-end location; a potential partner-ecosystem reference.",
+      "what_it_does_not_show": "No front-end supply chain; does not establish customer overlap for a specialty foundry.",
+      "quality": "B",
+      "sources": []
+    },
+    {
+      "title": "GF Singapore + VIS–NXP mature-node fabs",
+      "country": "Singapore (reference)",
+      "layer": "Front-end (mature/specialty)",
+      "what_happened": "GlobalFoundries US$4B expansion (opened Sep 2023; ~1.5M wpm total) and the VSMC (VIS–NXP) US$7.8B 300mm 130–40nm JV (construction from 2H 2024, first output 2027, ~55k wpm by 2029, TSMC-licensed) concentrate front-end additions in Singapore.",
+      "what_it_shows": "The region's front-end contest — and the credible non-China mature-node answer — is in Singapore, not the five; and Singapore mature-node capacity is actively expanding.",
+      "what_it_does_not_show": "Does not indicate any front-end opportunity in the five countries.",
+      "quality": "A",
+      "sources": ["gf_singapore", "nxp_vsmc", "vis_vsmc"]
+    }
+  ],
+  "signals_not_actionable": [
+    {
+      "title": "ARM × Danantara talent-training agreement",
+      "country": "Indonesia",
+      "layer": "Policy / talent (design)",
+      "what_happened": "Framework agreement signed in London on 23 Feb 2026 (witnessed by President Prabowo and Arm CEO Rene Haas) to train up to ~15,000 Indonesians in Arm's ecosystem; first cohort ~1,000 from May 2026. ANTARA reports an initial US$150M Indonesian-government allocation to build a national semiconductor ecosystem, and six national chip-design / IP areas Indonesia would hold (e.g. automotive, IoT, data center, home appliances).",
+      "what_it_shows": "A design-talent and ecosystem-positioning signal; Indonesia's intent to move up the value chain.",
+      "what_it_does_not_show": "NOT a manufacturing commitment (Arm's commitment is design talent and architecture, not fabrication). The US$150M is an Indonesian ecosystem allocation, not a payment to Arm. 'Arm subsidy / national-curriculum lock-in / RISC-V defense' remain analyst hypotheses, not the agreement's text.",
+      "quality": "B",
+      "sources": ["danantara_arm", "antara_arm", "antara_arm_signing"]
+    },
+    {
+      "title": "National semiconductor talent targets",
+      "country": "Malaysia / Vietnam / Thailand / Philippines",
+      "layer": "Policy (talent)",
+      "what_happened": "Malaysia 60,000 by 2030; Vietnam ~50,000 by 2030; Thailand ~80,000 (5-year plan); Philippines ~128,000 upskilling.",
+      "what_it_shows": "Direction and political will; useful for trend reading.",
+      "what_it_does_not_show": "Targets are not deployable-engineer stock and not capacity; must not be mixed with actual graduate/employment numbers.",
+      "quality": "B",
+      "sources": ["reuters_th_workforce"]
+    },
+    {
+      "title": "Indonesia silica-downstreaming roadmap",
+      "country": "Indonesia",
+      "layer": "Policy / materials",
+      "what_happened": "Policy roadmap (2025–2035) to build domestic silicon/wafer capability.",
+      "what_it_shows": "Long-horizon materials ambition.",
+      "what_it_does_not_show": "No electronic-grade processing or manufacturing base exists yet; a roadmap, not capacity.",
+      "quality": "D",
+      "sources": []
+    }
+  ]
+}

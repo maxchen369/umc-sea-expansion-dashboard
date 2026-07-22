@@ -1,0 +1,102 @@
+[
+  {
+    "id": "generic_country",
+    "name": "Generic Country Attractiveness",
+    "description": "Broad country platform quality across policy, ecosystem, talent, infrastructure, customer proximity, cost, stability, speed, and ESG readiness.",
+    "weights": {
+      "country_attractiveness_score": 18,
+      "policy_score": 10,
+      "ecosystem_score": 10,
+      "talent_score": 9,
+      "infrastructure_score": 10,
+      "customer_proximity_score": 9,
+      "cost_efficiency_score": 8,
+      "geopolitical_stability_score": 10,
+      "time_to_market_score": 10,
+      "esg_readiness_score": 6,
+      "execution_risk_penalty": -8
+    }
+  },
+  {
+    "id": "fab12i_synergy",
+    "name": "UMC Fab 12i Synergy",
+    "description": "Prioritizes locations that reinforce UMC Singapore Fab 12i, mature-node manufacturing assurance, customer qualification, and regional customer engineering support.",
+    "weights": {
+      "fab12i_synergy_score": 28,
+      "umc_global_layout_fit_score": 16,
+      "expansion_mode_fit_score": 14,
+      "infrastructure_score": 12,
+      "customer_coverage_score": 10,
+      "ecosystem_adjacency_score": 8,
+      "esg_readiness_score": 6,
+      "time_to_market_score": 6,
+      "execution_risk_penalty": -14
+    }
+  },
+  {
+    "id": "advanced_packaging_ecosystem",
+    "name": "Packaging / OSAT Ecosystem",
+    "description": "Prioritizes OSAT, packaging, assembly, testing, supplier adjacency, logistics, customer demand, partnership potential, and proximity to UMC wafer output.",
+    "weights": {
+      "ecosystem_adjacency_score": 24,
+      "partner_potential_score": 20,
+      "expansion_mode_fit_score": 14,
+      "ecosystem_score": 12,
+      "talent_score": 10,
+      "customer_coverage_score": 8,
+      "fab12i_synergy_score": 6,
+      "infrastructure_score": 6,
+      "execution_risk_penalty": -10
+    }
+  },
+  {
+    "id": "sales_support_coverage",
+    "name": "Sales & Customer Support Coverage",
+    "description": "Prioritizes customer density, fabless / IDM / EMS / OSAT presence, regional headquarters, ease of travel, FAE support, logistics coordination, and Fab 12i customer support relevance.",
+    "weights": {
+      "customer_coverage_score": 24,
+      "customer_proximity_score": 18,
+      "expansion_mode_fit_score": 12,
+      "fab12i_synergy_score": 10,
+      "talent_score": 10,
+      "time_to_market_score": 8,
+      "cost_efficiency_score": 7,
+      "partner_potential_score": 6,
+      "geopolitical_stability_score": 5,
+      "execution_risk_penalty": -8
+    }
+  },
+  {
+    "id": "low_risk_fast_entry",
+    "name": "Low Risk / Fast Entry",
+    "description": "Prioritizes stable, fast-to-launch, lower-complexity moves such as representative office, customer engineering support hub, and partner-led expansion.",
+    "weights": {
+      "geopolitical_stability_score": 18,
+      "time_to_market_score": 18,
+      "infrastructure_score": 12,
+      "country_attractiveness_score": 12,
+      "policy_score": 9,
+      "talent_score": 8,
+      "customer_coverage_score": 8,
+      "cost_efficiency_score": 7,
+      "esg_readiness_score": 6,
+      "execution_risk_penalty": -20
+    }
+  },
+  {
+    "id": "umc_global_layout_fit",
+    "name": "UMC Global Layout Fit",
+    "description": "Prioritizes how a Southeast Asia location complements UMC's global foundry footprint, Fab 12i anchor, customer diversification, supply assurance, and partner ecosystem.",
+    "weights": {
+      "umc_global_layout_fit_score": 26,
+      "fab12i_synergy_score": 18,
+      "customer_coverage_score": 14,
+      "ecosystem_adjacency_score": 12,
+      "partner_potential_score": 10,
+      "infrastructure_score": 8,
+      "geopolitical_stability_score": 6,
+      "time_to_market_score": 6,
+      "execution_risk_penalty": -12
+    }
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "note": "Module 5 — IF a back-end/adjacency move were considered, the inputs that actually bind a foundry/back-end decision, aligned to the revised (July 2026) appendix and quality-tagged. Electricity price and EMC graduate share are retained here per request, but framed as secondary inputs: power AVAILABILITY and the ABSOLUTE experienced-engineer pool matter more than price or graduate percentages.",
+  "field_order": [
+    { "key": "power_availability", "label": "Firm power availability (decision-magnitude)" },
+    { "key": "reliability", "label": "Reliability (SAIDI reference / firm-outage %)" },
+    { "key": "electricity_price", "label": "Electricity price (secondary input)" },
+    { "key": "experienced_engineer_pool", "label": "Experienced engineer pool (absolute, not %)" },
+    { "key": "emc_grad_share", "label": "EMC graduate share (context, not talent supply)" },
+    { "key": "supply_chain_adjacency", "label": "Supply-chain adjacency" },
+    { "key": "incentives_zones", "label": "Incentives / zones" },
+    { "key": "binding_constraint", "label": "Binding constraint" }
+  ],
+  "countries": [
+    {
+      "country": "Malaysia",
+      "power_availability": { "value": "Peninsular grid is the region's most capable for large industrial loads; site-level firm-MW for a fab must be confirmed with TNB.", "quality": "D" },
+      "reliability": { "value": "0.5 hr (WB Doing Business 2020 reference utility); 22.3% of firms reported outages (2024). The earlier 'sub-2-minute SAIDI' claim was an error and is removed; official historical SAIDI is on the order of tens of minutes/customer/yr.", "quality": "B" },
+      "electricity_price": { "value": "~0.140 USD/kWh (general commercial tariff, 2025/09; NOT a large-user fab rate — big users also pay max-demand, capacity, network, AFA).", "quality": "B" },
+      "experienced_engineer_pool": { "value": "~5,000 semiconductor-track engineering graduates/yr (reported, not semiconductor-exclusive). Prior '~600,000 E&E engineers' claim removed as an employment/engineer conflation.", "quality": "C" },
+      "emc_grad_share": { "value": "21.59% (2024; down from 29.01% in 2023 — check for reclassification).", "quality": "A" },
+      "supply_chain_adjacency": { "value": "Back-end consumables/equipment co-located in Penang; front-end specialty materials imported.", "quality": "D" },
+      "incentives_zones": { "value": "Penang, Kulim (KHTP), Selangor, Johor; National Semiconductor Strategy incentives.", "quality": "C" },
+      "binding_constraint": { "value": "High-end talent gap and poaching pressure toward Singapore.", "quality": "D" }
+    },
+    {
+      "country": "Vietnam",
+      "power_availability": { "value": "Northern industrial zones adequate for back-end; dry-season hydro shortfall and peak curtailment are risks for 24/7 loads.", "quality": "D" },
+      "reliability": { "value": "2.1 hr (WB DB 2020 reference utility); 43% of firms reported outages (2024). Reference values and survey shares are not directly comparable.", "quality": "B" },
+      "electricity_price": { "value": "~0.077–0.120 USD/kWh (mixes national average and southern industrial/time-of-use; proxy only, not cross-comparable).", "quality": "C" },
+      "experienced_engineer_pool": { "value": "~15,000 semiconductor specialists, ~7,000 in IC design (reported stock). 137,000 is enrollment in related programs, not deployable engineers.", "quality": "C" },
+      "emc_grad_share": { "value": "UIS value missing across recent years — data gap.", "quality": "D" },
+      "supply_chain_adjacency": { "value": "Some back-end materials/equipment via FDI; front-end nearly absent.", "quality": "D" },
+      "incentives_zones": { "value": "Bac Ninh, Hoa Lac, HCMC, Dong Nai industrial parks; NIC programs.", "quality": "C" },
+      "binding_constraint": { "value": "Front-end supply chain and power-quality variability.", "quality": "D" }
+    },
+    {
+      "country": "Thailand",
+      "power_availability": { "value": "EEC offers fast renewable grid connection; firm-MW for a fab must be confirmed with MEA/PEA per voltage/demand.", "quality": "D" },
+      "reliability": { "value": "0.5 hr (WB DB 2020 reference utility); firm-outage % data gap. Reference value only — cannot generalize to all industrial zones.", "quality": "B" },
+      "electricity_price": { "value": "~0.10–0.12 USD/kWh (industrial estimate, 2025; confirm project rate with MEA/PEA/ERC).", "quality": "C" },
+      "experienced_engineer_pool": { "value": "Semiconductor sandbox first cohort ~161 (program-level); government 5-year plan targets ~80,000 semiconductor workforce (target, not stock). KMITL 86,000 is a multi-year institutional plan, not annual supply.", "quality": "C" },
+      "emc_grad_share": { "value": "23.25% (2024; 23.30% in 2025).", "quality": "A" },
+      "supply_chain_adjacency": { "value": "Deep PCB/power material base; front-end wafer materials not established.", "quality": "D" },
+      "incentives_zones": { "value": "EEC, Chonburi, Samut Prakan, Lamphun/Lampang; BOI incentives.", "quality": "C" },
+      "binding_constraint": { "value": "Front-end talent and supply chain still being built; EV transition reshaping automotive demand.", "quality": "D" }
+    },
+    {
+      "country": "Indonesia",
+      "power_availability": { "value": "Java/Bali grid adequate for light industry; outer-island supply weak and uneven — a real constraint for 24/7 loads.", "quality": "D" },
+      "reliability": { "value": "2.8 hr (WB DB 2020 reference utility); 12.7% of firms reported outages (2023). Prior '14–65% need own generators' was a sample-specific study, not generalized.", "quality": "B" },
+      "electricity_price": { "value": "~0.08–0.10 USD/kWh (PLN I-3/I-4 estimate; subsidies and regional variation large; confirm with PLN).", "quality": "C" },
+      "experienced_engineer_pool": { "value": "No unified current semiconductor talent stock; ARM×Danantara targets up to 15,000 trainees (target). Prior 'tens of thousands/yr' not used for precise comparison.", "quality": "D" },
+      "emc_grad_share": { "value": "15.82% (latest 2023; 2024 value blank in UIS — cannot be stated as 2024).", "quality": "A" },
+      "supply_chain_adjacency": { "value": "Electronic-grade processing not yet formed; silica-downstreaming is a policy roadmap.", "quality": "D" },
+      "incentives_zones": { "value": "Batam FTZ, Java industrial zones; EV/local-content policy.", "quality": "C" },
+      "binding_constraint": { "value": "Ecosystem and supply-chain depth (weakest of the five — author comparison).", "quality": "D" }
+    },
+    {
+      "country": "Philippines",
+      "power_availability": { "value": "Metro Manila (Meralco) adequate; provincial supply weaker; manufacturers commonly keep own generation — a cost/feasibility factor.", "quality": "C" },
+      "reliability": { "value": "3.6 hr (WB DB 2020 reference utility); 43.9% of firms reported outages (2023). Meralco vs provincial co-ops differ sharply.", "quality": "B" },
+      "electricity_price": { "value": "~0.15–0.20 USD/kWh (among region's highest; location/voltage variation large).", "quality": "C" },
+      "experienced_engineer_pool": { "value": "~47,466 engineering/technology graduates (2021/22, clearer national proxy); IC designers only ~1,000. Upskill target ~128,000 is a different caliber and not annual graduates.", "quality": "B" },
+      "emc_grad_share": { "value": "15.61% (2024).", "quality": "A" },
+      "supply_chain_adjacency": { "value": "ATP consumables present; high-end materials/equipment imported.", "quality": "D" },
+      "incentives_zones": { "value": "CALABARZON, Metro Manila, Luzon, Cebu; PEZA zones.", "quality": "C" },
+      "binding_constraint": { "value": "High electricity cost, reliability variance, and limited IC-design depth.", "quality": "C" }
+    }
+  ]
+}

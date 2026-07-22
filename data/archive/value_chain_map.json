@@ -1,0 +1,72 @@
+{
+  "note": "Descriptive map of where each country's observable activity sits across the semiconductor value chain. This is an information map, not a ranking or score.",
+  "countries": ["Malaysia", "Vietnam", "Thailand", "Indonesia", "Philippines"],
+  "layers": [
+    {
+      "layer": "Wafer Fabrication (front-end)",
+      "description": "12-inch / advanced front-end wafer manufacturing.",
+      "cells": {
+        "Malaysia": "No 12-inch fab; in planning / investment-promotion stage.",
+        "Vietnam": "No front-end fab; front-end supply chain nearly blank.",
+        "Thailand": "No front-end fab; front-end / power devices at planning stage.",
+        "Indonesia": "No fab; silica-downstreaming wafer roadmap 2025–2035 just starting.",
+        "Philippines": "No front-end fab."
+      }
+    },
+    {
+      "layer": "Packaging & Test (back-end / OSAT)",
+      "description": "Assembly, packaging, test, advanced packaging.",
+      "cells": {
+        "Malaysia": "Mature OSAT; ~13% of global back-end capacity; extending to advanced packaging & substrates.",
+        "Vietnam": "Rising back-end (Amkor, Intel, Samsung); FDI-driven.",
+        "Thailand": "Back-end present; Infineon advanced-packaging fab under construction.",
+        "Indonesia": "Batam ATP (Infineon); early stage.",
+        "Philippines": "Veteran ATP base (73% SMS / 27% EMS); world's 9th largest chip exporter."
+      }
+    },
+    {
+      "layer": "IC Design",
+      "description": "Chip design houses and design-services activity.",
+      "cells": {
+        "Malaysia": "Emerging; Penang design push (e.g., Oppstar); extending from back-end.",
+        "Vietnam": "Fastest-rising in region; IC design firms ~40 → ~60 in two years; ~7,000 designers.",
+        "Thailand": "Limited; Analog Devices design presence.",
+        "Indonesia": "Nascent; ARM×Danantara training targeting design talent.",
+        "Philippines": "Very limited; ~13 firms, ~1,000 designers."
+      }
+    },
+    {
+      "layer": "Equipment & Materials",
+      "description": "Consumables, specialty gases, tools, local supply-chain depth.",
+      "cells": {
+        "Malaysia": "Back-end consumables/equipment co-located in Penang; front-end specialty materials imported.",
+        "Vietnam": "~15 foreign material/equipment suppliers; front-end materials mostly imported.",
+        "Thailand": "Deep PCB / power-device material supply chain; front-end wafer materials to be built.",
+        "Indonesia": "Weak; electronic-grade processing infrastructure a key challenge.",
+        "Philippines": "ATP consumables present; high-end materials/equipment import-dependent."
+      }
+    },
+    {
+      "layer": "EMS / Electronics Demand",
+      "description": "Electronics manufacturing services and downstream demand clusters.",
+      "cells": {
+        "Malaysia": "Broad E&E base; ~600,000 workers in E&E.",
+        "Vietnam": "Large FDI electronics base (Samsung, etc.); strong assembly gravity.",
+        "Thailand": "PCB/HDD global leader; automotive & electronics clusters (EEC).",
+        "Indonesia": "EV / local-content-driven electronics demand emerging.",
+        "Philippines": "Electronics ~60% of exports; EMS base (IMI, etc.)."
+      }
+    },
+    {
+      "layer": "Policy & Talent Development",
+      "description": "National strategies, incentives, and talent-training programs.",
+      "cells": {
+        "Malaysia": "National Semiconductor Strategy; target 60,000 trained by 2030.",
+        "Vietnam": "National semiconductor talent target 50,000–100,000 by 2030; STEM intake scaling.",
+        "Thailand": "4 national semiconductor training labs (KMITL); EEC incentives; target 100,000 high-skill.",
+        "Indonesia": "SKKNI 130/2024 standards; ARM×Danantara 15,000-engineer program; US$150M state investment.",
+        "Philippines": "Upskill target ~128,000 by 2028–2030; English-language workforce advantage."
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Southeast Asia Semiconductor — Consultant Reading Frame",
+  "lens": "Built outside-in, from public data only, from the viewpoint of an external industry-research consultant advising a specialty (mature-node) foundry with an existing Singapore anchor. No UMC-internal customer, capacity, or financial data is used.",
+  "structural_finding": "None of the five countries (Malaysia, Vietnam, Thailand, Indonesia, Philippines) has a confirmed commercial 300mm front-end wafer fab. The region's only front-end anchor is Singapore. For a specialty foundry, the 'Southeast Asia ex-Singapore' question is therefore not a front-end siting question — it is a back-end adjacency, demand-sensing, and China+1 optionality question.",
+  "how_to_read": "Modules are ordered by decision driver, not by data category. Demand and competition (Modules 2-3) carry the most decision weight and are the least documented; infrastructure facts (Module 5) are the best documented but move the decision least, so they are deliberately demoted and every figure is quality-tagged.",
+  "quality_legend": [
+    { "tag": "A", "label": "Comparable / directly citable", "definition": "Source, year and definition are clear; safe for management-brief figures." },
+    { "tag": "B", "label": "Verified but not cross-comparable", "definition": "Real data, but definitions differ across countries/years; use for background and trend reading." },
+    { "tag": "C", "label": "Estimate / Proxy", "definition": "Range, non-semiconductor role, or secondary source; screening only, not precise financial modelling." },
+    { "tag": "D", "label": "Author judgment / data gap", "definition": "No unified public quantitative data, or analytical narrative; a discussion prompt requiring later verification." }
+  ],
+  "knowledge_note": "Competitive and demand items (Modules 2-3) were verified against primary company/government sources in July 2026 — GF and VSMC (Singapore), Infineon (Kulim/Thailand), Amkor (Vietnam), Malaysia NSS, and ARM x Danantara are now A/B. Remaining C/D items are genuine estimates or public-data gaps, not unverified claims."
+}

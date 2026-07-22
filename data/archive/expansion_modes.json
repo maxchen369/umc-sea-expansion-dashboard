@@ -1,0 +1,89 @@
+[
+  {
+    "id": "optimize_existing_fab12i_p3",
+    "name": "Optimize Existing Fab 12i P3 / No New External Expansion",
+    "capex_level": "Committed / controlled",
+    "execution_complexity": "Medium",
+    "strategic_relevance_to_umc": "Highest near-term priority",
+    "description": "Prioritize Fab 12i P3 ramp, customer qualification, utilization, and capital efficiency before committing to new non-Singapore expansion.",
+    "best_fit_conditions": [
+      "Fab 12i P3 ramp and customer qualification remain the dominant execution priority",
+      "External OSAT, support, or manufacturing options lack validated customer demand and ROIC",
+      "UMC wants to preserve optionality for future Malaysia / Vietnam / Thailand / Philippines / Indonesia opportunities"
+    ],
+    "key_risks": [
+      "May defer useful ecosystem learning if external triggers become visible",
+      "Requires disciplined tracking of customer, partner, incentive, and ROIC triggers"
+    ]
+  },
+  {
+    "id": "sales_office",
+    "name": "Sales Office",
+    "capex_level": "Low",
+    "execution_complexity": "Low",
+    "strategic_relevance_to_umc": "Medium",
+    "description": "Regional account coverage, customer relationship management, demand sensing, and government / ecosystem relationships.",
+    "best_fit_conditions": [
+      "Named account density",
+      "Need for local relationship coverage",
+      "Low-capex market sensing before larger commitments"
+    ],
+    "key_risks": [
+      "Low impact if account ownership is unclear",
+      "Can duplicate Singapore or Taiwan coverage"
+    ]
+  },
+  {
+    "id": "customer_engineering_hub",
+    "name": "Customer Engineering Hub",
+    "capex_level": "Low to medium",
+    "execution_complexity": "Medium",
+    "strategic_relevance_to_umc": "High",
+    "description": "FAE support, design-in support, quality issue coordination, Fab 12i customer support, and technical account support.",
+    "best_fit_conditions": [
+      "Available engineering talent",
+      "Customer and EMS proximity",
+      "Clear escalation path into Fab 12i and Taiwan engineering teams"
+    ],
+    "key_risks": [
+      "Weak value if limited to generic support",
+      "Requires training, escalation discipline, and customer validation"
+    ]
+  },
+  {
+    "id": "packaging_osat_partnership",
+    "name": "Packaging / OSAT Partnership",
+    "capex_level": "Medium",
+    "execution_complexity": "Medium to high",
+    "strategic_relevance_to_umc": "High",
+    "description": "Partner-first access to advanced packaging, testing, assembly coordination, and turnkey wafer-to-package support.",
+    "best_fit_conditions": [
+      "OSAT and test ecosystem depth",
+      "Partner shortlist",
+      "Customer overlap with Fab 12i output"
+    ],
+    "key_risks": [
+      "Partner economics may not support UMC differentiation",
+      "Customer qualification and IP boundaries require diligence"
+    ]
+  },
+  {
+    "id": "foundry_manufacturing_expansion",
+    "name": "Foundry / Manufacturing Expansion",
+    "capex_level": "Very high",
+    "execution_complexity": "Very high",
+    "strategic_relevance_to_umc": "High but gated",
+    "description": "Direct manufacturing capacity or specialty process expansion. Highest capex and execution risk.",
+    "best_fit_conditions": [
+      "Anchor customer commitments",
+      "Government incentives",
+      "Power / water / permitting readiness",
+      "Engineering talent"
+    ],
+    "key_risks": [
+      "Large capex and long payback",
+      "Utility and ESG risk",
+      "Utilization and yield risk"
+    ]
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "country": "Malaysia",
+    "industry_position": "Mature back-end packaging & test; Penang cluster; extending toward IC design and advanced packaging.",
+    "twelve_inch_fab": "None (in planning / investment promotion)",
+    "electricity_price": "~0.140 USD/kWh (commercial, 2025/09). TNB tariff restructured from 2025/07 (RP4): split into Energy + Capacity + Network + Retail + AFA; industrial Class E has separate max-demand charge.",
+    "power_stability": "~0.5 hr outage/yr (regional best). 22.3% of firms reported experiencing outages (2024). Peninsular SAIDI long held at sub-2-minute levels; higher firm-experience share reflects smaller plants and East Malaysia differences.",
+    "clusters": "Penang “Silicon Island”, Kulim, Selangor, Johor",
+    "value_chain_position": "Back-end OSAT mature; extending to IC design, advanced packaging, substrates.",
+    "representative_companies": "350+ foreign firms and 4,000 SMEs in Penang; Intel, Infineon, AMD, Micron, ASE, AT&S; ~13% of global back-end capacity.",
+    "materials_localization": "Medium (back-end consumables fairly complete). Packaging consumables and equipment vendors co-located in Penang for years, shortening upgrade cycles; front-end specialty gases, photoresist and electronic-grade wafers still largely imported.",
+    "talent": "~5,000 semiconductor-track engineering graduates/yr (semiconductor caliber, not all engineering grads). ~650,000 engineers nationally, ~600,000 in E&E. 13,679 trained as of 2025/11; target 60,000 by 2030. EMC ~28.6% of tertiary graduates (World Bank/UIS, 2019).",
+    "salary": "Engineer ~USD 850–1,000/mo; 2025 raise ~4.8–5%. National avg monthly pay ~USD 813 (RM3,441); Penang electronics avg RM4,267, above national.",
+    "key_limitation": "Shortage of high-end talent; brain drain to Singapore.",
+    "data_gaps": [
+      "Front-end materials localization quantitative indicators",
+      "Precise EE degree awards (bachelor/master split)"
+    ],
+    "source_ids": ["gpp_malaysia", "tnb_tariff", "energywatch_reliability", "philstar_reliability", "mordor_malaysia", "wireunwired_talent", "hrasia_talent", "stantonchase_sea", "we_emc_malaysia", "fastlane_salary", "ringgitplus_salary", "indeed_malaysia"]
+  },
+  {
+    "country": "Vietnam",
+    "industry_position": "Back-end plus IC design rising fast; northern Vietnam cluster; heavy FDI inflow.",
+    "twelve_inch_fab": "None",
+    "electricity_price": "~0.077–0.120 USD/kWh (industrial, 2025). National average business tariff ~0.077 (among region's lowest); southern industrial ~0.107–0.120, higher than the north. EVN adjusts tariffs frequently.",
+    "power_stability": "~2.1 hr outage/yr. 43% of firms reported experiencing outages (2024). Total outage hours much improved, but firm-experience share is high; dry-season hydro shortfall and peak load cause occasional curtailment.",
+    "clusters": "North: Bac Ninh, Hanoi/Hoa Lac. South: HCMC, Dong Nai.",
+    "value_chain_position": "Dual-track packaging/test and IC design rising, with large FDI inflow.",
+    "representative_companies": "Amkor, Samsung, Intel (packaging); Marvell/Faraday (design); 50+ foreign firms; IC design firms rose from ~40 to ~60 in two years.",
+    "materials_localization": "Low–Medium (building fast). FDI brought ~15 foreign material/equipment suppliers; front-end supply chain nearly blank; materials mostly imported.",
+    "talent": "Now ~15,000 semiconductor specialists (IC design ~7,000); target 50,000–100,000 by 2030; ~+10,000 semiconductor engineers/yr. 2025 semiconductor-related enrollment 137,000 (first-stage STEM intake 237,000). Engineering graduates among world top 10 (>100,000; WEF/UNESCO).",
+    "salary": "Engineer ~USD 600–900/mo; 2025 raise ~7.1% (region's highest). Software developer avg ~USD 614/mo; semiconductor and Korean/Japanese firms pay premiums.",
+    "key_limitation": "Front-end ecosystem and power quality.",
+    "data_gaps": [
+      "Recent EMC graduate share (UIS values missing)",
+      "Front-end supply chain / materials data"
+    ],
+    "source_ids": ["gpp_global", "solarbk_vietnam", "jingsun_prices", "vnexpress_talent", "vietnamplus_talent", "ctsemi_vietnam", "stantonchase_sea", "talentjdi_salary"]
+  },
+  {
+    "country": "Thailand",
+    "industry_position": "Global leader in PCB/HDD; back-end focused; planning front-end, advanced packaging and power devices.",
+    "twelve_inch_fab": "None (front-end in planning)",
+    "electricity_price": "~0.10–0.12 USD/kWh (industrial, 2025 est.). Ft (fuel adjustment) revised each period; EEC zone offers fast renewable grid connection. Precise tiered rates should be confirmed with MEA/PEA.",
+    "power_stability": "~0.5 hr outage/yr (regional best, tied with Malaysia; World Bank Doing Business). Firm-outage share: data gap.",
+    "clusters": "EEC (Eastern Economic Corridor), Chonburi; new Lamphun/Lampang.",
+    "value_chain_position": "PCB and HDD global leader; back-end focused; front-end/advanced packaging/power devices planned.",
+    "representative_companies": "Sony, Toshiba, Delta, Analog Devices (design), Infineon (advanced-packaging fab under construction); ASEAN's largest PCB producer.",
+    "materials_localization": "Medium (deep electronics/PCB supply chain). Leverages existing automotive and electronics base; PCB and power-device materials fairly complete; front-end wafer materials still to be built.",
+    "talent": "~86,000 (KMITL 2025–2030 cumulative engineering/science); target 100,000 high-skill (incl. upskilling). KMITL is one of 4 national semiconductor training labs; 2025 sandbox first cohort only 161. 86,000 is one institution's cumulative figure, not national annual graduates.",
+    "salary": "Engineer ~USD 700–1,000/mo (est.); 2025 raise ~4.7%. National avg monthly pay ~USD 600–700; engineers above average.",
+    "key_limitation": "Front-end talent and ecosystem still to be built.",
+    "data_gaps": [
+      "Precise industrial tariff tiers (MEA/PEA)",
+      "Recent EMC graduate values (UIS missing)",
+      "Engineer salary (currently estimated)"
+    ],
+    "source_ids": ["jingsun_prices", "semi_thailand", "3dincites_thailand", "stantonchase_sea"]
+  },
+  {
+    "country": "Indonesia",
+    "industry_position": "Early stage; mainly Batam packaging/test.",
+    "twelve_inch_fab": "None",
+    "electricity_price": "~0.08–0.10 USD/kWh (industrial, 2025 est.). PLN industrial I-3/I-4 tiers; policy subsidies keep nominal rates low, but off-island supply cost and reliability vary widely.",
+    "power_stability": "~2.8 hr outage/yr. 12.7% of firms reported experiencing outages (2023). Java/Bali more stable; outer islands (Sumatra/Papua, etc.) SAIDI can exceed 10 hr, with 14–65% of users needing their own generators.",
+    "clusters": "Batam (adjacent to Singapore), Java industrial zones.",
+    "value_chain_position": "Early stage; packaging-led; silica-downstreaming wafer roadmap just starting.",
+    "representative_companies": "Infineon Batam ATP; driven by EV / local-content requirements (LCR); ecosystem and supply chain weakest of the five.",
+    "materials_localization": "Low. Entering via the Silica Downstreaming Roadmap 2025–2035, targeting domestic silicon wafers; electronic-grade processing and advanced manufacturing infrastructure remain the main challenges.",
+    "talent": "Tens of thousands of engineering graduates/yr (no unified semiconductor caliber). Early stage; SKKNI 130/2024 sets competency standards. EMC ~15–18% (est.); ~140,169 engineering graduates/yr (UNESCO absolute count; among world top 10).",
+    "salary": "Engineer ~USD 450–800/mo; 2025 raise ~5.9% (IT 8–15%). Engineer ~IDR 5–8M/mo (~USD 320–510, Jobstreet); Jakarta tech roles carry a clear premium.",
+    "key_limitation": "Weakest ecosystem and supply chain.",
+    "data_gaps": [
+      "Unified semiconductor talent stock/target",
+      "Precise industrial tariff tiers (PLN)"
+    ],
+    "source_ids": ["jingsun_prices", "philstar_reliability", "researchgate_indonesia", "evidencefund_indonesia", "yahoo_unesco", "jobstreet_indonesia", "aniday_salary", "stantonchase_sea"]
+  },
+  {
+    "country": "Philippines",
+    "industry_position": "Veteran ATP (assembly, test, packaging) base; world's 9th largest chip exporter.",
+    "twelve_inch_fab": "None",
+    "electricity_price": "~0.15–0.20 USD/kWh (industrial/commercial, 2025; among SEA's highest). Over 20% of firms view power as a “major or severe” business obstacle, far above the East Asia-Pacific average.",
+    "power_stability": "~3.6 hr outage/yr (among region's worst). 43.9% of firms reported experiencing outages (2023). Manufacturers commonly keep their own generators to prevent equipment damage; Meralco (Manila) better, provincial electric co-ops far worse.",
+    "clusters": "CALABARZON, Metro Manila, North/Central Luzon, Cebu.",
+    "value_chain_position": "Veteran ATP base (73% SMS / 27% EMS); very little IC design.",
+    "representative_companies": "World's 9th largest chip exporter; local firms IMI, Cirtek, Fastech; electronics ~60% of exports; only ~13 IC design firms, ~1,000 people.",
+    "materials_localization": "Low–Medium (mainly ATP consumables). ATP packaging consumables fairly mature, but high-end materials and equipment are import-dependent; local equipment/tool chain is thin.",
+    "talent": "~80,000+ engineering/technical graduates/yr; target upskill ~128,000 by 2028–2030; IC designers only ~1,000. English-language workforce is an advantage; only ~13 IC design firms. EMC ~47,466 engineering/technology graduates (Statista/CHED, 2021/22).",
+    "salary": "Engineer ~USD 600–900/mo; 2025 raise ~5.8%. IT engineer PHP 35K–250K+/mo (~USD 630–4,500, very wide range); Metro Manila/BGC/Makati highest.",
+    "key_limitation": "High electricity price; need for own generation; scarce IC design.",
+    "data_gaps": [
+      "Semiconductor-specific (non-general-engineering) salaries",
+      "Latest SAIDI values"
+    ],
+    "source_ids": ["startupnews_ph", "philstar_reliability", "oecd_philippines", "asean_bac_ph", "statista_ph", "stantonchase_sea", "secondtalent_ph"]
+  }
+]

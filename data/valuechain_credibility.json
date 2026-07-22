@@ -1,0 +1,77 @@
+{
+  "note": "Module 4 — where each country is actually credible in the value chain, referenced to Singapore as the front-end anchor. Status is credible / emerging / absent (a descriptive read of public evidence, not a score). Each cell carries a quality tag.",
+  "countries": ["Malaysia", "Vietnam", "Thailand", "Indonesia", "Philippines"],
+  "status_legend": {
+    "credible": "Established, multi-firm activity a customer could rely on today.",
+    "emerging": "Real but early / single-anchor / policy-driven.",
+    "absent": "No confirmed commercial activity."
+  },
+  "layers": [
+    {
+      "layer": "Front-end wafer fab (300mm)",
+      "reference": "Regional anchor is Singapore (GF, Micron, VIS–NXP). None confirmed in the five.",
+      "cells": {
+        "Malaysia": { "status": "absent", "note": "No confirmed commercial 300mm fab; investment-promotion stage.", "quality": "A" },
+        "Vietnam": { "status": "absent", "note": "No confirmed 300mm fab; front-end supply chain limited.", "quality": "A" },
+        "Thailand": { "status": "absent", "note": "No confirmed 300mm fab; front-end at planning stage.", "quality": "A" },
+        "Indonesia": { "status": "absent", "note": "No confirmed 300mm fab.", "quality": "A" },
+        "Philippines": { "status": "absent", "note": "No confirmed 300mm fab.", "quality": "A" }
+      }
+    },
+    {
+      "layer": "Back-end / OSAT (packaging & test)",
+      "reference": "The region's real strength layer.",
+      "cells": {
+        "Malaysia": { "status": "credible", "note": "Mature OSAT; ~13% of global packaging/assembly/test activity (share, not physical capacity). Advanced packaging is nascent, not credible yet — national target is only ~7% of global advanced packaging by 2035.", "quality": "A" },
+        "Vietnam": { "status": "credible", "note": "Amkor, Intel back-end; FDI-driven and growing.", "quality": "B" },
+        "Thailand": { "status": "credible", "note": "Back-end and power-component manufacturing (Infineon); HDD/PCB base.", "quality": "B" },
+        "Indonesia": { "status": "emerging", "note": "Limited Batam ATP (Infineon); thin.", "quality": "C" },
+        "Philippines": { "status": "credible", "note": "Veteran ATP base; 73% SMS / 27% EMS (OECD, note year).", "quality": "B" }
+      }
+    },
+    {
+      "layer": "IC design",
+      "reference": "Design gravity is nascent region-wide.",
+      "cells": {
+        "Malaysia": { "status": "emerging", "note": "Penang design push; extending from back-end.", "quality": "C" },
+        "Vietnam": { "status": "emerging", "note": "Fastest-rising; ~7,000 designers (reported), Marvell/Faraday R&D.", "quality": "C" },
+        "Thailand": { "status": "emerging", "note": "Limited; do not label Analog Devices as local design (per revised appendix).", "quality": "D" },
+        "Indonesia": { "status": "emerging", "note": "Policy/talent-driven (ARM×Danantara); no design industry yet.", "quality": "D" },
+        "Philippines": { "status": "emerging", "note": "~13 firms, ~1,000 designers (note year/source).", "quality": "C" }
+      }
+    },
+    {
+      "layer": "Equipment & materials",
+      "reference": "Front-end materials import-dependent region-wide.",
+      "cells": {
+        "Malaysia": { "status": "emerging", "note": "Back-end consumables/equipment co-located in Penang; front-end specialty materials imported.", "quality": "D" },
+        "Vietnam": { "status": "emerging", "note": "Some back-end material/equipment via FDI; front-end largely absent. Supplier count needs named list.", "quality": "D" },
+        "Thailand": { "status": "emerging", "note": "Deep PCB/power material base; front-end wafer materials not established.", "quality": "D" },
+        "Indonesia": { "status": "absent", "note": "Electronic-grade processing not yet formed; silica-downstreaming is a roadmap.", "quality": "D" },
+        "Philippines": { "status": "emerging", "note": "ATP consumables; high-end materials/equipment imported.", "quality": "D" }
+      }
+    },
+    {
+      "layer": "EMS / electronics demand",
+      "reference": "Downstream pull that anchors back-end and support.",
+      "cells": {
+        "Malaysia": { "status": "credible", "note": "Broad E&E base + Johor data-center cluster.", "quality": "B" },
+        "Vietnam": { "status": "credible", "note": "Large FDI electronics/EMS (Samsung and suppliers).", "quality": "B" },
+        "Thailand": { "status": "credible", "note": "HDD, PCB, automotive/power electronics.", "quality": "B" },
+        "Indonesia": { "status": "emerging", "note": "EV / local-content-driven demand emerging.", "quality": "C" },
+        "Philippines": { "status": "credible", "note": "Electronics ~60% of exports; EMS base.", "quality": "B" }
+      }
+    },
+    {
+      "layer": "Policy & talent development",
+      "reference": "Direction and incentives — a driver where it changes economics, a signal where it does not.",
+      "cells": {
+        "Malaysia": { "status": "credible", "note": "National Semiconductor Strategy; target 60,000 talent by 2030 (policy target).", "quality": "B" },
+        "Vietnam": { "status": "credible", "note": "National semiconductor talent target ~50,000 by 2030; STEM scaling.", "quality": "B" },
+        "Thailand": { "status": "credible", "note": "Government 5-year plan, semiconductor target ~80,000; EEC incentives.", "quality": "B" },
+        "Indonesia": { "status": "emerging", "note": "SKKNI standards; ARM×Danantara talent program (design/talent signal).", "quality": "C" },
+        "Philippines": { "status": "emerging", "note": "Upskill target ~128,000; English-language workforce advantage.", "quality": "C" }
+      }
+    }
+  ]
+}

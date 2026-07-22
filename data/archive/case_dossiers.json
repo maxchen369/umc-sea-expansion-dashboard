@@ -1,0 +1,145 @@
+[
+  {
+    "company_organization": "Singapore Fab 12i / P3 Execution Base",
+    "country": "Singapore",
+    "location": "Pasir Ris Wafer Fab Park",
+    "activity": "UMC 22/28nm and specialty wafer-fab expansion and ramp execution.",
+    "value_chain_position": "Front-end wafer fabrication",
+    "scale_indicator": "Existing UMC regional manufacturing anchor.",
+    "investment_amount": "UMC announced US$5 billion Singapore 22/28nm fab expansion.",
+    "capacity_workforce_indicator": "Project-specific P3 ramp, customer qualification, and utilization milestones are internal data gaps.",
+    "why_it_matters_for_umc": "This is the controlled execution path already tied to UMC customers, operations, and capital planning.",
+    "what_it_supports": "Primary focus on Singapore Fab 12i P3 execution before new external expansion.",
+    "what_it_does_not_prove": "It does not prove that an additional non-Singapore investment is justified.",
+    "next_validation_step": "Track P3 ramp by customer/product family, utilization, margin, and capex discipline.",
+    "sources": [
+      "src_umc_singapore_expansion",
+      "src_edb_semiconductors"
+    ],
+    "option_id": "optimize_existing_fab12i_p3",
+    "decision_implication": "Baseline anchor case for comparing any post-P3 option."
+  },
+  {
+    "company_organization": "Malaysia Penang Packaging / OSAT Cluster",
+    "country": "Malaysia",
+    "location": "Penang and Kulim",
+    "activity": "Packaging, assembly, test, equipment, materials, and semiconductor engineering ecosystem.",
+    "value_chain_position": "Packaging / OSAT ecosystem",
+    "scale_indicator": "Penang has over 350 foreign firms and 4,000 SMEs; Malaysia accounts for about 13% of global back-end semiconductor activity.",
+    "investment_amount": "Cluster-level figure varies by project; data gap for UMC-specific partner capex.",
+    "capacity_workforce_indicator": "Representative companies include Intel, Infineon, AMD, Micron, ASE, AT&S, Inari Amertron, and Unisem.",
+    "why_it_matters_for_umc": "The cluster could support packaging / OSAT partnership diligence adjacent to Fab 12i output.",
+    "what_it_supports": "Malaysia as conditional Packaging / OSAT watchlist.",
+    "what_it_does_not_prove": "It does not prove UMC customer demand, packaging attach-rate, partner economics, incentives, or ROIC.",
+    "next_validation_step": "Validate customer overlap, partner shortlist, attach-rate, revenue model, incentives, and ROIC.",
+    "sources": [
+      "src_malaysia_nss",
+      "src_malaysia_wsj_chip_hub",
+      "src_ase_global",
+      "src_inari_amertron",
+      "src_unisem_group"
+    ],
+    "option_id": "packaging_osat_partnership",
+    "decision_implication": "Supports considering a partner-first packaging / OSAT workstream, subject to UMC internal validation."
+  },
+  {
+    "company_organization": "Intel Malaysia Advanced Packaging Expansion",
+    "country": "Malaysia",
+    "location": "Penang and Kulim",
+    "activity": "Advanced packaging and assembly/test expansion.",
+    "value_chain_position": "Packaging / advanced packaging",
+    "scale_indicator": "Large multinational packaging and assembly/test footprint in Malaysia.",
+    "investment_amount": "Intel announced a major Malaysia expansion; source-specific amount should be confirmed before investment committee use.",
+    "capacity_workforce_indicator": "Workforce and package-capacity details require source-level refresh.",
+    "why_it_matters_for_umc": "Shows Malaysia's ability to host sophisticated back-end semiconductor operations.",
+    "what_it_supports": "Malaysia Packaging / OSAT conditional watchlist.",
+    "what_it_does_not_prove": "Intel's internal packaging economics do not prove UMC partnership economics or Fab 12i customer attach-rate.",
+    "next_validation_step": "Identify potential UMC-relevant partner models and compare cost, cycle time, yield, and customer pull.",
+    "sources": [
+      "src_intel_malaysia",
+      "src_intel_advanced_packaging_2026"
+    ],
+    "option_id": "packaging_osat_partnership",
+    "decision_implication": "Supports considering a partner-first packaging / OSAT workstream, subject to UMC internal validation."
+  },
+  {
+    "company_organization": "Amkor Technology Vietnam",
+    "country": "Vietnam",
+    "location": "Yen Phong II-C Industrial Park, Bac Ninh",
+    "activity": "Advanced system-in-package assembly and test manufacturing campus.",
+    "value_chain_position": "Assembly / test",
+    "scale_indicator": "Major foreign-invested back-end semiconductor campus.",
+    "investment_amount": "Source identifies major Vietnam campus investment; refreshed amount needed before Stage 1.",
+    "capacity_workforce_indicator": "Capacity and workforce detail require source-level validation.",
+    "why_it_matters_for_umc": "Indicates Vietnam has back-end and electronics manufacturing gravity that may create customer-engineering adjacency.",
+    "what_it_supports": "Vietnam as customer engineering / EMS watchlist.",
+    "what_it_does_not_prove": "It does not prove UMC customer overlap, local FAE workload, or revenue mechanism.",
+    "next_validation_step": "Map Fab 12i customers with Vietnam EMS or assembly flows and identify support workflows.",
+    "sources": [
+      "src_amkor_vietnam"
+    ],
+    "option_id": "packaging_osat_partnership",
+    "decision_implication": "Supports considering a partner-first packaging / OSAT workstream, subject to UMC internal validation."
+  },
+  {
+    "company_organization": "Thailand Eastern Economic Corridor Electronics / Automotive Cluster",
+    "country": "Thailand",
+    "location": "Chonburi, Rayong, Chachoengsao",
+    "activity": "Industrial policy and manufacturing cluster for automotive, electronics, and advanced industries.",
+    "value_chain_position": "Automotive / industrial demand sensing",
+    "scale_indicator": "National priority industrial corridor with electronics and automotive relevance.",
+    "investment_amount": "Project-specific semiconductor incentive amount is a data gap.",
+    "capacity_workforce_indicator": "Semiconductor-specific engineering capacity by function is a data gap.",
+    "why_it_matters_for_umc": "Could indicate mature-node, power, display, or industrial customer demand near Thai manufacturing clusters.",
+    "what_it_supports": "Thailand as automotive / power specialty watchlist.",
+    "what_it_does_not_prove": "It does not prove named UMC accounts, wafer demand, or specialty-process revenue.",
+    "next_validation_step": "Validate named automotive, power, and industrial customers against UMC product families.",
+    "sources": [
+      "src_thailand_eec",
+      "src_thailand_boi"
+    ],
+    "option_id": "sales_office",
+    "decision_implication": "Supports commercial sensing and account-development workstream, subject to named customer validation."
+  },
+  {
+    "company_organization": "Texas Instruments Philippines",
+    "country": "Philippines",
+    "location": "Baguio and Clark",
+    "activity": "Semiconductor assembly/test and manufacturing operations.",
+    "value_chain_position": "Assembly / test and support ecosystem",
+    "scale_indicator": "Longstanding multinational semiconductor operations in the Philippines.",
+    "investment_amount": "Project-specific comparable investment amount is a data gap.",
+    "capacity_workforce_indicator": "Workforce details require source-level validation.",
+    "why_it_matters_for_umc": "Supports the view that the Philippines has semiconductor operations and support-talent relevance.",
+    "what_it_supports": "Philippines as limited support / ATP watchlist.",
+    "what_it_does_not_prove": "It does not prove UMC-specific support workload, FAE availability, or escalation economics.",
+    "next_validation_step": "Define support workflows and test whether local talent can handle Fab 12i customer escalations.",
+    "sources": [
+      "src_ti_philippines",
+      "src_oecd_philippines"
+    ],
+    "option_id": "customer_engineering_hub",
+    "decision_implication": "Supports technical support workflow investigation, subject to workload and talent validation."
+  },
+  {
+    "company_organization": "Batam Electronics and Logistics Cluster",
+    "country": "Indonesia",
+    "location": "Batam, Riau Islands",
+    "activity": "Electronics manufacturing, industrial park, and logistics adjacency to Singapore.",
+    "value_chain_position": "Electronics logistics / long-term watchlist",
+    "scale_indicator": "Industrial and logistics cluster near Singapore.",
+    "investment_amount": "UMC-relevant semiconductor investment amount is a data gap.",
+    "capacity_workforce_indicator": "Semiconductor-specific engineering workforce is a data gap.",
+    "why_it_matters_for_umc": "Could be monitored for long-term customer, logistics, or policy adjacency.",
+    "what_it_supports": "Indonesia as long-term IC design / policy watchlist.",
+    "what_it_does_not_prove": "It does not prove foundry readiness, UMC customer density, partner maturity, or utility readiness.",
+    "next_validation_step": "Monitor named customer demand, partner maturity, and policy specificity before considering Stage 1.",
+    "sources": [
+      "src_bp_batam",
+      "src_batamindo",
+      "src_sat_nusapersada"
+    ],
+    "option_id": "sales_office",
+    "decision_implication": "Supports commercial sensing and account-development workstream, subject to named customer validation."
+  }
+]

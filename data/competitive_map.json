@@ -1,0 +1,88 @@
+{
+  "note": "Module 3 — who is already moving, and whether it crowds or validates. The analytical payoff is the layer split: regional front-end is concentrating in Singapore; the other five countries remain back-end / IDM. Items below verified against primary/company sources (July 2026).",
+  "reads_as_legend": {
+    "validating": "Confirms real demand / a viable regional layer.",
+    "crowding": "Adds competing capacity that could compress returns.",
+    "context": "Ecosystem or adjacency signal, not a direct competitive move."
+  },
+  "players": [
+    {
+      "player": "GlobalFoundries",
+      "type": "Foundry (peer)",
+      "location": "Singapore (Woodlands Wafer Fab Park)",
+      "layer": "Front-end (mature/specialty)",
+      "move": "US$4B expansion fab officially opened Sep 2023; adds ~450,000 300mm wafers/yr, taking GF Singapore to ~1.5M 300mm wafers/yr; ~1,000 jobs.",
+      "reads_as": "validating",
+      "read_note": "Direct peer confirming Singapore = the regional front-end anchor for specialty nodes. The clearest signal that front-end demand in the region concentrates in Singapore, not the five.",
+      "quality": "A",
+      "sources": ["gf_singapore"]
+    },
+    {
+      "player": "VisionPower (VSMC) — VIS × NXP",
+      "type": "Foundry JV (peer)",
+      "location": "Singapore (Tampines)",
+      "layer": "Front-end (mature 130–40nm)",
+      "move": "US$7.8B 300mm JV; 130–40nm mixed-signal, power-management and analog (automotive/industrial/consumer/mobile); 7 process licenses from TSMC. Construction began 2H 2024; first customer output 2027; ~55,000 wpm target by 2029.",
+      "reads_as": "crowding",
+      "read_note": "The single most decision-relevant competitive fact for a mature-node foundry: a US$7.8B, 55k-wpm mature-node fab is being added in Singapore — the regional anchor — not in the other five. Overlaps the automotive/industrial/PMIC space a specialty foundry serves.",
+      "quality": "A",
+      "sources": ["nxp_vsmc", "vis_vsmc"]
+    },
+    {
+      "player": "Micron",
+      "type": "IDM (memory)",
+      "location": "Singapore; Batam (Indonesia) back-end",
+      "layer": "Front-end (memory) + back-end",
+      "move": "Large NAND front-end in Singapore; assembly/test footprint in the region.",
+      "reads_as": "context",
+      "read_note": "Not foundry-comparable, but reinforces that front-end scale in the region sits in Singapore; adds regional power-demand context.",
+      "quality": "B",
+      "sources": []
+    },
+    {
+      "player": "Infineon",
+      "type": "IDM (power)",
+      "location": "Kulim (Malaysia); Samut Prakan & Bangkok (Thailand); Batam (Indonesia)",
+      "layer": "Back-end / power-device manufacturing",
+      "move": "Kulim: world's largest 200mm SiC power fab, Phase 1 opened Aug 2024 (~€2B), Phase 2 up to €5B, up to 4,000 jobs, ~€5B design wins / ~€1B prepayments. Thailand: new back-end fab in Samut Prakan (first building ready early 2026); divested its older Bangkok/Nonthaburi back-end site to Malaysian Pacific Industries (completed Feb 2026) with a long-term supply agreement.",
+      "reads_as": "validating",
+      "read_note": "Confirms SEA's real specialty gravity is back-end and power/IDM manufacturing — not front-end foundry siting. Note (per revised appendix, now verified): Thailand is a back-end component base, not an advanced-packaging foundry.",
+      "quality": "A",
+      "sources": ["infineon_kulim", "infineon_thailand", "infineon_thailand_divest"]
+    },
+    {
+      "player": "Intel",
+      "type": "IDM",
+      "location": "Penang / Kulim (Malaysia); Ho Chi Minh City (Vietnam)",
+      "layer": "Back-end (advanced packaging, assembly/test)",
+      "move": "Advanced packaging and assembly/test expansion in Malaysia; large assembly/test site in Vietnam.",
+      "reads_as": "validating",
+      "read_note": "Confirms Malaysia and Vietnam as credible back-end / advanced-packaging locations.",
+      "quality": "B",
+      "sources": []
+    },
+    {
+      "player": "Amkor",
+      "type": "OSAT",
+      "location": "Bac Ninh (Vietnam)",
+      "layer": "Back-end (advanced SiP assembly & test)",
+      "move": "US$1.6B campus (first two phases) at Yen Phong 2C; opened Oct 2023, first output Dec 2023, mass production from 2024; Advanced SiP and memory.",
+      "reads_as": "validating",
+      "read_note": "Anchors Vietnam's back-end credibility; a potential partner-ecosystem reference, not a competitor to front-end.",
+      "quality": "A",
+      "sources": ["amkor_vietnam"]
+    },
+    {
+      "player": "ASE / Inari / Unisem and Penang OSAT base",
+      "type": "OSAT",
+      "location": "Penang / Kulim (Malaysia)",
+      "layer": "Back-end (OSAT, test)",
+      "move": "Established, deep OSAT and test cluster; Malaysia holds ~13% of global packaging/assembly/test activity (market/activity share, not physical capacity).",
+      "reads_as": "validating",
+      "read_note": "The strongest existing back-end ecosystem in the five — but this is mature packaging/test; advanced packaging is nascent (national target ~7% of global advanced packaging only by 2035). Relevant to partnership discussion, not to front-end siting.",
+      "quality": "A",
+      "sources": ["mida_nss", "semimedia_13pct"]
+    }
+  ],
+  "synthesis": "Confirmed front-end (300mm) additions cluster in Singapore — GlobalFoundries (US$4B, ~1.5M wpm) and VSMC (US$7.8B, ~55k wpm mature-node). The other five countries attract back-end, OSAT and power/IDM investment (Infineon Kulim SiC, Amkor Vietnam, Intel). For a specialty foundry, the front-end contest is a Singapore contest — and Singapore mature-node capacity is actively expanding, i.e. partly a crowding signal; the five-country opportunity, if any, is back-end adjacency and China+1 optionality."
+}

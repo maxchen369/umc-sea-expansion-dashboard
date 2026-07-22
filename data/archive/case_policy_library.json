@@ -1,0 +1,93 @@
+[
+  {
+    "id": "case_penang_osat",
+    "title": "Penang packaging / OSAT cluster",
+    "country": "Malaysia",
+    "type": "Ecosystem case",
+    "what_happened": "A dense back-end semiconductor cluster has developed over decades around Penang, spanning packaging, assembly, test, equipment and materials, and semiconductor engineering.",
+    "where": "Penang (“Silicon Island”) and Kulim, Malaysia",
+    "value_chain_layer": "Packaging & Test (OSAT)",
+    "relevance": "Illustrates a mature regional back-end ecosystem: 350+ foreign firms and 4,000 SMEs in Penang, with ~13% of global back-end capacity; representative firms include Intel, Infineon, AMD, Micron, ASE and AT&S.",
+    "limitation": "Cluster-level scale does not describe any specific partner's economics, capacity, or customer overlap; UMC-specific figures are not established here.",
+    "discussion_prompt": "Malaysia's packaging/OSAT ecosystem may be relevant to future partnership discussions.",
+    "source_ids": ["mordor_malaysia", "malaysia_nss", "ase_global"]
+  },
+  {
+    "id": "case_intel_my_packaging",
+    "title": "Intel Malaysia advanced packaging expansion",
+    "country": "Malaysia",
+    "type": "Company case",
+    "what_happened": "Intel expanded advanced packaging and assembly/test operations in Malaysia, adding to its long-standing footprint.",
+    "where": "Penang and Kulim, Malaysia",
+    "value_chain_layer": "Packaging / advanced packaging",
+    "relevance": "Shows Malaysia's ability to host sophisticated back-end and advanced-packaging operations at multinational scale.",
+    "limitation": "Intel's internal packaging economics do not indicate third-party partnership economics; specific investment amount and capacity should be confirmed against primary sources before use.",
+    "discussion_prompt": null,
+    "source_ids": ["intel_malaysia"]
+  },
+  {
+    "id": "case_amkor_vietnam",
+    "title": "Amkor Technology Vietnam campus",
+    "country": "Vietnam",
+    "type": "Company case",
+    "what_happened": "Amkor established a large advanced system-in-package assembly and test manufacturing campus in northern Vietnam.",
+    "where": "Yen Phong II-C Industrial Park, Bac Ninh, Vietnam",
+    "value_chain_layer": "Assembly / Test (back-end)",
+    "relevance": "Indicates Vietnam's growing back-end and electronics manufacturing gravity alongside heavy FDI (Samsung, Intel).",
+    "limitation": "A single foreign-invested campus does not describe local supply-chain depth (front-end nearly blank) or broader ecosystem maturity; capacity/workforce detail needs source validation.",
+    "discussion_prompt": "Vietnam's EMS and electronics base may be relevant to customer-support discussions.",
+    "source_ids": ["ctsemi_vietnam", "vnexpress_talent"]
+  },
+  {
+    "id": "case_thailand_eec",
+    "title": "Thailand EEC electronics / automotive cluster & Infineon packaging",
+    "country": "Thailand",
+    "type": "Ecosystem + company case",
+    "what_happened": "Thailand's Eastern Economic Corridor concentrates automotive, electronics and PCB/HDD manufacturing; Infineon is building an advanced-packaging fab, and new clusters are forming at Lamphun/Lampang.",
+    "where": "EEC (Chonburi and surrounds); Lamphun/Lampang, Thailand",
+    "value_chain_layer": "EMS / electronics demand; back-end / advanced packaging",
+    "relevance": "Thailand is ASEAN's largest PCB producer with a deep automotive and power-electronics base and back-end presence.",
+    "limitation": "Cluster and demand signals do not describe named wafer demand or specialty-process economics; front-end and advanced-packaging build-out is early.",
+    "discussion_prompt": "Thailand's automotive and power-electronics base may be relevant to mature-node demand monitoring.",
+    "source_ids": ["semi_thailand", "3dincites_thailand"]
+  },
+  {
+    "id": "case_philippines_atp",
+    "title": "Philippines ATP base (TI and the wider ecosystem)",
+    "country": "Philippines",
+    "type": "Ecosystem + company case",
+    "what_happened": "The Philippines hosts a long-standing assembly, test and packaging (ATP) base; Texas Instruments and others run semiconductor assembly/test operations, and the OECD has profiled the domestic ecosystem.",
+    "where": "Baguio, Clark, CALABARZON, Metro Manila and Cebu, Philippines",
+    "value_chain_layer": "Assembly / Test (ATP)",
+    "relevance": "The Philippines is the world's 9th largest chip exporter (73% SMS / 27% EMS) with an English-speaking workforce.",
+    "limitation": "The base is ATP-heavy with very little IC design (~13 firms, ~1,000 designers); high electricity price and reliability are constraints; support-workload specifics are not established here.",
+    "discussion_prompt": "The Philippines' ATP base may be relevant to back-end or support discussions.",
+    "source_ids": ["oecd_philippines", "ti_philippines", "asean_bac_ph"]
+  },
+  {
+    "id": "case_indonesia_batam",
+    "title": "Indonesia Batam packaging & Infineon ATP",
+    "country": "Indonesia",
+    "type": "Ecosystem case",
+    "what_happened": "Indonesia's semiconductor activity is concentrated at Batam (adjacent to Singapore), where Infineon runs ATP operations; a silica-downstreaming roadmap aims to build domestic wafer capability.",
+    "where": "Batam, Riau Islands; Java industrial zones, Indonesia",
+    "value_chain_layer": "Packaging / Test; materials (early)",
+    "relevance": "Batam's proximity to Singapore and EV/local-content demand are the entry drivers; the Silica Downstreaming Roadmap 2025–2035 signals policy intent.",
+    "limitation": "Ecosystem and supply chain are the weakest of the five countries; electronic-grade processing infrastructure remains a key challenge.",
+    "discussion_prompt": null,
+    "source_ids": ["evidencefund_indonesia", "invest_indonesia"]
+  },
+  {
+    "id": "policy_arm_danantara",
+    "title": "ARM × Danantara Indonesia talent-training agreement",
+    "country": "Indonesia",
+    "type": "Policy case",
+    "what_happened": "On 23 Feb 2026, Indonesia's sovereign fund Danantara and UK-based ARM signed a framework agreement in London (witnessed by President Prabowo and ARM CEO Rene Haas) to train 15,000 Indonesian engineers within ARM's ecosystem. Indonesia is investing ~US$150M initially to build a national semiconductor ecosystem; the first cohort of ~1,000 started in May 2026, and cooperation extends to next-generation chip design across six IP domains (automotive, IoT, data center, home appliances, autonomous, quantum), with IP held by Indonesia.",
+    "where": "Indonesia (agreement signed in London)",
+    "value_chain_layer": "Policy & Talent Development; IC design (architecture)",
+    "relevance": "A concrete, dated policy signal on design-talent development and which architecture (ARM) shapes that talent. Facts (amount, headcount, timeline, IP domains) are source-backed.",
+    "limitation": "The 'ecosystem lock-in' and 'RISC-V defense' readings are analyst inference, not stated in the agreement. Indonesia's expectation that this leads to chip-manufacturing investment is its own; ARM's commitment is design talent and architecture, not fabrication — a gap between design-side lock-in and manufacturing landing remains open.",
+    "discussion_prompt": "Indonesia's ARM / Danantara case may be relevant as a design-talent and policy signal; note that talent competition is not only about numbers but about whose architecture shapes the talent.",
+    "source_ids": ["antara_arm", "danantara_arm", "jakartapost_arm", "wmedia_arm"]
+  }
+]

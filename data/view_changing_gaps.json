@@ -1,0 +1,47 @@
+{
+  "note": "Module 7 — not a list of missing numbers, but the unknowns that would actually flip a judgment. Ordered by decision weight.",
+  "gaps": [
+    {
+      "unknown": "Customer pull — do a specialty foundry's actual accounts want SEA capacity or SEA-based support?",
+      "would_change": "This flips whether ANY non-Singapore move is warranted at all. It is the single highest-weight unknown.",
+      "why_open": "Requires internal design-win / demand data; not available to an external consultant.",
+      "how_to_close": "Customer sourcing mandates, design-win geography, public China+1 supplier disclosures as proxy.",
+      "quality": "D"
+    },
+    {
+      "unknown": "China+1 durability — is the diversification structural or cyclical?",
+      "would_change": "Flips the urgency and the option value of a SEA back-end/optionality play.",
+      "why_open": "Policy- and customer-driven, evolving.",
+      "how_to_close": "Track export-control/tariff trajectory and named customer sourcing shifts (analyst + filings).",
+      "quality": "C"
+    },
+    {
+      "unknown": "Competitor forward capacity in Singapore (GF, VIS–NXP) — ramp, node mix, utilization.",
+      "would_change": "Flips crowding risk for mature-node capacity in the regional anchor.",
+      "why_open": "Announced but ramp details not public.",
+      "how_to_close": "Company filings, capex disclosures, node roadmaps.",
+      "quality": "C"
+    },
+    {
+      "unknown": "Site-level firm power availability (hundreds of MW, 24/7).",
+      "would_change": "Flips feasibility of any back-end or front-end placement, far more than electricity price does.",
+      "why_open": "Not published; utility/zone-specific.",
+      "how_to_close": "TNB / MEA-PEA / PLN / EVN / Meralco large-user data; site-level power-quality studies.",
+      "quality": "D"
+    },
+    {
+      "unknown": "Semiconductor-specific engineer pool and poachability (absolute, deployable).",
+      "would_change": "Flips talent feasibility; graduate percentages do not.",
+      "why_open": "Public data mixes actuals, enrollment, and policy targets.",
+      "how_to_close": "Industry-association headcounts; ministry yearbooks; recruiter salary guides by role.",
+      "quality": "C"
+    },
+    {
+      "unknown": "Materials localization — quantitative import-dependence by material.",
+      "would_change": "Flips back-end supply-chain readiness assessment.",
+      "why_open": "No unified public quantitative data; currently author judgment (D).",
+      "how_to_close": "SEMI material reports, customs/import data, named local-supplier lists.",
+      "quality": "D"
+    }
+  ]
+}
