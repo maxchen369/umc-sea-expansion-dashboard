@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Southeast Asia Semiconductor Landscape</title>
+    <meta name="description" content="A plain-language, evidence-graded briefing on the semiconductor landscape in Malaysia, Vietnam, Thailand, Indonesia and the Philippines, built from public sources.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">SEA</span>
+          <span class="brand-name">Southeast Asia Semiconductor Landscape</span>
+        </a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#takeaways">Takeaways</a>
+          <a href="#overview">Overview</a>
+          <a href="#countries">Countries</a>
+          <a href="#evidence">Evidence</a>
+          <a href="#about">About the data</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="intro" id="top">
+        <p class="eyebrow">Public-data briefing · Data as of July 2026</p>
+        <h1>Beyond Singapore: what can the rest of Southeast Asia offer a specialty chipmaker?</h1>
+        <p class="lead">A plain-language read of Malaysia, Vietnam, Thailand, Indonesia and the Philippines for a mature-node foundry that already runs a fab in Singapore. It uses public sources only, and every data point shows how solid its evidence is.</p>
+      </section>
+
+      <div class="filter-row" role="group" aria-label="Evidence filter">
+        <label class="switch">
+          <input type="checkbox" id="hideWeak">
+          <span class="switch-track" aria-hidden="true"></span>
+          <span class="switch-label">Hide estimates and judgment calls (C, D)</span>
+        </label>
+        <p class="filter-count" id="filterCount" aria-live="polite"></p>
+        <div class="grade-legend" id="gradeLegend"></div>
+      </div>
+
+      <section class="section" id="takeaways" aria-labelledby="takeawaysTitle">
+        <div class="section-head">
+          <h2 id="takeawaysTitle">Key takeaways</h2>
+        </div>
+        <div class="takeaway-grid" id="takeawayGrid"></div>
+      </section>
+
+      <section class="section" id="overview" aria-labelledby="overviewTitle">
+        <div class="section-head">
+          <h2 id="overviewTitle">What each country can do today</h2>
+          <p>A descriptive read of public evidence across six parts of the chip supply chain, not a score. Singapore is the reference point. Hover over or tab to a cell for details; the same details appear in each country profile.</p>
+        </div>
+        <div class="status-legend" id="statusLegend"></div>
+        <div class="table-wrap">
+          <table class="matrix">
+            <caption class="visually-hidden">Supply-chain presence by country</caption>
+            <thead id="matrixHead"></thead>
+            <tbody id="matrixBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" id="countries" aria-labelledby="countriesTitle">
+        <div class="section-head">
+          <h2 id="countriesTitle">Country profiles</h2>
+          <p>What each country is good at, what holds it back, and what to watch next. Open "Evidence behind this profile" on any card to see the underlying data.</p>
+        </div>
+        <div class="country-grid" id="countryGrid"></div>
+      </section>
+
+      <section class="section" id="evidence" aria-labelledby="evidenceTitle">
+        <div class="section-head section-head-row">
+          <div>
+            <h2 id="evidenceTitle">Evidence</h2>
+            <p>The detail behind the summary. Sections start collapsed; open the ones you need.</p>
+          </div>
+          <button type="button" class="text-button" id="toggleAll">Expand all</button>
+        </div>
+
+        <details class="evidence" id="demand">
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">Why companies look at Southeast Asia</span>
+              <span class="summary-sub">Four forces behind demand, and demand by country</span>
+            </span>
+          </summary>
+          <div class="evidence-body">
+            <p class="evidence-intro">Four forces push chip supply chains toward the region. Most of the pull lands on packaging, testing and customer support rather than new wafer fabs. This is also the least documented part of the picture, so read it as direction, not precision.</p>
+            <div class="card-grid" id="driverGrid"></div>
+            <h3 class="block-title">Demand by country</h3>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Country</th>
+                    <th scope="col">Main end markets</th>
+                    <th scope="col">What it means for a specialty foundry</th>
+                    <th scope="col">Evidence</th>
+                  </tr>
+                </thead>
+                <tbody id="endMarketBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="evidence" id="investing">
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">Who is already investing</span>
+              <span class="summary-sub">Seven company moves, checked against company and government sources</span>
+            </span>
+          </summary>
+          <div class="evidence-body">
+            <p class="evidence-intro">New wafer capacity is going into Singapore; the other five attract packaging, testing and power-chip plants. Each move is read as supporting the region, adding competition, or background.</p>
+            <ul class="reads-legend" id="readsLegend"></ul>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Company</th>
+                    <th scope="col">Where</th>
+                    <th scope="col">What they did</th>
+                    <th scope="col">What it means</th>
+                    <th scope="col">Evidence</th>
+                  </tr>
+                </thead>
+                <tbody id="investingBody"></tbody>
+              </table>
+            </div>
+            <div class="callout" id="investingSynthesis"></div>
+          </div>
+        </details>
+
+        <details class="evidence" id="constraints">
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">Practical constraints compared</span>
+              <span class="summary-sub">Power, talent, suppliers and incentives in each country</span>
+            </span>
+          </summary>
+          <div class="evidence-body">
+            <p class="evidence-intro">If a packaging, testing or support operation were considered, these are the practical factors that decide it. Power a site can actually get and the number of experienced engineers matter more than electricity prices or graduate percentages.</p>
+            <div class="table-wrap">
+              <table class="data-table constraints-table">
+                <thead id="constraintsHead"></thead>
+                <tbody id="constraintsBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details class="evidence" id="cases">
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">Real investments vs. announcements</span>
+              <span class="summary-sub">What is being built, and what is only planned</span>
+            </span>
+          </summary>
+          <div class="evidence-body">
+            <p class="evidence-intro">What is actually being built, separated from plans and promises that are not yet actionable.</p>
+            <h3 class="block-title">Being built or running</h3>
+            <div class="card-grid" id="realCases"></div>
+            <h3 class="block-title">Announced or planned, not yet actionable</h3>
+            <div class="card-grid" id="signalCases"></div>
+          </div>
+        </details>
+
+        <details class="evidence" id="unknowns">
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">What we still don't know</span>
+              <span class="summary-sub">Six open questions, most important first</span>
+            </span>
+          </summary>
+          <div class="evidence-body">
+            <p class="evidence-intro">The open questions that would change the picture, ordered by how much they matter.</p>
+            <div class="filter-group">
+              <ol class="gap-list" id="gapList"></ol>
+              <p class="empty-note" hidden>All six open questions are graded C or D; that is why they are still open.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="evidence" id="sources">
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">Sources</span>
+              <span class="summary-sub" id="sourcesSub">Public sources behind the data</span>
+            </span>
+          </summary>
+          <div class="evidence-body">
+            <ul class="source-list" id="sourceList"></ul>
+          </div>
+        </details>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="aboutTitle">
+        <div class="section-head">
+          <h2 id="aboutTitle">About the data</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-block" id="aboutScope"></div>
+          <div class="about-block">
+            <h3 class="block-title">Evidence grades</h3>
+            <ul class="plain-list" id="aboutGrades"></ul>
+          </div>
+          <div class="about-block">
+            <h3 class="block-title">Supply-chain status</h3>
+            <ul class="plain-list" id="aboutStatus"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Public sources only · Data as of July 2026 · Not investment advice</p>
+    </footer>
+
+    <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>

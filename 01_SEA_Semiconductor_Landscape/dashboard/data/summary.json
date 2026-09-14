@@ -1,0 +1,98 @@
+{
+  "takeaways": [
+    {
+      "headline": "Singapore is the region's only front-end chipmaking hub",
+      "body": "None of the other five countries has a confirmed commercial 300mm wafer fab. For a chipmaker already in Singapore, they are not places to build a front-end fab; they matter for packaging, testing, customer support and spreading supply-chain risk.",
+      "quality": "A",
+      "link": { "href": "#overview", "label": "See the overview" }
+    },
+    {
+      "headline": "Singapore itself is getting more crowded",
+      "body": "GlobalFoundries opened a US$4B expansion in 2023, and the US$7.8B VIS–NXP joint venture (VSMC) is due to start customer output in 2027 in the same mature-node space. More capacity next door means more competition for the same customers.",
+      "quality": "A",
+      "link": { "href": "#investing", "label": "See who is investing" }
+    },
+    {
+      "headline": "The other five attract packaging, testing and power-chip plants",
+      "body": "Recent examples: Infineon's silicon-carbide power fab in Kulim, Amkor's advanced-packaging campus in Bac Ninh, and Intel's assembly and test sites in Malaysia and Vietnam. Malaysia's cluster is the most established; Indonesia is still early.",
+      "quality": "B",
+      "link": { "href": "#countries", "label": "See the country profiles" }
+    },
+    {
+      "headline": "The biggest questions can't be answered from public data",
+      "body": "Whether customers actually want capacity or support in the region, whether China+1 diversification lasts, and whether a site can get enough reliable power would change the picture most.",
+      "quality": "D",
+      "link": { "href": "#unknowns", "label": "See what we don't know" }
+    }
+  ],
+  "not_a_ranking": "This is not a ranking, a score or an investment recommendation. It organizes public evidence so readers can form their own judgment.",
+  "grade_short": {
+    "A": "Comparable, citable",
+    "B": "Verified, not comparable",
+    "C": "Estimate or proxy",
+    "D": "Judgment or data gap"
+  },
+  "status_labels": {
+    "credible": "Established",
+    "emerging": "Emerging",
+    "absent": "Not present"
+  },
+  "status_definitions": {
+    "credible": "Activity by multiple companies that a customer could rely on today.",
+    "emerging": "Real but early, anchored by one company, or driven by policy.",
+    "absent": "No confirmed commercial activity."
+  },
+  "layer_labels": {
+    "Front-end wafer fab (300mm)": {
+      "label": "Chip fabrication (300mm wafer fabs)",
+      "short": "Wafer fabs",
+      "note": "Singapore has GlobalFoundries, Micron and VIS–NXP; none confirmed in the five."
+    },
+    "Back-end / OSAT (packaging & test)": {
+      "label": "Packaging & testing",
+      "short": "Packaging & test",
+      "note": "The region's real strength."
+    },
+    "IC design": {
+      "label": "Chip design",
+      "short": "Design",
+      "note": "Still early across the region."
+    },
+    "Equipment & materials": {
+      "label": "Equipment & materials",
+      "short": "Materials",
+      "note": "Front-end materials are imported across the region."
+    },
+    "EMS / electronics demand": {
+      "label": "Electronics manufacturing & local demand",
+      "short": "Electronics",
+      "note": "Local demand that anchors packaging and support work."
+    },
+    "Policy & talent development": {
+      "label": "Policy & talent programs",
+      "short": "Policy & talent",
+      "note": "A real driver only when incentives change the economics."
+    }
+  },
+  "field_labels": {
+    "power_availability": "Reliable power for large sites",
+    "reliability": "Power outages",
+    "electricity_price": "Electricity price",
+    "experienced_engineer_pool": "Experienced engineers",
+    "emc_grad_share": "Engineering, manufacturing & construction graduates (% of all graduates)",
+    "supply_chain_adjacency": "Local suppliers",
+    "incentives_zones": "Incentives & industrial zones",
+    "binding_constraint": "Main constraint"
+  },
+  "driver_labels": {
+    "China+1 / supply-chain derisking": "China+1: spreading supply chains beyond China",
+    "Tariff & trade-policy shifts": "Tariffs and trade rules",
+    "Taiwan-concentration risk / customer dual-sourcing": "Customers want a second source outside Taiwan",
+    "End-market gravity inside SEA": "Growing demand inside the region"
+  },
+  "reads_as_labels": {
+    "validating": "Supports the region",
+    "crowding": "Adds competition",
+    "context": "Background"
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "country": "Malaysia",
+    "role": "Southeast Asia's most established packaging and testing cluster",
+    "strengths": [
+      { "text": "Decades-deep packaging and test cluster in Penang and Kulim (Intel, Infineon, AMD, Micron, ASE, AT&S), with about 13% of global assembly, packaging and test activity (a share of activity, not capacity).", "quality": "B" },
+      { "text": "Infineon's Kulim site is the world's largest 200mm silicon-carbide power fab (Phase 1 opened August 2024).", "quality": "A" },
+      { "text": "Broad electronics base plus a large data-center build-out in Johor, next to Singapore.", "quality": "B" }
+    ],
+    "constraints": [
+      { "text": "Advanced packaging is still early: the national target is about 7% of global advanced packaging by 2035.", "quality": "A" },
+      { "text": "Shortage of senior engineers, with talent drawn to Singapore.", "quality": "D" },
+      { "text": "Front-end specialty materials are imported.", "quality": "D" }
+    ],
+    "watch": [
+      { "text": "Whether the national talent target (60,000 by 2030) turns into experienced engineers.", "quality": "B" },
+      { "text": "Firm power for a large site, which has to be confirmed with the utility (TNB).", "quality": "D" }
+    ]
+  },
+  {
+    "country": "Vietnam",
+    "role": "Fast-growing electronics and back-end base, with rising chip design",
+    "strengths": [
+      { "text": "Large foreign-invested electronics manufacturing base, led by Samsung and its suppliers.", "quality": "B" },
+      { "text": "Established back-end sites: Amkor's US$1.6B campus in Bac Ninh (opened 2023) and a large Intel assembly and test site in Ho Chi Minh City.", "quality": "B" },
+      { "text": "Chip design is rising fastest in the group: about 7,000 designers (reported), with Marvell and Faraday R&D.", "quality": "C" }
+    ],
+    "constraints": [
+      { "text": "Little front-end supply chain; back-end equipment and materials arrive mainly through foreign investors.", "quality": "D" },
+      { "text": "43% of firms reported power outages in 2024.", "quality": "B" }
+    ],
+    "watch": [
+      { "text": "Whether the talent target (about 50,000 by 2030) turns into deployable engineers; today's reported stock is about 15,000.", "quality": "C" },
+      { "text": "Dry-season hydropower shortfalls and peak curtailment, a risk for plants that run 24/7.", "quality": "D" }
+    ]
+  },
+  {
+    "country": "Thailand",
+    "role": "Automotive, power-electronics and electronics manufacturing base",
+    "strengths": [
+      { "text": "The clearest demand for mature-node and power chips, from automotive and power electronics.", "quality": "C" },
+      { "text": "Established back-end and power-component manufacturing (Infineon), plus a hard-disk-drive and circuit-board base.", "quality": "B" },
+      { "text": "A government five-year semiconductor plan and investment incentives in the Eastern Economic Corridor.", "quality": "B" }
+    ],
+    "constraints": [
+      { "text": "Front-end talent and supply chain are still being built.", "quality": "D" },
+      { "text": "The shift to electric vehicles is reshaping the automotive base, so demand is still moving.", "quality": "C" }
+    ],
+    "watch": [
+      { "text": "How Infineon's new back-end plant in Samut Prakan ramps up (first building ready early 2026).", "quality": "A" },
+      { "text": "Progress toward about 80,000 semiconductor workers under the five-year plan (a target, not today's workforce).", "quality": "B" }
+    ]
+  },
+  {
+    "country": "Indonesia",
+    "role": "Early-stage, policy-driven market with long-term ambitions",
+    "strengths": [
+      { "text": "Large domestic market, with electric-vehicle and local-content electronics demand emerging.", "quality": "C" },
+      { "text": "Arm and Danantara agreed to train up to about 15,000 people in chip design, with a first cohort of about 1,000 from May 2026.", "quality": "B" },
+      { "text": "Some back-end activity in Batam (Infineon), though still thin.", "quality": "C" }
+    ],
+    "constraints": [
+      { "text": "The thinnest ecosystem and supply chain of the five (author comparison).", "quality": "D" },
+      { "text": "Power supply outside Java and Bali is weak and uneven.", "quality": "D" },
+      { "text": "No electronic-grade materials processing yet.", "quality": "D" }
+    ],
+    "watch": [
+      { "text": "Whether the Arm program grows into a real design industry; it is a talent program, not a manufacturing commitment.", "quality": "B" },
+      { "text": "The 2025–2035 silica-downstreaming roadmap, which is a plan rather than capacity.", "quality": "D" }
+    ]
+  },
+  {
+    "country": "Philippines",
+    "role": "Veteran packaging and testing base with an English-speaking workforce",
+    "strengths": [
+      { "text": "Long-established assembly, test and packaging base; the world's 9th-largest chip exporter (OECD).", "quality": "B" },
+      { "text": "Electronics make up about 60% of exports.", "quality": "B" },
+      { "text": "About 47,000 engineering and technology graduates in 2021/22.", "quality": "B" }
+    ],
+    "constraints": [
+      { "text": "Among the region's highest electricity prices, about US$0.15–0.20 per kWh.", "quality": "C" },
+      { "text": "43.9% of firms reported power outages in 2023.", "quality": "B" },
+      { "text": "Chip design is thin: about 13 firms and 1,000 designers.", "quality": "C" }
+    ],
+    "watch": [
+      { "text": "Grid reliability outside Metro Manila, where many plants keep their own generators.", "quality": "C" },
+      { "text": "Progress on the 128,000-person upskilling target, which measures something different from graduates.", "quality": "C" }
+    ]
+  }
+]
